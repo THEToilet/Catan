@@ -1,0 +1,89 @@
+@startuml Catan
+start
+
+partition Title {
+        if () then (ゲームをする)
+        else (ゲームをやめる)
+            stop
+        endif
+}
+
+fork
+    :マスタプレイヤーのみ;
+    partition Initialization {
+        :マップに地形配置;
+        :地形に数字を配置;
+
+    }
+
+fork again
+    :Matching;
+    partition Matching {
+        while (4人揃うまで)
+            :入ってきた順にプレイヤー名をつける(ex:1P);
+        endwhile
+    }
+
+end fork
+        
+partition Setup {
+    :席の場所決定;
+    :ダイスを振るx2;
+    note left
+        4人それぞれ
+    end note
+    while (数が大きい順に)
+        :家＆路を置く;
+    endwhile
+    while (数が小さい順に)
+        :家＆路を置く;
+    endwhile
+    :資源配布;
+    note right
+        2番目に置いた陣地の資材をもらう
+    end note
+}
+
+partition MainGame {
+repeat
+repeat
+    if (建設するか？) then (yes)
+        if (道) then (yes)
+        elseif (開拓地) then (yes)
+        elseif (都市化) then (yes)
+        else (nothing)
+        endif
+    elseif (カードについて) then (yes)
+        if (カードを引くか？) then (yes)
+            :カード入手;
+        else (カード使用) 
+            if (騎士カード) then (yes)
+            elseif (街道建設カード) then (yes)
+            elseif (独占カード) then (yes)
+            elseif (収穫カード) then (yes)
+            else (nothing)
+            endif
+        endif
+    elseif (貿易) then (yes)
+        if(4:1) then (yes)
+        elseif(3:1) then (yes)
+        elseif(2:1) then (yes)
+        else (nothing)
+        endif
+    elseif (交渉) then (yes)
+        :交渉相手の選択;
+        :欲しいもの、渡すもの選択;
+        if (交渉成立) then (yes)
+            :交換;
+        else (nothing)
+        endif
+    elseif (勝利宣言(10p)) then (yes)
+        stop
+    else (no)
+    endif  
+repeat while (ターン終了?)
+:終了する;
+repeat while (ゲーム終了するまでダイスのでた数が大きい順にプレイする)
+}
+
+@enduml

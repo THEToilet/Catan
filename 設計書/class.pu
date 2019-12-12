@@ -1,0 +1,172 @@
+@startuml CatanClass
+
+namespace Terrant{
+    enum TerrantType {
+        Forest
+        Hill
+        Mine
+        Pasture
+        Field
+        Desert
+    }
+    abstract class TerrantBase{
+        + TerrantType
+    }
+
+    TerrantBase --> Forest
+    TerrantBase --> Hill
+    TerrantBase --> Mine
+    TerrantBase --> Pasture
+    TerrantBase --> Field
+    TerrantBase --> Desert
+
+    TerrantBase --r> TerrantType
+
+}
+
+Card.ICardBehavior --|> Terrant.TerrantBase
+Players.PlayerCore --> Point.NormalPoint
+
+namespace Point{
+
+    enum PointType {
+        NormalPoint
+        TradePoint
+    }
+    abstract class PointBase{
+        + PointType
+    }
+
+    PointBase --r> PointType
+
+    PointBase --> NormalPoint
+    PointBase --> TradeBase
+}
+
+namespace Territory{
+
+    enum TerritoryType {
+        Road
+        Settlement
+        City
+    }
+
+    interface ITerritoryBehavior
+    class Road
+    ITerritoryBehavior --> Road
+    abstract BaseEntity
+    ITerritoryBehavior --> BaseEntity
+
+    class Settlement
+    class City
+    BaseEntity --> Settlement
+    BaseEntity --> City
+
+    ITerritoryBehavior --r> TerrantType
+}
+
+Territory.ITerritoryBehavior --r> Point.PointBase
+
+namespace Card{
+
+    interface ICardBehavior
+
+
+    enum MaterialType {
+        Wood
+        Bricks
+        IronOre
+        Wheat
+        Wool
+    }
+
+    abstract NormalCardEntity
+    Card.ICardBehavior --> NormalCardEntity
+    abstract SpecialCardEntity
+    Card.ICardBehavior --> SpecialCardEntity
+
+    class Wood
+    class Bricks
+    class IronOre
+    class Wheat
+    class Wool
+
+    Card.NormalCardEntity --> Wood
+    Card.NormalCardEntity --> Bricks
+    Card.NormalCardEntity --> IronOre
+    Card.NormalCardEntity --> Wheat
+    Card.NormalCardEntity --> Wool
+
+    ICardBehavior --r> MaterialType
+}
+
+
+
+namespace Maneger{
+    class CreateTerrant
+    class ResourceDistribution
+    class TimeManager
+    class GameStateManager
+    class BattleStateManager
+
+
+    enum GameState{
+        Title
+        Maching
+        Initialization
+        Battle
+        Finished
+        Result
+    }
+
+    enum BattleState{
+        Construction
+        Card
+        Trade
+        Negotiation
+        VictoryDeclaration
+    }
+
+    interface IBattleStateBehaviour
+
+    abstract CardEntity
+
+    IBattleStateBehaviour --> CardEntity
+    IBattleStateBehaviour --> Construction
+    IBattleStateBehaviour --> Trade
+    IBattleStateBehaviour --> Negotiation
+    IBattleStateBehaviour --> VictoryDeclaration
+    CardEntity --> DrawCard
+    CardEntity --> UseCard
+
+    Class Construction
+    Class DrawCard
+    Class UseCard
+    Class Trade
+    Class Negotiation
+    Class VictoryDeclaration
+
+    IBattleStateBehaviour --r> BattleState
+
+    GameStateManager --r> GameState
+}
+
+namespace Players{
+    class PlayerCore<<MonoBehaviour>>
+    class PlayerDrawer<<MonoBehaviour>>
+    class PlayerDice
+
+    enum PlayerId{
+        Player1
+        Player2
+        Player3
+        Player4
+    }
+
+    PlayerId --> PlayerCore
+    PlayerDrawer --> PlayerCore
+}
+
+Card.ICardBehavior --|> Players.PlayerCore
+
+@enduml
