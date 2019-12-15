@@ -1,7 +1,7 @@
 @startuml CatanClass
 
-namespace Terrant{
-    enum TerrantType {
+namespace Terrain{
+    enum TerrainType {
         Forest
         Hill
         Mine
@@ -9,22 +9,22 @@ namespace Terrant{
         Field
         Desert
     }
-    abstract class TerrantBase{
-        + TerrantType
+    abstract class TerrainBase{
+        + TerrainType
     }
 
-    TerrantBase --> Forest
-    TerrantBase --> Hill
-    TerrantBase --> Mine
-    TerrantBase --> Pasture
-    TerrantBase --> Field
-    TerrantBase --> Desert
+    TerrainBase --> Forest
+    TerrainBase --> Hill
+    TerrainBase --> Mine
+    TerrainBase --> Pasture
+    TerrainBase --> Field
+    TerrainBase --> Desert
 
-    TerrantBase --r> TerrantType
+    TerrainBase --r> TerrainType
 
 }
 
-Card.ICardBehavior --|> Terrant.TerrantBase
+Card.ICardBehavior --|> Terrain.TerrainBase
 Players.PlayerCore --> Point.NormalPoint
 
 namespace Point{
@@ -62,7 +62,7 @@ namespace Territory{
     BaseEntity --> Settlement
     BaseEntity --> City
 
-    ITerritoryBehavior --r> TerrantType
+    ITerritoryBehavior --r> TerrainType
 }
 
 Territory.ITerritoryBehavior --r> Point.PointBase
@@ -103,7 +103,7 @@ namespace Card{
 
 
 namespace Maneger{
-    class CreateTerrant
+    class CreateTerrain
     class ResourceDistribution
     class TimeManager
     class GameStateManager
