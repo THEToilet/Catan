@@ -26,7 +26,7 @@ namespace Catan.Scripts.Generation
         {
             Vector3[] vertices = new Vector3[hexagon + 1];
             Vector3[] centerVertics = new Vector3[19];
-                HexagonGeneration(1);
+            HexagonGeneration(1);
 
         }
 
@@ -54,51 +54,16 @@ namespace Catan.Scripts.Generation
 
             for (int i = 0; i < 12; i++)
             {
-                vertices2[i + 1] = new Vector3(Mathf.Sin(i * angleStep)*2, 0, Mathf.Cos(i * angleStep)*2);
+                vertices2[i + 1] = new Vector3(Mathf.Sin(i * angleStep) * 2, 0, Mathf.Cos(i * angleStep) * 2);
             }
 
             for (int i = 0; i < 12 + 1; i++)
             {
                 GameObject obj = Instantiate(point, vertices2[i], Quaternion.identity);
-                obj.name = obj.name.Replace("(Clone)", "_" + (i+7).ToString());
+                obj.name = obj.name.Replace("(Clone)", "_" + (i + 7).ToString());
             }
 
 
         }
-
-        /*
-                void Start()
-                {
-                    cubeSize = gameObject.transform.localScale;
-                    offset = gameObject.transform.localPosition;
-                }
-
-                void Update()
-                {
-                    InstantiateSmallCubeAtRandom();
-                }
-
-                void InstantiateSmallCubeAtRandom()
-                {
-                    // オブジェクトを立方体内のランダムな位置にインスタンス化する
-                    for (int i = 1; i <= batchNum; i++)
-                    {
-                        float xPos = GetRandomRangeInCube() * cubeSize.x;
-                        float yPos = GetRandomRangeInCube() * cubeSize.y;
-                        float zPos = GetRandomRangeInCube() * cubeSize.z;
-                        Vector3 position = new Vector3(xPos, yPos, zPos) + offset;
-
-                        // Prefabをインスタンス化する
-                        GameObject obj = Instantiate(cubePrefab, position, Quaternion.identity);
-                        obj.transform.SetParent(gameObject.transform);
-                    }
-                }
-
-                float GetRandomRangeInCube()
-                {
-                    float randomRange = Random.Range(min, max);
-                    return randomRange;
-                }
-                */
     }
 }

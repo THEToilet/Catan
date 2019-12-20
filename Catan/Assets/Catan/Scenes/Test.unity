@@ -3091,6 +3091,8 @@ GameObject:
   - component: {fileID: 870925631}
   - component: {fileID: 870925630}
   - component: {fileID: 870925629}
+  - component: {fileID: 870925633}
+  - component: {fileID: 870925634}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3173,6 +3175,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870925633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870925628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f221c436edb68840954818932252861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainValue: 00000000010000000100000001000000020000000200000002000000030000000300000003000000030000000400000004000000040000000400000005000000050000000500000005000000
+--- !u!114 &870925634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870925628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98696c9be317a154584003a916f8ace5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNoGeneration: {fileID: 870925633}
+  terrainPointValue: 
+  Forest: {fileID: 1167028497395346633, guid: df9f4a0962ad9994f8fc6b06ddf09bc9, type: 3}
+  Hill: {fileID: 8806305424732913802, guid: b3ef19f1854f6d745b3f038be6f5d128, type: 3}
+  Mine: {fileID: 2267186302494787059, guid: 8968d88f7b87aa940a03b7b9675316e6, type: 3}
+  Pasture: {fileID: 5026640733993945387, guid: 60f1ce29ec069204992020744c09288d, type: 3}
+  Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
+  Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632, type: 3}
 --- !u!1001 &929968601
 PrefabInstance:
   m_ObjectHideFlags: 0
