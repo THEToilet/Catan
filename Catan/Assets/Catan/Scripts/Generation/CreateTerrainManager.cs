@@ -57,8 +57,6 @@ namespace Catan.Scripts.Generation
             for (int i = 0; i < terrainNumber; i++)
             {
                 terrainPosition = TerrainPoint[i];
-                Debug.Log(terrainPosition);
-                Debug.Log(terrainPosition);
                 switch (terrainPointValue[i])
                 {
                     case 0:
