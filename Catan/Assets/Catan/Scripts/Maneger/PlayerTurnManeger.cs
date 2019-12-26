@@ -1,22 +1,13 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Manager
 {
-    public enum PlayerId
-    {
-        Player1 = 0,
-        Player2 = 1,
-        Player3 = 2,
-        Player4 = 3
-    }
     class PlayerTurnManeger : MonoBehaviour
     {
         PlayerId playerId = PlayerId.Player1;
-        public void Start()
-        {
-        }
 
         public void Update()
         {

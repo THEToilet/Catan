@@ -60,22 +60,22 @@ namespace Catan.Scripts.Generation
                 switch (terrainPointValue[i])
                 {
                     case 0:
-                        GameObject.Instantiate(Desert, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Desert, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                     case 1:
-                        GameObject.Instantiate(Mine, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Mine, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                     case 2:
-                        GameObject.Instantiate(Hill, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Hill, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                     case 3:
-                        GameObject.Instantiate(Pasture, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Pasture, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                     case 4:
-                        GameObject.Instantiate(Field, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Field, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                     case 5:
-                        GameObject.Instantiate(Forest, terrainPosition, Quaternion.Euler(0,30,0));
+                        GameObject.Instantiate(Forest, terrainPosition, Quaternion.Euler(0, 30, 0));
                         break;
                 }
             }

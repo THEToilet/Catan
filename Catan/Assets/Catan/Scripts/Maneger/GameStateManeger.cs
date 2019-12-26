@@ -1,24 +1,13 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using Catan.Scripts.Game;
 
 namespace Catan.Scripts.Manager
 {
-
-    public enum GameState
-    {
-        Construction,
-        AboutCard,
-        Trade,
-        Negotiation,
-        VictoryDeclaration
-    }
     class GameStateManeger : MonoBehaviour
     {
         GameState gameState = GameState.Construction;
-        public void Start()
-        {
-        }
 
         public void Update()
         {

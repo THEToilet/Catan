@@ -27,16 +27,6 @@ namespace Catan.Scripts.Generation
         {
             this.terrainValue = Shuffle(terrainValue);
         }
-        void Start()
-        {
-            /*
-            for (int i = 0; i < terrainNumber; i++)
-            {
-                Debug.Log(terrainValue[i]);
-            }
-            */
-        }
-
 
         private int[] Shuffle(int[] array)
         {
