@@ -6,14 +6,34 @@ namespace Catan.Scripts.Common
 {
     public class Dice : MonoBehaviour
     {
+        List<int> numbers = new List<int>();
+        int start = 1;
+        int end = 7;
+        int count = 4;
+        int[] orderNum = new int[4];
         public int RollOnceDice()
         {
-            return Random.Range(1, 7);
+            return Random.Range(start, end);
         }
 
-        public int RollTwiceDice()
+        // 重複を防ぐためにListを使って数字を渡している
+        // しかしここで渡しているのは数字だけ
+        public int[] RollTwiceDice()
         {
-            return RollOnceDice() + RollOnceDice();
+            for (int i = 0; i < 7 + 1; i++)
+            {
+                numbers.Add(i);
+            }
+            for (int i = 0; i < count; i++)
+            {
+                int index = Random.Range(0, numbers.Count);
+
+                orderNum[i] = numbers[index];
+            }
+            return orderNum;
         }
+
+
+
     }
 }

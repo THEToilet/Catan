@@ -9,14 +9,13 @@ namespace Catan.Scripts.Player
     {
         public Dice dice;
         public int[] orderNum = new int[4];
+ 
 
         public void OrderDecide()
         {
-            for (int i = 0; i < 4; i++)
-            {
-                orderNum[i] = dice.RollTwiceDice();
-            }
+
         }
+
 
     }
 
