@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 98696c9be317a154584003a916f8ace5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Forest: {fileID: 1167028497395346633, guid: df9f4a0962ad9994f8fc6b06ddf09bc9,
+      type: 3}
+  - Hill: {fileID: 8806305424732913802, guid: b3ef19f1854f6d745b3f038be6f5d128, type: 3}
+  - Mine: {fileID: 2267186302494787059, guid: 8968d88f7b87aa940a03b7b9675316e6, type: 3}
+  - Pasture: {fileID: 5026640733993945387, guid: 60f1ce29ec069204992020744c09288d,
+      type: 3}
+  - Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
+  - Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

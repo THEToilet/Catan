@@ -6,12 +6,9 @@ using UnityEngine;
 namespace Catan.Scripts.Generation
 {
 
-    public class CreateTerrainManager : MonoBehaviour
+    public class TerrainGeneration : MonoBehaviour
     {
-        public RandomNoGeneration randomNoGeneration;
         private static int terrainNumber = 19;
-
-        public int[] terrainPointValue;
 
         Vector3 terrainPosition;
         [SerializeField] GameObject Forest;
@@ -43,16 +40,8 @@ namespace Catan.Scripts.Generation
             new Vector3(15f,0,10f)             // 18
         };
 
-        // Start is called before the first frame update
-        void Start()
-        {
-            terrainPointValue = randomNoGeneration.terrainValue;
-            Create();
-
-        }
-
         // Desert : 1 = 0, Mine : 3 = 1, Hill : 3 = 2, Pasture : 4 = 3, Field : 4 = 4, Forest : 4 = 5    --- Total 19
-        void Create()
+        public void Create(int[] terrainPointValue)
         {
             for (int i = 0; i < terrainNumber; i++)
             {

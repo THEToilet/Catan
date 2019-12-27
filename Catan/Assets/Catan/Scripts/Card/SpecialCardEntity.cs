@@ -15,12 +15,6 @@ namespace Catan.Scripts.Card
     {
         public abstract SpecialCardType type { get; }
 
-        public PlayerId owner { get; private set; }
-
-        public void SetParams(PlayerId _owner)
-        {
-            owner = _owner;
-        }
     }
 
 }

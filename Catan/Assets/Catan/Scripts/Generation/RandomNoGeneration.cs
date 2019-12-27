@@ -23,9 +23,9 @@ namespace Catan.Scripts.Generation
 
         */
 
-        void Awake()
+        public int[] Generate()
         {
-            this.terrainValue = Shuffle(terrainValue);
+            return this.terrainValue = Shuffle(terrainValue);
         }
 
         private int[] Shuffle(int[] array)

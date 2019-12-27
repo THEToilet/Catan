@@ -11,16 +11,9 @@ namespace Catan.Scripts.Card
     /// ノーマルカードの実態
     /// </summary>
 
-    public abstract class CardEntity : MonoBehaviour
+    public class CardEntity : MonoBehaviour
     {
-        public abstract CardType type { get; }
-
-        public PlayerId owner { get; private set; }
-
-        public void SetParams(PlayerId _owner)
-        {
-            owner = _owner;
-        }
+        public CardType type { get; }
     }
 
 }

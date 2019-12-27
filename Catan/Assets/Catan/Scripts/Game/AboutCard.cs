@@ -8,7 +8,7 @@ namespace Catan.Scripts.Game
 
     class AboutCard : MonoBehaviour
     {
-        
+
     }
 
 }
