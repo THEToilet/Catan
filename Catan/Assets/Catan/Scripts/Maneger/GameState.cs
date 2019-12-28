@@ -10,8 +10,7 @@ namespace Catan.Scripts.Manager
         Construction,
         AboutCard,
         Trade,
-        Negotiation,
-        VictoryDeclaration
+        Negotiation
     }
 
 }

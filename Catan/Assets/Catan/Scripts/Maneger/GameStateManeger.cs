@@ -1,29 +1,53 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using UniRx.Async;
+using UniRx.Async.Triggers;
+using System.Threading;
 using Catan.Scripts.Game;
 
 namespace Catan.Scripts.Manager
 {
-    class GameStateManeger : MonoBehaviour
+    public class GameStateManeger : MonoBehaviour
     {
-        GameState gameState = GameState.Construction;
 
-        public void Update()
+        // ステート管理するReactiveProperty
+        public ReactiveProperty<GameState> _currentGameState
+            = new ReactiveProperty<GameState>();
+
+        void Start()
         {
-            switch (gameState)
+            StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+        }
+
+        /// <summary>
+        /// ステート遷移するたびに処理を走らせる
+        /// </summary>
+        private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
             {
-                case GameState.Construction:
-                    break;
-                case GameState.AboutCard:
-                    break;
-                case GameState.Trade:
-                    break;
-                case GameState.Negotiation:
-                    break;
-                case GameState.VictoryDeclaration:
-                    break;
+                // ステート遷移を待つ
+                var next = await _currentGameState;
+
+                // 遷移先に合わせて処理をする
+                switch (next)
+                {
+                    case GameState.Construction:
+                        Debug.Log("construc");
+                        break;
+                    case GameState.AboutCard:
+                        Debug.Log("aboutcard");
+                        break;
+                    case GameState.Trade:
+                        Debug.Log("trade");
+                        break;
+                    case GameState.Negotiation:
+                        Debug.Log("negotiation");
+                        break;
+                }
             }
+
         }
     }
 }

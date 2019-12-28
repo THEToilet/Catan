@@ -7,7 +7,7 @@ namespace Catan.Scripts.Generation
 {
     public class RandomNoGeneration : MonoBehaviour
     {
-        private static int terrainNumber = 19;
+   //   private static int terrainNumber = 19;
         public int[] terrainValue = new int[] { 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5 };
 
         /*

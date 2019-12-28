@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Catan .Scripts.Player;
+using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Card
 {
@@ -13,7 +13,7 @@ namespace Catan.Scripts.Card
 
     public class CardEntity : MonoBehaviour
     {
-        public CardType type { get; }
+        public CardType type { get; set; }
     }
 
 }

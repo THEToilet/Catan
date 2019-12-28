@@ -4,15 +4,10 @@ using UnityEngine;
 
 namespace Catan.Scripts.Territory
 {
-    public class TerritoryType
+    public enum TerritoryType
     {
-
-        public enum GameState
-        {
-            Road,
-            Settlement,
-            City
-        }
-
+        Road,
+        Settlement,
+        City
     }
 }

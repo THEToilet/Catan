@@ -9,7 +9,7 @@ namespace Catan.Scripts.Territory
     {
         public abstract TerritoryType type { get; }
 
-        public abstract Vector3 TerritoryPosition { get; set; }
+        public abstract Vector3 TerritoryPosition { get;}
 
     }
 

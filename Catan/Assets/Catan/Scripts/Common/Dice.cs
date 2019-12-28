@@ -20,7 +20,7 @@ namespace Catan.Scripts.Common
         // しかしここで渡しているのは数字だけ
         public int[] RollTwiceDice()
         {
-            for (int i = 0; i < 7 + 1; i++)
+            for (int i = 0; i < 7; i++)
             {
                 numbers.Add(i);
             }
@@ -29,8 +29,15 @@ namespace Catan.Scripts.Common
                 int index = Random.Range(0, numbers.Count);
 
                 orderNum[i] = numbers[index];
+
+                numbers.RemoveAt(index);
             }
             return orderNum;
+        }
+
+        public int RandomRollTwiceDice()
+        {
+            return RollOnceDice() + RollOnceDice();
         }
 
 

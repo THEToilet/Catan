@@ -1,38 +1,58 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
+using UniRx.Async;
+using UniRx.Async.Triggers;
+using System.Threading;
 using Catan.Scripts.Game;
 
 namespace Catan.Scripts.Manager
 {
-    class ProgressStateManeger : MonoBehaviour
+    public class ProgressStateManeger : MonoBehaviour
     {
-        private ProgressState progressState = ProgressState.Title;
-
         public InitializationManeger initializationManeger;
-        public void Update()
+        public BattleManeger battleManeger;
+
+        // ステート管理するReactiveProperty
+        public ReactiveProperty<ProgressState> _currentProgressState
+            = new ReactiveProperty<ProgressState>(ProgressState.Title);
+
+        void Start()
         {
-            switch (progressState)
+            StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            _currentProgressState.SetValueAndForceNotify(ProgressState.Initialization);
+        }
+
+        /// <summary>
+        /// ステート遷移するたびに処理を走らせる
+        /// </summary>
+        private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
             {
-                case ProgressState.Title:
-                    progressState = ProgressState.Maching;
-                    break;
-                case ProgressState.Maching:
-                    progressState = ProgressState.Initialization;
-                    break;
-                case ProgressState.Initialization:
-                    initializationManeger.Excute();
-                    progressState = ProgressState.Battle;
-                    break;
-                case ProgressState.Battle:
-                    progressState = ProgressState.Finished;
-                    break;
-                case ProgressState.Finished:
-                    progressState = ProgressState.Result;
-                    break;
-                case ProgressState.Result:
-                    break;
+                // ステート遷移を待つ
+                var next = await _currentProgressState;
+
+                // 遷移先に合わせて処理をする
+                switch (next)
+                {
+                    case ProgressState.Maching:
+                        break;
+                    case ProgressState.Initialization:
+                        Debug.Log("ini");
+                        initializationManeger.Excute();
+                        break;
+                    case ProgressState.Battle:
+                        Debug.Log("battle");
+                        battleManeger.Excute();
+                        break;
+                    case ProgressState.Finished:
+                        break;
+                    case ProgressState.Result:
+                        break;
+                }
             }
+
         }
     }
 }

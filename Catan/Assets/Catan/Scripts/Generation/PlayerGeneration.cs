@@ -12,10 +12,10 @@ namespace Catan.Scripts.Generation
 
 
         Vector3[] PlayerPoint = new Vector3[]{
-            new Vector3(-40f,0,0),   // player1
-            new Vector3(0,0,-40f),   // player2
-            new Vector3(40f,0,0),    // player3
-            new Vector3(0,0,40f)     // player4
+            new Vector3(-50f,0,0),   // player1
+            new Vector3(0,0,-50f),   // player2
+            new Vector3(50f,0,0),    // player3
+            new Vector3(0,0,50f)     // player4
         };
 
         public void Generate()

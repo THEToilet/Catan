@@ -10,6 +10,7 @@ namespace Catan.Scripts.Player
         [SerializeField] private PlayerId playerId;
         [SerializeField] private Belongings _belongings;
 
+
         public void Initialize(PlayerId _playerId)
         {
             playerId = _playerId;
