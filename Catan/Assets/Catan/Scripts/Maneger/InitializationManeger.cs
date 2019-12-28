@@ -17,10 +17,15 @@ namespace Catan.Scripts.Manager
         public PlayerGeneration playerGeneration;
         public OrderDetermining orderDetermining;
         public ProgressStateManeger progressStateManeger;
+
+        public PointChildrenGeneration pointChildrenGeneration;
+        public PointParentGeneration pointParentGeneration;
         public PlayerTurn playerTurn;
 
         public async void Excute()
         {
+            pointChildrenGeneration.Generate();
+            pointParentGeneration.Generate();
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide(); // 順番決定

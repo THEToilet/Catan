@@ -4,7 +4,10 @@ using UnityEngine;
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using System.Threading;
-using Catan.Scripts.Game;
+
+/// <summary>
+/// 全体の進行の管理
+/// </summary>
 
 namespace Catan.Scripts.Manager
 {

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using Catan.Scripts.Point;
+using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Generation
 {
@@ -40,6 +42,8 @@ namespace Catan.Scripts.Generation
             new Vector3(15f,0,10f)             // 18
         };
 
+        GameObject tmpGameObject;
+
         // Desert : 1 = 0, Mine : 3 = 1, Hill : 3 = 2, Pasture : 4 = 3, Field : 4 = 4, Forest : 4 = 5    --- Total 19
         public void Create(int[] terrainPointValue)
         {
@@ -49,22 +53,28 @@ namespace Catan.Scripts.Generation
                 switch (terrainPointValue[i])
                 {
                     case 0:
-                        GameObject.Instantiate(Desert, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Desert, terrainPosition, Quaternion.Euler(0, 30, 0));
+                      //  tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Desert;
                         break;
                     case 1:
-                        GameObject.Instantiate(Mine, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Mine, terrainPosition, Quaternion.Euler(0, 30, 0));
+                      //  tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Mine;
                         break;
                     case 2:
-                        GameObject.Instantiate(Hill, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Hill, terrainPosition, Quaternion.Euler(0, 30, 0));
+                      //  tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Hill;
                         break;
                     case 3:
-                        GameObject.Instantiate(Pasture, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Pasture, terrainPosition, Quaternion.Euler(0, 30, 0));
+                      //  tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Pasture;
                         break;
                     case 4:
-                        GameObject.Instantiate(Field, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Field, terrainPosition, Quaternion.Euler(0, 30, 0));
+                      //  tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Field;
                         break;
                     case 5:
-                        GameObject.Instantiate(Forest, terrainPosition, Quaternion.Euler(0, 30, 0));
+                        tmpGameObject = GameObject.Instantiate(Forest, terrainPosition, Quaternion.Euler(0, 30, 0));
+                       // tmpGameObject.GetComponent<PointParentBehavior>().terrainType = TerrainType.Forest;
                         break;
                 }
             }

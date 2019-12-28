@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Catan.Scripts.Point
 {
-   // [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+    // [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
     [System.Serializable]
     public class PointChildrenBehavior : MonoBehaviour
     {
@@ -14,6 +14,12 @@ namespace Catan.Scripts.Point
         [SerializeField] GameObject AdjacentPoint_1;
         [SerializeField] GameObject AdjacentPoint_2;
 
+        GameObject parent;
+
+        void Start()
+        {
+
+        }
     }
 
 }

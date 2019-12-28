@@ -2291,7 +2291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &568965081
 Transform:
   m_ObjectHideFlags: 0
@@ -3537,7 +3537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &861551037
 Transform:
   m_ObjectHideFlags: 0
@@ -3698,7 +3698,6 @@ GameObject:
   - component: {fileID: 870925631}
   - component: {fileID: 870925630}
   - component: {fileID: 870925629}
-  - component: {fileID: 870925634}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3781,24 +3780,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &870925634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870925628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98696c9be317a154584003a916f8ace5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Forest: {fileID: 1167028497395346633, guid: df9f4a0962ad9994f8fc6b06ddf09bc9, type: 3}
-  Hill: {fileID: 8806305424732913802, guid: b3ef19f1854f6d745b3f038be6f5d128, type: 3}
-  Mine: {fileID: 2267186302494787059, guid: 8968d88f7b87aa940a03b7b9675316e6, type: 3}
-  Pasture: {fileID: 5026640733993945387, guid: 60f1ce29ec069204992020744c09288d, type: 3}
-  Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
-  Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632, type: 3}
 --- !u!1001 &929968601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5927,6 +5908,8 @@ GameObject:
   - component: {fileID: 1669153287}
   - component: {fileID: 1669153284}
   - component: {fileID: 1669153285}
+  - component: {fileID: 1669153296}
+  - component: {fileID: 1669153295}
   - component: {fileID: 1669153293}
   - component: {fileID: 1669153294}
   - component: {fileID: 1669153289}
@@ -5973,6 +5956,8 @@ MonoBehaviour:
   playerGeneration: {fileID: 1669153290}
   orderDetermining: {fileID: 1669153294}
   progressStateManeger: {fileID: 1669153284}
+  pointChildrenGeneration: {fileID: 1669153295}
+  pointParentGeneration: {fileID: 1669153296}
   playerTurn: {fileID: 1669153291}
 --- !u!114 &1669153286
 MonoBehaviour:
@@ -6098,6 +6083,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dice: {fileID: 1669153293}
   orderNum: 00000000000000000000000000000000
+--- !u!114 &1669153295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56dd6d2970dd374fb1e05268cd02af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childPoint: {fileID: 6301703377462696426, guid: 1ad522fb3fa902f43bf64f77dbf9298e,
+    type: 3}
+--- !u!114 &1669153296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477659a25e1c964458b2c470d80f884e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentPoint: {fileID: 3963085190805560878, guid: 51f003557a4f09245b710312b67f1fea,
+    type: 3}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Point
 {
@@ -8,16 +7,15 @@ namespace Catan.Scripts.Point
     [System.Serializable]
     public class PointParentBehavior : MonoBehaviour
     {
-        [SerializeField] public int pointNumber;
-        [SerializeField] GameObject poimtObject;
-        [SerializeField] GameObject AdjacentPoint_0;
-        [SerializeField] GameObject AdjacentPoint_1;
-        [SerializeField] GameObject AdjacentPoint_2;
-        [SerializeField] GameObject AdjacentPoint_3;
-        [SerializeField] GameObject AdjacentPoint_4;
-        [SerializeField] GameObject AdjacentPoint_5;
-
-
+        public int pointNumber;
+        GameObject poimtObject;
+        GameObject childPoint_0;
+        GameObject childPoint_1;
+        GameObject childPoint_2;
+        GameObject childPoint_3;
+        GameObject childPoint_4;
+        GameObject childPoint_5;
+        public TerrainType terrainType;
     }
 
 }
