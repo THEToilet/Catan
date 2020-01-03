@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Catan.Scripts.Generation;
+﻿using Catan.Scripts.Generation;
 using UnityEngine;
-using UniRx.Async;
-using UniRx.Async.Triggers;
-using UniRx;
 using Catan.Scripts.Player;
+using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Manager
 {
@@ -17,22 +13,26 @@ namespace Catan.Scripts.Manager
         public PlayerGeneration playerGeneration;
         public OrderDetermining orderDetermining;
         public ProgressStateManeger progressStateManeger;
-
         public PointChildrenGeneration pointChildrenGeneration;
         public PointParentGeneration pointParentGeneration;
         public PlayerTurn playerTurn;
+        public PointChildrenRelevanceSetting pointChildrenRelevanceSetting;
+        public PointParentRelevanceSetting pointParentRelevanceSetting;
 
         public async void Excute()
         {
-            pointChildrenGeneration.Generate();
-            pointParentGeneration.Generate();
+            pointChildrenGeneration.Generate();  // 子の点生成
+            pointParentGeneration.Generate();  // 親の点生成
+            pointChildrenRelevanceSetting.Allocation(); // この点同士の連結設定
+            pointParentRelevanceSetting.Allocation(); // 親がもつ子の点の設定
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide(); // 順番決定
             playerTurn.playerIds = orderDetermining.GetOrder(); // 順番取得
             await playerTurn.DescendingOrderTurnState(); //　初期配置降順
             await playerTurn.AscendingOrderTurnState(); // 初期配置昇順
-            progressStateManeger._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
+            progressStateManeger._currentProgressState.
+                SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
         }
     }
 

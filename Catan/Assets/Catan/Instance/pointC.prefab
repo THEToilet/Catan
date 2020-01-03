@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2050398637511594447}
   - component: {fileID: 5713084244010020150}
   - component: {fileID: 401991208490790040}
+  - component: {fileID: 5621604854544892867}
   m_Layer: 0
   m_Name: pointC
   m_TagString: Untagged
@@ -93,7 +94,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointNumber: 0
-  poimtObject: {fileID: 0}
   AdjacentPoint_0: {fileID: 0}
   AdjacentPoint_1: {fileID: 0}
   AdjacentPoint_2: {fileID: 0}
+--- !u!65 &5621604854544892867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301703377462696426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9709234, y: 0.11490167, z: 1.9709234}
+  m_Center: {x: 0, y: 0.08972812, z: -0.000000029802322}

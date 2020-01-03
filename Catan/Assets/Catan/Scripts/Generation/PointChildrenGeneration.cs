@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Generation
 {
@@ -9,7 +10,7 @@ namespace Catan.Scripts.Generation
     {
         [SerializeField] GameObject childPoint;
         Vector3[] childPoints = new Vector3[]{
-            new Vector3(-5,0,0),            // 0
+            new Vector3(-5f,0,0),            // 0
             new Vector3(-2.5f,0,-5f),       // 1
             new Vector3(2.5f,0,-5f),        // 2
             new Vector3(5f,0,0),            // 3
@@ -27,7 +28,7 @@ namespace Catan.Scripts.Generation
             new Vector3(2.5f,0,-25f),       // 15
             new Vector3(-2.5f,0,-25f),      // 16
             new Vector3(-5f,0,-20f),        // 17
-            new Vector3(5f,0,-20f),         // 18
+            new Vector3(5f,0,20f),          // 18
             new Vector3(2.5f,0,25f),        // 19
             new Vector3(-2.5f,0,25f),       // 20
             new Vector3(-5f,0,20f),         // 21
@@ -53,9 +54,9 @@ namespace Catan.Scripts.Generation
             new Vector3(-20f,0,-10f),       // 41
             new Vector3(-17.5f,0,-5f),      // 42
             new Vector3(-20f,0,0),          // 43
-            new Vector3(-17.5f,0,5f),        // 44
+            new Vector3(-17.5f,0,5f),       // 44
             new Vector3(-20f,0,10f),        // 45
-            new Vector3(-17.5f,15f),        // 46
+            new Vector3(-17.5f,0,15f),      // 46
             new Vector3(17.5f,0,-15f),      // 47
             new Vector3(20f,0,-10f),        // 48
             new Vector3(17.5f,0,-5f),       // 49
@@ -65,13 +66,16 @@ namespace Catan.Scripts.Generation
             new Vector3(17.5f,0,15f),       // 53
         };
 
+        public List<GameObject> childrenPointGameObjects = new List<GameObject>();
+
         public void Generate()
         {
             GameObject tmpGameObject;
             for (int i = 0; i < childPoints.Length; i++)
             {
                 tmpGameObject = GameObject.Instantiate(childPoint, childPoints[i], Quaternion.identity);
-                tmpGameObject.name = "PointChild" + i;
+                tmpGameObject.name = "PointChild_" + i;
+                childrenPointGameObjects.Add(tmpGameObject);
             }
         }
     }

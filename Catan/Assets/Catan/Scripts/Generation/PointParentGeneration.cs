@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Generation
@@ -8,6 +7,7 @@ namespace Catan.Scripts.Generation
     public class PointParentGeneration : MonoBehaviour
     {
         [SerializeField] GameObject parentPoint;
+        public List<GameObject> parentPointObjects = new List<GameObject>();
         Vector3[] parentPoints = new Vector3[]{
             new Vector3(0,0,0),                // 0
             new Vector3(0,0,-10f),             // 1
@@ -36,7 +36,9 @@ namespace Catan.Scripts.Generation
             for (int i = 0; i < parentPoints.Length; i++)
             {
                 tmpGameObject = GameObject.Instantiate(parentPoint, parentPoints[i], Quaternion.identity);
-                tmpGameObject.name = "PointParent" + i;
+                tmpGameObject.name = "PointParent_" + i;
+                parentPointObjects.Add(tmpGameObject);
+
             }
         }
     }

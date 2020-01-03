@@ -1,24 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Catan.Scripts.Point
 {
-    // [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-    [System.Serializable]
     public class PointChildrenBehavior : MonoBehaviour
     {
         [SerializeField] public int pointNumber;
-        [SerializeField] GameObject poimtObject;
-        [SerializeField] GameObject AdjacentPoint_0;
-        [SerializeField] GameObject AdjacentPoint_1;
-        [SerializeField] GameObject AdjacentPoint_2;
-
+        public GameObject AdjacentPoint_0;
+        public GameObject AdjacentPoint_1;
+        public GameObject AdjacentPoint_2;
         GameObject parent;
+        GameObject terriory;
 
-        void Start()
-        {
-
+        public bool hasTerritory(){
+            return false;
         }
     }
 

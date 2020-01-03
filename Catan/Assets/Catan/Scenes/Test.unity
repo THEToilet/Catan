@@ -3697,7 +3697,6 @@ GameObject:
   - component: {fileID: 870925632}
   - component: {fileID: 870925631}
   - component: {fileID: 870925630}
-  - component: {fileID: 870925629}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3705,20 +3704,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &870925629
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870925628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &870925630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5908,6 +5893,8 @@ GameObject:
   - component: {fileID: 1669153287}
   - component: {fileID: 1669153284}
   - component: {fileID: 1669153285}
+  - component: {fileID: 1669153298}
+  - component: {fileID: 1669153297}
   - component: {fileID: 1669153296}
   - component: {fileID: 1669153295}
   - component: {fileID: 1669153293}
@@ -5959,6 +5946,8 @@ MonoBehaviour:
   pointChildrenGeneration: {fileID: 1669153295}
   pointParentGeneration: {fileID: 1669153296}
   playerTurn: {fileID: 1669153291}
+  pointChildrenRelevanceSetting: {fileID: 1669153297}
+  pointParentRelevanceSetting: {fileID: 1669153298}
 --- !u!114 &1669153286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6003,6 +5992,7 @@ MonoBehaviour:
   Pasture: {fileID: 5026640733993945387, guid: 60f1ce29ec069204992020744c09288d, type: 3}
   Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
   Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632, type: 3}
+  pointParentGeneration: {fileID: 1669153296}
 --- !u!114 &1669153289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6097,6 +6087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childPoint: {fileID: 6301703377462696426, guid: 1ad522fb3fa902f43bf64f77dbf9298e,
     type: 3}
+  childrenPointGameObjects: []
 --- !u!114 &1669153296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6111,6 +6102,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentPoint: {fileID: 3963085190805560878, guid: 51f003557a4f09245b710312b67f1fea,
     type: 3}
+  parentPointObjects: []
+--- !u!114 &1669153297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b2d761cd374264d888920181481d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
+--- !u!114 &1669153298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8ce8e220869d645b42c29c3dcfefd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
+  pointParentGeneration: {fileID: 1669153296}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7771,6 +7790,7 @@ GameObject:
   - component: {fileID: 2096806377}
   - component: {fileID: 2096806379}
   - component: {fileID: 2096806380}
+  - component: {fileID: 2096806381}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -7841,6 +7861,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
   playerText: {fileID: 1900405604}
+--- !u!114 &2096806381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5d947b3f787fd459bfdc3dd6124275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 167422086}
 --- !u!1001 &2113399409
 PrefabInstance:
   m_ObjectHideFlags: 0
