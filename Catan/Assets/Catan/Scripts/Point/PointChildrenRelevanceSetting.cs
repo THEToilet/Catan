@@ -1,19 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Threading;
-using UniRx.Async;
-using UniRx.Async.Triggers;
-using UniRx;
+﻿using UnityEngine;
 using Catan.Scripts.Generation;
 
 namespace Catan.Scripts.Point
 {
-
     public class PointChildrenRelevanceSetting : MonoBehaviour
     {
 
         public PointChildrenGeneration pointChildrenGeneration;
+        // 隣接点
         int[][] adjacentPoint =
         {
             new[] {1, 5, 26},           // 0

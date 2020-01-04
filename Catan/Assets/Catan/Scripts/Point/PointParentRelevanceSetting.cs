@@ -1,20 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Threading;
-using UniRx.Async;
-using UniRx.Async.Triggers;
-using UniRx;
+﻿using UnityEngine;
 using Catan.Scripts.Generation;
 
 namespace Catan.Scripts.Point
 {
-
     public class PointParentRelevanceSetting : MonoBehaviour
     {
         public PointChildrenGeneration pointChildrenGeneration;
         public PointParentGeneration pointParentGeneration;
-        // それぞれの親の点が持っているこの点
+
+        // それぞれの親の点が持っている子の点
         int[][] havePoints =
         {
             new[] { 0 ,1 ,2, 3, 4, 5},          // 0

@@ -12,6 +12,7 @@ namespace Catan.Scripts.Manager
     {
 
         public PlayerId[] playerIds;
+        public PlayerMonitoring playerMonitoring;
         // ステート管理するReactiveProperty
         public ReactiveProperty<PlayerId> _currentPlayerId
             = new ReactiveProperty<PlayerId>();
@@ -23,7 +24,7 @@ namespace Catan.Scripts.Manager
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
         }
 
-        public async UniTask DescendingOrderTurnState()
+        public async UniTask DescendingOrderTurnState() //　初期配置降順
         {
             for (int i = 0; i < 4; i++)
             {
@@ -31,7 +32,7 @@ namespace Catan.Scripts.Manager
                 await TurnUniTask();
             }
         }
-        public async UniTask AscendingOrderTurnState()
+        public async UniTask AscendingOrderTurnState() // 初期配置昇順
         {
             for (int i = 3; i >= 0; i--)
             {
@@ -39,10 +40,10 @@ namespace Catan.Scripts.Manager
                 await TurnUniTask();
             }
         }
+
         /// <summary>
         /// ステート遷移するたびに処理を走らせる
         /// </summary>
-
         private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
@@ -54,19 +55,19 @@ namespace Catan.Scripts.Manager
                 {
                     case PlayerId.Player1:
                         Debug.Log(1);
-                        // Do something...
+                        playerMonitoring.Monitoring(PlayerId.Player1);
                         break;
                     case PlayerId.Player2:
                         Debug.Log(2);
-                        // Do something...
+                        playerMonitoring.Monitoring(PlayerId.Player2);
                         break;
                     case PlayerId.Player3:
                         Debug.Log(3);
-                        // Do something...
+                        playerMonitoring.Monitoring(PlayerId.Player3);
                         break;
                     case PlayerId.Player4:
                         Debug.Log(4);
-                        // Do something...
+                        playerMonitoring.Monitoring(PlayerId.Player4);
                         break;
                 }
             }
@@ -74,7 +75,7 @@ namespace Catan.Scripts.Manager
 
         async UniTask TurnUniTask()
         {
-            await UniTask.WaitUntil(() => this.isActive == true);
+            await UniTask.WaitUntil(() => this.isActive == true); // playerendボタンが押されるまで待機
             this.isActive = false;
         }
 

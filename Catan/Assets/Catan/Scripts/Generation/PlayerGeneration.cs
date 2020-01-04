@@ -27,23 +27,23 @@ namespace Catan.Scripts.Generation
                 switch (i)
                 {
                     case (0):
-                        playerCore.Initialize(PlayerId.Player1);
                         playerCore.name = "Player1";
+                        playerCore.playerId = PlayerId.Player1;
                         playerCore.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(PlayerId.Player1);
                         break;
                     case (1):
-                        playerCore.Initialize(PlayerId.Player2);
                         playerCore.name = "Player2";
+                        playerCore.playerId = PlayerId.Player2;
                         playerCore.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(PlayerId.Player2);
                         break;
                     case (2):
-                        playerCore.Initialize(PlayerId.Player3);
                         playerCore.name = "Player3";
+                        playerCore.playerId = PlayerId.Player3;
                         playerCore.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(PlayerId.Player3);
                         break;
                     case (3):
-                        playerCore.Initialize(PlayerId.Player4);
                         playerCore.name = "Player4";
+                        playerCore.playerId = PlayerId.Player4;
                         playerCore.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(PlayerId.Player4);
                         break;
                 }

@@ -7,13 +7,9 @@ namespace Catan.Scripts.Player
 
     public class PlayerCore : MonoBehaviour
     {
-        [SerializeField] private PlayerId playerId;
+        [SerializeField] public PlayerId playerId;
         [SerializeField] private Belongings _belongings;
+        public int playerScore;
 
-
-        public void Initialize(PlayerId _playerId)
-        {
-            playerId = _playerId;
-        }
     }
 }

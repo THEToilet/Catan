@@ -8,14 +8,9 @@ namespace Catan.Scripts.Manager
     {
         public PlayerTurn playerTurn;
         public ProgressStateManeger progressStateManeger;
-
-        void Start()
-        {
-
-        }
         public void Excute()
         {
-            //playerTurn.DescendingOrderTurnState();
+            // TODO ここでplayerTurnをそれぞれのプレイヤーのスコアが10以上になるまで回す
             progressStateManeger._currentProgressState.SetValueAndForceNotify(ProgressState.Finished);
         }
     }

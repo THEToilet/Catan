@@ -50,8 +50,10 @@ namespace Catan.Scripts.Manager
                         battleManeger.Excute();
                         break;
                     case ProgressState.Finished:
+                        Debug.Log("Finished");
                         break;
                     case ProgressState.Result:
+                        Debug.Log("Result");
                         break;
                 }
             }
