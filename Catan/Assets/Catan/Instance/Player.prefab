@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   _belongings: {fileID: -4890443960719522926}
-  Camera: {fileID: 5037143389463352636, guid: 9ea6268dfaa647848b075f121a5e4c68, type: 3}
+  playerScore: 0
 --- !u!114 &-4890443960719522926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,8 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807787e9a472c1c489eed69387f02964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
   cards: []
-  stype: 0
   scards: []
   territories: []

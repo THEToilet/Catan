@@ -13,7 +13,7 @@ namespace Catan.Scripts.Player
        // [SerializeField] private SpecialCardType stype;
         public List<CardEntity> cards = new List<CardEntity>();
         public List<SpecialCardEntity> scards = new List<SpecialCardEntity>();
-        public List<TerritoryEntity> territories = new List<TerritoryEntity>();
+        public List<GameObject> territories = new List<GameObject>();
 
     }
 }

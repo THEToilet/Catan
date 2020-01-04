@@ -10,10 +10,8 @@ namespace Catan.Scripts.Point
         public GameObject AdjacentPoint_2;
         GameObject parent;
         GameObject terriory;
+        public bool hasTerritory = false;
 
-        public bool hasTerritory(){
-            return false;
-        }
     }
 
 }
