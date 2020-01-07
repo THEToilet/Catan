@@ -5944,7 +5944,6 @@ GameObject:
   - component: {fileID: 1669153297}
   - component: {fileID: 1669153296}
   - component: {fileID: 1669153295}
-  - component: {fileID: 1669153293}
   - component: {fileID: 1669153294}
   - component: {fileID: 1669153289}
   - component: {fileID: 1669153288}
@@ -6098,18 +6097,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
   progressStateManeger: {fileID: 1669153284}
---- !u!114 &1669153293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669153283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d91e5a89b214d84ba8c4867cf2d0cb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1669153294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6122,7 +6109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a90d72129583364a9c8b8786ec8837f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 1669153293}
   orderNum: 00000000000000000000000000000000
 --- !u!114 &1669153295
 MonoBehaviour:

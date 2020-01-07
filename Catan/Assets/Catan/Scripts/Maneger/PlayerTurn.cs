@@ -7,15 +7,12 @@ using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Manager
 {
-
     public class PlayerTurn : MonoBehaviour
     {
-
         public PlayerId[] playerIds;
         public PlayerMonitoring playerMonitoring;
         // ステート管理するReactiveProperty
-        public ReactiveProperty<PlayerId> _currentPlayerId
-            = new ReactiveProperty<PlayerId>();
+        public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
 
         public bool isActive = false;
 
@@ -39,6 +36,11 @@ namespace Catan.Scripts.Manager
                 _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
                 await TurnUniTask();
             }
+        }
+
+        public async UniTask NormalTurnState()  // 通常のターン時はこれを使う
+        {
+            await VictoryPersonExists();
         }
 
         /// <summary>
@@ -73,10 +75,15 @@ namespace Catan.Scripts.Manager
             }
         }
 
-        async UniTask TurnUniTask()
+        async UniTask TurnUniTask() // ここを初期化用として路と陣地がおかれたらに変更する
         {
             await UniTask.WaitUntil(() => this.isActive == true); // playerendボタンが押されるまで待機
             this.isActive = false;
+        }
+
+        async UniTask VictoryPersonExists()  // 優勝者がいるまでまわす
+        {
+            await UniTask.WaitUntil(() => isActive == true);
         }
 
     }

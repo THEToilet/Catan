@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Catan.Scripts.Player
 {
-    public class PlayerIdExtensions
+    public static class PlayerIdExtensions
     {
 
         public static Color ToColor(PlayerId id)

@@ -8,7 +8,6 @@ namespace Catan.Scripts.Player
 {
     public class OrderDetermining : MonoBehaviour
     {
-        public Dice dice;
         public int[] orderNum = new int[4];
 
         private PlayerId[] playerNames = new PlayerId[] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
@@ -20,7 +19,7 @@ namespace Catan.Scripts.Player
         // 取得した値をソート
         public void OrderDecide()
         {
-            orderNum = dice.RollTwiceDice();
+            orderNum = Dice.RollTwiceDice();
             for (int i = 0; i < 4; i++)
             {
                 dic.Add(playerNames[i], orderNum[i]);
