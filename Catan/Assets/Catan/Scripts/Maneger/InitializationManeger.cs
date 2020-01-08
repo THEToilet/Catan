@@ -15,6 +15,7 @@ namespace Catan.Scripts.Manager
         public ProgressStateManeger progressStateManeger;
         public PointChildrenGeneration pointChildrenGeneration;
         public PointParentGeneration pointParentGeneration;
+        public RoadGeneration roadGeneration;
         public PlayerTurn playerTurn;
         public PointChildrenRelevanceSetting pointChildrenRelevanceSetting;
         public PointParentRelevanceSetting pointParentRelevanceSetting;
@@ -25,6 +26,7 @@ namespace Catan.Scripts.Manager
             pointParentGeneration.Generate();  // 親の点生成
             pointChildrenRelevanceSetting.Allocation(); // この点同士の連結設定
             pointParentRelevanceSetting.Allocation(); // 親がもつ子の点の設定
+            roadGeneration.Generate();  // RoadBase生成
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide(); // 順番決定
