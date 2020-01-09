@@ -10,14 +10,15 @@ namespace Catan.Scripts.Manager
 {
     public class DistributeCardManeger : MonoBehaviour
     {
+        CardEntity card;
         // Start is called before the first frame update
         void Start()
         {
 
         }
-        public void Distribute(int diceNum)
+        public CardEntity Distribute(int diceNum)
         {
-
+            return card;
         }
     }
 }

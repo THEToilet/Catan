@@ -5947,11 +5947,12 @@ GameObject:
   - component: {fileID: 1669153294}
   - component: {fileID: 1669153289}
   - component: {fileID: 1669153288}
+  - component: {fileID: 1669153302}
   - component: {fileID: 1669153290}
   - component: {fileID: 1669153293}
   - component: {fileID: 1669153292}
-  - component: {fileID: 1669153291}
   - component: {fileID: 1669153301}
+  - component: {fileID: 1669153291}
   - component: {fileID: 1669153286}
   - component: {fileID: 1669153299}
   - component: {fileID: 1669153300}
@@ -5999,6 +6000,7 @@ MonoBehaviour:
   playerTurn: {fileID: 1669153291}
   pointChildrenRelevanceSetting: {fileID: 1669153297}
   pointParentRelevanceSetting: {fileID: 1669153298}
+  terrainNumberGeneration: {fileID: 1669153302}
 --- !u!114 &1669153286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6044,6 +6046,7 @@ MonoBehaviour:
   Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
   Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632, type: 3}
   pointParentGeneration: {fileID: 1669153296}
+  teritorryObjectCollections: []
 --- !u!114 &1669153289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6226,11 +6229,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1669153283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 883bec8d6ebb1b447b08bda588d553d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b3c25acdc42eea34483a7550b14c093b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   territoryGeneration: {fileID: 1669153300}
   playerTurn: {fileID: 1669153291}
+--- !u!114 &1669153302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eeb389e8bc5c514d82ab77328394379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainGeneration: {fileID: 1669153288}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0

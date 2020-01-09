@@ -15,7 +15,7 @@ using Catan.Scripts.Terrain;
 public class ObjectClickPresenter : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-    public TerrainGenerationDecision terrainGenerationDecision;
+    public TerritoryGenerationDecision terrainGenerationDecision;
     private RaycastHit hit; //レイキャストが当たったものを取得する入れ物
     GameObject getedGameObject;
     // TODO : この機能をUniRxで実装する

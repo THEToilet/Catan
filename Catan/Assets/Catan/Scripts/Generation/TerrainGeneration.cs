@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using Catan.Scripts.Point;
 using Catan.Scripts.Terrain;
 
@@ -15,6 +16,8 @@ namespace Catan.Scripts.Generation
         [SerializeField] private GameObject Desert;
         private GameObject tmpGameObject;
         public PointParentGeneration pointParentGeneration;
+
+        public List<GameObject> teritorryObjectCollections = new List<GameObject>();
 
         // Desert : 1 = 0, Mine : 3 = 1, Hill : 3 = 2, Pasture : 4 = 3, Field : 4 = 4, Forest : 4 = 5    --- Total 19
         public void Create(int[] terrainPointValue)
@@ -56,6 +59,7 @@ namespace Catan.Scripts.Generation
                         point.GetComponent<PointParentBehavior>().terrainType = TerrainType.Forest;
                         break;
                 }
+                teritorryObjectCollections.Add(tmpGameObject);
             }
         }
     }

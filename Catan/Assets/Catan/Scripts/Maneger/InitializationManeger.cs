@@ -19,6 +19,7 @@ namespace Catan.Scripts.Manager
         public PlayerTurn playerTurn;
         public PointChildrenRelevanceSetting pointChildrenRelevanceSetting;
         public PointParentRelevanceSetting pointParentRelevanceSetting;
+        public TerrainNumberGeneration terrainNumberGeneration;
 
         public async void Excute()
         {
@@ -28,6 +29,7 @@ namespace Catan.Scripts.Manager
             pointParentRelevanceSetting.Allocation(); // 親がもつ子の点の設定
             roadGeneration.Generate();  // RoadBase生成
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
+            terrainNumberGeneration.Distribution(); // 数字トークン生成
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide(); // 順番決定
             playerTurn.playerIds = orderDetermining.GetOrder(); // プレイヤーの順番取得

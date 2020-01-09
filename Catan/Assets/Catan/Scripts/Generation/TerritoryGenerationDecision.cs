@@ -6,7 +6,7 @@ using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Generation
 {
-    public class TerrainGenerationDecision : MonoBehaviour
+    public class TerritoryGenerationDecision : MonoBehaviour
     {
         public TerritoryGeneration territoryGeneration;
         public PlayerTurn playerTurn;
