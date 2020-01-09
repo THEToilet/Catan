@@ -10,15 +10,14 @@ using Catan.Scripts.Generation;
 using Catan.Scripts.Player;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Point;
+using Catan.Scripts.Terrain;
 
 public class ObjectClickPresenter : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-    public TerritoryGeneration territoryGeneration;
-    public PlayerTurn playerTurn;
+    public TerrainGenerationDecision terrainGenerationDecision;
     private RaycastHit hit; //レイキャストが当たったものを取得する入れ物
-    GameObject gameObjectsa;
-
+    GameObject getedGameObject;
     // TODO : この機能をUniRxで実装する
     void Start()
     {
@@ -33,20 +32,9 @@ public class ObjectClickPresenter : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))  //マウスのポジションからRayを投げて何かに当たったらhitに入れる
             {
-                gameObjectsa = hit.collider.gameObject; //オブジェクト名を取得して変数に入れる
-                Debug.Log(gameObjectsa.name); //オブジェクト名をコンソールに表示
-                bool has = gameObjectsa.GetComponent<PointChildrenBehavior>().hasTerritory;
-                if (!has) // オブジェクトがおいてあったら置かない
-                {
-                    Debug.Log("置きます");
-                    gameObjectsa.GetComponent<PointChildrenBehavior>().hasTerritory = true;
-                    territoryGeneration.Generate(gameObjectsa.transform.position, TerritoryType.Settlement, playerTurn._currentPlayerId.Value);
-                }
-                else
-                {
-                    Debug.Log("もうおいてあります");
-                }
-
+                getedGameObject = hit.collider.gameObject; //オブジェクト名を取得して変数に入れる
+                Debug.Log(getedGameObject.name); //オブジェクト名をコンソールに表示
+                terrainGenerationDecision.GeneratingInstruction(getedGameObject); // 地形生成命令本部
             }
         }
     }

@@ -24,7 +24,7 @@ namespace Catan.Scripts.Generation
             {
                 case (TerritoryType.Road):
                     tmpGameObject.GetComponent<Belongings>().territories.Add(
-                       tmp = GameObject.Instantiate(Road, position, Quaternion.identity)
+                       tmp = GameObject.Instantiate(Road, new Vector3(position.x, 2f, position.z), Quaternion.Euler(0,90,0))
                     );
                     break;
                 case (TerritoryType.Settlement):
@@ -38,6 +38,7 @@ namespace Catan.Scripts.Generation
                     );
                     break;
             }
+
             tmp.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(playerId); //　生成したオブジェクトに色付ける
         }
 

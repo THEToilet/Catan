@@ -5951,6 +5951,7 @@ GameObject:
   - component: {fileID: 1669153293}
   - component: {fileID: 1669153292}
   - component: {fileID: 1669153291}
+  - component: {fileID: 1669153301}
   - component: {fileID: 1669153286}
   - component: {fileID: 1669153299}
   - component: {fileID: 1669153300}
@@ -6216,6 +6217,20 @@ MonoBehaviour:
     type: 3}
   City: {fileID: 7653112566406791383, guid: df173d8ffd90aa74a864d68942c96db3, type: 3}
   objectClickPresenter: {fileID: 2096806381}
+--- !u!114 &1669153301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883bec8d6ebb1b447b08bda588d553d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  territoryGeneration: {fileID: 1669153300}
+  playerTurn: {fileID: 1669153291}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7960,8 +7975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 167422086}
-  territoryGeneration: {fileID: 1669153300}
-  playerTurn: {fileID: 1669153291}
+  terrainGenerationDecision: {fileID: 1669153301}
 --- !u!1001 &2113399409
 PrefabInstance:
   m_ObjectHideFlags: 0
