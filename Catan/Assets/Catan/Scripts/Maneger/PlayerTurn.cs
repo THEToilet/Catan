@@ -38,6 +38,15 @@ namespace Catan.Scripts.Manager
       }
     }
 
+    public async void NormalOrderTurnState() // 通常のターンはこれを使う
+    {
+      for (int i = 0; i < 4; i++)
+      {
+        _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
+        await TurnUniTask();
+      }
+    }
+
 
 
     /// <summary>
