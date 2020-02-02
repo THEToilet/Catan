@@ -6103,6 +6103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
   progressStateManeger: {fileID: 1669153284}
+  toPleyerObject: {fileID: 35605534}
+  winner: {fileID: 0}
 --- !u!114 &1669153293
 MonoBehaviour:
   m_ObjectHideFlags: 0
