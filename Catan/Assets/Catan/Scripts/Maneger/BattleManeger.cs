@@ -17,27 +17,29 @@ namespace Catan.Scripts.Manager
     public ToPleyerObject toPleyerObject;
     public GameObject winner;
 
+    public ReactiveProperty<bool> winnerExist = new ReactiveProperty<bool>(false);
+
+    public ReactiveProperty<int> winnerScore = new ReactiveProperty<int>(0);
+
     private PlayerId[] playerIds = { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
-
-    private ReactiveProperty<int> winnerScore = new ReactiveProperty<int>(0);
-
     public void Start()
     {
       // TODO このクラスでやりたかったことをRxでやる
       winnerScore.ObserveEveryValueChanged(_ => _.Value)
-            .Where(_ => _ >= 10)
+            .Where(x => x >= 10)
             .Subscribe(_ =>
                 progressStateManeger._currentProgressState.SetValueAndForceNotify(ProgressState.Finished)
             );
-
     }
+
     public void Update()
     {
       VictoryPersonExists(); // playerに10点以上とった人がいるか判定
     }
-    public void Excute()
+    public async void Excute()
     {
-      playerTurn.NormalOrderTurnState(); // ターン進行
+      await playerTurn.DescendingOrderTurnState(); // ターン進行
+      this.Excute();  // 繰り返し
     }
     private void VictoryPersonExists()  // 優勝者がいるまでまわす
     {
@@ -45,8 +47,7 @@ namespace Catan.Scripts.Manager
       {
         GameObject tmpGameObject = toPleyerObject.ToPlayer(playerIds[i]);
         // ここでplayerTurnをそれぞれのプレイヤーのスコアが10以上になるまで回す
-        winnerScore.Value = tmpGameObject.GetComponent<PlayerCore>().playerScore;
-        winner = tmpGameObject;
+        winnerScore = tmpGameObject.GetComponent<PlayerCore>().playerScore;
       }
     }
   }
