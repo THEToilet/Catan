@@ -21068,6 +21068,12 @@ MonoBehaviour:
   m_Text: "\u30AD\u30E3\u30F3\u30BB\u30EB"
 --- !u!222 &1946518816
 CanvasRenderer:
+  playerTurn: {fileID: 1669153291}
+  progressStateManeger: {fileID: 1669153284}
+  toPleyerObject: {fileID: 35605534}
+  winner: {fileID: 0}
+--- !u!114 &1669153293
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
