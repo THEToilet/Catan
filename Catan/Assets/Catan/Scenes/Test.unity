@@ -17819,6 +17819,7 @@ GameObject:
   - component: {fileID: 1669153284}
   - component: {fileID: 1669153285}
   - component: {fileID: 1669153298}
+  - component: {fileID: 1669153303}
   - component: {fileID: 1669153297}
   - component: {fileID: 1669153296}
   - component: {fileID: 1669153295}
@@ -17827,7 +17828,6 @@ GameObject:
   - component: {fileID: 1669153288}
   - component: {fileID: 1669153302}
   - component: {fileID: 1669153290}
-  - component: {fileID: 1669153293}
   - component: {fileID: 1669153292}
   - component: {fileID: 1669153301}
   - component: {fileID: 1669153291}
@@ -17874,7 +17874,7 @@ MonoBehaviour:
   progressStateManeger: {fileID: 1669153284}
   pointChildrenGeneration: {fileID: 1669153295}
   pointParentGeneration: {fileID: 1669153296}
-  roadGeneration: {fileID: 1669153293}
+  roadGeneration: {fileID: 1669153303}
   playerTurn: {fileID: 1669153291}
   pointChildrenRelevanceSetting: {fileID: 1669153297}
   pointParentRelevanceSetting: {fileID: 1669153298}
@@ -17981,21 +17981,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
   progressStateManeger: {fileID: 1669153284}
+  toPleyerObject: {fileID: 35605534}
+  winner: {fileID: 0}
 --- !u!114 &1669153293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669153283}
+  m_GameObject: {fileID: 1946518813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1034a409cac48ef4a9379002b12aa99a, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  roadBase: {fileID: 5159556551954786097, guid: 6d21fa47e8e786e43b80d47c425028b5,
-    type: 3}
-  roads: []
 --- !u!114 &1669153294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18125,6 +18124,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainGeneration: {fileID: 1669153288}
+--- !u!114 &1669153303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1034a409cac48ef4a9379002b12aa99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadBase: {fileID: 5159556551954786097, guid: 6d21fa47e8e786e43b80d47c425028b5,
+    type: 3}
+  roads: []
 --- !u!1 &1669473338
 GameObject:
   m_ObjectHideFlags: 0
@@ -21008,6 +21022,7 @@ GameObject:
   - component: {fileID: 1946518814}
   - component: {fileID: 1946518816}
   - component: {fileID: 1946518815}
+  - component: {fileID: 1669153293}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -21068,12 +21083,6 @@ MonoBehaviour:
   m_Text: "\u30AD\u30E3\u30F3\u30BB\u30EB"
 --- !u!222 &1946518816
 CanvasRenderer:
-  playerTurn: {fileID: 1669153291}
-  progressStateManeger: {fileID: 1669153284}
-  toPleyerObject: {fileID: 35605534}
-  winner: {fileID: 0}
---- !u!114 &1669153293
-MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
