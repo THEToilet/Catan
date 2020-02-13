@@ -8,12 +8,12 @@ public class PlayerTurnUI : MonoBehaviour
 {
     public GameObject turnPanel;
     public Text playerText;
-    int turn = 0;
-    float time = 0;
-    bool turnFlag = false;
+    private float time = 0;
+    private bool turnFlag = false;
 
     public void DisplayPlayerName(PlayerId _playerId)
     {
+        this.TurnFlag();
         playerText.color = PlayerIdExtensions.ToColor(_playerId);
         switch (_playerId)
         {
@@ -40,12 +40,6 @@ public class PlayerTurnUI : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TurnFlag();
-            PlayerName();
-        }*/
 
         if (turnFlag == true)
         {

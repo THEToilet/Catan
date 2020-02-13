@@ -17,11 +17,13 @@ namespace Catan.Scripts.Presenter
 
         [SerializeField] private Button negotiationButton;
 
+        [SerializeField] private Button drawCardButton;
+
         public GameStateManeger gameStateManeger;
         public PlayerTurn playerTurn;
 
-        private bool ownPlayer = false;
-        private bool otherPlayer = false;
+        private bool isOwnPlayer = false;
+        private bool isOtherPlayer = false;
         private bool action = false;
         private bool build = false;
         private bool card = false;
@@ -43,14 +45,22 @@ namespace Catan.Scripts.Presenter
         void Start()
         {
 
-            constructionButton.OnClickAsObservable()
+            constructionButton.OnClickAsObservable()  // 建設する
             .Subscribe(_ =>
             {
                 gameStateManeger._currentGameState
                     .SetValueAndForceNotify(GameState.Construction);
             });
 
-            aboutCardButton.OnClickAsObservable()
+            aboutCardButton.OnClickAsObservable()  // カードを使う　
+            .Subscribe(_ =>
+            {
+                gameStateManeger._currentGameState
+                    .SetValueAndForceNotify(GameState.AboutCard);
+            });
+
+
+            drawCardButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
                 gameStateManeger._currentGameState
@@ -81,19 +91,19 @@ namespace Catan.Scripts.Presenter
 
         public void OwnPlayer()
         {
-            if (ownPlayer == false)
+            if (!isOwnPlayer)
             {
-                ownPlayer = true;
+                isOwnPlayer = true;
                 ownPlayerPanel.SetActive(true);
 
-                if (otherPlayer == false && action == false)
+                if (!isOtherPlayer && !action)
                 {
                     turnPlayer.transform.Translate(-400, 0, 0);
                 }
 
                 else
                 {
-                    otherPlayer = false;
+                    isOtherPlayer = false;
                     action = false;
                     otherPlayerPanel.SetActive(false);
                     actionPanel.SetActive(false);
@@ -101,7 +111,7 @@ namespace Catan.Scripts.Presenter
             }
             else
             {
-                ownPlayer = false;
+                isOwnPlayer = false;
                 turnPlayer.transform.Translate(400, 0, 0);
                 ownPlayerPanel.SetActive(false);
             }
@@ -109,19 +119,19 @@ namespace Catan.Scripts.Presenter
 
         public void OtherPlayer()
         {
-            if (otherPlayer == false)
+            if (!isOtherPlayer)
             {
-                otherPlayer = true;
+                isOtherPlayer = true;
                 otherPlayerPanel.SetActive(true);
 
-                if (ownPlayer == false && action == false)
+                if (!isOwnPlayer && !action)
                 {
                     turnPlayer.transform.Translate(-400, 0, 0);
                 }
 
                 else
                 {
-                    ownPlayer = false;
+                    isOwnPlayer = false;
                     action = false;
                     actionPanel.SetActive(false);
                     ownPlayerPanel.SetActive(false);
@@ -129,7 +139,7 @@ namespace Catan.Scripts.Presenter
             }
             else
             {
-                otherPlayer = false;
+                isOtherPlayer = false;
                 turnPlayer.transform.Translate(400, 0, 0);
                 otherPlayerPanel.SetActive(false);
             }
@@ -137,20 +147,20 @@ namespace Catan.Scripts.Presenter
 
         public void Action()
         {
-            if (action == false)
+            if (!action)
             {
                 action = true;
                 actionPanel.SetActive(true);
 
-                if (otherPlayer == false && ownPlayer == false)
+                if (!isOtherPlayer && !isOwnPlayer)
                 {
                     turnPlayer.transform.Translate(-400, 0, 0);
                 }
 
                 else
                 {
-                    otherPlayer = false;
-                    ownPlayer = false;
+                    isOtherPlayer = false;
+                    isOwnPlayer = false;
                     ownPlayerPanel.SetActive(false);
                     otherPlayerPanel.SetActive(false);
                 }
@@ -191,7 +201,7 @@ namespace Catan.Scripts.Presenter
 
         public void Trade()
         {
-            if (buildPanel.activeSelf == false && cardPanel.activeSelf == false &&  negotiationPanel.activeSelf == false)
+            if (buildPanel.activeSelf == false && cardPanel.activeSelf == false && negotiationPanel.activeSelf == false)
             {
                 tradePanel.SetActive(true);
             }
