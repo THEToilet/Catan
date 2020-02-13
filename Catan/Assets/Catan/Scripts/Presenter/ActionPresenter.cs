@@ -7,10 +7,6 @@ namespace Catan.Scripts.Presenter
 {
     public class ActionPresenter : MonoBehaviour
     {
-        [SerializeField] private Button spreadActionButton;
-
-        [SerializeField] private Button closeActionButton;
-
         [SerializeField] private Button turnEndButton;
 
         [SerializeField] private Button constructionButton;
@@ -24,13 +20,13 @@ namespace Catan.Scripts.Presenter
         public GameStateManeger gameStateManeger;
         public PlayerTurn playerTurn;
 
-        public bool ownPlayer = false;
-        public bool otherPlayer = false;
-        public bool action = false;
-        public bool build = false;
-        public bool card = false;
-        public bool trade = false;
-        public bool negotiation = false;
+        private bool ownPlayer = false;
+        private bool otherPlayer = false;
+        private bool action = false;
+        private bool build = false;
+        private bool card = false;
+        private bool trade = false;
+        private bool negotiation = false;
 
         public GameObject turnPlayer;
         public GameObject ownPlayerPanel;
@@ -46,21 +42,6 @@ namespace Catan.Scripts.Presenter
         // Start is called before the first frame update
         void Start()
         {
-            spreadActionButton.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    spreadActionButton.interactable = false;
-                    closeActionButton.interactable = true;
-
-                });
-
-            closeActionButton.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    closeActionButton.interactable = false;
-                    spreadActionButton.interactable = true;
-
-                });
 
             constructionButton.OnClickAsObservable()
             .Subscribe(_ =>

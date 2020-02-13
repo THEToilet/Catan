@@ -13,8 +13,9 @@ namespace Catan.Scripts.Presenter
 
         public Image diceImage1;
         public Image diceImage2;
-        private int diceNum1=1;
-        private int diceNum2=1;
+        public bool isDiceSpin = false;
+        private int diceNum1 = 1;
+        private int diceNum2 = 1;
         private bool isDice = false;
         public Sprite[] diceNumSprite = new Sprite[6];
 
@@ -39,6 +40,7 @@ namespace Catan.Scripts.Presenter
                 isDice = false;
                 diceImage1.GetComponent<Image>().sprite = diceNumSprite[diceNum1 - 1];
                 diceImage2.GetComponent<Image>().sprite = diceNumSprite[diceNum2 - 1];
+                isDiceSpin = true;
             }
 
             //回している間のさいころの目の表示

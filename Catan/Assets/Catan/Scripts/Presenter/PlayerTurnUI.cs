@@ -2,60 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Catan.Scripts.Player;
 
 public class PlayerTurnUI : MonoBehaviour
 {
     public GameObject turnPanel;
     public Text playerText;
-    int turn=0;
+    int turn = 0;
     float time = 0;
     bool turnFlag = false;
 
-    void PlayerName()
+    public void DisplayPlayerName(PlayerId _playerId)
     {
-        if (turn == 0)
+        playerText.color = PlayerIdExtensions.ToColor(_playerId);
+        switch (_playerId)
         {
-            playerText.text = "player1";
-            playerText.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
-        }
-        else if (turn == 1)
-        {
-            playerText.text = "player2";
-            playerText.color = new Color(0f / 255f, 255f / 255f, 0f / 255f);
-        }
-        else if (turn == 2)
-        {
-            playerText.text = "player3";
-            playerText.color = new Color(0f / 255f, 0f / 255f, 255f / 255f);
-        }
-        else if (turn == 3)
-        {
-            playerText.text = "player4";
-            playerText.color = new Color(255f / 255f, 255f / 255f, 0f / 255f);
-        }
-        if (turn < 3)
-        {
-            turn++;
-        }
-        else
-        {
-            turn = 0;
+            case PlayerId.Player1:
+                playerText.text = "player1";
+                break;
+            case PlayerId.Player2:
+                playerText.text = "player2";
+                break;
+            case PlayerId.Player3:
+                playerText.text = "player3";
+                break;
+            case PlayerId.Player4:
+                playerText.text = "player4";
+                break;
         }
     }
 
-    void TurnFlag()
+    private void TurnFlag()
     {
         turnFlag = true;
         turnPanel.SetActive(true);
     }
 
-    void Update()
+    private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.P))
         {
             TurnFlag();
             PlayerName();
-        }
+        }*/
 
         if (turnFlag == true)
         {
