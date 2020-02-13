@@ -31,6 +31,9 @@ namespace Catan.Scripts.Manager
                 case(PlayerId.Player4):
                     playerText.text = "Player4";
                     break;
+                default:
+                    playerText.text = "undifeined";
+                    break;
             }
         }
 

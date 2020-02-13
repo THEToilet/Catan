@@ -4,12 +4,15 @@ using UniRx;
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
+using Catan.Scripts.Presenter;
 
 namespace Catan.Scripts.Manager
 {
   public class PlayerTurn : MonoBehaviour
   {
     public PlayerId[] playerIds;
+    public PlayerTurnUI playerTurnUI;
+    public DicePresenter dicePresenter;
     public PlayerMonitoring playerMonitoring;
     // ステート管理するReactiveProperty
     public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
@@ -38,6 +41,15 @@ namespace Catan.Scripts.Manager
       }
     }
 
+    public async UniTask NormalOrderTurnState() //　初期配置降順
+    {
+      for (int i = 0; i < 4; i++)
+      {
+        _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
+        await UnitilRollDice();
+      }
+    }
+
     /// <summary>
     /// ステート遷移するたびに処理を走らせる
     /// </summary>
@@ -52,28 +64,39 @@ namespace Catan.Scripts.Manager
         {
           case PlayerId.Player1:
             Debug.Log(1);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player1);
             playerMonitoring.Monitoring(PlayerId.Player1);
             break;
           case PlayerId.Player2:
             Debug.Log(2);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player2);
             playerMonitoring.Monitoring(PlayerId.Player2);
             break;
           case PlayerId.Player3:
             Debug.Log(3);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player3);
             playerMonitoring.Monitoring(PlayerId.Player3);
             break;
           case PlayerId.Player4:
             Debug.Log(4);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player4);
             playerMonitoring.Monitoring(PlayerId.Player4);
             break;
         }
       }
     }
 
-    async UniTask TurnUniTask() // ここを初期化用として路と陣地がおかれたらに変更する
+    async UniTask TurnUniTask() // TODO : ここを初期化用として路と陣地がおかれたらに変更する(別メソッドを作る)
     {
       await UniTask.WaitUntil(() => this.isActive == true); // playerendボタンが押されるまで待機
       this.isActive = false;
+    }
+
+    async UniTask UnitilRollDice() // ここを初期化用として路と陣地がおかれたらに変更する
+    {
+      await UniTask.WaitUntil(() => dicePresenter.isDiceSpin == true); // Diceボタンが押されるまで待機
+      dicePresenter.isDiceSpin = false;
+      await TurnUniTask();
     }
 
 
