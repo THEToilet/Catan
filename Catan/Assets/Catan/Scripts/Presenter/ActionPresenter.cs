@@ -24,13 +24,13 @@ namespace Catan.Scripts.Presenter
         public GameStateManeger gameStateManeger;
         public PlayerTurn playerTurn;
 
-        public bool ownPlayer = false;
-        public bool otherPlayer = false;
-        public bool action = false;
-        public bool build = false;
-        public bool card = false;
-        public bool trade = false;
-        public bool negotiation = false;
+        private bool ownPlayer = false;
+        private bool otherPlayer = false;
+        private bool action = false;
+        private bool build = false;
+        private bool card = false;
+        private bool trade = false;
+        private bool negotiation = false;
 
         public GameObject turnPlayer;
         public GameObject ownPlayerPanel;
