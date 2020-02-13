@@ -5,7 +5,6 @@ using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Manager
 {
-
     public class InitializationManeger : MonoBehaviour
     {
         public TerrainGeneration terrainGeneration;

@@ -15407,6 +15407,12 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 188.70001, y: -48}
+  m_SizeDelta: {x: 56.399994, y: 47.300003}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &216350781
+=======
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
@@ -18016,6 +18022,7 @@ GameObject:
   - component: {fileID: 1669153285}
   - component: {fileID: 1669153303}
   - component: {fileID: 1669153298}
+  - component: {fileID: 1669153303}
   - component: {fileID: 1669153297}
   - component: {fileID: 1669153296}
   - component: {fileID: 1669153295}
@@ -18177,7 +18184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
   progressStateManeger: {fileID: 1669153284}
-  toPleyerObject: {fileID: 0}
+  toPleyerObject: {fileID: 35605534}
   winner: {fileID: 0}
 --- !u!114 &1669153293
 MonoBehaviour:
