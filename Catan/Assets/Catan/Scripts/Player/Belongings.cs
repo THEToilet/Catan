@@ -9,10 +9,8 @@ namespace Catan.Scripts.Player
 {
     public class Belongings : MonoBehaviour
     {
-       // [SerializeField] private CardType type;
-       // [SerializeField] private SpecialCardType stype;
-        public List<CardEntity> cards = new List<CardEntity>();
-        public List<SpecialCardEntity> scards = new List<SpecialCardEntity>();
+        public List<GameObject> cards = new List<GameObject>();
+        public List<GameObject> scards = new List<GameObject>();
         public List<GameObject> territories = new List<GameObject>();
 
     }

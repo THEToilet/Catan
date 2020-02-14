@@ -16,7 +16,7 @@ namespace Catan.Scripts.Generation
             for (int i = 0; i < NumberToken.Length; i++)
             {
                 Debug.Log(NumberToken[i]);
-                terrainGeneration.teritorryObjectCollections[i].GetComponent<TerrainBehavior>().tokenNumber = NumberToken[i];  // TerrainGameObjectのBehaviorに数字トークンを代入する
+                terrainGeneration.terrainObjectCollections[i].GetComponent<TerrainBehavior>().tokenNumber = NumberToken[i];  // TerrainGameObjectのBehaviorに数字トークンを代入する
             }
         }
     }

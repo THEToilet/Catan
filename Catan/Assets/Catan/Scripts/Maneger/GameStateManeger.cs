@@ -32,6 +32,8 @@ namespace Catan.Scripts.Manager
                 // 遷移先に合わせて処理をする
                 switch (next)
                 {
+                    // TODO: どっかの変数に現在のターンプレイヤー情報を保持しておく
+                    //  PlayerTurn._currentPlayerId　に保存しておく
                     case GameState.Construction:
                         Debug.Log("construc");
                         break;

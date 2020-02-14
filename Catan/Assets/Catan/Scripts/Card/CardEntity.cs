@@ -13,7 +13,7 @@ namespace Catan.Scripts.Card
 
     public class CardEntity : MonoBehaviour
     {
-        public CardType type { get; set; }
+        public CardType cardType;
     }
 
 }

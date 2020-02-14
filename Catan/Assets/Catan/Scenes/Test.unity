@@ -17038,7 +17038,7 @@ MonoBehaviour:
   Field: {fileID: 8242806185205640835, guid: cb91e12db8c6d9543996b2f4a2f0600a, type: 3}
   Desert: {fileID: 9187379385963164465, guid: e2cca4a05fc260940b95827e4a4b0632, type: 3}
   pointParentGeneration: {fileID: 1669153296}
-  teritorryObjectCollections: []
+  terrainObjectCollections: []
 --- !u!114 &1669153289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17081,6 +17081,8 @@ MonoBehaviour:
   playerIds: 
   playerTurnUI: {fileID: 2096806385}
   dicePresenter: {fileID: 2096806379}
+  nortificationPresenter: {fileID: 0}
+  distributeCardManeger: {fileID: 0}
   playerMonitoring: {fileID: 1669153299}
   isActive: 0
 --- !u!114 &1669153292
@@ -21621,6 +21623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RecommendText: {fileID: 1341139645}
+  dicePresenter: {fileID: 0}
 --- !u!1 &2108768905
 GameObject:
   m_ObjectHideFlags: 0

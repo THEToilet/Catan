@@ -13,9 +13,13 @@ namespace Catan.Scripts.Manager
     public PlayerId[] playerIds;
     public PlayerTurnUI playerTurnUI;
     public DicePresenter dicePresenter;
+    public NortificationPresenter nortificationPresenter;
+    public DistributeCardManeger distributeCardManeger;
     public PlayerMonitoring playerMonitoring;
     // ステート管理するReactiveProperty
     public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
+
+    public ReactiveProperty<PlayerId> _normalCurrentPlayerId = new ReactiveProperty<PlayerId>();
 
     public bool isActive = false;
 
@@ -45,13 +49,13 @@ namespace Catan.Scripts.Manager
     {
       for (int i = 0; i < 4; i++)
       {
-        _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
-        await UnitilRollDice();
+        _normalCurrentPlayerId.SetValueAndForceNotify(playerIds[i]);
+        await TurnUniTask();
       }
     }
 
     /// <summary>
-    /// ステート遷移するたびに処理を走らせる
+    /// ステート遷移するたびに処理を走らせる 初期配置で使う
     /// </summary>
     private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
     {
@@ -62,25 +66,62 @@ namespace Catan.Scripts.Manager
         // 遷移先に合わせて処理をする
         switch (next)
         {
+          // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
           case PlayerId.Player1:
             Debug.Log(1);
-            playerTurnUI.DisplayPlayerName(PlayerId.Player1);
-            playerMonitoring.Monitoring(PlayerId.Player1);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player1); // playerにターン開始を通知
             break;
           case PlayerId.Player2:
             Debug.Log(2);
             playerTurnUI.DisplayPlayerName(PlayerId.Player2);
-            playerMonitoring.Monitoring(PlayerId.Player2);
             break;
           case PlayerId.Player3:
             Debug.Log(3);
             playerTurnUI.DisplayPlayerName(PlayerId.Player3);
-            playerMonitoring.Monitoring(PlayerId.Player3);
             break;
           case PlayerId.Player4:
             Debug.Log(4);
             playerTurnUI.DisplayPlayerName(PlayerId.Player4);
-            playerMonitoring.Monitoring(PlayerId.Player4);
+            break;
+        }
+      }
+    }
+
+    /// <summary>
+    /// ステート遷移するたびに処理を走らせる 通常ターンで使う
+    /// </summary>
+    private async UniTaskVoid NormalGameStateChangedAsync(CancellationToken cancellationToken)
+    {
+      while (!cancellationToken.IsCancellationRequested)
+      {
+        // ステート遷移を待つ
+        var next = await _normalCurrentPlayerId;
+        // 遷移先に合わせて処理をする
+        switch (next)
+        {
+          // TODO: playerに通知
+          //　      サイコロを引いてもらう
+          //        その数に応じてカードを配る
+          //        ターン終了を押してもらうまで待機
+          // Monitoring けすかも
+          case PlayerId.Player1:
+            Debug.Log(1);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player1); // playerにターン開始を通知
+         //   await nortificationPresenter.UnitilRollDice();
+            // TODO :　サイコロで得た数字からカードを配る
+            distributeCardManeger.Distribute(2/*dicecnum*/);
+            break;
+          case PlayerId.Player2:
+            Debug.Log(2);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player2);
+            break;
+          case PlayerId.Player3:
+            Debug.Log(3);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player3);
+            break;
+          case PlayerId.Player4:
+            Debug.Log(4);
+            playerTurnUI.DisplayPlayerName(PlayerId.Player4);
             break;
         }
       }
@@ -92,12 +133,6 @@ namespace Catan.Scripts.Manager
       this.isActive = false;
     }
 
-    async UniTask UnitilRollDice() // ここを初期化用として路と陣地がおかれたらに変更する
-    {
-      await UniTask.WaitUntil(() => dicePresenter.isDiceSpin == true); // Diceボタンが押されるまで待機
-      dicePresenter.isDiceSpin = false;
-      await TurnUniTask();
-    }
 
 
   }

@@ -17,7 +17,7 @@ namespace Catan.Scripts.Generation
         private GameObject tmpGameObject;
         public PointParentGeneration pointParentGeneration;
 
-        public List<GameObject> teritorryObjectCollections = new List<GameObject>();
+        public List<GameObject> terrainObjectCollections = new List<GameObject>();
 
         // Desert : 1 = 0, Mine : 3 = 1, Hill : 3 = 2, Pasture : 4 = 3, Field : 4 = 4, Forest : 4 = 5    --- Total 19
         public void Create(int[] terrainPointValue)
@@ -59,7 +59,7 @@ namespace Catan.Scripts.Generation
                         point.GetComponent<PointParentBehavior>().terrainType = TerrainType.Forest;
                         break;
                 }
-                teritorryObjectCollections.Add(tmpGameObject);
+                terrainObjectCollections.Add(tmpGameObject);
             }
         }
     }

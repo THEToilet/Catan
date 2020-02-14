@@ -11,9 +11,9 @@ namespace Catan.Scripts.Card
     /// スペシャルノーマルカードの実態
     /// </summary>
 
-    public abstract class SpecialCardEntity : MonoBehaviour
+    public class SpecialCardEntity : MonoBehaviour
     {
-        public abstract SpecialCardType type { get; }
+        public SpecialCardType specialCardType;
 
     }
 

@@ -5,20 +5,33 @@ using Catan.Scripts.Card;
 using Catan.Scripts.Player;
 using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
+using Catan.Scripts.Generation;
 
 namespace Catan.Scripts.Manager
 {
     public class DistributeCardManeger : MonoBehaviour
     {
-        CardEntity card;
+        public TerrainGeneration terrainGeneration;
+        private GameObject[] tmpGameObjects;
+        // terrainGeneration.terainObjectsColledtions 地形がある
         // Start is called before the first frame update
-        void Start()
+        public void Distribute(int diceNum)
         {
-
-        }
-        public CardEntity Distribute(int diceNum)
-        {
-            return card;
+            /*
+            //for(int i=0;i<terrainGeneration.terrainObjectCollections.size();i++){
+                if(dicNum == terrainGeneration.terrainObjectscollections[i]){
+                    tempObjects.add(terrainGeneration.terrainObjectscollections[i])
+                }
+            }
+            for(int i=0;i<tmpGameObjects.lengh;i++){
+                for(int i=0;i<6;i++){
+                    if(tmpGameOBjects[i].childPoint[i] == ture){
+                        Get PlayerId => add PlayerId Belongings card Terrain Type
+                    }
+                }
+            }
+*/
+            // でた数字からその数字に値するトークンを持っている地形に隣接する人にカードをあげる
         }
     }
 }
