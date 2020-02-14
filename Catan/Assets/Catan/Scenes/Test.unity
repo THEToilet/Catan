@@ -2799,7 +2799,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403003095}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4468,6 +4468,7 @@ RectTransform:
   - {fileID: 1403076913}
   - {fileID: 2143028692}
   - {fileID: 1584955176}
+  - {fileID: 1341139644}
   - {fileID: 256113742}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -12300,7 +12301,7 @@ RectTransform:
   - {fileID: 1669473339}
   - {fileID: 832647214}
   m_Father: {fileID: 403003095}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -14349,7 +14350,7 @@ RectTransform:
   - {fileID: 1661245201}
   - {fileID: 1735578655}
   m_Father: {fileID: 403003095}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -15459,7 +15460,7 @@ RectTransform:
   - {fileID: 1706247052}
   - {fileID: 1785661050}
   m_Father: {fileID: 403003095}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -15860,7 +15861,7 @@ RectTransform:
   - {fileID: 407327451}
   - {fileID: 891802652}
   m_Father: {fileID: 403003095}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21447,22 +21448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996231dc0410b124389e2587ac88a47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   turnEndButton: {fileID: 1270479690}
   constructionButton: {fileID: 1266677093}
   aboutCardButton: {fileID: 1585629301}
   tradeButton: {fileID: 916243033}
   negotiationButton: {fileID: 1047430915}
-  drawCardButton: {fileID: 1648742580}
-=======
-  spreadActionButton: {fileID: 216350781}
-  closeActionButton: {fileID: 1411011657}
-  turnEndButton: {fileID: 1270479690}
-  constructionButton: {fileID: 1421734097}
-  aboutCardButton: {fileID: 387094541}
-  tradeButton: {fileID: 1962551216}
-  negotiationButton: {fileID: 1641765176}
->>>>>>> battle_scene
+  drawCardButton: {fileID: 1585629301}
   gameStateManeger: {fileID: 1669153286}
   playerTurn: {fileID: 1669153291}
   turnPlayer: {fileID: 1149041950}
@@ -21522,11 +21513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 1669153291}
-<<<<<<< HEAD
   playerText: {fileID: 256113743}
-=======
-  playerText: {fileID: 1858245386}
->>>>>>> battle_scene
 --- !u!114 &2096806381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21925,11 +21912,7 @@ RectTransform:
   - {fileID: 802858338}
   - {fileID: 644277517}
   m_Father: {fileID: 403003095}
-<<<<<<< HEAD
-  m_RootOrder: 2
-=======
   m_RootOrder: 3
->>>>>>> battle_scene
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -22158,11 +22141,7 @@ RectTransform:
   m_Children:
   - {fileID: 1270479689}
   m_Father: {fileID: 403003095}
-<<<<<<< HEAD
-  m_RootOrder: 5
-=======
   m_RootOrder: 6
->>>>>>> battle_scene
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
