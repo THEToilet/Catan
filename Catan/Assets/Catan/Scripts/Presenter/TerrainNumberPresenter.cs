@@ -9,6 +9,7 @@ namespace Catan.Scripts.Presenter
 
     public class TerrainNumberPresenter : MonoBehaviour
     {
+        // Tokenを表示する
         public TerrainNumberGeneration terrainNumberGeneration;
         // Start is called before the first frame update
         void Start()

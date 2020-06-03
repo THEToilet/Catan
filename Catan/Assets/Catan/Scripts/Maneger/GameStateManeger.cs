@@ -39,7 +39,9 @@ namespace Catan.Scripts.Manager
                         break;
                     case GameState.AboutCard:
                         Debug.Log("aboutcard");
+                        // カードを引くクラスを使う
                         break;
+                    // これより下はまた後で
                     case GameState.Trade:
                         Debug.Log("trade");
                         break;

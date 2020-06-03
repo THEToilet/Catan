@@ -56,6 +56,9 @@ namespace Catan.Scripts.Manager
 
     /// <summary>
     /// ステート遷移するたびに処理を走らせる 初期配置で使う
+
+
+
     /// </summary>
     private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
     {

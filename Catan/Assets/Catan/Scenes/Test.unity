@@ -21458,14 +21458,6 @@ MonoBehaviour:
   drawCardButton: {fileID: 1585629301}
   gameStateManeger: {fileID: 1669153286}
   playerTurn: {fileID: 1669153291}
-  turnPlayer: {fileID: 1149041950}
-  ownPlayerPanel: {fileID: 2114207745}
-  otherPlayerPanel: {fileID: 1546502795}
-  actionPanel: {fileID: 1403076912}
-  buildPanel: {fileID: 718809019}
-  cardPanel: {fileID: 1735578654}
-  tradePanel: {fileID: 1955657067}
-  negotiationPanel: {fileID: 1661245200}
 --- !u!4 &2096806378
 Transform:
   m_ObjectHideFlags: 0
