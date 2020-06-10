@@ -13,51 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-06-10T20:57:32.768+09:00
-  initializedAtString: 2020-06-06T23:08:14.938+09:00
+  lastUpdatedAtString: 2020-06-10T21:27:59.909+09:00
+  initializedAtString: 2020-06-10T21:02:06.593+09:00
   entries:
-  - path: Catan\Assets\Catan\Scenes\Test.unity
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scenes\Test.unity
-    projectPath: Assets\Catan\Scenes\Test.unity
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Catan\Assets\Catan\Scripts\Generation\PointChildren.csv
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\PointChildren.csv
-    projectPath: Assets\Catan\Scripts\Generation\PointChildren.csv
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Assets\Catan\Scripts\Generation\PointChildren.csv.meta
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\PointChildren.csv.meta
-    projectPath: Assets\Catan\Scripts\Generation\PointChildren.csv.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Assets\Catan\Scripts\Generation\PointParentGeneration.csv
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\PointParentGeneration.csv
-    projectPath: Assets\Catan\Scripts\Generation\PointParentGeneration.csv
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Assets\Catan\Scripts\Generation\PointParentGeneration.csv.meta
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\PointParentGeneration.csv.meta
-    projectPath: Assets\Catan\Scripts\Generation\PointParentGeneration.csv.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Assets\Catan\Scripts\Generation\Road.csv
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\Road.csv
-    projectPath: Assets\Catan\Scripts\Generation\Road.csv
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Assets\Catan\Scripts\Generation\Road.csv.meta
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Generation\Road.csv.meta
-    projectPath: Assets\Catan\Scripts\Generation\Road.csv.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Catan\Library\ArtifactDB
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\ArtifactDB
     projectPath: Library\ArtifactDB
@@ -70,45 +28,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Catan\Library\Artifacts\44\44e72bd5e4fc65ce412699a93afc6de9
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\44\44e72bd5e4fc65ce412699a93afc6de9
-    projectPath: Library\Artifacts\44\44e72bd5e4fc65ce412699a93afc6de9
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Library\Artifacts\dd\dd11ef4599763886ded8425d627266c4
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\dd\dd11ef4599763886ded8425d627266c4
-    projectPath: Library\Artifacts\dd\dd11ef4599763886ded8425d627266c4
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Catan\Library\Artifacts\ef\efa85e9e6b6cde7a985499787ed6fe15
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\ef\efa85e9e6b6cde7a985499787ed6fe15
-    projectPath: Library\Artifacts\ef\efa85e9e6b6cde7a985499787ed6fe15
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Catan\Library\EditorInstance.json
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Catan\Library\gfu\cache\branches.yaml
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\branches.yaml
-    projectPath: Library\gfu\cache\branches.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Catan\Library\gfu\cache\gitlocks.yaml
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Catan\Library\gfu\cache\gitlog.yaml
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitlog.yaml
-    projectPath: Library\gfu\cache\gitlog.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -133,6 +61,12 @@ MonoBehaviour:
   - path: Catan\Library\SceneVisibilityState.asset
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\SceneVisibilityState.asset
     projectPath: Library\SceneVisibilityState.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
