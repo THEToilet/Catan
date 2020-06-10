@@ -13,31 +13,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2020-06-04T00:30:36.998+09:00
-  initializedAtString: 2020-06-03T21:00:29.008+09:00
-  localBranches:
-  - name: action
-    tracking: origin/action
-  - name: battle_scene
-    tracking: 
-  - name: beat_playerTurn
-    tracking: origin/beat_playerTurn
-  - name: master
-    tracking: origin/master
+  lastUpdatedAtString: 2020-06-10T20:34:48.317+09:00
+  initializedAtString: 2020-06-06T23:08:16.253+09:00
+  localBranches: []
   remoteBranches:
-  - name: origin/action
-    tracking: '[None]'
-  - name: origin/aoto
-    tracking: '[None]'
-  - name: origin/beat_playerTurn
-    tracking: '[None]'
   - name: origin/HEAD
     tracking: '[None]'
   - name: origin/master
-    tracking: '[None]'
-  - name: origin/THEToilet-patch-1
-    tracking: '[None]'
-  - name: origin/turn
     tracking: '[None]'
   remotes:
   - name: origin
@@ -48,77 +30,23 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys:
-    - action
-    - battle_scene
-    - beat_playerTurn
-    - master
-    values:
-    - name: action
-      remote:
-        name: origin
-        url: https://github.com/THEToilet/Catan.git
-      trackingBranch: action
-    - name: battle_scene
-      remote:
-        name: 
-        url: 
-      trackingBranch: 
-    - name: beat_playerTurn
-      remote:
-        name: origin
-        url: https://github.com/THEToilet/Catan.git
-      trackingBranch: beat_playerTurn
-    - name: master
-      remote:
-        name: origin
-        url: https://github.com/THEToilet/Catan.git
-      trackingBranch: master
+    keys: []
+    values: []
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
-      - action
-      - aoto
-      - beat_playerTurn
       - HEAD
       - master
-      - THEToilet-patch-1
-      - turn
     subKeyValues:
     - Values:
-      - name: action
-        remote:
-          name: origin
-          url: https://github.com/THEToilet/Catan.git
-        trackingBranch: 
-      - name: aoto
-        remote:
-          name: origin
-          url: https://github.com/THEToilet/Catan.git
-        trackingBranch: 
-      - name: beat_playerTurn
-        remote:
-          name: origin
-          url: https://github.com/THEToilet/Catan.git
-        trackingBranch: 
       - name: HEAD
         remote:
           name: origin
           url: https://github.com/THEToilet/Catan.git
         trackingBranch: 
       - name: master
-        remote:
-          name: origin
-          url: https://github.com/THEToilet/Catan.git
-        trackingBranch: 
-      - name: THEToilet-patch-1
-        remote:
-          name: origin
-          url: https://github.com/THEToilet/Catan.git
-        trackingBranch: 
-      - name: turn
         remote:
           name: origin
           url: https://github.com/THEToilet/Catan.git
