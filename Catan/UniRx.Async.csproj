@@ -339,6 +339,21 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f3/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="GitHub.Api.45">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ </Reference>
+ <Reference Include="GitHub.Logging">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+ </Reference>
+ <Reference Include="GitHub.Unity.45">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ </Reference>
+ <Reference Include="GitHub.UnityShim">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ </Reference>
+ <Reference Include="sfw.net">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -354,20 +369,20 @@
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.Api.45">
- <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.Unity.45">
- <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
  </Reference>
- <Reference Include="sfw.net">
- <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+ <Reference Include="Zenject-usage">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.UnityShim">
- <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
  </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
+ <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
  <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
