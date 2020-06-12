@@ -26,6 +26,7 @@ namespace Catan.Scripts.Generation
             {
                 GameObject point = pointParentGeneration.parentPointObjects[i];
                 tmpTerrainPosition = point.transform.position;
+                tmpTerrainPosition.y -= 5;
                 switch (terrainPointValue[i])
                 {
                     case 0:
