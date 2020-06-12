@@ -17081,7 +17081,7 @@ MonoBehaviour:
   playerIds: 
   playerTurnUI: {fileID: 2096806385}
   dicePresenter: {fileID: 2096806379}
-  nortificationPresenter: {fileID: 0}
+  nortificationPresenter: {fileID: 2096806387}
   distributeCardManeger: {fileID: 0}
   playerMonitoring: {fileID: 1669153299}
   isActive: 0
@@ -17241,7 +17241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eeb389e8bc5c514d82ab77328394379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainGeneration: {fileID: 1669153288}
+  pointParentGeneration: {fileID: 1669153296}
 --- !u!114 &1669153303
 MonoBehaviour:
   m_ObjectHideFlags: 0

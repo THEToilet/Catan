@@ -5,7 +5,7 @@ namespace Catan.Scripts.Point
 {
     public class PointParentBehavior : MonoBehaviour
     {
-        public int pointNumber;
+        public int tokenNumber;
         GameObject TerrainObject;
         public GameObject childPoint_0;
         public GameObject childPoint_1;
