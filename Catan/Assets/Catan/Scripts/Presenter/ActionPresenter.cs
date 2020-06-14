@@ -8,6 +8,7 @@ namespace Catan.Scripts.Presenter
   public class ActionPresenter : MonoBehaviour
   {
     [SerializeField] private Button turnEndButton;
+    [SerializeField] private Button rollDiceButton;
 
     [SerializeField] private Button constructionButton;
 
@@ -70,6 +71,11 @@ namespace Catan.Scripts.Presenter
         playerTurn.isActive = true;
       });
 
+      rollDiceButton.OnClickAsObservable()
+      .Subscribe(_ =>
+      {
+        
+      });
     }
 
   }
