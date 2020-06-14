@@ -41,6 +41,7 @@ namespace Catan.Scripts.Manager
       {
         _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
         await TurnUniTask(); // 陣地と路が置かれるるまで待つ
+        // distributeCardManager.Distribute2(point);
       }
     }
 
@@ -50,6 +51,7 @@ namespace Catan.Scripts.Manager
       {
        // _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
         await TurnUniTask(); // サイコロが押されるまで待つ
+        distributeCardManeger.Distribute(1);
       }
     }
     /// <summary>

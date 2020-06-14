@@ -32,5 +32,22 @@ namespace Catan.Scripts.Manager
 
             // でた数字からその数字に値するトークンを持っている地形に隣接する人にカードをあげる
         }
+        public void Distribute2(GameObject Point)
+        {
+            for(int i=0;i<terrainGeneration.terrainObjectCollections.size();i++){
+                if(dicNum == terrainGeneration.terrainObjectscollections[i]){
+                    tempObjects.add(terrainGeneration.terrainObjectscollections[i])
+                }
+            }
+            for(int i=0;i<tmpGameObjects.lengh;i++){
+                for(int i=0;i<6;i++){
+                    if(tmpGameOBjects[i].childPoint[i] == ture){
+                        //Get PlayerId => add PlayerId Belongings card Terrain Type
+                    }
+                }
+            }
+
+            // でた数字からその数字に値するトークンを持っている地形に隣接する人にカードをあげる
+        }
     }
 }
