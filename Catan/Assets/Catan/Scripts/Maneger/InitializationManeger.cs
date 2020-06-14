@@ -20,7 +20,7 @@ namespace Catan.Scripts.Manager
         public PointParentRelevanceSetting pointParentRelevanceSetting;
         public TerrainNumberGeneration terrainNumberGeneration;
 
-        public async void Excute()
+        public void Excute()
         {
             pointChildrenGeneration.Generate();  // 子の点生成
             pointParentGeneration.Generate();  // 親の点生成
@@ -30,12 +30,6 @@ namespace Catan.Scripts.Manager
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
             playerGeneration.Generate(); // プレイヤー生成
-            orderDetermining.OrderDecide(); // 順番決定
-            playerTurn.playerIds = orderDetermining.GetOrder(); // プレイヤーの順番取得
-            await playerTurn.DescendingOrderTurnState(); //　初期配置降順
-            await playerTurn.AscendingOrderTurnState(); // 初期配置昇順
-            progressStateManeger._currentProgressState.
-                SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
         }
     }
 

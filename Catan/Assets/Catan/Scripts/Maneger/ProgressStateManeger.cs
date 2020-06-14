@@ -15,6 +15,7 @@ namespace Catan.Scripts.Manager
     {
         public InitializationManeger initializationManeger;
         public BattleManeger battleManeger;
+        public PlayerId[] playerIds;
 
         // ステート管理するReactiveProperty
         public ReactiveProperty<ProgressState> _currentProgressState
@@ -44,6 +45,11 @@ namespace Catan.Scripts.Manager
                     case ProgressState.Initialization:
                         Debug.Log("ini");
                         initializationManeger.Excute();
+                        playerIds = orderDetermining.GetOrder(); // プレイヤーの順番取得
+                        playerTurn.DescendingOrderTurnState(playerIds); //　サイコロ振る
+                        playerTurn.DescendingOrderTurnState(playerIds); //　初期配置降順
+                        playerTurn.AscendingOrderTurnState(playerIds); // 初期配置昇順
+                        progressStateManeger._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
                         break;
                     case ProgressState.Battle:
                         Debug.Log("battle");

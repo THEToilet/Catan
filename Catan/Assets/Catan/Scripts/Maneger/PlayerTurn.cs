@@ -10,7 +10,6 @@ namespace Catan.Scripts.Manager
 {
   public class PlayerTurn : MonoBehaviour
   {
-    public PlayerId[] playerIds;
     public PlayerTurnUI playerTurnUI;
     public DicePresenter dicePresenter;
     public NortificationPresenter nortificationPresenter;
