@@ -17,8 +17,7 @@ namespace Catan.Scripts.Manager
         // Start is called before the first frame update
         public void Distribute(int diceNum)
         {
-            /*
-            //for(int i=0;i<terrainGeneration.terrainObjectCollections.size();i++){
+            for(int i=0;i<terrainGeneration.terrainObjectCollections.size();i++){
                 if(dicNum == terrainGeneration.terrainObjectscollections[i]){
                     tempObjects.add(terrainGeneration.terrainObjectscollections[i])
                 }
@@ -26,11 +25,11 @@ namespace Catan.Scripts.Manager
             for(int i=0;i<tmpGameObjects.lengh;i++){
                 for(int i=0;i<6;i++){
                     if(tmpGameOBjects[i].childPoint[i] == ture){
-                        Get PlayerId => add PlayerId Belongings card Terrain Type
+                        //Get PlayerId => add PlayerId Belongings card Terrain Type
                     }
                 }
             }
-*/
+
             // でた数字からその数字に値するトークンを持っている地形に隣接する人にカードをあげる
         }
     }
