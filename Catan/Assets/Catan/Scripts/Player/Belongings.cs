@@ -12,6 +12,9 @@ namespace Catan.Scripts.Player
         public List<GameObject> cards = new List<GameObject>();
         public List<GameObject> scards = new List<GameObject>();
         public List<GameObject> territories = new List<GameObject>();
+        public List<GameObject> Settlement = new List<GameObject>();
+        public List<GameObject> City = new List<GameObject>();
+        public List<GameObject> Road = new List<GameObject>();
 
     }
 }
