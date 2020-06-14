@@ -38,7 +38,7 @@ namespace Catan.Scripts.Manager
     }
     public async void Excute()
     {
-      await playerTurn.NormalOrderTurnState(); // ターン進行
+    //  await playerTurn.NormalOrderTurnState(); // ターン進行
       this.Excute();  // 繰り返し
     }
     private void VictoryPersonExists()  // 優勝者がいるまでまわす

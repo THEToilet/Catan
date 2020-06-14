@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using System.Threading;
+using Catan.Scripts.Player;
 
 /// <summary>
 /// 全体の進行の管理
@@ -14,7 +15,9 @@ namespace Catan.Scripts.Manager
     public class ProgressStateManeger : MonoBehaviour
     {
         public InitializationManeger initializationManeger;
+        public OrderDetermining orderDetermining;
         public BattleManeger battleManeger;
+        public PlayerTurn playerTurn;
         public PlayerId[] playerIds;
 
         // ステート管理するReactiveProperty
@@ -49,7 +52,7 @@ namespace Catan.Scripts.Manager
                         await playerTurn.DescendingOrderTurnState(playerIds); //　サイコロ振る
                         await playerTurn.DescendingOrderTurnState(playerIds); //　初期配置降順
                         await playerTurn.AscendingOrderTurnState(playerIds); // 初期配置昇順
-                        progressStateManeger._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
+                        this._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
                         break;
                     case ProgressState.Battle:
                         Debug.Log("battle");

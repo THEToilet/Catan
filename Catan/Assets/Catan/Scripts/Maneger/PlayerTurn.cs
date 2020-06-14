@@ -27,7 +27,7 @@ namespace Catan.Scripts.Manager
       StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
     }
 
-    public async UniTask DescendingOrderTurnState() //　初期配置降順
+    public async UniTask DescendingOrderTurnState(PlayerId[] playerIds) //　初期配置降順
     {
       for (int i = 0; i < 4; i++)
       {
@@ -35,7 +35,7 @@ namespace Catan.Scripts.Manager
         await TurnUniTask(); // 陣地と路が置かれるるまで待つ
       }
     }
-    public async UniTask AscendingOrderTurnState() // 初期配置昇順
+    public async UniTask AscendingOrderTurnState(PlayerId[] playerIds) // 初期配置昇順
     {
       for (int i = 3; i >= 0; i--)
       {
@@ -44,11 +44,11 @@ namespace Catan.Scripts.Manager
       }
     }
 
-    public async UniTask DescendingOrderTurnState() //　初期配置降順
+    public async UniTask NormalDescendingOrderTurnState() //　初期配置降順
     {
       for (int i = 0; i < 4; i++)
       {
-        _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
+       // _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
         await TurnUniTask(); // サイコロが押されるまで待つ
       }
     }
