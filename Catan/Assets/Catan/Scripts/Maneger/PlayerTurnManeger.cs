@@ -6,6 +6,7 @@ using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
 using JetBrains.Annotations;
+using System;
 
 namespace Catan.Scripts.Manager
 {
@@ -31,6 +32,7 @@ namespace Catan.Scripts.Manager
             TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
             _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
+            _currentTurnState.SetValueAndForceNotify(TurnState.RollDice);
         }
 
         /// <summary>
@@ -69,23 +71,27 @@ namespace Catan.Scripts.Manager
         public void Next()
         {
             // Nextの処理
-
-            if (state == 0 && cur <= 3)
+            if (cur <= 3)
             {
                 cur++;
-                if (cur == 3) state++;
+                if (cur == 3) _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
             }
-            else if (state == 1)
+            else if (cur <= 7)
             {
-                playerIds = orderDetermining.GetOrder();
-                cur--;
-                if (cur == 0) state++;
+                cur++;
+                if (cur == 7) _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
             }
-            else if (state == 2)
+            else if (cur <= 11)
             {
+                cur++;
+                if (cur == 11) _currentTurnState.SetValueAndForceNotify(TurnState.RollDice);
                 Debug.Log("うんこ");
             }
-            _currentPlayerId.SetValueAndForceNotify(playerIds[cur]);
+            else
+            {
+                cur++;
+            }
+            _currentPlayerId.SetValueAndForceNotify(playerIds[cur % 4]);
         }
 
         /// <summary>
@@ -105,12 +111,15 @@ namespace Catan.Scripts.Manager
                         Debug.Log("RollDice");
                         break;
                     case TurnState.DescendingOrderArragement:
+                        playerIds = orderDetermining.GetOrder();
                         Debug.Log("Decend");
                         break;
                     case TurnState.AscendingOrderArrangement:
+                        Array.Reverse(playerIds);
                         Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
+                        Array.Reverse(playerIds);
                         Debug.Log("NormalState");
                         break;
                 }
