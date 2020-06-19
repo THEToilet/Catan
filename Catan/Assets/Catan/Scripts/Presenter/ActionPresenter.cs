@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UniRx;
 using Catan.Scripts.Manager;
+using Catan.Scripts.Common;
 
 namespace Catan.Scripts.Presenter
 {
@@ -74,7 +75,7 @@ namespace Catan.Scripts.Presenter
       rollDiceButton.OnClickAsObservable()
       .Subscribe(_ =>
       {
-        
+          Debug.Log(Dice.RollOnceDice()); 
       });
     }
 

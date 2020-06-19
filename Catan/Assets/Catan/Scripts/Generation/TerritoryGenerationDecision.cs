@@ -9,7 +9,7 @@ namespace Catan.Scripts.Generation
     public class TerritoryGenerationDecision : MonoBehaviour
     {
         public TerritoryGeneration territoryGeneration;
-        public PlayerTurn playerTurn;
+        public PlayerTurnManeger playerTurn;
         private bool hasPointTerritory;
         private bool hasRoadBaseTerritory;
         public void GeneratingInstruction(GameObject _gameObject)

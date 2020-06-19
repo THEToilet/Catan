@@ -15,7 +15,6 @@ namespace Catan.Scripts.Manager
         public PointChildrenGeneration pointChildrenGeneration;
         public PointParentGeneration pointParentGeneration;
         public RoadGeneration roadGeneration;
-        public PlayerTurn playerTurn;
         public PointChildrenRelevanceSetting pointChildrenRelevanceSetting;
         public PointParentRelevanceSetting pointParentRelevanceSetting;
         public TerrainNumberGeneration terrainNumberGeneration;

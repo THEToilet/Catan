@@ -12,7 +12,7 @@ namespace Catan.Scripts.Manager
 {
   public class BattleManeger : MonoBehaviour
   {
-    public PlayerTurn playerTurn;
+    public PlayerTurnManeger playerTurn;
     public ProgressStateManeger progressStateManeger;
     public ToPleyerObject toPleyerObject;
     public GameObject winner;

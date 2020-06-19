@@ -18,23 +18,21 @@ namespace Catan.Scripts.Manager
         public ProgressStateManeger progressStateManeger;
         // ステート管理するReactiveProperty
         public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
+        public OrderDetermining orderDetermining;
+        public PlayerId[] IniplayerIds;
+        public PlayerId[] playerIds;
+        private int cur = 0;
 
         private void Start()
         {
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            IniplayerIds = new PlayerId[8];
+            playerIds = orderDetermining.GetOrder(); 
+            _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
         }
 
-         public async UniTask NormalDescendingOrderTurnState() //　初期配置降順
-         {
-           for (int i = 0; i < 4; i++)
-           {
-            // _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
-             distributeCardManeger.Distribute(1);
-           }
-         }
         /// <summary>
         /// ステート遷移するたびに処理を走らせる 初期配置で使う
-
         /// </summary>
         private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
         {
@@ -69,6 +67,9 @@ namespace Catan.Scripts.Manager
         public void Next()
         {
             // Nextの処理
+
+            cur++;
+            _currentPlayerId.SetValueAndForceNotify(playerIds[cur]);
         }
 
 

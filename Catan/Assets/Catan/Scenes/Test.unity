@@ -17549,7 +17549,6 @@ MonoBehaviour:
   pointChildrenGeneration: {fileID: 1669153295}
   pointParentGeneration: {fileID: 1669153296}
   roadGeneration: {fileID: 1669153303}
-  playerTurn: {fileID: 1669153291}
   pointChildrenRelevanceSetting: {fileID: 1669153297}
   pointParentRelevanceSetting: {fileID: 1669153298}
   terrainNumberGeneration: {fileID: 1669153302}
@@ -17643,7 +17642,10 @@ MonoBehaviour:
   nortificationPresenter: {fileID: 2096806387}
   distributeCardManeger: {fileID: 0}
   playerMonitoring: {fileID: 1669153299}
-  isActive: 0
+  progressStateManeger: {fileID: 1669153284}
+  orderDetermining: {fileID: 1669153294}
+  IniplayerIds: 
+  playerIds: 
 --- !u!114 &1669153292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22128,7 +22130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnEndButton: {fileID: 1270479690}
-  rollDiceButton: {fileID: 0}
+  rollDiceButton: {fileID: 1711976377}
   constructionButton: {fileID: 1266677093}
   aboutCardButton: {fileID: 1585629301}
   tradeButton: {fileID: 916243033}
