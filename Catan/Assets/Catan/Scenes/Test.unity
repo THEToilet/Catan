@@ -22295,7 +22295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RecommendText: {fileID: 1341139645}
-  dicePresenter: {fileID: 0}
+  dicePresenter: {fileID: 2096806379}
 --- !u!1 &2108768905
 GameObject:
   m_ObjectHideFlags: 0

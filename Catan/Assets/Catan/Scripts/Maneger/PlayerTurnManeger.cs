@@ -26,9 +26,9 @@ namespace Catan.Scripts.Manager
         private void Start()
         {
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
-            IniplayerIds = new PlayerId[8];
-            playerIds = orderDetermining.GetOrder(); 
+            playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
             _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
+            IniplayerIds = new PlayerId[8];
         }
 
         /// <summary>
