@@ -5,6 +5,7 @@ using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
+using JetBrains.Annotations;
 
 namespace Catan.Scripts.Manager
 {
@@ -18,6 +19,7 @@ namespace Catan.Scripts.Manager
         public ProgressStateManeger progressStateManeger;
         // ステート管理するReactiveProperty
         public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
+        public ReactiveProperty<TurnState> _currentTurnState = new ReactiveProperty<TurnState>();
         public OrderDetermining orderDetermining;
         public PlayerId[] playerIds;
         private int cur = 0;
@@ -25,7 +27,8 @@ namespace Catan.Scripts.Manager
 
         private void Start()
         {
-            StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            PlayerIdChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
             _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
         }
@@ -33,7 +36,7 @@ namespace Catan.Scripts.Manager
         /// <summary>
         /// ステート遷移するたびに処理を走らせる 初期配置で使う
         /// </summary>
-        private async UniTaskVoid StateChangedAsync(CancellationToken cancellationToken)
+        private async UniTaskVoid PlayerIdChangedAsync(CancellationToken cancellationToken)
         {
             while (!cancellationToken.IsCancellationRequested)
             {
@@ -83,6 +86,35 @@ namespace Catan.Scripts.Manager
                 Debug.Log("うんこ");
             }
             _currentPlayerId.SetValueAndForceNotify(playerIds[cur]);
+        }
+
+        /// <summary>
+        /// ステート遷移するたびに処理を走らせる 初期配置で使う
+        /// </summary>
+        private async UniTaskVoid TurnStateChangedAsync(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                // ステート遷移を待つ
+                var next = await _currentTurnState;
+                // 遷移先に合わせて処理をする
+                switch (next)
+                {
+                    // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
+                    case TurnState.RollDice:
+                        Debug.Log("RollDice");
+                        break;
+                    case TurnState.DescendingOrderArragement:
+                        Debug.Log("Decend");
+                        break;
+                    case TurnState.AscendingOrderArrangement:
+                        Debug.Log("Accend");
+                        break;
+                    case TurnState.NormalTurn:
+                        Debug.Log("NormalState");
+                        break;
+                }
+            }
         }
 
 
