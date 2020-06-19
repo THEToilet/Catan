@@ -21,7 +21,7 @@ namespace Catan.Scripts.Presenter
     [SerializeField] private Button drawCardButton;
 
     public GameStateManeger gameStateManeger;
-    public PlayerTurn playerTurn;
+    public PlayerTurnManeger playerTurn;
 
 
 
@@ -44,21 +44,21 @@ namespace Catan.Scripts.Presenter
       });
 
 
-      drawCardButton.OnClickAsObservable()
+      drawCardButton.OnClickAsObservable() // カードを引く  
       .Subscribe(_ =>
       {
         gameStateManeger._currentGameState
                   .SetValueAndForceNotify(GameState.AboutCard);
       });
 
-      tradeButton.OnClickAsObservable()
+      tradeButton.OnClickAsObservable() //  トレードする
       .Subscribe(_ =>
       {
         gameStateManeger._currentGameState
                   .SetValueAndForceNotify(GameState.Trade);
       });
 
-      negotiationButton.OnClickAsObservable()
+      negotiationButton.OnClickAsObservable()  // 交渉する
       .Subscribe(_ =>
       {
         gameStateManeger._currentGameState
@@ -68,7 +68,7 @@ namespace Catan.Scripts.Presenter
       turnEndButton.OnClickAsObservable()
       .Subscribe(_ =>
       {
-        playerTurn.isActive = true;
+        playerTurn.Next();
       });
 
       rollDiceButton.OnClickAsObservable()
