@@ -318,6 +318,24 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenProEditor">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiEditor">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

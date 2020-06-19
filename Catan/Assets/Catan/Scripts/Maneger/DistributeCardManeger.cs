@@ -6,21 +6,21 @@ using Catan.Scripts.Player;
 using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Generation;
+using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Manager
 {
     public class DistributeCardManeger : MonoBehaviour
     {
         public TerrainGeneration terrainGeneration;
+        public PointParentGeneration pointParentGeneration;
         private GameObject[] tmpGameObjects;
-        [SerializeField] GameObject BrickCard;
-        [SerializeField] GameObject IronOre;
-        [SerializeField] GameObject WheatCard;
-        [SerializeField] GameObject WoodCard;
-        [SerializeField] GameObject WoolCard;
+        public ToPleyerObject toPleyerObject;
+        public ToCardObject toCardObject;
+        PlayerId[] playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
         // terrainGeneration.terainObjectsColledtions 地形がある
         // Start is called before the first frame update
-        
+
         public void Distribute(int diceNum)
         {
             /*
@@ -56,6 +56,26 @@ namespace Catan.Scripts.Manager
             }
 */
             // でた数字からその数字に値するトークンを持っている地形に隣接する人にカードをあげる
+        }
+        public void InitDistribute()
+        {
+            for (int i = 0; i < playerIds.Length; i++)
+            {
+
+                var ta = toPleyerObject.ToPlayer(playerIds[i]).GetComponent<Belongings>();
+                var tt = toPleyerObject.ToPlayer(playerIds[i]).GetComponent<Belongings>().City[1];
+                for (int j = 0; j < pointParentGeneration.parentPointObjects.Count; j++)
+                {
+                    var tmp = pointParentGeneration.parentPointObjects[j].GetComponent<PointParentBehavior>();
+                    for (int k = 0; k < 6; k++)
+                    {
+                        if (tt.Equals(tmp.childPointObjects[k]))
+                        {
+                            ta.cards.Add(toCardObject.ToCard(tmp.terrainType));
+                        }
+                    }
+                }
+            }
         }
     }
 }

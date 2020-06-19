@@ -38,17 +38,17 @@ namespace Catan.Scripts.Point
             {
                 GameObject tmpGameObject = pointParentGeneration.parentPointObjects[i];
                 var setGameObject = tmpGameObject.GetComponent<PointParentBehavior>();
-                setGameObject.childPoint_0 =
+                setGameObject.childPointObjects[0] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][0]];
-                setGameObject.childPoint_1 =
+                setGameObject.childPointObjects[1] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][1]];
-                setGameObject.childPoint_2 =
+                setGameObject.childPointObjects[2] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][2]];
-                setGameObject.childPoint_3 =
+                setGameObject.childPointObjects[3] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][3]];
-                setGameObject.childPoint_4 =
+                setGameObject.childPointObjects[4] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][4]];
-                setGameObject.childPoint_5 =
+                setGameObject.childPointObjects[5] =
                         pointChildrenGeneration.childrenPointGameObjects[havePoints[i][5]];
             }
         }

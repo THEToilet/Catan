@@ -67,6 +67,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\CardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Common\Dice.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\AboutCard.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\Construction.cs" />
@@ -127,6 +128,21 @@
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryImplementation\Road.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryImplementation\Settlement.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryType.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -384,6 +400,15 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>C:/Users/donki/Desktop/Catan/Catan/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>C:/Users/donki/Desktop/Catan/Catan/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f3/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
