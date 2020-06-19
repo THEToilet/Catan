@@ -13,6 +13,11 @@ namespace Catan.Scripts.Manager
     {
         public TerrainGeneration terrainGeneration;
         private GameObject[] tmpGameObjects;
+        [SerializeField] GameObject BrickCard;
+        [SerializeField] GameObject IronOre;
+        [SerializeField] GameObject WheatCard;
+        [SerializeField] GameObject WoodCard;
+        [SerializeField] GameObject WoolCard;
         // terrainGeneration.terainObjectsColledtions 地形がある
         // Start is called before the first frame update
         

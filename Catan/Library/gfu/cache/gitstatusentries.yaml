@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-06-20T00:28:17.463+09:00
-  initializedAtString: 2020-06-20T00:28:17.463+09:00
+  lastUpdatedAtString: 2020-06-20T01:26:12.486+09:00
+  initializedAtString: 2020-06-20T00:42:56.656+09:00
   entries:
   - path: Catan\Assets\Catan.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan.meta
@@ -22,6 +22,42 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Assets\Catan\Instance\BrickCard.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\BrickCard.prefab
+    projectPath: Assets\Catan\Instance\BrickCard.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\BrickCard.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\BrickCard.prefab.meta
+    projectPath: Assets\Catan\Instance\BrickCard.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\Card.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\Card.prefab
+    projectPath: Assets\Catan\Instance\Card.prefab
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Instance\Card.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\Card.prefab.meta
+    projectPath: Assets\Catan\Instance\Card.prefab.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Instance\IronOreCard.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\IronOreCard.prefab
+    projectPath: Assets\Catan\Instance\IronOreCard.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\IronOreCard.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\IronOreCard.prefab.meta
+    projectPath: Assets\Catan\Instance\IronOreCard.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Assets\Catan\Instance\pointC.prefab.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\pointC.prefab.meta
     projectPath: Assets\Catan\Instance\pointC.prefab.meta
@@ -76,6 +112,42 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Assets\Catan\Instance\WheatCard.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WheatCard.prefab
+    projectPath: Assets\Catan\Instance\WheatCard.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\WheatCard.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WheatCard.prefab.meta
+    projectPath: Assets\Catan\Instance\WheatCard.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\WoodCard.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WoodCard.prefab
+    projectPath: Assets\Catan\Instance\WoodCard.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\WoodCard.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WoodCard.prefab.meta
+    projectPath: Assets\Catan\Instance\WoodCard.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\WoolCard.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WoolCard.prefab
+    projectPath: Assets\Catan\Instance\WoolCard.prefab
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Instance\WoolCard.prefab.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\WoolCard.prefab.meta
+    projectPath: Assets\Catan\Instance\WoolCard.prefab.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Assets\Catan\Model.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Model.meta
     projectPath: Assets\Catan\Model.meta
@@ -225,25 +297,97 @@ MonoBehaviour:
     projectPath: Assets\Catan\Pictures\IronCard.png
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Pictures\IronCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\IronCard.png.meta
+    projectPath: Assets\Catan\Pictures\IronCard.png.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Pictures\IronOreCard.png
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\IronOreCard.png
+    projectPath: Assets\Catan\Pictures\IronOreCard.png
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\IronOreCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\IronOreCard.png.meta
+    projectPath: Assets\Catan\Pictures\IronOreCard.png.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\Materials.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\Materials.meta
+    projectPath: Assets\Catan\Pictures\Materials.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\Materials\BrickCard.mat
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\Materials\BrickCard.mat
+    projectPath: Assets\Catan\Pictures\Materials\BrickCard.mat
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\Materials\BrickCard.mat.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\Materials\BrickCard.mat.meta
+    projectPath: Assets\Catan\Pictures\Materials\BrickCard.mat.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Assets\Catan\Pictures\SheepCard.png
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\SheepCard.png
     projectPath: Assets\Catan\Pictures\SheepCard.png
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Pictures\SheepCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\SheepCard.png.meta
+    projectPath: Assets\Catan\Pictures\SheepCard.png.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Catan\Assets\Catan\Pictures\WeedCard.png
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WeedCard.png
     projectPath: Assets\Catan\Pictures\WeedCard.png
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Pictures\WeedCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WeedCard.png.meta
+    projectPath: Assets\Catan\Pictures\WeedCard.png.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Catan\Assets\Catan\Pictures\WheatCard.png
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WheatCard.png
+    projectPath: Assets\Catan\Pictures\WheatCard.png
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\WheatCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WheatCard.png.meta
+    projectPath: Assets\Catan\Pictures\WheatCard.png.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Assets\Catan\Pictures\WoodCard.png
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WoodCard.png
     projectPath: Assets\Catan\Pictures\WoodCard.png
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Assets\Catan\Pictures\WoolCard.png
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WoolCard.png
+    projectPath: Assets\Catan\Pictures\WoolCard.png
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Assets\Catan\Pictures\WoolCard.png.meta
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Pictures\WoolCard.png.meta
+    projectPath: Assets\Catan\Pictures\WoolCard.png.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Assets\Catan\Scenes.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scenes.meta
     projectPath: Assets\Catan\Scenes.meta
@@ -259,6 +403,12 @@ MonoBehaviour:
   - path: Catan\Assets\Catan\Scenes\Main.unity.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scenes\Main.unity.meta
     projectPath: Assets\Catan\Scenes\Main.unity.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Assets\Catan\Scenes\Test.unity
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scenes\Test.unity
+    projectPath: Assets\Catan\Scenes\Test.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -361,6 +511,12 @@ MonoBehaviour:
   - path: Catan\Assets\Catan\Scripts\Maneger.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Maneger.meta
     projectPath: Assets\Catan\Scripts\Maneger.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs
+    projectPath: Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -3850,39 +4006,225 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Catan\Library\Artifacts\1f\1fe424e19a587dea07578a3d9e2c394d
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\1f\1fe424e19a587dea07578a3d9e2c394d
-    projectPath: Library\Artifacts\1f\1fe424e19a587dea07578a3d9e2c394d
+  - path: Catan\Library\Artifacts\03\03a969275905bba171c0a9dde6e4d842
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\03\03a969275905bba171c0a9dde6e4d842
+    projectPath: Library\Artifacts\03\03a969275905bba171c0a9dde6e4d842
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\05\058946dad64d46a646eccfd1cab5ee25
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\05\058946dad64d46a646eccfd1cab5ee25
+    projectPath: Library\Artifacts\05\058946dad64d46a646eccfd1cab5ee25
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\14\145462942ecbb3ca6a7837f91aeeb09b
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\14\145462942ecbb3ca6a7837f91aeeb09b
+    projectPath: Library\Artifacts\14\145462942ecbb3ca6a7837f91aeeb09b
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\19\190f12689473dd63cc84febe7be5b8c8
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\19\190f12689473dd63cc84febe7be5b8c8
+    projectPath: Library\Artifacts\19\190f12689473dd63cc84febe7be5b8c8
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\22\22f3207d1e5661f2ad1c7fab46ee394e
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\22\22f3207d1e5661f2ad1c7fab46ee394e
+    projectPath: Library\Artifacts\22\22f3207d1e5661f2ad1c7fab46ee394e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\36\3684e60fd8be4060da08b7a0481fd919
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\36\3684e60fd8be4060da08b7a0481fd919
+    projectPath: Library\Artifacts\36\3684e60fd8be4060da08b7a0481fd919
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\39\3914a0ab77654f00fa45277315365b14
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\39\3914a0ab77654f00fa45277315365b14
+    projectPath: Library\Artifacts\39\3914a0ab77654f00fa45277315365b14
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\54\54524573ebdd772760588f28e10ffc92
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\54\54524573ebdd772760588f28e10ffc92
+    projectPath: Library\Artifacts\54\54524573ebdd772760588f28e10ffc92
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\58\58fb03da20431a3782820ee5ae418f38
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\58\58fb03da20431a3782820ee5ae418f38
+    projectPath: Library\Artifacts\58\58fb03da20431a3782820ee5ae418f38
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\5a\5ae9d620a5d1f730553aa7118b7c252d
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\5a\5ae9d620a5d1f730553aa7118b7c252d
+    projectPath: Library\Artifacts\5a\5ae9d620a5d1f730553aa7118b7c252d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\5d\5d9866af8c607434f9056810359641ef
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\5d\5d9866af8c607434f9056810359641ef
+    projectPath: Library\Artifacts\5d\5d9866af8c607434f9056810359641ef
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\61\61cb617a5c2f9359f4fb2619fa9ea823
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\61\61cb617a5c2f9359f4fb2619fa9ea823
+    projectPath: Library\Artifacts\61\61cb617a5c2f9359f4fb2619fa9ea823
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\66\660d76442a36b63bba7a03c181b9e778
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\66\660d76442a36b63bba7a03c181b9e778
+    projectPath: Library\Artifacts\66\660d76442a36b63bba7a03c181b9e778
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\69\6964747e5f529477c45ac1bcfef42136
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\69\6964747e5f529477c45ac1bcfef42136
+    projectPath: Library\Artifacts\69\6964747e5f529477c45ac1bcfef42136
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\6b\6b71a5ccfa3601258a4cde22d5f5dfdd
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\6b\6b71a5ccfa3601258a4cde22d5f5dfdd
+    projectPath: Library\Artifacts\6b\6b71a5ccfa3601258a4cde22d5f5dfdd
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\73\73269faeb968e5f210d91046f5d9624f
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\73\73269faeb968e5f210d91046f5d9624f
+    projectPath: Library\Artifacts\73\73269faeb968e5f210d91046f5d9624f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\75\751431e66fde32ced42b1e242036075a
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\75\751431e66fde32ced42b1e242036075a
+    projectPath: Library\Artifacts\75\751431e66fde32ced42b1e242036075a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\92\92e0e0a9d11671642d951ac95a4f855e
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\92\92e0e0a9d11671642d951ac95a4f855e
+    projectPath: Library\Artifacts\92\92e0e0a9d11671642d951ac95a4f855e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\99\99be9289d852b39481395c960314c4b0
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\99\99be9289d852b39481395c960314c4b0
+    projectPath: Library\Artifacts\99\99be9289d852b39481395c960314c4b0
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\9a\9adb66ac441290addc17667c71f05216
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\9a\9adb66ac441290addc17667c71f05216
+    projectPath: Library\Artifacts\9a\9adb66ac441290addc17667c71f05216
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: Catan\Library\Artifacts\32\32248849c41e312e4ef8a5119238d828
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\32\32248849c41e312e4ef8a5119238d828
-    projectPath: Library\Artifacts\32\32248849c41e312e4ef8a5119238d828
+  - path: Catan\Library\Artifacts\a1\a1ef7c80ed727165579128aa794f7e6f
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\a1\a1ef7c80ed727165579128aa794f7e6f
+    projectPath: Library\Artifacts\a1\a1ef7c80ed727165579128aa794f7e6f
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Catan\Library\Artifacts\97\97dd847c00b8c93f9d0262f150a97816
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\97\97dd847c00b8c93f9d0262f150a97816
-    projectPath: Library\Artifacts\97\97dd847c00b8c93f9d0262f150a97816
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\aa\aa47781980a640e11f1b0162a289bc06
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\aa\aa47781980a640e11f1b0162a289bc06
+    projectPath: Library\Artifacts\aa\aa47781980a640e11f1b0162a289bc06
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Catan\Library\Artifacts\db\dbf02e322a4fe38f2bc7e09f1642b067
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\db\dbf02e322a4fe38f2bc7e09f1642b067
-    projectPath: Library\Artifacts\db\dbf02e322a4fe38f2bc7e09f1642b067
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\b2\b288c27c8b1703df50e1458aef9c3e26
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\b2\b288c27c8b1703df50e1458aef9c3e26
+    projectPath: Library\Artifacts\b2\b288c27c8b1703df50e1458aef9c3e26
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Catan\Library\Artifacts\ea\eab717010036b20a22b2961a8443aa69
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\ea\eab717010036b20a22b2961a8443aa69
-    projectPath: Library\Artifacts\ea\eab717010036b20a22b2961a8443aa69
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\b7\b7e5513e027c470745d02b6f24b66c5c
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\b7\b7e5513e027c470745d02b6f24b66c5c
+    projectPath: Library\Artifacts\b7\b7e5513e027c470745d02b6f24b66c5c
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Catan\Library\Artifacts\f5\f513bf918228e1e2877691752c6b9bcd
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\f5\f513bf918228e1e2877691752c6b9bcd
-    projectPath: Library\Artifacts\f5\f513bf918228e1e2877691752c6b9bcd
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\b9\b9cfc4541acc325ffd2ba225d884f033
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\b9\b9cfc4541acc325ffd2ba225d884f033
+    projectPath: Library\Artifacts\b9\b9cfc4541acc325ffd2ba225d884f033
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\c8\c89d2506e9f13381d25a1f5393f75ee2
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\c8\c89d2506e9f13381d25a1f5393f75ee2
+    projectPath: Library\Artifacts\c8\c89d2506e9f13381d25a1f5393f75ee2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\cc\cc4eb7b7062b8a720e5bb0816196cd6e
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\cc\cc4eb7b7062b8a720e5bb0816196cd6e
+    projectPath: Library\Artifacts\cc\cc4eb7b7062b8a720e5bb0816196cd6e
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\cd\cda59bc640eb86275ae8b9e419c7db4d
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\cd\cda59bc640eb86275ae8b9e419c7db4d
+    projectPath: Library\Artifacts\cd\cda59bc640eb86275ae8b9e419c7db4d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\d4\d41ffe624aad6c12f2d5da152d288509
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\d4\d41ffe624aad6c12f2d5da152d288509
+    projectPath: Library\Artifacts\d4\d41ffe624aad6c12f2d5da152d288509
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\d4\d4c5efc46075e4c8c3c18161104304fc
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\d4\d4c5efc46075e4c8c3c18161104304fc
+    projectPath: Library\Artifacts\d4\d4c5efc46075e4c8c3c18161104304fc
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\dc\dc7091a95d8d115ae88805ca6cd62e38
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\dc\dc7091a95d8d115ae88805ca6cd62e38
+    projectPath: Library\Artifacts\dc\dc7091a95d8d115ae88805ca6cd62e38
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\e2\e2e6ccfc2c5c47057fcc4be4994406df
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\e2\e2e6ccfc2c5c47057fcc4be4994406df
+    projectPath: Library\Artifacts\e2\e2e6ccfc2c5c47057fcc4be4994406df
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\e3\e3f7da77aafe41519e2b5f5e727b85c2
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\e3\e3f7da77aafe41519e2b5f5e727b85c2
+    projectPath: Library\Artifacts\e3\e3f7da77aafe41519e2b5f5e727b85c2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\ef\ef3b437512ac07fa2ab3f4369fd2594f
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\ef\ef3b437512ac07fa2ab3f4369fd2594f
+    projectPath: Library\Artifacts\ef\ef3b437512ac07fa2ab3f4369fd2594f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\f6\f6e14be392f91d282bc1165e47adaabe
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\f6\f6e14be392f91d282bc1165e47adaabe
+    projectPath: Library\Artifacts\f6\f6e14be392f91d282bc1165e47adaabe
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\fb\fbeb68f6f47059c2350c0f45de52f095
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\fb\fbeb68f6f47059c2350c0f45de52f095
+    projectPath: Library\Artifacts\fb\fbeb68f6f47059c2350c0f45de52f095
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\fe\fe302fb5417280e9099a51f3658d8635
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\fe\fe302fb5417280e9099a51f3658d8635
+    projectPath: Library\Artifacts\fe\fe302fb5417280e9099a51f3658d8635
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -3898,9 +4240,27 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Catan\Library\gfu\cache\repoinfo.yaml
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\repoinfo.yaml
     projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Library\InspectorExpandedItems.asset
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -12459,6 +12819,12 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Library\StateCache\SceneView\aedaca-mainStage.json
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\SceneView\aedaca-mainStage.json
+    projectPath: Library\StateCache\SceneView\aedaca-mainStage.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Catan\ProjectSettings\AudioManager.asset
     fullPath: C:\Users\donki\Desktop\Catan\Catan\ProjectSettings\AudioManager.asset
     projectPath: ProjectSettings\AudioManager.asset
@@ -12573,9 +12939,39 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Catan\Temp\UnityTempFile-f65bdf7f04f6f454b837b094956c2fef
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-f65bdf7f04f6f454b837b094956c2fef
-    projectPath: Temp\UnityTempFile-f65bdf7f04f6f454b837b094956c2fef
+  - path: Catan\Temp\UnityTempFile-2e5e214fa0bb2d34593848daed8a54fa
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-2e5e214fa0bb2d34593848daed8a54fa
+    projectPath: Temp\UnityTempFile-2e5e214fa0bb2d34593848daed8a54fa
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Temp\UnityTempFile-7e4c5de279e84574bb460cbe58cb3832
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-7e4c5de279e84574bb460cbe58cb3832
+    projectPath: Temp\UnityTempFile-7e4c5de279e84574bb460cbe58cb3832
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Temp\UnityTempFile-a255df0da6b0e3e4d8bf96db58d86d1c
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-a255df0da6b0e3e4d8bf96db58d86d1c
+    projectPath: Temp\UnityTempFile-a255df0da6b0e3e4d8bf96db58d86d1c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Temp\UnityTempFile-a71de96badf0c5b49836f23fc18420c5
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-a71de96badf0c5b49836f23fc18420c5
+    projectPath: Temp\UnityTempFile-a71de96badf0c5b49836f23fc18420c5
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Temp\UnityTempFile-b09bdc0a0d03d2a4a84fbf9f9267f3b1
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-b09bdc0a0d03d2a4a84fbf9f9267f3b1
+    projectPath: Temp\UnityTempFile-b09bdc0a0d03d2a4a84fbf9f9267f3b1
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Temp\UnityTempFile-e903913e9be04134fb950bf06febb0f4
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Temp\UnityTempFile-e903913e9be04134fb950bf06febb0f4
+    projectPath: Temp\UnityTempFile-e903913e9be04134fb950bf06febb0f4
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1

@@ -5,6 +5,7 @@ using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
+using Catan.Scripts.Player;
 using JetBrains.Annotations;
 using System;
 
@@ -13,6 +14,7 @@ namespace Catan.Scripts.Manager
     public class PlayerTurnManeger : MonoBehaviour
     {
         public PlayerTurnUI playerTurnUI;
+        public ToPleyerObject toPleyerObjects;
         public DicePresenter dicePresenter;
         public NortificationPresenter nortificationPresenter;
         public DistributeCardManeger distributeCardManeger;
@@ -70,6 +72,10 @@ namespace Catan.Scripts.Manager
 
         public void Next()
         {
+            Debug.Log(1);
+            Debug.Log(toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count);
+            Debug.Log(2);
+            Debug.Log(toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count);
             // Nextの処理
             if (cur <= 3)
             {
@@ -78,12 +84,20 @@ namespace Catan.Scripts.Manager
             }
             else if (cur <= 7)
             {
-                cur++;
+                if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 1 &&
+                    toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 1)
+                {
+                    cur++;
+                }
                 if (cur == 7) _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
             }
             else if (cur <= 11)
             {
-                cur++;
+                if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 2 &&
+                    toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 2)
+                {
+                    cur++;
+                }
                 if (cur == 11) _currentTurnState.SetValueAndForceNotify(TurnState.RollDice);
                 Debug.Log("うんこ");
             }
@@ -120,6 +134,7 @@ namespace Catan.Scripts.Manager
                         break;
                     case TurnState.NormalTurn:
                         Array.Reverse(playerIds);
+                        // カードを配る
                         Debug.Log("NormalState");
                         break;
                 }

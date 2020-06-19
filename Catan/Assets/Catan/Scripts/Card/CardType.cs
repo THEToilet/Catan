@@ -8,7 +8,7 @@ namespace Catan.Scripts.Card
     public enum CardType
     {
         Wood,
-        Bricks,
+        Brick,
         IronOre,
         Wheat,
         Wool
