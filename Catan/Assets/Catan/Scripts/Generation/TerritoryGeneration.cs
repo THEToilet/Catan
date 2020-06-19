@@ -23,17 +23,17 @@ namespace Catan.Scripts.Generation
             switch (territoryType)
             {
                 case (TerritoryType.Road):
-                    tmpGameObject.GetComponent<Belongings>().territories.Add(
+                    tmpGameObject.GetComponent<Belongings>().Road.Add(
                        tmp = GameObject.Instantiate(Road, new Vector3(position.x, 2f, position.z), Quaternion.Euler(0,90,0))
                     );
                     break;
                 case (TerritoryType.Settlement):
-                    tmpGameObject.GetComponent<Belongings>().territories.Add(
+                    tmpGameObject.GetComponent<Belongings>().City.Add(
                         tmp = GameObject.Instantiate(Settlement, new Vector3(position.x, 2f, position.z), Quaternion.identity)
                     );
                     break;
                 case (TerritoryType.City):
-                    tmpGameObject.GetComponent<Belongings>().territories.Add(
+                    tmpGameObject.GetComponent<Belongings>().City.Add(
                         tmp = GameObject.Instantiate(City, position, Quaternion.identity)
                     );
                     break;
