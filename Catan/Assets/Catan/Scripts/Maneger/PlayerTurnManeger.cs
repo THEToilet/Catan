@@ -19,16 +19,15 @@ namespace Catan.Scripts.Manager
         // ステート管理するReactiveProperty
         public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
         public OrderDetermining orderDetermining;
-        public PlayerId[] IniplayerIds;
         public PlayerId[] playerIds;
         private int cur = 0;
+        private int state = 0;
 
         private void Start()
         {
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
             _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
-            IniplayerIds = new PlayerId[8];
         }
 
         /// <summary>
@@ -68,7 +67,20 @@ namespace Catan.Scripts.Manager
         {
             // Nextの処理
 
-            cur++;
+            if (state == 0 && cur <= 3)
+            {
+                cur++;
+                if (cur == 3) state++;
+            }
+            else if (state == 1)
+            {
+                cur--;
+                if (cur == 0) state++;
+            }
+            else if (state == 2)
+            {
+                Debug.Log("うんこ");
+            }
             _currentPlayerId.SetValueAndForceNotify(playerIds[cur]);
         }
 
