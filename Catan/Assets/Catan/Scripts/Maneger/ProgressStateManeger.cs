@@ -49,14 +49,14 @@ namespace Catan.Scripts.Manager
                         Debug.Log("ini");
                         initializationManeger.Excute();
                         playerIds = orderDetermining.GetOrder(); // プレイヤーの順番取得
-                        await playerTurn.DescendingOrderTurnState(playerIds); //　サイコロ振る
-                        await playerTurn.DescendingOrderTurnState(playerIds); //　初期配置降順
-                        await playerTurn.AscendingOrderTurnState(playerIds); // 初期配置昇順
-                        this._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
+                       // await playerTurn.DescendingOrderTurnState(playerIds); //　サイコロ振る
+                       //  await playerTurn.DescendingOrderTurnState(playerIds); //　初期配置降順
+                      //  await playerTurn.AscendingOrderTurnState(playerIds); // 初期配置昇順
+                      //  this._currentProgressState.SetValueAndForceNotify(ProgressState.Battle); // ゲームシーンをバトルへ
                         break;
                     case ProgressState.Battle:
                         Debug.Log("battle");
-                        playerTurn.AscendingOrderTurnState(playerIds); // バトル開始
+                     //   playerTurn.AscendingOrderTurnState(playerIds); // バトル開始
                         battleManeger.Excute();
                         break;
                     case ProgressState.Finished:

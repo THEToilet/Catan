@@ -17,8 +17,7 @@ namespace Catan.Scripts.Manager
     public PlayerMonitoring playerMonitoring;
     // ステート管理するReactiveProperty
     public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();
-
-    public ReactiveProperty<PlayerId> _normalCurrentPlayerId = new ReactiveProperty<PlayerId>();
+   // public ReactiveProperty<PlayerId> _normalCurrentPlayerId = new ReactiveProperty<PlayerId>();
 
     public bool isActive = false;
 
@@ -27,14 +26,15 @@ namespace Catan.Scripts.Manager
       StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
     }
 
-    public async UniTask DescendingOrderTurnState(PlayerId[] playerIds) //　初期配置降順
-    {
-      for (int i = 0; i < 4; i++)
-      {
-        _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
-        await TurnUniTask(); // 陣地と路が置かれるるまで待つ
-      }
-    }
+   // public async UniTask DescendingOrderTurnState(PlayerId[] playerIds) //　初期配置降順
+   // {
+   //   for (int i = 0; i < 4; i++)
+   //   {
+   //     _currentPlayerId.SetValueAndForceNotify(playerIds[i]);
+  //      await TurnUniTask(); // 陣地と路が置かれるるまで待つ
+  //j    }
+   // }
+   /*
     public async UniTask AscendingOrderTurnState(PlayerId[] playerIds) // 初期配置昇順
     {
       for (int i = 3; i >= 0; i--)
@@ -53,7 +53,7 @@ namespace Catan.Scripts.Manager
         await TurnUniTask(); // サイコロが押されるまで待つ
         distributeCardManeger.Distribute(1);
       }
-    }
+    }*/
     /// <summary>
     /// ステート遷移するたびに処理を走らせる 初期配置で使う
 
