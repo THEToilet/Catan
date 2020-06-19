@@ -29,6 +29,7 @@ namespace Catan.Scripts.Manager
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
             playerGeneration.Generate(); // プレイヤー生成
+            orderDetermining.OrderDecide();
         }
     }
 

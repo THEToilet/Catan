@@ -48,7 +48,6 @@ namespace Catan.Scripts.Manager
                     case ProgressState.Initialization:
                         Debug.Log("ini");
                         initializationManeger.Excute();
-                        playerIds = orderDetermining.GetOrder(); // プレイヤーの順番取得
                        // await playerTurn.DescendingOrderTurnState(playerIds); //　サイコロ振る
                        //  await playerTurn.DescendingOrderTurnState(playerIds); //　初期配置降順
                       //  await playerTurn.AscendingOrderTurnState(playerIds); // 初期配置昇順

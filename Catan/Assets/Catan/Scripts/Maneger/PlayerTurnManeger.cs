@@ -74,6 +74,7 @@ namespace Catan.Scripts.Manager
             }
             else if (state == 1)
             {
+                playerIds = orderDetermining.GetOrder();
                 cur--;
                 if (cur == 0) state++;
             }

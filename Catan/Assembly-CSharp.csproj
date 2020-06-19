@@ -87,10 +87,12 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\DrawSpecialCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameStateManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\InitialState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitializationManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\TurnState.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\Belongings.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\OrderDetermining.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\PlayerAction.cs" />
