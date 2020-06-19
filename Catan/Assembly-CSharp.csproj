@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{C4738008-B38B-A26D-412F-A4FE1EAA2FF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -88,7 +89,7 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameStateManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitializationManeger.cs" />
-    <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurn.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\Belongings.cs" />

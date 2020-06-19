@@ -13,7 +13,7 @@ namespace Catan.Scripts.Presenter
   {
 
     public ReactiveProperty<PlayerId> _currentPlayerId;
-    public PlayerTurn playerTurn;
+    public PlayerTurnManeger playerTurn;
 
     public Text playerText;
 

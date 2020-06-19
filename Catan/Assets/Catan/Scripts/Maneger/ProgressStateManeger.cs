@@ -17,7 +17,7 @@ namespace Catan.Scripts.Manager
         public InitializationManeger initializationManeger;
         public OrderDetermining orderDetermining;
         public BattleManeger battleManeger;
-        public PlayerTurn playerTurn;
+        public PlayerTurnManeger playerTurn;
         public PlayerId[] playerIds;
 
         // ステート管理するReactiveProperty
