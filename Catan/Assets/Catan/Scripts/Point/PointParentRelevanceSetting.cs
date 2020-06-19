@@ -38,18 +38,18 @@ namespace Catan.Scripts.Point
             {
                 GameObject tmpGameObject = pointParentGeneration.parentPointObjects[i];
                 var setGameObject = tmpGameObject.GetComponent<PointParentBehavior>();
-                setGameObject.childPointObjects[0] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][0]];
-                setGameObject.childPointObjects[1] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][1]];
-                setGameObject.childPointObjects[2] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][2]];
-                setGameObject.childPointObjects[3] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][3]];
-                setGameObject.childPointObjects[4] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][4]];
-                setGameObject.childPointObjects[5] =
-                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][5]];
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][0]]);
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][1]]);
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][2]]);
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][3]]);
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][4]]);
+                setGameObject.childPointObjects.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[havePoints[i][5]]);
             }
         }
     }

@@ -482,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35605535}
   - component: {fileID: 35605534}
+  - component: {fileID: 35605536}
   m_Layer: 0
   m_Name: Common
   m_TagString: Untagged
@@ -519,6 +520,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &35605536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35605533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f113d50aa81b90e4580b06adc185ff47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrickCard: {fileID: 6786201980398328745, guid: 340ade802ad9f754b813b4153bd8efc6,
+    type: 3}
+  IronOreCard: {fileID: 6096707088935298040, guid: d8b6884ee3ca2a44fa855051a9cb237b,
+    type: 3}
+  WheatCard: {fileID: 5611914648156111369, guid: c9905570922ff594bb6b699d34e864ad,
+    type: 3}
+  WoodCard: {fileID: 229454834926381371, guid: a675f1de7c66de845b79d94b33d2bb58, type: 3}
+  WoolCard: {fileID: 5084588388414511856, guid: 397427f90dec28049b40897723ce4573,
+    type: 3}
 --- !u!1 &38126198
 GameObject:
   m_ObjectHideFlags: 0
@@ -17426,15 +17448,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9883b60513f14794b86720351fedf4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainGeneration: {fileID: 0}
-  BrickCard: {fileID: 6786201980398328745, guid: 340ade802ad9f754b813b4153bd8efc6,
-    type: 3}
-  IronOre: {fileID: 6096707088935298040, guid: d8b6884ee3ca2a44fa855051a9cb237b, type: 3}
-  WheatCard: {fileID: 5611914648156111369, guid: c9905570922ff594bb6b699d34e864ad,
-    type: 3}
-  WoodCard: {fileID: 229454834926381371, guid: a675f1de7c66de845b79d94b33d2bb58, type: 3}
-  WoolCard: {fileID: 5084588388414511856, guid: 397427f90dec28049b40897723ce4573,
-    type: 3}
+  terrainGeneration: {fileID: 1669153288}
+  pointParentGeneration: {fileID: 1669153296}
+  toPleyerObject: {fileID: 35605534}
+  toCardObject: {fileID: 35605536}
 --- !u!1 &1669473338
 GameObject:
   m_ObjectHideFlags: 0

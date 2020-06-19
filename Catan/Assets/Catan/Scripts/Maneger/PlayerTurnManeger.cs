@@ -98,7 +98,7 @@ namespace Catan.Scripts.Manager
                 {
                     cur++;
                 }
-                if (cur == 11) _currentTurnState.SetValueAndForceNotify(TurnState.RollDice);
+                if (cur == 11) _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
                 Debug.Log("うんこ");
             }
             else
@@ -135,6 +135,7 @@ namespace Catan.Scripts.Manager
                     case TurnState.NormalTurn:
                         Array.Reverse(playerIds);
                         // カードを配る
+                        distributeCardManeger.InitDistribute();
                         Debug.Log("NormalState");
                         break;
                 }
