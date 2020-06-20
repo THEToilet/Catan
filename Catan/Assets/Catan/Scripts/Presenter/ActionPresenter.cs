@@ -31,6 +31,7 @@ namespace Catan.Scripts.Presenter
         void Start()
         {
 
+            /*
             constructionButton.OnClickAsObservable()  // 建設する
             .Subscribe(_ =>
             {
@@ -66,7 +67,7 @@ namespace Catan.Scripts.Presenter
                 gameStateManeger._currentGameState
                     .SetValueAndForceNotify(GameState.Negotiation);
             });
-
+*/
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
