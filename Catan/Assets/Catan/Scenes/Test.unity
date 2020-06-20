@@ -17420,6 +17420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointParentGeneration: {fileID: 1669153296}
+  numberToken: {fileID: 5520514683870041040, guid: 96d86b6cc8e2bd6439f6881e12fb02a6,
+    type: 3}
 --- !u!114 &1669153303
 MonoBehaviour:
   m_ObjectHideFlags: 0
