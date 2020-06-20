@@ -15,26 +15,37 @@ namespace Catan.Scripts.Manager
     {
         public TerrainGeneration terrainGeneration;
         public PointParentGeneration pointParentGeneration;
-        private List< GameObject> tmpGameObjects = new List<GameObject>();
+        private List<GameObject> tmpGameObjects = new List<GameObject>();
         public ToPleyerObject toPleyerObject;
         public ToCardObject toCardObject;
         PlayerId[] playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
 
         public void Distribute(int diceNum)
         {
-            var t = pointParentGeneration.parentPointObjects ;// 地形がある
+            var t = pointParentGeneration.parentPointObjects;
 
-            for(int i=0;i<t.Count; i++){
-                if(diceNum == t[i].GetComponent<PointParentBehavior>().tokenNumber){
+            for (int i = 0; i < t.Count; i++)
+            {
+                if (diceNum == t[i].GetComponent<PointParentBehavior>().tokenNumber)
+                {
                     tmpGameObjects.Add(t[i]);
+                }
             }
-            }
-            for(int i=0;i<tmpGameObjects.Count;i++){
-                for(int j=0;j<6;j++){
-                   // if(tmpGameObjects[i].childPoint[j] == ture){
-
-                        //Get PlayerId => add Playerd Belongings card Terrain Type
-                    //}
+            for (int i = 0; i < tmpGameObjects.Count; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    for (int k = 0; k < playerIds.Length; k++)
+                    {
+                        var n = toPleyerObject.ToPlayer(playerIds[k]).GetComponent<Belongings>();
+                        for (int l = 0; l < n.City.Count; l++)
+                        {
+                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l]))
+                            {
+                                n.City.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
+                            }
+                        }
+                    }
                 }
             }
         }

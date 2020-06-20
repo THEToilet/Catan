@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2020-06-20T17:39:43.399+09:00
-  initializedAtString: 2020-06-20T16:36:04.386+09:00
-  ahead: 1
+  lastUpdatedAtString: 2020-06-20T18:39:15.177+09:00
+  initializedAtString: 2020-06-20T18:20:31.376+09:00
+  ahead: 0
   behind: 0
