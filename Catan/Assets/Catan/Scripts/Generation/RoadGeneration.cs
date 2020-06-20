@@ -93,7 +93,7 @@ namespace Catan.Scripts.Generation
             GameObject tmpGameObject;
             for (int i = 0; i < roadBasePositions.Length; i++)
             {
-                tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.identity);
+                tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90,0,0));
                 tmpGameObject.name = "RoadBase_" + i;
                 roads.Add(tmpGameObject);
             }

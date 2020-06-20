@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2020-06-20T21:53:09.999+09:00
-  initializedAtString: 2020-06-20T21:51:04.647+09:00
+  lastUpdatedAtString: 2020-06-20T23:00:19.874+09:00
+  initializedAtString: 2020-06-20T22:23:33.974+09:00
   currentGitRemote:
     name: origin
     url: https://github.com/THEToilet/Catan.git

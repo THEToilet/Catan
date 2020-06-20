@@ -138,8 +138,10 @@
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+    <Compile Include="Assets\Fantasy UI\Samples\IconPreview.cs" />
     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Fantasy UI\Fonts\OFL.txt" />
     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
