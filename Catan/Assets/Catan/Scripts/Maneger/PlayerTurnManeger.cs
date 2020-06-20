@@ -135,8 +135,8 @@ namespace Catan.Scripts.Manager
                     case TurnState.NormalTurn:
                         Array.Reverse(playerIds);
                         // カードを配る
-                        distributeCardManeger.InitDistribute();
                         Debug.Log("NormalState");
+                        distributeCardManeger.InitDistribute();
                         break;
                 }
             }
