@@ -17146,7 +17146,6 @@ MonoBehaviour:
   orderDetermining: {fileID: 1669153294}
   battleManeger: {fileID: 1669153292}
   playerTurn: {fileID: 1669153291}
-  playerIds: 
 --- !u!114 &1669153285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21772,6 +21771,7 @@ MonoBehaviour:
   drawCardButton: {fileID: 1585629301}
   gameStateManeger: {fileID: 1669153286}
   playerTurn: {fileID: 1669153291}
+  distributeCardManeger: {fileID: 1669153304}
 --- !u!4 &2096806378
 Transform:
   m_ObjectHideFlags: 0

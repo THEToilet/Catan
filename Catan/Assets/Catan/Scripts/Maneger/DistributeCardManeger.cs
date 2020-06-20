@@ -15,13 +15,14 @@ namespace Catan.Scripts.Manager
     {
         public TerrainGeneration terrainGeneration;
         public PointParentGeneration pointParentGeneration;
-        private List<GameObject> tmpGameObjects = new List<GameObject>();
         public ToPleyerObject toPleyerObject;
         public ToCardObject toCardObject;
         PlayerId[] playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
 
         public void Distribute(int diceNum)
         {
+            List<GameObject> tmpGameObjects = new List<GameObject>();
+            Debug.Log("超うんこ");
             var t = pointParentGeneration.parentPointObjects;
 
             for (int i = 0; i < t.Count; i++)
@@ -31,20 +32,20 @@ namespace Catan.Scripts.Manager
                     tmpGameObjects.Add(t[i]);
                 }
             }
-            for (int i = 0; i < tmpGameObjects.Count; i++)
+
+            for (int k = 0; k < playerIds.Length; k++)
             {
-                for (int j = 0; j < 6; j++)
+                var n = toPleyerObject.ToPlayer(playerIds[k]).GetComponent<Belongings>();
+                for (int l = 0; l < n.City.Count; l++)
                 {
-                    for (int k = 0; k < playerIds.Length; k++)
+                    for (int i = 0; i < tmpGameObjects.Count; i++)
                     {
-                        var n = toPleyerObject.ToPlayer(playerIds[k]).GetComponent<Belongings>();
-                        for (int l = 0; l < n.City.Count; l++)
-                        {
-                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l]))
+                        for (int j = 0; j < 6; j++)
+                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l].GetComponent<Settlement>().TerritoryPosition))
                             {
-                                n.City.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
+                                Debug.Log("Hello unnko");
+                                n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
                             }
-                        }
                     }
                 }
             }
