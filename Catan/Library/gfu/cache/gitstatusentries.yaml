@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-06-21T01:00:20.059+09:00
-  initializedAtString: 2020-06-20T23:45:14.084+09:00
+  lastUpdatedAtString: 2020-06-21T02:36:12.219+09:00
+  initializedAtString: 2020-06-21T01:27:50.464+09:00
   entries:
   - path: Catan\Assets\Catan.meta
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan.meta
     projectPath: Assets\Catan.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Catan\Assets\Catan\Instance\NumberToken.prefab
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Instance\NumberToken.prefab
+    projectPath: Assets\Catan\Instance\NumberToken.prefab
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -4577,18 +4583,36 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Catan\Library\Artifacts\04\04fc797b94b5ef9b8c6bb7628286970f
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\04\04fc797b94b5ef9b8c6bb7628286970f
-    projectPath: Library\Artifacts\04\04fc797b94b5ef9b8c6bb7628286970f
+  - path: Catan\Library\Artifacts\53\532e280fac8e3e1e2f0c1b273422f50b
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\53\532e280fac8e3e1e2f0c1b273422f50b
+    projectPath: Library\Artifacts\53\532e280fac8e3e1e2f0c1b273422f50b
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Catan\Library\Artifacts\12\1237c605cf494c7f6b08bb44f19d8d0c
-    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\12\1237c605cf494c7f6b08bb44f19d8d0c
-    projectPath: Library\Artifacts\12\1237c605cf494c7f6b08bb44f19d8d0c
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\64\6417d7ffcd1884be1da80df8fc4fc03f
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\64\6417d7ffcd1884be1da80df8fc4fc03f
+    projectPath: Library\Artifacts\64\6417d7ffcd1884be1da80df8fc4fc03f
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\8f\8f4bf8f012deabd46e59fb1156f3ef77
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\8f\8f4bf8f012deabd46e59fb1156f3ef77
+    projectPath: Library\Artifacts\8f\8f4bf8f012deabd46e59fb1156f3ef77
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\98\988bfacbc3b06b305570859b43cefef1
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\98\988bfacbc3b06b305570859b43cefef1
+    projectPath: Library\Artifacts\98\988bfacbc3b06b305570859b43cefef1
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Catan\Library\Artifacts\c3\c3294d9bafd57572289502eb511c2b2c
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\c3\c3294d9bafd57572289502eb511c2b2c
+    projectPath: Library\Artifacts\c3\c3294d9bafd57572289502eb511c2b2c
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Library\EditorInstance.json
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\EditorInstance.json
     projectPath: Library\EditorInstance.json
@@ -13180,12 +13204,24 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Library\StateCache\Hierarchy\b3481f-96d86b6cc8e2bd6439.json
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\Hierarchy\b3481f-96d86b6cc8e2bd6439.json
+    projectPath: Library\StateCache\Hierarchy\b3481f-96d86b6cc8e2bd6439.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Library\StateCache\Hierarchy\b3481f-mainStage.json
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\Hierarchy\b3481f-mainStage.json
     projectPath: Library\StateCache\Hierarchy\b3481f-mainStage.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Catan\Library\StateCache\SceneView\aedaca-96d86b6cc8e2bd6439.json
+    fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\SceneView\aedaca-96d86b6cc8e2bd6439.json
+    projectPath: Library\StateCache\SceneView\aedaca-96d86b6cc8e2bd6439.json
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Catan\Library\StateCache\SceneView\aedaca-mainStage.json
     fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\SceneView\aedaca-mainStage.json
     projectPath: Library\StateCache\SceneView\aedaca-mainStage.json
