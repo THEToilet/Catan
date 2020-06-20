@@ -21,7 +21,7 @@ namespace Catan.Scripts.Generation
                 if (!hasPointTerritory) // オブジェクトがおいてあったら置かない
                 {
                     _gameObject.GetComponent<PointChildrenBehavior>().hasTerritory = true;
-                    territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Settlement, playerTurn._currentPlayerId.Value);
+                    territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Settlement, playerTurn._currentPlayerId.Value, _gameObject);
                 }
             }
 
@@ -31,7 +31,7 @@ namespace Catan.Scripts.Generation
                 if (!hasRoadBaseTerritory) // オブジェクトがおいてあったら置かない
                 {
                     _gameObject.GetComponent<RoadBaseBehavior>().hasTerritory = true;
-                    territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Road, playerTurn._currentPlayerId.Value);
+                    territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Road, playerTurn._currentPlayerId.Value, _gameObject);
                 }
             }
         }

@@ -9,7 +9,7 @@ namespace Catan.Scripts.Territory.TerritoryImplementation
     {
 
         public override TerritoryType type => TerritoryType.Road;
-        public override Vector3 TerritoryPosition => new Vector3();
+        public GameObject TerritoryPosition;
 
 
 
