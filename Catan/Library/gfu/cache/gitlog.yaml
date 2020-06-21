@@ -13,9 +13,147 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-06-21T22:20:47.822+09:00
-  initializedAtString: 2020-06-21T22:20:44.587+09:00
+  lastUpdatedAtString: 2020-06-21T23:56:52.889+09:00
+  initializedAtString: 2020-06-21T23:56:51.583+09:00
   log:
+  - commitID: f7b23c8714f46a7891f606cdedf047a151303b2d
+    mergeA: 
+    mergeB: 
+    authorName: TheToilet
+    authorEmail: bp18015@shibaura-it.ac.jp
+    commitEmail: bp18015@shibaura-it.ac.jp
+    commitName: TheToilet
+    summary: "Action \u306E\u3000\u30DC\u30BF\u30F3\u3092\u6574\u5099"
+    description: 
+    timeString: 2020-06-21T22:36:48.000+09:00
+    commitTimeString: 2020-06-21T22:36:48.000+09:00
+    changes:
+    - path: Catan\Assets\Catan\Scenes\Test.unity
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scenes\Test.unity
+      projectPath: Assets\Catan\Scenes\Test.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Assets\Catan\Scripts\Maneger\GameState.cs
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Maneger\GameState.cs
+      projectPath: Assets\Catan\Scripts\Maneger\GameState.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Assets\Catan\Scripts\Maneger\GameStateManeger.cs
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Maneger\GameStateManeger.cs
+      projectPath: Assets\Catan\Scripts\Maneger\GameStateManeger.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Assets\Catan\Scripts\Presenter\ActionPresenter.cs
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Assets\Catan\Scripts\Presenter\ActionPresenter.cs
+      projectPath: Assets\Catan\Scripts\Presenter\ActionPresenter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\ArtifactDB
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\ArtifactDB
+      projectPath: Library\ArtifactDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\Artifacts\03\03d02655e977091b4f4c369582f41b10
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\03\03d02655e977091b4f4c369582f41b10
+      projectPath: Library\Artifacts\03\03d02655e977091b4f4c369582f41b10
+      originalPath: Catan\Library\Artifacts\7c\7c0b89cf0bca596d104d3fa13b7f9671
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Catan\Library\Artifacts\36\36456c821cef4bfb67b9d3c2442e0764
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\36\36456c821cef4bfb67b9d3c2442e0764
+      projectPath: Library\Artifacts\36\36456c821cef4bfb67b9d3c2442e0764
+      originalPath: Catan\Library\Artifacts\32\32230f5934080ebcec74c7142a74d0b0
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Catan\Library\Artifacts\d8\d81b963f746a2af2122d3e27a7863ab7
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\d8\d81b963f746a2af2122d3e27a7863ab7
+      projectPath: Library\Artifacts\d8\d81b963f746a2af2122d3e27a7863ab7
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Catan\Library\Artifacts\d8\d8da9daac5c4590661b31277b8c815e6
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\Artifacts\d8\d8da9daac5c4590661b31277b8c815e6
+      projectPath: Library\Artifacts\d8\d8da9daac5c4590661b31277b8c815e6
+      originalPath: Catan\Library\Artifacts\7a\7a2a44e3467230d6967d040ecba0f0e1
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Catan\Library\CurrentLayout-default.dwlt
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\CurrentLayout-default.dwlt
+      projectPath: Library\CurrentLayout-default.dwlt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\ScriptAssemblies\Assembly-CSharp.dll
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\ScriptAssemblies\Assembly-CSharp.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\ScriptAssemblies\Assembly-CSharp.pdb
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\ScriptAssemblies\Assembly-CSharp.pdb
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\SourceAssetDB
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\SourceAssetDB
+      projectPath: Library\SourceAssetDB
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\StateCache\SceneView\aedaca-mainStage.json
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\StateCache\SceneView\aedaca-mainStage.json
+      projectPath: Library\StateCache\SceneView\aedaca-mainStage.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\branches.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\gitlocks.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\gitlog.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Catan\Library\gfu\cache\repoinfo.yaml
+      fullPath: C:\Users\donki\Desktop\Catan\Catan\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: 858cafd0c70104ad324730787bd5f81a1cfdb264
     mergeA: 
     mergeB: 

@@ -73,7 +73,7 @@ namespace Catan.Scripts.Generation
             GameObject tmpGameObject;
             for (int i = 0; i < childPoints.Length; i++)
             {
-                tmpGameObject = GameObject.Instantiate(childPoint, childPoints[i], Quaternion.identity);
+                tmpGameObject = GameObject.Instantiate(childPoint, childPoints[i], Quaternion.Euler(90f,0,0));
                 tmpGameObject.name = "PointChild_" + i;
                 childrenPointGameObjects.Add(tmpGameObject);
             }

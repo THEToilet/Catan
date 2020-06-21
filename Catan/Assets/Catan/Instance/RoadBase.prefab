@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5159556551954786096}
   - component: {fileID: 7521511024271269186}
   - component: {fileID: -3357790253748033574}
-  - component: {fileID: 7845090667158747939}
   m_Layer: 0
   m_Name: RoadBase
   m_TagString: Untagged
@@ -100,7 +99,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
@@ -110,21 +109,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7845090667158747939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5159556551954786097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8f6d3c6e4250e84192f5b34ce9e71bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glowColor: {r: 1, g: 1, b: 1, a: 1}
-  glowBrightness: 3.6
-  outlineWidth: 4
-  alphaThreshold: 0.25
-  drawOutside: 0
-  enableInstancing: 0

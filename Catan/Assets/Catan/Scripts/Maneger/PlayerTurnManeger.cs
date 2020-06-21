@@ -123,18 +123,22 @@ namespace Catan.Scripts.Manager
                     // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
                     case TurnState.RollDice:
                         Debug.Log("RollDice");
+                        playerNotificationPresenter.DisplayNote("RollDice");
                         break;
                     case TurnState.DescendingOrderArragement:
                         playerIds = orderDetermining.GetOrder();
+                        playerNotificationPresenter.DisplayNote("Decend");
                         Debug.Log("Decend");
                         break;
                     case TurnState.AscendingOrderArrangement:
                         Array.Reverse(playerIds);
+                        playerNotificationPresenter.DisplayNote("Accend");
                         Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
                         Array.Reverse(playerIds);
                         // カードを配る
+                        playerNotificationPresenter.DisplayNote("NormalState");
                         Debug.Log("NormalState");
                         distributeCardManeger.InitDistribute();
                         break;
