@@ -13,11 +13,15 @@ namespace Catan.Scripts.Presenter
     {
 
         public GameObject notePanel;
+        public GameObject nnotePanel;
         public ReactiveProperty<PlayerId> _currentPlayerId;
         public PlayerTurnManeger playerTurn;
         private float time = 0;
         private bool turnFlag = false;
         public Text noteText;
+        private float ntime = 0;
+        private bool noteFlag= false;
+        public Text nnoteText;
 
         public void DisplayPlayerName(PlayerId _playerId)
         {
@@ -45,8 +49,8 @@ namespace Catan.Scripts.Presenter
 
         public void DisplayNote(string mess)
         {
-            this.TurnFlag();
-            noteText.text = mess;
+            this.NoteFlag();
+            nnoteText.text = mess;
         }
 
         private void TurnFlag()
@@ -54,16 +58,29 @@ namespace Catan.Scripts.Presenter
             turnFlag = true;
             notePanel.SetActive(true);
         }
+        private void NoteFlag()
+        {
+            noteFlag = true;
+            nnotePanel.SetActive(true);
+        }
 
         private void Update()
         {
             if (turnFlag) time++;
+            if (noteFlag) ntime++;
 
-            if (time >= 200)
+            if (time >= 300)
             {
                 turnFlag = false;
                 notePanel.SetActive(false);
                 this.time = 0;
+            }
+            
+            if (ntime >= 200)
+            {
+                noteFlag= false;
+                nnotePanel.SetActive(false);
+                this.ntime = 0;
             }
         }
 
