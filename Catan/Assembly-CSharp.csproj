@@ -68,6 +68,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\ToSpecialCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Common\Dice.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\AboutCard.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\Construction.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Assets\Catan\Scripts\Generation\TerritoryGenerationDecision.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\BattleManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs" />
-    <Compile Include="Assets\Catan\Scripts\Maneger\DrawSpecialCardManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\DistributeDevelopmentCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameStateManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitialState.cs" />

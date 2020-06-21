@@ -14,6 +14,7 @@ namespace Catan.Scripts.Manager
         public ReactiveProperty<GameState> _currentGameState
             = new ReactiveProperty<GameState>();
         public PlayerTurnManeger playerTurnManeger;
+        public DistributeDevelopmentCardManeger distributeDevelopmentCardManeger;
         void Start()
         {
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
@@ -38,7 +39,8 @@ namespace Catan.Scripts.Manager
                         Debug.Log("construc");
                         break;
                     case GameState.DrawCard:
-                        Debug.Log("aboutcard");
+                        Debug.Log("drawCard");
+                        distributeDevelopmentCardManeger.DrawCard(playerTurnManeger._currentPlayerId.Value);
                         // カードを引くクラスを使う
                         break;
                     case GameState.UseCard:
