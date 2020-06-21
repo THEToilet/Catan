@@ -13,7 +13,7 @@ namespace Catan.Scripts.Manager
         // ステート管理するReactiveProperty
         public ReactiveProperty<GameState> _currentGameState
             = new ReactiveProperty<GameState>();
-
+        public PlayerTurnManeger playerTurnManeger;
         void Start()
         {
             StateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
@@ -37,8 +37,12 @@ namespace Catan.Scripts.Manager
                     case GameState.Construction:
                         Debug.Log("construc");
                         break;
-                    case GameState.AboutCard:
+                    case GameState.DrawCard:
                         Debug.Log("aboutcard");
+                        // カードを引くクラスを使う
+                        break;
+                    case GameState.UseCard:
+                        Debug.Log("Usecard");
                         // カードを引くクラスを使う
                         break;
                     // これより下はまた後で

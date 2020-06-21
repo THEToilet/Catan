@@ -8,7 +8,8 @@ namespace Catan.Scripts.Manager
     public enum GameState
     {
         Construction,
-        AboutCard,
+        UseCard,
+        DrawCard,
         Trade,
         Negotiation
     }

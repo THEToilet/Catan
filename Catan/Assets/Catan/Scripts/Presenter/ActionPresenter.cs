@@ -14,6 +14,7 @@ namespace Catan.Scripts.Presenter
         [SerializeField] private Button constructionButton;
 
         [SerializeField] private Button tradeButton;
+        [SerializeField] private Button useCardButton;
 
         [SerializeField] private Button negotiationButton;
 
@@ -28,8 +29,6 @@ namespace Catan.Scripts.Presenter
         // Start is called before the first frame update
         void Start()
         {
-
-            /*
             constructionButton.OnClickAsObservable()  // 建設する
             .Subscribe(_ =>
             {
@@ -37,11 +36,11 @@ namespace Catan.Scripts.Presenter
                     .SetValueAndForceNotify(GameState.Construction);
             });
 
-            aboutCardButton.OnClickAsObservable()  // カードを使う　
+            useCardButton.OnClickAsObservable()  // カードを使う　
             .Subscribe(_ =>
             {
                 gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.AboutCard);
+                    .SetValueAndForceNotify(GameState.UseCard);
             });
 
 
@@ -49,7 +48,7 @@ namespace Catan.Scripts.Presenter
             .Subscribe(_ =>
             {
                 gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.AboutCard);
+                    .SetValueAndForceNotify(GameState.DrawCard);
             });
 
             tradeButton.OnClickAsObservable() //  トレードする
@@ -65,7 +64,7 @@ namespace Catan.Scripts.Presenter
                 gameStateManeger._currentGameState
                     .SetValueAndForceNotify(GameState.Negotiation);
             });
-*/
+           
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
