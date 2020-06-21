@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8820405240951510217}
   - component: {fileID: 401991208490790040}
-  - component: {fileID: 5621604854544892867}
   - component: {fileID: -7056925119640035321}
+  - component: {fileID: -4871817044444131792}
   m_Layer: 0
   m_Name: pointC
   m_TagString: Untagged
@@ -55,19 +55,6 @@ MonoBehaviour:
   AdjacentPoint_1: {fileID: 0}
   AdjacentPoint_2: {fileID: 0}
   hasTerritory: 0
---- !u!65 &5621604854544892867
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6301703377462696426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.08972812, z: -0.000000029802322}
 --- !u!212 &-7056925119640035321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -118,3 +105,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!135 &-4871817044444131792
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301703377462696426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}

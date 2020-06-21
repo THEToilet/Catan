@@ -113,6 +113,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\DicePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\NortificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ObjectClickPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\PlayerInfoPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PlayerNotificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\BuildUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\CardUI.cs" />
