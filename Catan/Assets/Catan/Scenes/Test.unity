@@ -2982,7 +2982,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1831122621}
-        m_MethodName: DOPlay
+        m_MethodName: DORestart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11962,7 +11962,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1831122620}
-  - component: {fileID: 1831122622}
   - component: {fileID: 1831122621}
   m_Layer: 5
   m_Name: Actions
@@ -12097,21 +12096,6 @@ MonoBehaviour:
   optionalRotationMode: 0
   optionalScrambleMode: 0
   optionalString: 
---- !u!114 &1831122622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831122619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 40306178, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preset: 0
-  onEnableBehaviour: 1
-  onDisableBehaviour: 0
 --- !u!1001 &1835202359
 PrefabInstance:
   m_ObjectHideFlags: 0
