@@ -13,7 +13,7 @@ namespace Catan.Scripts.Manager
 {
     public class PlayerTurnManeger : MonoBehaviour
     {
-        public PlayerTurnUI playerTurnUI;
+        public PlayerNotificationPresenter playerNotificationPresenter; 
         public ToPleyerObject toPleyerObjects;
         public DicePresenter dicePresenter;
         public NortificationPresenter nortificationPresenter;
@@ -52,19 +52,19 @@ namespace Catan.Scripts.Manager
                     // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
                     case PlayerId.Player1:
                         Debug.Log(1);
-                        playerTurnUI.DisplayPlayerName(PlayerId.Player1); // playerにターン開始を通知
+                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player1); // playerにターン開始を通知
                         break;
                     case PlayerId.Player2:
                         Debug.Log(2);
-                        playerTurnUI.DisplayPlayerName(PlayerId.Player2);
+                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player2);
                         break;
                     case PlayerId.Player3:
                         Debug.Log(3);
-                        playerTurnUI.DisplayPlayerName(PlayerId.Player3);
+                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player3);
                         break;
                     case PlayerId.Player4:
                         Debug.Log(4);
-                        playerTurnUI.DisplayPlayerName(PlayerId.Player4);
+                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player4);
                         break;
                 }
             }

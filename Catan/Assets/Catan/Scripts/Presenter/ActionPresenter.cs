@@ -13,8 +13,6 @@ namespace Catan.Scripts.Presenter
 
         [SerializeField] private Button constructionButton;
 
-        [SerializeField] private Button aboutCardButton;
-
         [SerializeField] private Button tradeButton;
 
         [SerializeField] private Button negotiationButton;

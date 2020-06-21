@@ -9,39 +9,64 @@ using Catan.Scripts.Manager;
 namespace Catan.Scripts.Presenter
 {
 
-  public class PlayerNotificationPresenter : MonoBehaviour
-  {
+    public class PlayerNotificationPresenter : MonoBehaviour
+    {
 
-    public ReactiveProperty<PlayerId> _currentPlayerId;
-    public PlayerTurnManeger playerTurn;
+        public GameObject notePanel;
+        public ReactiveProperty<PlayerId> _currentPlayerId;
+        public PlayerTurnManeger playerTurn;
+        private float time = 0;
+        private bool turnFlag = false;
+        public Text noteText;
 
-    public Text playerText;
-
-        void Update()
+        public void DisplayPlayerName(PlayerId _playerId)
         {
-            //  Debug.Log(playerTurn._currentPlayerId.Value);
-            playerText.color = PlayerIdExtensions.ToColor(playerTurn._currentPlayerId.Value);
-            switch (playerTurn._currentPlayerId.Value)
+            this.TurnFlag();
+            noteText.color = PlayerIdExtensions.ToColor(_playerId);
+            switch (_playerId)
             {
-                case (PlayerId.Player1):
-                    playerText.text = "Player1";
+                case PlayerId.Player1:
+                    noteText.text = "player1";
                     break;
-                case (PlayerId.Player2):
-                    playerText.text = "Player2";
+                case PlayerId.Player2:
+                    noteText.text = "player2";
                     break;
-                case (PlayerId.Player3):
-                    playerText.text = "Player3";
+                case PlayerId.Player3:
+                    noteText.text = "player3";
                     break;
-                case (PlayerId.Player4):
-                    playerText.text = "Player4";
+                case PlayerId.Player4:
+                    noteText.text = "player4";
                     break;
                 default:
-                    playerText.text = "undifeined";
+                    noteText.text = "undfined";
                     break;
             }
         }
 
+        public void DisplayNote(string mess)
+        {
+            this.TurnFlag();
+            noteText.text = mess;
+        }
 
-  }
+        private void TurnFlag()
+        {
+            turnFlag = true;
+            notePanel.SetActive(true);
+        }
+
+        private void Update()
+        {
+            if (turnFlag) time++;
+
+            if (time >= 200)
+            {
+                turnFlag = false;
+                notePanel.SetActive(false);
+                this.time = 0;
+            }
+        }
+
+    }
 
 }
