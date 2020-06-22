@@ -42,7 +42,6 @@ namespace Catan.Scripts.Generation
             new Vector3(11.5f,0,-17.5f),         // 21
             new Vector3(11.5f,0,-7f),       // 22
             new Vector3(11.5f,0,2.5f),     // 23
-            new Vector3(11.5f,0,12.5f),       // 24
             new Vector3(4.5f,0,-22.5f),      // 25
             new Vector3(4.5f,0,-12.5f),          // 26
             new Vector3(4.5f,0,-2.5f),       // 27
@@ -67,7 +66,7 @@ namespace Catan.Scripts.Generation
             new Vector3(11f,0,17.5f),          // 43
             new Vector3(11f,0,7.5f),       // 44
             new Vector3(11f,0,-2.5f),        // 45
-            new Vector3(11f,0,12.5f),      // 46
+            new Vector3(11f,0,12.5f),    // *  // 46
             new Vector3(4.5f,0,22.5f),      // 47
             new Vector3(4.5f,0,12.5f),        // 48
             new Vector3(4.5f,0,2.5f),       // 49
@@ -96,6 +95,7 @@ namespace Catan.Scripts.Generation
                 tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90,0,0));
                 tmpGameObject.name = "RoadBase_" + i;
                 roads.Add(tmpGameObject);
+                tmpGameObject.SetActive(false);
             }
         }
 

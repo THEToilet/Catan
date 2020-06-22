@@ -5,8 +5,6 @@ using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
-using Catan.Scripts.Player;
-using JetBrains.Annotations;
 using System;
 
 namespace Catan.Scripts.Manager

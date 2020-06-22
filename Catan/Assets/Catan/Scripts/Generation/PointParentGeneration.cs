@@ -38,6 +38,7 @@ namespace Catan.Scripts.Generation
                 tmpGameObject = GameObject.Instantiate(parentPoint, parentPoints[i], Quaternion.identity);
                 tmpGameObject.name = "PointParent_" + i;
                 parentPointObjects.Add(tmpGameObject);
+                tmpGameObject.SetActive(false);
 
             }
         }
