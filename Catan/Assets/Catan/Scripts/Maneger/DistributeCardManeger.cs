@@ -7,7 +7,7 @@ using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Generation;
 using Catan.Scripts.Point;
-using Catan.Scripts.Territory.TerritoryImplementation;
+using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Manager
 {
@@ -41,7 +41,7 @@ namespace Catan.Scripts.Manager
                     for (int i = 0; i < tmpGameObjects.Count; i++)
                     {
                         for (int j = 0; j < 6; j++)
-                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l].GetComponent<Settlement>().TerritoryPosition))
+                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l].GetComponent<TerritoryEntity>().TerritoryPosition))
                             {
                                 Debug.Log("Hello unnko");
                                 n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
@@ -57,7 +57,7 @@ namespace Catan.Scripts.Manager
             for (int i = 0; i < playerIds.Length; i++)
             {
                 var pb = toPleyerObject.ToPlayer(playerIds[i]).GetComponent<Belongings>();
-                var tt = pb.City[1].GetComponent<Settlement>().TerritoryPosition;
+                var tt = pb.City[1].GetComponent<TerritoryEntity>().TerritoryPosition;
                 Debug.Log(tt.name);
                 for (int j = 0; j < pointParentGeneration.parentPointObjects.Count; j++)
                 {

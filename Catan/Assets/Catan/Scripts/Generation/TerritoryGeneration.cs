@@ -4,7 +4,7 @@ using UnityEngine;
 using Catan.Scripts.Presenter;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Player;
-using Catan.Scripts.Territory.TerritoryImplementation;
+using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Generation
 {
@@ -27,19 +27,19 @@ namespace Catan.Scripts.Generation
                     tmpGameObject.GetComponent<Belongings>().Road.Add(
                        tmp = GameObject.Instantiate(Road, new Vector3(position.x, 2f, position.z), Quaternion.Euler(0, 90, 0))
                     ) ;
-                    tmp.GetComponent<Road>().TerritoryPosition = _gameObject;
+                    tmp.GetComponent<TerritoryEntity>().TerritoryPosition = _gameObject;
                     break;
                 case (TerritoryType.Settlement):
                     tmpGameObject.GetComponent<Belongings>().City.Add(
                         tmp = GameObject.Instantiate(Settlement, new Vector3(position.x, 2f, position.z), Quaternion.identity)
                     );
-                    tmp.GetComponent<Settlement>().TerritoryPosition = _gameObject;
+                    tmp.GetComponent<TerritoryEntity>().TerritoryPosition = _gameObject;
                     break;
                 case (TerritoryType.City):
                     tmpGameObject.GetComponent<Belongings>().City.Add(
                         tmp = GameObject.Instantiate(City, position, Quaternion.identity)
                     );
-                    tmp.GetComponent<City>().TerritoryPosition = _gameObject;
+                    tmp.GetComponent<TerritoryEntity>().TerritoryPosition = _gameObject;
                     break;
             }
 

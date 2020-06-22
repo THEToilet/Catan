@@ -326,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6660270296942490308}
   - component: {fileID: 8062680104410233467}
-  - component: {fileID: 705281291303999553}
+  - component: {fileID: -5176763610877066685}
   m_Layer: 0
   m_Name: City
   m_TagString: Untagged
@@ -391,7 +391,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &705281291303999553
+--- !u!114 &-5176763610877066685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400,6 +400,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7653112566406791383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8171331f7a9c8f041a5bea587d05a27f, type: 3}
+  m_Script: {fileID: 11500000, guid: 456dbc74e5a20f5478d66c35e0bdc362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  territoryType: 2
+  TerritoryPosition: {fileID: 0}
