@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Catan\Scripts\Card\CardEntity.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\CardEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\CardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Catan\Scripts\Terrain\TerrainBehavior.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\TerrainType.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEntity.cs" />
+    <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryImplementation\City.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryImplementation\Road.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryImplementation\Settlement.cs" />
