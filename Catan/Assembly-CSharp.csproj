@@ -113,6 +113,7 @@
     <Compile Include="Assets\Catan\Scripts\Point\PointParentRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ActionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ActiveButtonPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\CardViewPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\CurrentPlayerPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\DicePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\NortificationPresenter.cs" />

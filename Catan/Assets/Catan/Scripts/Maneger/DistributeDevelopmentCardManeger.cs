@@ -15,7 +15,7 @@ namespace Catan.Scripts.Manager
         private int end = 6;
         public void DrawCard(PlayerId playerId)
         {
-            var tmp = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>().cards;
+            var tmp = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>().scards;
             // ここでコスト計算　if()
             tmp.Add(toSpecialCardObject.ToCard(Random.Range(start, end)));
         }
