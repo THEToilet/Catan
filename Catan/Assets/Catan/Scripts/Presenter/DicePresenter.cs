@@ -20,11 +20,6 @@ namespace Catan.Scripts.Presenter
         public Sprite[] diceNumSprite = new Sprite[6];
         [SerializeField] GameObject DicePanel;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
         void Update()
         {
             //ダイスを回し始める&ダイスの確定

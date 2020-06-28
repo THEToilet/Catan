@@ -3,6 +3,9 @@ using UnityEngine.UI;
 using UniRx;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Common;
+using UnityEditor.VersionControl;
+using UniRx.Triggers;
+using Catan.Scripts.Card;
 
 namespace Catan.Scripts.Presenter
 {
@@ -11,31 +14,23 @@ namespace Catan.Scripts.Presenter
         [SerializeField] private Button turnEndButton;
         [SerializeField] private Button rollDiceButton;
 
-        [SerializeField] private Button constructionButton;
 
-        [SerializeField] private Button tradeButton;
         [SerializeField] private Button useCardButton;
 
         [SerializeField] private Button negotiationButton;
-
-        [SerializeField] private Button drawCardButton;
+        [SerializeField] Button submmitButton;
 
         public GameStateManeger gameStateManeger;
         public PlayerTurnManeger playerTurn;
         public DistributeCardManeger distributeCardManeger;
         public UIRestrictionPresenter uIRestrictionPresenter;
+        public TradeCardEnumeration tradeCardEnumeration;
 
 
 
         // Start is called before the first frame update
         void Start()
         {
-            constructionButton.OnClickAsObservable()  // 建設する
-            .Subscribe(_ =>
-            {
-                gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.Construction);
-            });
 
             useCardButton.OnClickAsObservable()  // カードを使う　
             .Subscribe(_ =>
@@ -44,28 +39,13 @@ namespace Catan.Scripts.Presenter
                     .SetValueAndForceNotify(GameState.UseCard);
             });
 
-
-            drawCardButton.OnClickAsObservable() // カードを引く  
-            .Subscribe(_ =>
-            {
-                gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.DrawCard);
-            });
-
-            tradeButton.OnClickAsObservable() //  トレードする
-            .Subscribe(_ =>
-            {
-                gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.Trade);
-            });
-
             negotiationButton.OnClickAsObservable()  // 交渉する
             .Subscribe(_ =>
             {
                 gameStateManeger._currentGameState
                     .SetValueAndForceNotify(GameState.Negotiation);
             });
-           
+
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
@@ -79,6 +59,12 @@ namespace Catan.Scripts.Presenter
 
                 uIRestrictionPresenter.TurnOffRollDice();
                 distributeCardManeger.Distribute(Dice.RandomRollTwiceDice());
+            });
+
+            submmitButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                tradeCardEnumeration.TableTopEnumeration();
             });
         }
 

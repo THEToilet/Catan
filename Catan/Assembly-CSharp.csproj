@@ -72,6 +72,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToSpecialCardObject.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\TradeCardEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Common\Dice.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\AboutCard.cs" />
     <Compile Include="Assets\Catan\Scripts\Game\Construction.cs" />
