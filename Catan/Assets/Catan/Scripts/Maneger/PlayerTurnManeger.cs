@@ -46,6 +46,7 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentPlayerId;
                 // 遷移先に合わせて処理をする
+                uIRestrictionPresenter.Release();
                 switch (next)
                 {
                     // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回

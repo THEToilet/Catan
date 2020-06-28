@@ -18,6 +18,7 @@ namespace Catan.Scripts.Presenter
         private int diceNum2 = 1;
         private bool isDice = false;
         public Sprite[] diceNumSprite = new Sprite[6];
+        [SerializeField] GameObject DicePanel;
 
         // Start is called before the first frame update
         void Start()

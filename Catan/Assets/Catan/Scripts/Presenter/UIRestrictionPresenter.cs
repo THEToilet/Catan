@@ -19,11 +19,22 @@ namespace Catan.Scripts.Presenter
             ActionsButton.interactable = false;
         }
 
+        public void TurnOffAll()
+        {
+            RollDice.interactable = false;
+            ActionsButton.interactable = false;
+        }
+
+        public void TuenOffRollDice()
+        {
+            RollDice.gameObject.SetActive(false);
+        }
         public void Release()
         {
             ActionsButton.interactable = true;
             ChangeButton.interactable = true;
             RollDice.interactable = true;
+            RollDice.gameObject.SetActive(true);
         }
 
     }

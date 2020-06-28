@@ -23,6 +23,7 @@ namespace Catan.Scripts.Presenter
         public GameStateManeger gameStateManeger;
         public PlayerTurnManeger playerTurn;
         public DistributeCardManeger distributeCardManeger;
+        public UIRestrictionPresenter uIRestrictionPresenter;
 
 
 
@@ -75,6 +76,8 @@ namespace Catan.Scripts.Presenter
             .Subscribe(_ =>
             {
                 Debug.Log(Dice.RandomRollTwiceDice());
+
+                uIRestrictionPresenter.TuenOffRollDice();
                 distributeCardManeger.Distribute(Dice.RandomRollTwiceDice());
             });
         }
