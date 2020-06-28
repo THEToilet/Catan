@@ -40,6 +40,7 @@ namespace Catan.Scripts.Generation
                 parentPointObjects.Add(tmpGameObject);
                 tmpGameObject.SetActive(false);
 
+
             }
         }
     }

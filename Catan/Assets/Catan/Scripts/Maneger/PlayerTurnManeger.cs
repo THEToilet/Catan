@@ -23,6 +23,7 @@ namespace Catan.Scripts.Manager
         public ReactiveProperty<TurnState> _currentTurnState = new ReactiveProperty<TurnState>();
         public OrderDetermining orderDetermining;
         public PlayerId[] playerIds;
+        public UIRestrictionPresenter uIRestrictionPresenter;
         private int cur = 0;
         private int state = 0;
 
@@ -122,6 +123,7 @@ namespace Catan.Scripts.Manager
                     case TurnState.RollDice:
                         Debug.Log("RollDice");
                         playerNotificationPresenter.DisplayNote("RollDice");
+                        uIRestrictionPresenter.LetRollDice();
                         break;
                     case TurnState.DescendingOrderArragement:
                         playerIds = orderDetermining.GetOrder();
@@ -131,6 +133,7 @@ namespace Catan.Scripts.Manager
                     case TurnState.AscendingOrderArrangement:
                         Array.Reverse(playerIds);
                         playerNotificationPresenter.DisplayNote("Accend");
+                        uIRestrictionPresenter.Release();
                         Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
