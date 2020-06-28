@@ -6,6 +6,7 @@ using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
 using System;
+using Catan.Scripts.Generation;
 
 namespace Catan.Scripts.Manager
 {
@@ -24,6 +25,8 @@ namespace Catan.Scripts.Manager
         public OrderDetermining orderDetermining;
         public PlayerId[] playerIds;
         public UIRestrictionPresenter uIRestrictionPresenter;
+        public RoadBasePresenter roadBasePresenter;
+        public PointChildrenPresenter pointChildrenPresenter;
         private int cur = 0;
         private int state = 0;
 
@@ -129,6 +132,8 @@ namespace Catan.Scripts.Manager
                     case TurnState.DescendingOrderArragement:
                         playerIds = orderDetermining.GetOrder();
                         playerNotificationPresenter.DisplayNote("Decend");
+                        pointChildrenPresenter.ShowAll();
+                        roadBasePresenter.ShowAll();
                         Debug.Log("Decend");
                         break;
                     case TurnState.AscendingOrderArrangement:

@@ -14667,6 +14667,8 @@ MonoBehaviour:
   orderDetermining: {fileID: 1669153294}
   playerIds: 
   uIRestrictionPresenter: {fileID: 2096806386}
+  roadBasePresenter: {fileID: 2096806388}
+  pointChildrenPresenter: {fileID: 2096806389}
 --- !u!114 &1669153292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19715,6 +19717,8 @@ GameObject:
   - component: {fileID: 2096806384}
   - component: {fileID: 2096806385}
   - component: {fileID: 2096806386}
+  - component: {fileID: 2096806389}
+  - component: {fileID: 2096806388}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -19925,6 +19929,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecommendText: {fileID: 256113743}
   dicePresenter: {fileID: 2096806379}
+--- !u!114 &2096806388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129be5a828f21fd41b6c370e677980d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadGeneration: {fileID: 1669153303}
+--- !u!114 &2096806389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f7bcf0a2b443e469a6ad55080fdf43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
 --- !u!1 &2098795010
 GameObject:
   m_ObjectHideFlags: 0
