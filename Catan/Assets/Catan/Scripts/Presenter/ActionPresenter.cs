@@ -77,7 +77,7 @@ namespace Catan.Scripts.Presenter
             {
                 Debug.Log(Dice.RandomRollTwiceDice());
 
-                uIRestrictionPresenter.TuenOffRollDice();
+                uIRestrictionPresenter.TurnOffRollDice();
                 distributeCardManeger.Distribute(Dice.RandomRollTwiceDice());
             });
         }
