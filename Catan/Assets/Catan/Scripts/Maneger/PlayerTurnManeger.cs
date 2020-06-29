@@ -36,7 +36,7 @@ namespace Catan.Scripts.Manager
             TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
             _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
-            _currentTurnState.SetValueAndForceNotify(TurnState.RollDice);
+            _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
         }
 
         /// <summary>

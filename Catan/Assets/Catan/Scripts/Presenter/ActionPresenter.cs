@@ -26,6 +26,7 @@ namespace Catan.Scripts.Presenter
         public UIRestrictionPresenter uIRestrictionPresenter;
         public TradeCardEnumeration tradeCardEnumeration;
 
+        public DicePresenter dicePresenter;
 
 
         // Start is called before the first frame update
@@ -56,9 +57,11 @@ namespace Catan.Scripts.Presenter
             .Subscribe(_ =>
             {
                 Debug.Log(Dice.RandomRollTwiceDice());
-
                 uIRestrictionPresenter.TurnOffRollDice();
-                distributeCardManeger.Distribute(Dice.RandomRollTwiceDice());
+                var d = Dice.RandomRollTwiceDice();
+                distributeCardManeger.Distribute(d[0]+d[1]);
+                 dicePresenter.ShowDice(d[0], d[1]);
+
             });
 
             submmitButton.OnClickAsObservable()

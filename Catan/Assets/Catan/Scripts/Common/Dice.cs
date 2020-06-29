@@ -63,9 +63,9 @@ namespace Catan.Scripts.Common
         }
 
         // 普段のサイコロはこっちを使う
-        public static int RandomRollTwiceDice()
+        public static int[] RandomRollTwiceDice()
         {
-            return RollOnceDice() + RollOnceDice();
+            return new int[] {RollOnceDice() , RollOnceDice()};
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Catan.Scripts.Generation;
 using Catan.Scripts.Point;
+using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Presenter
 {
@@ -29,6 +30,11 @@ namespace Catan.Scripts.Presenter
             {
                 p[i].SetActive(false);
             }
+        }
+
+        public void ShowPossiblePoint(PlayerId playerId)
+        {
+
         }
     }
 

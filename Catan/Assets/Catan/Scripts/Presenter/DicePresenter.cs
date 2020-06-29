@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using Catan.Scripts.Common;
+using UniRx.Async;
 
 namespace Catan.Scripts.Presenter
 {
@@ -13,15 +14,20 @@ namespace Catan.Scripts.Presenter
 
         public Image diceImage1;
         public Image diceImage2;
-        public bool isDiceSpin = false;
+      //  public bool isDiceSpin = false;
         private int diceNum1 = 1;
         private int diceNum2 = 1;
-        private bool isDice = false;
+      //  private bool isDice = false;
         public Sprite[] diceNumSprite = new Sprite[6];
         [SerializeField] GameObject DicePanel;
 
+        private void Start()
+        {
+       //     ShowDice(0 ,0).Forget();
+        }
         void Update()
         {
+            /*
             //ダイスを回し始める&ダイスの確定
             if (Input.GetKeyDown(KeyCode.D) && isDice == false)
             {
@@ -44,9 +50,16 @@ namespace Catan.Scripts.Presenter
             {
                 diceImage1.GetComponent<Image>().sprite = diceNumSprite[Dice.RollOnceDice() - 1];
                 diceImage2.GetComponent<Image>().sprite = diceNumSprite[Dice.RollOnceDice() - 1];
-            }
+            }*/
+        }
 
-
+        public async UniTask ShowDice(int num1, int num2)
+        {
+            DicePanel.SetActive(true);
+            diceImage1.GetComponent<Image>().sprite = diceNumSprite[num1 - 1];
+            diceImage2.GetComponent<Image>().sprite = diceNumSprite[num2 - 1];
+            await UniTask.DelayFrame(120);
+            DicePanel.SetActive(false);
         }
     }
 

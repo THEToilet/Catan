@@ -23,12 +23,12 @@ namespace Catan.Scripts.Presenter
     {
     }
 
-
+/*
     public async UniTask UnitilRollDice() // ここを初期化用として路と陣地がおかれたらに変更する
     {
       await UniTask.WaitUntil(() => dicePresenter.isDiceSpin == true); // Diceボタンが押されるまで待機
       dicePresenter.isDiceSpin = false;
     }
+*/
   }
-
 }

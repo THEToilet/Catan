@@ -19502,6 +19502,7 @@ MonoBehaviour:
   distributeCardManeger: {fileID: 1669153304}
   uIRestrictionPresenter: {fileID: 2096806386}
   tradeCardEnumeration: {fileID: 1669153305}
+  dicePresenter: {fileID: 2096806379}
 --- !u!4 &2096806378
 Transform:
   m_ObjectHideFlags: 0
