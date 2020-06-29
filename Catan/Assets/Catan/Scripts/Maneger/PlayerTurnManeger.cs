@@ -12,7 +12,7 @@ namespace Catan.Scripts.Manager
 {
     public class PlayerTurnManeger : MonoBehaviour
     {
-        public PlayerNotificationPresenter playerNotificationPresenter; 
+        public PlayerNotificationPresenter playerNotificationPresenter;
         public ToPleyerObject toPleyerObjects;
         public DicePresenter dicePresenter;
         public NortificationPresenter nortificationPresenter;
@@ -27,6 +27,7 @@ namespace Catan.Scripts.Manager
         public UIRestrictionPresenter uIRestrictionPresenter;
         public RoadBasePresenter roadBasePresenter;
         public PointChildrenPresenter pointChildrenPresenter;
+        public TableTopCardPresenter tableTopCardPresenter;
         private int cur = 0;
         private int state = 0;
 
@@ -50,6 +51,8 @@ namespace Catan.Scripts.Manager
                 var next = await _currentPlayerId;
                 // 遷移先に合わせて処理をする
                 uIRestrictionPresenter.ReleaseExpectAction();
+                tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
+                tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
                 switch (next)
                 {
                     // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回

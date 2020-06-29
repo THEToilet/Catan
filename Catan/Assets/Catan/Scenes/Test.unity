@@ -14386,6 +14386,7 @@ MonoBehaviour:
   uIRestrictionPresenter: {fileID: 2096806386}
   roadBasePresenter: {fileID: 2096806388}
   pointChildrenPresenter: {fileID: 2096806389}
+  tableTopCardPresenter: {fileID: 2096806390}
 --- !u!114 &1669153292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19473,6 +19474,7 @@ GameObject:
   - component: {fileID: 2096806386}
   - component: {fileID: 2096806389}
   - component: {fileID: 2096806388}
+  - component: {fileID: 2096806390}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -19531,7 +19533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceImage1: {fileID: 1583926780}
   diceImage2: {fileID: 1016499347}
-  isDiceSpin: 0
   diceNumSprite:
   - {fileID: 21300000, guid: 1c4083600ca544030890921841b3076d, type: 3}
   - {fileID: 21300000, guid: f64c2b702cb1a458caa034fd6f5ee256, type: 3}
@@ -19709,6 +19710,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointChildrenGeneration: {fileID: 1669153295}
+--- !u!114 &2096806390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865eb06bc6db847459d2dadd7bad1272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TableTop: {fileID: 846976395}
+  Hand: {fileID: 1462838910}
+  toPleyerObject: {fileID: 35605534}
+  toCardObject: {fileID: 35605536}
 --- !u!1 &2098795010
 GameObject:
   m_ObjectHideFlags: 0
