@@ -84,9 +84,10 @@ namespace Catan.Scripts.Manager
             if (t.Count == 1)
             {
                 roadBasePresenter.ShowAdjacentPoint(t[0].GetComponent<TerritoryEntity>().TerritoryPosition);
-                print("f");
+                pointChildrenPresenter.EraseAll();
             }
-            
+
+
         }
 
         private async UniTaskVoid CursoleAsync(CancellationToken cancellationToken)
@@ -98,12 +99,9 @@ namespace Catan.Scripts.Manager
                 // 遷移先に合わせて処理をする
                 if (_currentCursole.Value <= 4)
                 {
-                    var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City[0];
-                    roadBasePresenter.ShowAdjacentPoint(t);
                     if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 1 &&
                         toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 1)
                     {
-                        cur++;
                     }
                     if (cur == 4) _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
                 }
@@ -112,15 +110,13 @@ namespace Catan.Scripts.Manager
                     if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 2 &&
                         toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 2)
                     {
-                        cur++;
                     }
                     if (cur == 8) _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
                 }
                 else
                 {
-                    cur++;
                 }
-                _currentPlayerId.SetValueAndForceNotify(playerIds[cur % 4]);
+                _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
 
             }
         }

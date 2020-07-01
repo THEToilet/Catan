@@ -36,13 +36,12 @@ namespace Catan.Scripts.Presenter
 
         public void ShowAdjacentPoint(GameObject g)
         {
-            var a1 = g.GetComponent<PointChildrenBehavior>().AdjacentPoint_0;
-            var a2 = g.GetComponent<PointChildrenBehavior>().AdjacentPoint_1;
-            var a3 = g.GetComponent<PointChildrenBehavior>().AdjacentPoint_2;
-
-            a1.SetActive(true);
-            a2.SetActive(true);
-            a3.SetActive(true);
+            var a = g.GetComponent<PointChildrenBehavior>();
+             for(int i= 0;i < a.adjacentRoadBase.Count; i++)
+            {
+                GameObject s = a.adjacentRoadBase[i];
+                s.SetActive(true);
+            }
 
         }
         public void EraseAdjacentPoint(GameObject g)
