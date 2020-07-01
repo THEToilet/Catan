@@ -17,7 +17,7 @@ namespace Catan.Scripts.Card
         {
             switch (tt)
             {
-                case TerrainType.Desert:
+                case TerrainType.Field:
                     return BrickCard;
                 case TerrainType.Mine:
                     return IronOreCard;

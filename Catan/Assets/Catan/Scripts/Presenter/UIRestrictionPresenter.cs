@@ -33,13 +33,13 @@ namespace Catan.Scripts.Presenter
         {
             ActionsButton.interactable = true;
             ChangeButton.interactable = true;
-            RollDice.gameObject.SetActive(true);
+            RollDice.interactable = true;
         }
 
         public void ReleaseExpectAction()
         {
             ChangeButton.interactable = true;
-            RollDice.gameObject.SetActive(true);
+            RollDice.interactable = false;
 
         }
 

@@ -166,13 +166,14 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentCursole;
                 // 遷移先に合わせて処理をする
-                if (_currentTurnState.Value != TurnState.NormalTurn)
+                if (_currentTurnState.Value != TurnState.NormalTurn && _currentCursole.Value <= 7)
                 {
                     Debug.Log("Common");
                     _currentPlayerId.SetValueAndForceNotify(pIds[_currentCursole.Value]);
                 }
                 else
                 {
+                    Debug.Log("紙");
                     _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
                 }
             }

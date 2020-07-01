@@ -7,7 +7,6 @@ using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Generation;
 using Catan.Scripts.Point;
-using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Manager
 {
@@ -68,7 +67,10 @@ namespace Catan.Scripts.Manager
                         if (tt.Equals(tmp.childPointObjects[k]))
                         {
                             Debug.Log("真うんこ");
-                            pb.cards.Add(toCardObject.ToCard(tmp.terrainType));
+                            if (TerrainType.Desert != tmp.terrainType)
+                            {
+                                pb.cards.Add(toCardObject.ToCard(tmp.terrainType));
+                            }
                         }
                     }
                 }

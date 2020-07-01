@@ -50,6 +50,7 @@ namespace Catan.Scripts.Presenter
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
+                Debug.Log("ok");
                 playerTurn._currentCursole.Value++;
             });
 
