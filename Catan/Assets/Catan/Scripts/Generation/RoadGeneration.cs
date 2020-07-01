@@ -95,7 +95,7 @@ namespace Catan.Scripts.Generation
                 tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90,0,0));
                 tmpGameObject.name = "RoadBase_" + i;
                 roads.Add(tmpGameObject);
-                tmpGameObject.SetActive(false);
+              //  tmpGameObject.SetActive(false);
             }
         }
 

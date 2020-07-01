@@ -2,6 +2,7 @@
 using UnityEngine;
 using Catan.Scripts.Player;
 using Catan.Scripts.Point;
+using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Manager
 {
@@ -18,6 +19,7 @@ namespace Catan.Scripts.Manager
         public PointChildrenRelevanceSetting pointChildrenRelevanceSetting;
         public PointParentRelevanceSetting pointParentRelevanceSetting;
         public TerrainNumberGeneration terrainNumberGeneration;
+        public RoadBaseRelevanceSetting roadBaseRelevanceSetting;
 
         public void Excute()
         {
@@ -26,6 +28,7 @@ namespace Catan.Scripts.Manager
             pointChildrenRelevanceSetting.Allocation(); // この点同士の連結設定
             pointParentRelevanceSetting.Allocation(); // 親がもつ子の点の設定
             roadGeneration.Generate();  // RoadBase生成
+            roadBaseRelevanceSetting.Allocation();
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
             playerGeneration.Generate(); // プレイヤー生成

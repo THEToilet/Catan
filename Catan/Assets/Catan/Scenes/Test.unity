@@ -14223,6 +14223,7 @@ GameObject:
   - component: {fileID: 1669153284}
   - component: {fileID: 1669153285}
   - component: {fileID: 1669153303}
+  - component: {fileID: 1669153306}
   - component: {fileID: 1669153298}
   - component: {fileID: 1669153297}
   - component: {fileID: 1669153296}
@@ -14287,6 +14288,7 @@ MonoBehaviour:
   pointChildrenRelevanceSetting: {fileID: 1669153297}
   pointParentRelevanceSetting: {fileID: 1669153298}
   terrainNumberGeneration: {fileID: 1669153302}
+  roadBaseRelevanceSetting: {fileID: 1669153306}
 --- !u!114 &1669153286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14593,6 +14595,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tableTop: {fileID: 846976395}
   cards: []
+--- !u!114 &1669153306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde4339a236c10a48ad7328c9cd95b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
+  pointParentGeneration: {fileID: 1669153296}
+  roadGeneration: {fileID: 1669153303}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
