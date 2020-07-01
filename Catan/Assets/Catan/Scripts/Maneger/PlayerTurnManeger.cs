@@ -85,7 +85,8 @@ namespace Catan.Scripts.Manager
                 // 遷移先に合わせて処理をする
                 if (_currentTurnState.Value == TurnState.NormalTurn)
                 {
-                    uIRestrictionPresenter.ReleaseExpectAction();
+                    // uIRestrictionPresenter.ReleaseExpectAction();
+                    uIRestrictionPresenter.Release();
                     tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
                     tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
                     roadBasePresenter.EraseAll();
