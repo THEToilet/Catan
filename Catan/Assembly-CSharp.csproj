@@ -116,6 +116,7 @@
     <Compile Include="Assets\Catan\Scripts\Point\PointParentRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ActionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ActiveButtonPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\BuildUIPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\CardViewPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\CurrentPlayerPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\DicePresenter.cs" />
@@ -126,7 +127,6 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\PointChildrenPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\RoadBasePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\TableTopCardPresenter.cs" />
-    <Compile Include="Assets\Catan\Scripts\Presenter\UI restrictionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\BuildUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\CardUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\NegotiationUI.cs" />

@@ -40,7 +40,7 @@ namespace Catan.Scripts.Manager
                     for (int i = 0; i < tmpGameObjects.Count; i++)
                     {
                         for (int j = 0; j < 6; j++)
-                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[k].Equals(n.City[l].GetComponent<TerritoryEntity>().TerritoryPosition))
+                            if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[j].Equals(n.City[l].GetComponent<TerritoryEntity>().TerritoryPosition))
                             {
                                 Debug.Log("Hello unnko");
                                 n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
