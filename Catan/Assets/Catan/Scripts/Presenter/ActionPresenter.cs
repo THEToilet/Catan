@@ -25,6 +25,8 @@ namespace Catan.Scripts.Presenter
         public DistributeCardManeger distributeCardManeger;
         public UIRestrictionPresenter uIRestrictionPresenter;
         public TradeCardEnumeration tradeCardEnumeration;
+        [SerializeField] Button actionButton;
+        [SerializeField] Button actionCancelButton;
 
         public DicePresenter dicePresenter;
 
@@ -70,7 +72,21 @@ namespace Catan.Scripts.Presenter
             {
                 tradeCardEnumeration.TableTopEnumeration();
             });
-        }
 
+            actionButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                actionButton.gameObject.SetActive(false);
+                actionCancelButton.gameObject.SetActive(true);
+            });
+
+            actionCancelButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                actionCancelButton.gameObject.SetActive(false);
+                actionButton.gameObject.SetActive(true);
+            });
+
+        }
     }
 }

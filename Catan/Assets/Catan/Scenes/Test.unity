@@ -8208,7 +8208,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1831122621}
-        m_MethodName: DORestart
+        m_MethodName: DOPlayBackwards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16612,6 +16612,8 @@ MonoBehaviour:
   distributeCardManeger: {fileID: 1669153304}
   uIRestrictionPresenter: {fileID: 2096806386}
   tradeCardEnumeration: {fileID: 1669153305}
+  actionButton: {fileID: 406737375}
+  actionCancelButton: {fileID: 947930611}
   dicePresenter: {fileID: 2096806379}
 --- !u!4 &2096806378
 Transform:
