@@ -31,15 +31,25 @@ namespace Catan.Scripts.Manager
         public ReactiveProperty<int> _currentCursole = new ReactiveProperty<int>(0);
         int cur = 0;
         private int state = 0;
+        private bool isOK= false;
 
         private void Start()
         {
             PlayerIdChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            uIRestrictionPresenter.TurnOffAll();
             CursoleAsync(this.GetCancellationTokenOnDestroy()).Forget();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
-            _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
+        }
+
+        public void Excute()
+        {
+            Debug.Log("^_^");
+            playerIds = orderDetermining.GetOrder();
+            Debug.Log(playerIds);
             _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
+            _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
+            isOK = true;
         }
 
         /// <summary>
@@ -52,9 +62,17 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentPlayerId;
                 // 遷移先に合わせて処理をする
-                uIRestrictionPresenter.ReleaseExpectAction();
-                tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
-                tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
+                if (_currentTurnState.Value != TurnState.AscendingOrderArrangement && _currentTurnState.Value != TurnState.DescendingOrderArragement)
+                {
+                    uIRestrictionPresenter.ReleaseExpectAction();
+                    tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
+                    tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
+                }
+                else
+                {
+                    roadBasePresenter.EraseAll();
+                    pointChildrenPresenter.ShowAll();
+                }
                 switch (next)
                 {
                     // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
@@ -80,14 +98,44 @@ namespace Catan.Scripts.Manager
 
         private void Update()
         {
-            var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
-            if (t.Count == 1)
+            if (progressStateManeger._currentProgressState.Value == ProgressState.Battle && isOK)
             {
-                roadBasePresenter.ShowAdjacentPoint(t[0].GetComponent<TerritoryEntity>().TerritoryPosition);
-                pointChildrenPresenter.EraseAll();
+
+                var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
+                if (t.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn)
+                {
+                    roadBasePresenter.ShowAdjacentPoint(t[0].GetComponent<TerritoryEntity>().TerritoryPosition);
+                    pointChildrenPresenter.EraseAll();
+                }
+                if (t.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn)
+                {
+                    roadBasePresenter.ShowAdjacentPoint(t[1].GetComponent<TerritoryEntity>().TerritoryPosition);
+                    pointChildrenPresenter.EraseAll();
+                }
+
+                if (_currentCursole.Value <= 4)
+                {
+                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 1 &&
+                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 1)
+                    {
+                        _currentCursole.Value++;
+                    }
+                    if (_currentCursole.Value == 4)
+                    {
+                        Array.Reverse(playerIds);
+                        _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
+                    }
+                }
+                else if (_currentCursole.Value <= 8)
+                {
+                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 2 &&
+                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 2)
+                    {
+                        _currentCursole.Value++;
+                    }
+                    if (_currentCursole.Value == 8) _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
+                }
             }
-
-
         }
 
         private async UniTaskVoid CursoleAsync(CancellationToken cancellationToken)
@@ -97,27 +145,7 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentCursole;
                 // 遷移先に合わせて処理をする
-                if (_currentCursole.Value <= 4)
-                {
-                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 1 &&
-                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 1)
-                    {
-                    }
-                    if (cur == 4) _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
-                }
-                else if (cur <= 8)
-                {
-                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 2 &&
-                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 2)
-                    {
-                    }
-                    if (cur == 8) _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
-                }
-                else
-                {
-                }
                 _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
-
             }
         }
 
@@ -134,20 +162,19 @@ namespace Catan.Scripts.Manager
                 switch (next)
                 {
                     case TurnState.DescendingOrderArragement:
-                        playerIds = orderDetermining.GetOrder();
                         playerNotificationPresenter.DisplayNote("Decend");
                         pointChildrenPresenter.ShowAll();
+                        uIRestrictionPresenter.TurnOffAll();
                         Debug.Log("Decend");
                         break;
                     case TurnState.AscendingOrderArrangement:
-                        Array.Reverse(playerIds);
                         playerNotificationPresenter.DisplayNote("Accend");
-                        uIRestrictionPresenter.Release();
                         Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
                         Array.Reverse(playerIds);
                         // カードを配る
+                        uIRestrictionPresenter.Release();
                         playerNotificationPresenter.DisplayNote("NormalState");
                         Debug.Log("NormalState");
                         distributeCardManeger.InitDistribute();

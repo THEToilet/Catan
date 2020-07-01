@@ -1,9 +1,8 @@
-﻿using System;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
+using System.Threading;
 using UniRx.Async;
 using UniRx.Async.Triggers;
-using System.Threading;
 using Catan.Scripts.Player;
 
 /// <summary>
@@ -21,7 +20,8 @@ namespace Catan.Scripts.Manager
 
         // ステート管理するReactiveProperty
         public ReactiveProperty<ProgressState> _currentProgressState
-            = new ReactiveProperty<ProgressState>(ProgressState.Title);
+            = new ReactiveProperty<ProgressState>();
+        bool isOK = true;
 
         void Start()
         {
@@ -29,6 +29,20 @@ namespace Catan.Scripts.Manager
             _currentProgressState.SetValueAndForceNotify(ProgressState.Initialization);
         }
 
+        private void Update()
+        {
+            Debug.Log(_currentProgressState.Value);
+            if(_currentProgressState.Value == ProgressState.Battle)
+            {
+                if (isOK)
+                {
+                    playerTurn.Excute();
+                    isOK = false;
+                }
+            }
+        }
+
+        // TODO ここのReactivePropertyのバグ解決
         /// <summary>
         /// ステート遷移するたびに処理を走らせる
         /// </summary>
@@ -47,11 +61,12 @@ namespace Catan.Scripts.Manager
                     case ProgressState.Initialization:
                         Debug.Log("ini");
                         initializationManeger.Excute();
+                        _currentProgressState.SetValueAndForceNotify(ProgressState.Battle);
+                        Debug.Log("OK");
                         break;
                     case ProgressState.Battle:
                         Debug.Log("battle");
-                     //   playerTurn.AscendingOrderTurnState(playerIds); // バトル開始
-                        battleManeger.Excute();
+                        playerTurn.Excute();
                         break;
                     case ProgressState.Finished:
                         Debug.Log("Finished");

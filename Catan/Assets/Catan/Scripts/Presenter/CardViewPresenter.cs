@@ -23,13 +23,16 @@ namespace Catan.Scripts.Presenter
         // Update is called once per frame
         void Update()
         {
-            var p = playerTurnManeger._currentPlayerId.Value;
-            var o = cardEnumeration.Enumeration(p);
-            WoodText.text = o[0].ToString();
-            BrickCard.text = o[1].ToString();
-            IronOreCard.text = o[2].ToString();
-            WheatCard.text = o[3].ToString();
-            WoolCard.text = o[4].ToString();
+            if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
+            {
+                var p = playerTurnManeger._currentPlayerId.Value;
+                var o = cardEnumeration.Enumeration(p);
+                WoodText.text = o[0].ToString();
+                BrickCard.text = o[1].ToString();
+                IronOreCard.text = o[2].ToString();
+                WheatCard.text = o[3].ToString();
+                WoolCard.text = o[4].ToString();
+            }
         }
     }
 
