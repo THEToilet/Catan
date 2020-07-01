@@ -50,7 +50,7 @@ namespace Catan.Scripts.Presenter
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                playerTurn.Next();
+                playerTurn._currentCursole.Value++;
             });
 
             rollDiceButton.OnClickAsObservable()
@@ -59,8 +59,8 @@ namespace Catan.Scripts.Presenter
                 Debug.Log(Dice.RandomRollTwiceDice());
                 uIRestrictionPresenter.TurnOffRollDice();
                 var d = Dice.RandomRollTwiceDice();
-                distributeCardManeger.Distribute(d[0]+d[1]);
-                 dicePresenter.ShowDice(d[0], d[1]);
+                distributeCardManeger.Distribute(d[0] + d[1]);
+                dicePresenter.ShowDice(d[0], d[1]);
 
             });
 

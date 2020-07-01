@@ -89,10 +89,12 @@
     <Compile Include="Assets\Catan\Scripts\Generation\TerritoryGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\TerritoryGenerationDecision.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\BattleManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\CardExchangeManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeDevelopmentCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameStateManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\InitialPlacement.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitialState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitializationManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\PointChildrenPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\RoadBasePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\TableTopCardPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\UI restrictionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\BuildUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\CardUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\NegotiationUI.cs" />
