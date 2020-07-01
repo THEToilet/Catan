@@ -7,6 +7,9 @@ using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
 using System;
 using Catan.Scripts.Territory;
+using Zenject;
+using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Catan.Scripts.Manager
 {
@@ -29,9 +32,10 @@ namespace Catan.Scripts.Manager
         public PointChildrenPresenter pointChildrenPresenter;
         public TableTopCardPresenter tableTopCardPresenter;
         public ReactiveProperty<int> _currentCursole = new ReactiveProperty<int>(0);
+        public List<PlayerId> pIds = new List<PlayerId>();
         int cur = 0;
         private int state = 0;
-        private bool isOK= false;
+        private bool isOK = false;
 
         private void Start()
         {
@@ -48,10 +52,27 @@ namespace Catan.Scripts.Manager
             playerIds = orderDetermining.GetOrder();
             Debug.Log(playerIds);
             _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
-            _currentPlayerId.SetValueAndForceNotify(playerIds[0]);
+            for (int i = 0; i < 4; i++)
+            {
+                pIds.Add(playerIds[i]);
+            }
+            Array.Reverse(playerIds);
+            for (int i = 0; i < 4; i++)
+            {
+                pIds.Add(playerIds[i]);
+            }
+            Array.Reverse(playerIds);
+            _currentPlayerId.SetValueAndForceNotify(pIds[0]);
             isOK = true;
         }
 
+        public void Note()
+        {
+            roadBasePresenter.EraseAll();
+            pointChildrenPresenter.ShowAll();
+            Debug.Log(";;");
+            playerNotificationPresenter.DisplayPlayerName(_currentPlayerId.Value);
+        }
         /// <summary>
         /// ステート遷移するたびに処理を走らせる 初期配置で使う
         /// </summary>
@@ -62,11 +83,13 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentPlayerId;
                 // 遷移先に合わせて処理をする
-                if (_currentTurnState.Value != TurnState.AscendingOrderArrangement && _currentTurnState.Value != TurnState.DescendingOrderArragement)
+                if (_currentTurnState.Value == TurnState.NormalTurn)
                 {
                     uIRestrictionPresenter.ReleaseExpectAction();
                     tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
                     tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
+                    roadBasePresenter.EraseAll();
+                    pointChildrenPresenter.EraseAll();
                 }
                 else
                 {
@@ -102,39 +125,37 @@ namespace Catan.Scripts.Manager
             {
 
                 var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
-                if (t.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn)
+                var s = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road;
+                if (t.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
                 {
                     roadBasePresenter.ShowAdjacentPoint(t[0].GetComponent<TerritoryEntity>().TerritoryPosition);
                     pointChildrenPresenter.EraseAll();
                 }
-                if (t.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn)
+
+                if (s.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
+                {
+                    _currentCursole.Value++;
+                    if (_currentCursole.Value == 4)
+                    {
+                        _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
+                        Note();
+                    }
+                }
+                if (t.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
                 {
                     roadBasePresenter.ShowAdjacentPoint(t[1].GetComponent<TerritoryEntity>().TerritoryPosition);
                     pointChildrenPresenter.EraseAll();
                 }
+                if (s.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
+                {
+                    _currentCursole.Value++;
+                    if (_currentCursole.Value == 8)
+                    {
+                        _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
+                        //Note();
+                    }
+                }
 
-                if (_currentCursole.Value <= 4)
-                {
-                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 1 &&
-                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 1)
-                    {
-                        _currentCursole.Value++;
-                    }
-                    if (_currentCursole.Value == 4)
-                    {
-                        Array.Reverse(playerIds);
-                        _currentTurnState.SetValueAndForceNotify(TurnState.AscendingOrderArrangement);
-                    }
-                }
-                else if (_currentCursole.Value <= 8)
-                {
-                    if (toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City.Count >= 2 &&
-                        toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road.Count >= 2)
-                    {
-                        _currentCursole.Value++;
-                    }
-                    if (_currentCursole.Value == 8) _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
-                }
             }
         }
 
@@ -145,7 +166,15 @@ namespace Catan.Scripts.Manager
                 // ステート遷移を待つ
                 var next = await _currentCursole;
                 // 遷移先に合わせて処理をする
-                _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
+                if (_currentTurnState.Value != TurnState.NormalTurn)
+                {
+                    Debug.Log("Common");
+                    _currentPlayerId.SetValueAndForceNotify(pIds[_currentCursole.Value]);
+                }
+                else
+                {
+                    _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
+                }
             }
         }
 
@@ -172,8 +201,9 @@ namespace Catan.Scripts.Manager
                         Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
-                        Array.Reverse(playerIds);
                         // カードを配る
+                        roadBasePresenter.EraseAll();
+                        pointChildrenPresenter.EraseAll();
                         uIRestrictionPresenter.Release();
                         playerNotificationPresenter.DisplayNote("NormalState");
                         Debug.Log("NormalState");
