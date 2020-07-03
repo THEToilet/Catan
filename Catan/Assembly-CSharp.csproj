@@ -68,6 +68,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\CardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\CardEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\CardType.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\DrawCard.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />

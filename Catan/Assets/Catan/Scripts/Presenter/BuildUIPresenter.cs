@@ -21,6 +21,7 @@ namespace Catan.Scripts.Presenter
         public ToPleyerObject toPleyerObject;
         public CardEnumeration cardEnumeration;
         public CardConsumptionManeger cardConsumptionManeger;
+        public DrawCard drawCard;
 
         private void Start()
         {
@@ -47,6 +48,7 @@ namespace Catan.Scripts.Presenter
             drawCardButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
+            drawCard.Draw();
             cardConsumptionManeger.BuyCard();
         });
         }

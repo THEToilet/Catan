@@ -61,6 +61,7 @@ namespace Catan.Scripts.Presenter
             {
                 uIRestrictionPresenter.TurnOffRollDice();
                 var d = Dice.RandomRollTwiceDice();
+                Debug.Log("Dice : " + d[0] + d[1]);
                 distributeCardManeger.Distribute(d[0] + d[1]);
                 dicePresenter.ShowDiceNum(d[0] + d[1]);
                 dicePresenter.ShowDice(d[0], d[1]);
