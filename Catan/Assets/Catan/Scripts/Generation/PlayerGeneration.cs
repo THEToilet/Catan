@@ -52,6 +52,7 @@ namespace Catan.Scripts.Generation
                         toPleyerObject.Player4 = tmpObject;
                         break;
                 }
+                tmpObject.SetActive(false);
             }
         }
     }

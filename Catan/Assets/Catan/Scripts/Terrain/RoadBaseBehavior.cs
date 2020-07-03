@@ -7,6 +7,7 @@ namespace Catan.Scripts.Terrain
     public class RoadBaseBehavior : MonoBehaviour
     {
         public bool hasTerritory = false;
+        public int angle;
     }
 
 }

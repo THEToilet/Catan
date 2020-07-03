@@ -5,6 +5,7 @@ using Catan.Scripts.Presenter;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Player;
 using Catan.Scripts.Territory;
+using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Generation
 {
@@ -20,13 +21,14 @@ namespace Catan.Scripts.Generation
         private GameObject tmp;
         public void Generate(Vector3 position, TerritoryType territoryType, PlayerId playerId, GameObject _gameObject)
         {
+            // roadbaseに角度の情報を持たせておく　0:| 1:\ 2:/
             tmpGameObject = toPleyerObject.ToPlayer(playerId); // playerIdに対するオブジェクトを取得
             switch (territoryType)
             {
                 case (TerritoryType.Road):
                     tmpGameObject.GetComponent<Belongings>().Road.Add(
-                       tmp = GameObject.Instantiate(Road, new Vector3(position.x, 2f, position.z), Quaternion.Euler(0, 90, 0))
-                    ) ;
+                       tmp = GameObject.Instantiate(Road, new Vector3(position.x, 2f, position.z), Quaternion.Euler(0, _gameObject.GetComponent<RoadBaseBehavior>().angle, 0))
+                    );
                     tmp.GetComponent<TerritoryEntity>().TerritoryPosition = _gameObject;
                     break;
                 case (TerritoryType.Settlement):

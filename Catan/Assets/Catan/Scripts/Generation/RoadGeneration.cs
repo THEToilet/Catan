@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Catan.Scripts.Terrain;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +16,6 @@ namespace Catan.Scripts.Generation
             new Vector3(0,0,5f),            // 3
             new Vector3(15f,0,-5f),         // 4
             new Vector3(15f,0,5f),        // 5
-          //  new Vector3(5f,0,-10f),         // 6
             new Vector3(-15f,0,-5f),       // 7
             new Vector3(-15f,0,5f),      // 8
             new Vector3(7.5f,0,-10f),        // 9
@@ -37,7 +37,6 @@ namespace Catan.Scripts.Generation
             // rotation 120
             new Vector3(19f,0,-12.5f),        // 17
             new Vector3(19f,0,-2.5f),          // 18
-          //  new Vector3(19f,0,25f),        // 19
             new Vector3(19f,0,7.5f),       // 20
             new Vector3(11.5f,0,-17.5f),         // 21
             new Vector3(11.5f,0,-7f),       // 22
@@ -92,9 +91,21 @@ namespace Catan.Scripts.Generation
             GameObject tmpGameObject;
             for (int i = 0; i < roadBasePositions.Length; i++)
             {
-                tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90,0,0));
+                tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90, 0, 0));
                 tmpGameObject.name = "RoadBase_" + i;
                 roads.Add(tmpGameObject);
+                if (i >= 0 && i <= 14)
+                {
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 90;
+                }
+                else if (i >= 15 && i <= 26)
+                {
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 150;
+                }
+                else
+                {
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
+                }
                 tmpGameObject.SetActive(false);
             }
         }
