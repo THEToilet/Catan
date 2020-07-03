@@ -59,12 +59,11 @@ namespace Catan.Scripts.Presenter
             rollDiceButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                Debug.Log(Dice.RandomRollTwiceDice());
                 uIRestrictionPresenter.TurnOffRollDice();
                 var d = Dice.RandomRollTwiceDice();
                 distributeCardManeger.Distribute(d[0] + d[1]);
+                dicePresenter.ShowDiceNum(d[0] + d[1]);
                 dicePresenter.ShowDice(d[0], d[1]);
-
             });
 
             submmitButton.OnClickAsObservable()

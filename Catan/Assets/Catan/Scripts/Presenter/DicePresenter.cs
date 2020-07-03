@@ -20,6 +20,7 @@ namespace Catan.Scripts.Presenter
       //  private bool isDice = false;
         public Sprite[] diceNumSprite = new Sprite[6];
         [SerializeField] GameObject DicePanel;
+        [SerializeField] Text diceText;
 
         private void Start()
         {
@@ -60,6 +61,11 @@ namespace Catan.Scripts.Presenter
             diceImage2.GetComponent<Image>().sprite = diceNumSprite[num2 - 1];
             await UniTask.DelayFrame(120);
             DicePanel.SetActive(false);
+        }
+        
+        public void ShowDiceNum(int n)
+        {
+            diceText.text = n.ToString();
         }
     }
 
