@@ -142,6 +142,7 @@
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryType.cs" />
+    <Compile Include="Assets\Catan\Scripts\Thief\ThiefCore.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
