@@ -834,18 +834,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75953781}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1831122621}
-        m_MethodName: DOPlayBackwards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &75953781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6968,18 +6957,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 821345228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1831122621}
-        m_MethodName: DOPlayBackwards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &821345228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11459,18 +11437,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638841786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1831122621}
-        m_MethodName: DOPlayBackwards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1638841786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14455,18 +14422,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1860925991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1831122621}
-        m_MethodName: DOPlayBackwards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1860925991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16870,6 +16826,7 @@ MonoBehaviour:
   playerTurnManeger: {fileID: 1669153291}
   toPleyerObject: {fileID: 35605534}
   cardEnumeration: {fileID: 35605539}
+  cardConsumptionManeger: {fileID: 1669153307}
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
+using UniRx;
 
 namespace Catan.Scripts.Presenter
 {
@@ -19,6 +20,7 @@ namespace Catan.Scripts.Presenter
         public PlayerTurnManeger playerTurnManeger;
         public ToPleyerObject toPleyerObject;
         public CardEnumeration cardEnumeration;
+        public CardConsumptionManeger cardConsumptionManeger;
 
         private void Start()
         {
@@ -27,10 +29,25 @@ namespace Catan.Scripts.Presenter
             cityButton.interactable = false;
             drawCardButton.interactable = false;
 
-            submmitButton.OnClickAsObservable()
+            roadButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
-            tradeCardEnumeration.TableTopEnumeration();
+            cardConsumptionManeger.BuyRoad();
+        });
+            settlementButton.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            cardConsumptionManeger.BuySettlement();
+        });
+            cityButton.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            cardConsumptionManeger.BuyCity();
+        });
+            drawCardButton.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            cardConsumptionManeger.BuyCard();
         });
         }
 
