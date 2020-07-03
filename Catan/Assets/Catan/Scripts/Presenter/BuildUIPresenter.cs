@@ -26,6 +26,12 @@ namespace Catan.Scripts.Presenter
             settlementButton.interactable = false;
             cityButton.interactable = false;
             drawCardButton.interactable = false;
+
+            submmitButton.OnClickAsObservable()
+        .Subscribe(_ =>
+        {
+            tradeCardEnumeration.TableTopEnumeration();
+        });
         }
 
         private void Update()

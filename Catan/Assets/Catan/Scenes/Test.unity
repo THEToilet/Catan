@@ -11836,6 +11836,7 @@ GameObject:
   - component: {fileID: 1669153304}
   - component: {fileID: 1669153293}
   - component: {fileID: 1669153305}
+  - component: {fileID: 1669153307}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -12204,6 +12205,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointChildrenGeneration: {fileID: 1669153295}
   roadGeneration: {fileID: 1669153303}
+--- !u!114 &1669153307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a962dc82256fbd49962f4f28c6eeeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnManeger: {fileID: 1669153291}
+  toPleyerObject: {fileID: 35605534}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
