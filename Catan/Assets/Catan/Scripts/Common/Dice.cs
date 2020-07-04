@@ -41,7 +41,7 @@ namespace Catan.Scripts.Common
         // 数字トークンを返すメソッド
         public static int[] NumberToken()
         {
-            int[] token = { 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
+            int[] token = { 2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12 };
 
             int[] newToken = new int[token.Length];
 

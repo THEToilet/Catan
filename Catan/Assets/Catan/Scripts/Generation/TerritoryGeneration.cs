@@ -4,7 +4,6 @@ using UnityEngine;
 using Catan.Scripts.Presenter;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Player;
-using Catan.Scripts.Territory;
 using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Generation

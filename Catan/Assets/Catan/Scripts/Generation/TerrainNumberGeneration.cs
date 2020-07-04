@@ -11,21 +11,34 @@ namespace Catan.Scripts.Generation
     public class TerrainNumberGeneration : MonoBehaviour
     {
         public PointParentGeneration pointParentGeneration;
-        [SerializeField] GameObject numberToken;
+        [SerializeField] GameObject numberTokenObject;
         private int[] NumberToken;
         public void Distribution()
         {
             NumberToken = Dice.NumberToken();
             GameObject tmp;
-            for (int i = 0; i < NumberToken.Length; i++)
+            var p = pointParentGeneration.parentPointObjects;
+            Debug.Log("oo");
+            int cur = 0;
+            for (int i = 0; i < p.Count; i++)
             {
-                var p = pointParentGeneration.parentPointObjects[i];
-                Debug.Log(NumberToken[i]);
-                p.GetComponent<PointParentBehavior>().tokenNumber = NumberToken[i];  // TerrainGameObjectのBehaviorに数字トークンを代入する
-                tmp = GameObject.Instantiate(numberToken, new Vector3(p.transform.position.x, p.transform.position.y + 5f, p.transform.position.z), Quaternion.Euler(90, -90, 0)) ;
-                tmp.GetComponent<TextMesh>().text = NumberToken[i].ToString();
+                if (p[i].GetComponent<PointParentBehavior>().terrainType == TerrainType.Desert)
+                {
+                    Debug.Log(114);
+                    p[i].GetComponent<PointParentBehavior>().tokenNumber = 7;
+                    tmp = GameObject.Instantiate(numberTokenObject, new Vector3(p[i].transform.position.x, p[i].transform.position.y + 5f, p[i].transform.position.z), Quaternion.Euler(90, -90, 0));
+                    tmp.GetComponent<TextMesh>().text = "7";
+                    Debug.Log("Oh");
+                }
+                else
+                {
+                    Debug.Log(514);
+                    p[i].GetComponent<PointParentBehavior>().tokenNumber = NumberToken[cur];  // TerrainGameObjectのBehaviorに数字トークンを代入する
+                    tmp = GameObject.Instantiate(numberTokenObject, new Vector3(p[i].transform.position.x, p[i].transform.position.y + 5f, p[i].transform.position.z), Quaternion.Euler(90, -90, 0));
+                    tmp.GetComponent<TextMesh>().text = NumberToken[cur].ToString();
+                    cur++;
+                }
             }
         }
     }
-
 }

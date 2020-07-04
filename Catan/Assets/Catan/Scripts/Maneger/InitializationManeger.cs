@@ -30,9 +30,9 @@ namespace Catan.Scripts.Manager
             roadGeneration.Generate();  // RoadBase生成
             roadBaseRelevanceSetting.Allocation();  // 子と路の関連づけ
             terrainGeneration.Create(randomNoGeneration.Generate()); // 地形生成
-            terrainNumberGeneration.Distribution(); // 数字トークン生成
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide();　// 順番生成
+            terrainNumberGeneration.Distribution(); // 数字トークン生成
             Debug.Log("hello");
         }
     }

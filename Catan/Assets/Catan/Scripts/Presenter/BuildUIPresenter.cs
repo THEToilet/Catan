@@ -34,22 +34,26 @@ namespace Catan.Scripts.Presenter
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuyRoad();
+            Debug.Log("あ！");
         });
             settlementButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuySettlement();
+            Debug.Log("い！");
         });
             cityButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuyCity();
+            Debug.Log("う！");
         });
             drawCardButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             drawCard.Draw();
             cardConsumptionManeger.BuyCard();
+            Debug.Log("お！");
         });
         }
 
