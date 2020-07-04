@@ -22,6 +22,7 @@ namespace Catan.Scripts.Presenter
         public CardEnumeration cardEnumeration;
         public CardConsumptionManeger cardConsumptionManeger;
         public DrawCard drawCard;
+        public RoadBasePresenter roadBasePresenter;
 
         private void Start()
         {
@@ -34,6 +35,7 @@ namespace Catan.Scripts.Presenter
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuyRoad();
+            roadBasePresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
             Debug.Log("あ！");
         });
             settlementButton.OnClickAsObservable()

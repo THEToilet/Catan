@@ -16950,6 +16950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roadGeneration: {fileID: 1669153303}
+  toPleyerObject: {fileID: 35605534}
 --- !u!114 &2096806389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16963,6 +16964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointChildrenGeneration: {fileID: 1669153295}
+  toPleyerObject: {fileID: 35605534}
 --- !u!114 &2096806390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17000,6 +17002,7 @@ MonoBehaviour:
   cardEnumeration: {fileID: 35605539}
   cardConsumptionManeger: {fileID: 1669153307}
   drawCard: {fileID: 1669153308}
+  roadBasePresenter: {fileID: 2096806388}
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0

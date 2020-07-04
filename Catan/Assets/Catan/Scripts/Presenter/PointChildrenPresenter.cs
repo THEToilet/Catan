@@ -11,6 +11,7 @@ namespace Catan.Scripts.Presenter
     public class PointChildrenPresenter : MonoBehaviour
     {
         public PointChildrenGeneration pointChildrenGeneration;
+        public ToPleyerObject toPleyerObject;
         public void ShowAll()
         {
             var p = pointChildrenGeneration.childrenPointGameObjects;
@@ -34,7 +35,7 @@ namespace Catan.Scripts.Presenter
 
         public void ShowPossiblePoint(PlayerId playerId)
         {
-
+            var p = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
         }
     }
 
