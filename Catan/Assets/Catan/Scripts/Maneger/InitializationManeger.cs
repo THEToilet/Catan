@@ -3,6 +3,7 @@ using UnityEngine;
 using Catan.Scripts.Player;
 using Catan.Scripts.Point;
 using Catan.Scripts.Terrain;
+using Catan.Scripts.Theif;
 
 namespace Catan.Scripts.Manager
 {
@@ -20,6 +21,7 @@ namespace Catan.Scripts.Manager
         public PointParentRelevanceSetting pointParentRelevanceSetting;
         public TerrainNumberGeneration terrainNumberGeneration;
         public RoadBaseRelevanceSetting roadBaseRelevanceSetting;
+        public TheifGeneration theifGeneration;
 
         public void Excute()
         {
@@ -33,6 +35,7 @@ namespace Catan.Scripts.Manager
             playerGeneration.Generate(); // プレイヤー生成
             orderDetermining.OrderDecide();　// 順番生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
+            theifGeneration.Generate(); // 盗賊生成
             Debug.Log("hello");
         }
     }

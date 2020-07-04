@@ -11838,6 +11838,7 @@ GameObject:
   - component: {fileID: 1669153305}
   - component: {fileID: 1669153307}
   - component: {fileID: 1669153308}
+  - component: {fileID: 1669153309}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -11885,6 +11886,7 @@ MonoBehaviour:
   pointParentRelevanceSetting: {fileID: 1669153298}
   terrainNumberGeneration: {fileID: 1669153302}
   roadBaseRelevanceSetting: {fileID: 1669153306}
+  theifGeneration: {fileID: 1669153309}
 --- !u!114 &1669153286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12235,6 +12237,21 @@ MonoBehaviour:
   playerTurnManeger: {fileID: 1669153291}
   toPleyerObject: {fileID: 35605534}
   toSpecialCardObject: {fileID: 35605537}
+--- !u!114 &1669153309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b51ad30b2ca67d4db6745ee35800cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theifObject: {fileID: 7909872320494514294, guid: 04382b0b8187d5942a4fcf1ea67feae9,
+    type: 3}
+  pointParentGeneration: {fileID: 1669153296}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0

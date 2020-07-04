@@ -89,6 +89,7 @@
     <Compile Include="Assets\Catan\Scripts\Generation\TerrainNumberGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\TerritoryGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\TerritoryGenerationDecision.cs" />
+    <Compile Include="Assets\Catan\Scripts\Generation\TheifGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\BattleManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\CardConsumptionManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\CardExchangeManeger.cs" />
