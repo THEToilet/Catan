@@ -27,10 +27,10 @@ namespace Catan.Scripts.Presenter
             {
                 var p = playerTurnManeger._currentPlayerId.Value;
                 var o = cardEnumeration.Enumeration(p);
-                WoodText.text = o[0].ToString();
-                BrickCard.text = o[1].ToString();
-                IronOreCard.text = o[2].ToString();
-                WheatCard.text = o[3].ToString();
+                WoodText.text = o[3].ToString();
+                BrickCard.text = o[0].ToString();
+                IronOreCard.text = o[1].ToString();
+                WheatCard.text = o[2].ToString();
                 WoolCard.text = o[4].ToString();
             }
         }

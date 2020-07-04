@@ -17,6 +17,8 @@ namespace Catan.Scripts.Presenter
         [SerializeField] Button settlementButton;
         [SerializeField] Button roadButton;
         [SerializeField] Button drawCardButton;
+        [SerializeField] Button actionButton;
+        [SerializeField] Button actionCancelButton;
         public PlayerTurnManeger playerTurnManeger;
         public ToPleyerObject toPleyerObject;
         public CardEnumeration cardEnumeration;
@@ -36,18 +38,21 @@ namespace Catan.Scripts.Presenter
         {
             cardConsumptionManeger.BuyRoad();
             roadBasePresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
+            this.TurnOffAll();
             Debug.Log("あ！");
         });
             settlementButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuySettlement();
+            this.TurnOffAll();
             Debug.Log("い！");
         });
             cityButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             cardConsumptionManeger.BuyCity();
+            this.TurnOffAll();
             Debug.Log("う！");
         });
             drawCardButton.OnClickAsObservable()
@@ -55,8 +60,24 @@ namespace Catan.Scripts.Presenter
         {
             drawCard.Draw();
             cardConsumptionManeger.BuyCard();
+            this.TurnOffAll();
             Debug.Log("お！");
         });
+        }
+
+        public void TurnOffAll()
+        {
+            drawCardButton.interactable = false;
+            cityButton.interactable = false;
+            settlementButton.interactable = false;
+            roadButton.interactable = false;
+            this.Reset();
+        }
+
+        public void Reset()
+        {
+            actionButton.gameObject.SetActive(true);
+            actionCancelButton.gameObject.SetActive(false);
         }
 
         private void Update()

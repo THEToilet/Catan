@@ -15,6 +15,7 @@ namespace Catan.Scripts.Manager
         {
             var c = p.GetComponent<Belongings>().cards;
             int check = 0;
+            Debug.Log("DOODODO");
             for (int i = 0; i < c.Count; i++)
             {
                 if (c[i].GetComponent<CardEntity>().cardType == cost[check])
@@ -34,7 +35,7 @@ namespace Catan.Scripts.Manager
         public void BuyRoad()
         {
             CardType[] cost = new CardType[] { CardType.Brick, CardType.Wood };
-            var p = ToPlayer();
+            var p = this.ToPlayer();
             DeleteElement(p, cost);
 
         }
@@ -42,14 +43,14 @@ namespace Catan.Scripts.Manager
         public void BuySettlement()
         {
             CardType[] cost = new CardType[] { CardType.Brick, CardType.Wood, CardType.Wheat, CardType.Wool };
-            var p = ToPlayer();
+            var p = this.ToPlayer();
             DeleteElement(p, cost);
         }
 
         public void BuyCity()
         {
             CardType[] cost = new CardType[] { CardType.Wheat, CardType.Wheat, CardType.IronOre, CardType.IronOre, CardType.IronOre };
-            var p = ToPlayer();
+            var p = this.ToPlayer();
             DeleteElement(p, cost);
 
         }
@@ -57,7 +58,7 @@ namespace Catan.Scripts.Manager
         public void BuyCard()
         {
             CardType[] cost = new CardType[] { CardType.IronOre, CardType.Wheat, CardType.Wool };
-            var p = ToPlayer();
+            var p = this.ToPlayer();
             DeleteElement(p, cost);
 
         }
