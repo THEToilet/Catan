@@ -43,7 +43,10 @@ namespace Catan.Scripts.Presenter
             for (int i = 0; i < a.adjacentRoadBase.Count; i++)
             {
                 GameObject s = a.adjacentRoadBase[i];
-                s.SetActive(true);
+                if (!s.GetComponent<RoadBaseBehavior>().hasTerritory)
+                {
+                    s.SetActive(true);
+                }
             }
 
         }
