@@ -104,6 +104,7 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\TurnState.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\VictoryPointEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\Belongings.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\OrderDetermining.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\PlayerAction.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\TradeUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\UIPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UIRestrictionPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\VictoryPointPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseBehavior.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\TerrainBehavior.cs" />
