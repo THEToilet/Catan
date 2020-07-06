@@ -15,7 +15,7 @@ namespace Catan.Scripts.Presenter
         public void ShowAll()
         {
             var p = pointChildrenGeneration.childrenPointGameObjects;
-            for(int i = 0; i < p.Count; i++)
+            for (int i = 0; i < p.Count; i++)
             {
                 if (!p[i].GetComponent<PointChildrenBehavior>().hasTerritory)
                 {
@@ -27,7 +27,7 @@ namespace Catan.Scripts.Presenter
         public void EraseAll()
         {
             var p = pointChildrenGeneration.childrenPointGameObjects;
-            for(int i = 0; i < p.Count; i++)
+            for (int i = 0; i < p.Count; i++)
             {
                 p[i].SetActive(false);
             }
@@ -35,7 +35,17 @@ namespace Catan.Scripts.Presenter
 
         public void ShowPossiblePoint(PlayerId playerId)
         {
-            var p = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
+            var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
+            var p = pointChildrenGeneration.childrenPointGameObjects;
+            for (int i = 0; i < p.Count; i++)
+            {
+                if (!p[i].GetComponent<PointChildrenBehavior>().hasTerritory)
+                {
+
+
+                    var t = player.City;
+                }
+            }
         }
     }
 

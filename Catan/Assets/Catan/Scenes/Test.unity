@@ -18950,6 +18950,10 @@ MonoBehaviour:
   cardConsumptionManeger: {fileID: 1669153307}
   drawCard: {fileID: 1669153308}
   roadBasePresenter: {fileID: 2096806388}
+  pointChildrenPresenter: {fileID: 2096806389}
+  uIRestrictionPresenter: {fileID: 2096806386}
+  r: 0
+  c: 0
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0

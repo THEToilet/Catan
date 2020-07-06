@@ -63,6 +63,7 @@ namespace Catan.Scripts.Presenter
         }
         public void ShowPossiblePoint(PlayerId playerId)
         {
+            // 路の接点も表示する
             var p = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
             for (int i = 0; i < p.City.Count; i++)
             {
