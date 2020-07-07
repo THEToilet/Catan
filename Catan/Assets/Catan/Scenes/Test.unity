@@ -17071,6 +17071,8 @@ GameObject:
   - component: {fileID: 1669153308}
   - component: {fileID: 1669153309}
   - component: {fileID: 1669153310}
+  - component: {fileID: 1669153312}
+  - component: {fileID: 1669153311}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -17119,6 +17121,8 @@ MonoBehaviour:
   terrainNumberGeneration: {fileID: 1669153302}
   roadBaseRelevanceSetting: {fileID: 1669153306}
   theifGeneration: {fileID: 1669153309}
+  roadToChildrenRelevanceSetting: {fileID: 1669153311}
+  roadBaseRoadRelevanceSetting: {fileID: 1669153312}
 --- !u!114 &1669153286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17501,6 +17505,34 @@ MonoBehaviour:
   progressStateManeger: {fileID: 1669153284}
   toPleyerObject: {fileID: 35605534}
   victoryPoint: 
+--- !u!114 &1669153311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3702ac5340c19940a19429a0ec50977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
+  roadGeneration: {fileID: 1669153303}
+--- !u!114 &1669153312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab844ec370dfc094c8d9a387ee95925b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenGeneration: {fileID: 1669153295}
+  roadGeneration: {fileID: 1669153303}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0

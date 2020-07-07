@@ -8,6 +8,8 @@ namespace Catan.Scripts.Terrain
     {
         public bool hasTerritory = false;
         public int angle;
+        public List<GameObject> adjacentRoadBase = new List<GameObject>();
+        public List<GameObject> adjacentPointChildren = new List<GameObject>();
     }
 
 }

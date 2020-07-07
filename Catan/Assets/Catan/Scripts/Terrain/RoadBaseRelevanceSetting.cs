@@ -72,7 +72,7 @@ namespace Catan.Scripts.Terrain
 
         public void Allocation()
         {
-            for (int i = 0; i < 53; i++)
+            for (int i = 0; i < 54; i++)
             {
                 Debug.Log("unnko");
                 GameObject tmpGameObject = pointChildrenGeneration.childrenPointGameObjects[i];

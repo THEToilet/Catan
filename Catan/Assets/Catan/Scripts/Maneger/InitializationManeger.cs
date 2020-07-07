@@ -22,6 +22,8 @@ namespace Catan.Scripts.Manager
         public TerrainNumberGeneration terrainNumberGeneration;
         public RoadBaseRelevanceSetting roadBaseRelevanceSetting;
         public TheifGeneration theifGeneration;
+        public RoadToChildrenRelevanceSetting roadToChildrenRelevanceSetting;
+        public RoadBaseRoadRelevanceSetting roadBaseRoadRelevanceSetting;
 
         public void Excute()
         {
@@ -36,6 +38,8 @@ namespace Catan.Scripts.Manager
             orderDetermining.OrderDecide();　// 順番生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
             theifGeneration.Generate(); // 盗賊生成
+            roadToChildrenRelevanceSetting.Allocation();
+            roadBaseRoadRelevanceSetting.Allocation();
             Debug.Log("hello");
         }
     }
