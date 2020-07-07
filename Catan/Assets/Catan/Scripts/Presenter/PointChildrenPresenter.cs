@@ -41,9 +41,9 @@ namespace Catan.Scripts.Presenter
             {
                 if (!p[i].GetComponent<PointChildrenBehavior>().hasTerritory)
                 {
-
-
                     var t = player.City;
+                    p[i].SetActive(true);
+
                 }
             }
         }

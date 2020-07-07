@@ -62,7 +62,14 @@ namespace Catan.Scripts.Presenter
                 uIRestrictionPresenter.TurnOffRollDice();
                 var d = Dice.RandomRollTwiceDice();
                 Debug.Log("Dice : " + d[0] + d[1]);
+                if(d[0] + d[1] == 7)
+                {
+                    Debug.Log("Thief");
+                }
+                else
+                {
                 distributeCardManeger.Distribute(d[0] + d[1]);
+                }
                 dicePresenter.ShowDiceNum(d[0] + d[1]);
                 dicePresenter.ShowDice(d[0], d[1]);
             });
