@@ -63,6 +63,11 @@ namespace Catan.Scripts.Manager
 
         }
 
+        public void DeleteCard(CardType[] cost)
+        {
+            var p = this.ToPlayer();
+            DeleteElement(p, cost);
+        }
         public GameObject ToPlayer()
         {
             var p = playerTurnManeger._currentPlayerId.Value;
