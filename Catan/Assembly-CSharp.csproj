@@ -130,6 +130,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\PlayerNotificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PointChildrenPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\RoadBasePresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\SpecialCardPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\TableTopCardPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\BuildUI.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UI\CardUI.cs" />

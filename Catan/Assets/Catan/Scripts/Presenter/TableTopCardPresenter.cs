@@ -22,7 +22,7 @@ namespace Catan.Scripts.Presenter
             {
 
                 GameObject tmpObject = GameObject.Instantiate(g, this.transform.position, Quaternion.identity);
-                tmpObject.transform.parent = Hand.transform;
+                tmpObject.transform.SetParent(Hand.transform);
             }
         }
 

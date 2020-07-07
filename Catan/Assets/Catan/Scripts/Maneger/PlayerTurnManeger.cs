@@ -31,6 +31,7 @@ namespace Catan.Scripts.Manager
         public RoadBasePresenter roadBasePresenter;
         public PointChildrenPresenter pointChildrenPresenter;
         public TableTopCardPresenter tableTopCardPresenter;
+        public SpecialCardPresenter specialCardPresenter;
         public ReactiveProperty<int> _currentCursole = new ReactiveProperty<int>(0);
         public List<PlayerId> pIds = new List<PlayerId>();
         int cur = 0;
@@ -89,6 +90,8 @@ namespace Catan.Scripts.Manager
                     uIRestrictionPresenter.Release();
                     tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
                     tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
+                    specialCardPresenter.DeleateCard(_currentPlayerId.Value);
+                    specialCardPresenter.CreateCard(_currentPlayerId.Value);
                     roadBasePresenter.EraseAll();
                     pointChildrenPresenter.EraseAll();
                 }
