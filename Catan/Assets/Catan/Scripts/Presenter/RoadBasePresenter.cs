@@ -76,6 +76,18 @@ namespace Catan.Scripts.Presenter
                     }
                 }
             }
+            for (int i = 0; i < p.Road.Count; i++)
+            {
+                var ad = p.Road[i].GetComponent<TerritoryEntity>().TerritoryPosition.GetComponent<RoadBaseBehavior>().adjacentRoadBase;
+                for (int j = 0; j < ad.Count; j++)
+                {
+                    if (!ad[j].GetComponent<RoadBaseBehavior>().hasTerritory)
+                    {
+                        ad[j].SetActive(true);
+                    }
+
+                }
+            }
         }
 
     }

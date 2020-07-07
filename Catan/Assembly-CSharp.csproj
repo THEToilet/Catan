@@ -103,6 +103,7 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\TheifManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\TurnState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\VictoryPointEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Player\Belongings.cs" />
