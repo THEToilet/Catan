@@ -12,7 +12,7 @@ namespace Catan.Scripts.Terrain
         public PointChildrenGeneration pointChildrenGeneration;
         public RoadGeneration roadGeneration;
 
-        // それぞれの路が持っている路の点
+        // それぞれの路が持っている点
         int[][] roadToChildre =
         { new[] {3,35},           // 0
             new[] {26,0},            // 1

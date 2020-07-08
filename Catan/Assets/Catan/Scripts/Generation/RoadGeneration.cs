@@ -26,13 +26,13 @@ namespace Catan.Scripts.Generation
             new Vector3(0,0,15f),         // 14
             new Vector3(0,0,-25f),       // 15
             new Vector3(0,0,25f),      // 16
-            new Vector3(15f,0,15f),
-            new Vector3(15f,0,-15f),
-            new Vector3(7.5f,0,20f),
-            new Vector3(7.5f,0,-20f),
-            new Vector3(-15f,0,15f),
-            new Vector3(-15f,0,-15f),
-            new Vector3(-7.5f,0,20f),
+            new Vector3(15f,0,15f),    // 17
+            new Vector3(15f,0,-15f),   // 18
+            new Vector3(7.5f,0,20f),   // 19 
+            new Vector3(7.5f,0,-20f),   // 20
+            new Vector3(-15f,0,15f),  // 21
+            new Vector3(-15f,0,-15f),  // 22
+            new Vector3(-7.5f,0,20f),  
             new Vector3(-7.5f,0,-20f),
             // rotation 120
             new Vector3(19f,0,-12.5f),        // 17
@@ -94,17 +94,21 @@ namespace Catan.Scripts.Generation
                 tmpGameObject = GameObject.Instantiate(roadBase, roadBasePositions[i], Quaternion.Euler(90, 0, 0));
                 tmpGameObject.name = "RoadBase_" + i;
                 roads.Add(tmpGameObject);
-                if (i >= 0 && i <= 14)
+                if (i >= 0 && i <= 23)
                 {
                     tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 90;
                 }
-                else if (i >= 15 && i <= 26)
+                else if (i == 53)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 150;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
+                }
+                else if (i >= 24 && i <= 46)
+                {
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
                 }
                 else
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 150;
                 }
                 tmpGameObject.SetActive(false);
             }
