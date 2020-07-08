@@ -3,6 +3,7 @@ using Catan.Scripts.Card;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Catan.Scripts.Manager
 {
@@ -17,7 +18,8 @@ namespace Catan.Scripts.Manager
         {
             var tmp = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>().scards;
             // ここでコスト計算　if()
-            tmp.Add(toSpecialCardObject.ToCard(Random.Range(start, end)));
+            var card = toSpecialCardObject.ToCard(Random.Range(start, end));
+            tmp.Add(card);
         }
     }
 

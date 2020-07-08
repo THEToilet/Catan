@@ -17916,6 +17916,7 @@ GameObject:
   - component: {fileID: 1669153312}
   - component: {fileID: 1669153311}
   - component: {fileID: 1669153313}
+  - component: {fileID: 1669153314}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -18389,6 +18390,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIRestrictionPresenter: {fileID: 2096806386}
+--- !u!114 &1669153314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82edd04c9cd7974b87fe3ea9b2d80fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theifManeger: {fileID: 1669153313}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23897,8 +23911,8 @@ MonoBehaviour:
   distributeCardManeger: {fileID: 1669153304}
   uIRestrictionPresenter: {fileID: 2096806386}
   tradeCardEnumeration: {fileID: 1669153305}
-  playerNotificationPresenter: {fileID: 0}
-  theifManeger: {fileID: 0}
+  playerNotificationPresenter: {fileID: 2096806380}
+  theifManeger: {fileID: 1669153313}
   actionButton: {fileID: 406737375}
   actionCancelButton: {fileID: 947930611}
   costButton: {fileID: 1395368465}
@@ -24171,6 +24185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toPleyerObject: {fileID: 35605534}
   toCardObject: {fileID: 35605536}
+  specialCardManeger: {fileID: 1669153314}
   specialHnad: {fileID: 565787185}
 --- !u!114 &2096806393
 MonoBehaviour:
