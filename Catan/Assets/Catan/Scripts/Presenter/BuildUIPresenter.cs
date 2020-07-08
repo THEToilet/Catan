@@ -55,6 +55,7 @@ namespace Catan.Scripts.Presenter
         {
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             cardConsumptionManeger.BuySettlement();
+            pointChildrenPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
             this.TurnOffAll();
             this.setCount(p);
             isCheck = true;
@@ -108,7 +109,7 @@ namespace Catan.Scripts.Presenter
                 {
                     roadButton.interactable = true;
                 }
-                if (num[3] >= 1 && num[0] >= 1 && num[2] >= 1 && num[4] >= 4)
+                if (num[3] >= 1 && num[0] >= 1 && num[2] >= 1 && num[4] >= 1)
                 {
                     settlementButton.interactable = true;
                 }

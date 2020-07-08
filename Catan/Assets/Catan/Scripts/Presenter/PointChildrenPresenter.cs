@@ -42,6 +42,7 @@ namespace Catan.Scripts.Presenter
             var p = pointChildrenGeneration.childrenPointGameObjects;
             var b = roadGeneration.roads;
             List<GameObject> showPoint = new List<GameObject>();
+            List<GameObject> hasPoint = new List<GameObject>();
             for (int i = 0; i < p.Count; i++)
             {
                 var a = p[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
@@ -64,33 +65,38 @@ namespace Catan.Scripts.Presenter
                 for (int j = 0; j < c.Count; j++)
                 {
                     showPoint.Add(c[j]);
+                    if (!CheckDuplication(showPoint))
+                    {
+                    }
+                    else
+                    {
+                        hasPoint.Add(c[j]);
+                    }
                 }
             }
-            var list = FindDuplication(showPoint);
-            for(int i = 0; i < list.Count; i++)
+            for (int i = 0; i < hasPoint.Count; i++)
             {
-                list[i].SetActive(true);
+                hasPoint[i].SetActive(true);
             }
 
         }
 
-        /// <summary>
-        /// 引数のリスト（何らかの名称のリスト）から、重複する要素を抽出する。
-        /// </summary>
-        /// <param name="list">何らかの名称のリスト。</param>
-        /// <returns>重複している要素のリスト。</returns>
-        public static List<GameObject> FindDuplication(List<GameObject> list)
+        bool CheckDuplication(List<GameObject> showPoint)
         {
-            // 要素名でGroupByした後、グループ内の件数が2以上（※重複あり）に絞り込み、
-            // 最後にIGrouping.Keyからグループ化に使ったキーを抽出している。
-            var duplicates = list.GroupBy(name => name).Where(name => name.Count() > 1)
-                .Select(group => group.Key).ToList();
+            HashSet<string> hashSet = new HashSet<string>();
 
-            return duplicates;
+            foreach (var item in showPoint)
+            {
+                hashSet.Add(item.name);
+            }
+
+            //重複がある場合は要素数が減る
+            if (showPoint.Count > hashSet.Count)
+            {
+                return false;
+            }
+            return true;
         }
-
-
-        // 表示できる点があるか調査する
     }
 
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2020-07-08T13:00:20.345+09:00
-  initializedAtString: 2020-07-08T11:56:57.419+09:00
+  lastUpdatedAtString: 2020-07-08T15:03:01.462+09:00
+  initializedAtString: 2020-07-08T15:03:00.816+09:00
   localBranches:
   - name: master
     tracking: origin/master
