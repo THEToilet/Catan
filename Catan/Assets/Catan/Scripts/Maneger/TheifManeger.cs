@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheifManeger : MonoBehaviour
+namespace Catan.Scripts.Manager
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public class TheifManeger : MonoBehaviour
     {
-        
+
+        void ReduceCard()
+        {
+
+        }
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

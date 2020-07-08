@@ -27,6 +27,8 @@ namespace Catan.Scripts.Presenter
         public TradeCardEnumeration tradeCardEnumeration;
         [SerializeField] Button actionButton;
         [SerializeField] Button actionCancelButton;
+        [SerializeField] Button costButton;
+        [SerializeField] Button costCancelButton;
 
         public DicePresenter dicePresenter;
 
@@ -93,6 +95,22 @@ namespace Catan.Scripts.Presenter
                 actionCancelButton.gameObject.SetActive(false);
                 actionButton.gameObject.SetActive(true);
             });
+
+            costButton.OnClickAsObservable()
+         .Subscribe(_ =>
+         {
+             costButton.gameObject.SetActive(false);
+             costCancelButton.gameObject.SetActive(true);
+
+         });
+
+            costCancelButton.OnClickAsObservable()
+            .Subscribe(_ =>
+            {
+                costCancelButton.gameObject.SetActive(false);
+                costButton.gameObject.SetActive(true);
+            });
+
 
         }
     }

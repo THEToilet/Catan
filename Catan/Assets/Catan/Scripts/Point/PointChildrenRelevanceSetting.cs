@@ -25,12 +25,12 @@ namespace Catan.Scripts.Point
             new[] {13 ,11, 18},         // 12
             new[] {12 ,27 ,4},          // 13
             new[] {7 ,31, 15},          // 14
-            new[] {16 ,14,0},          // 15
-            new[] {17 ,15,0},          // 16
-            new[] {16 ,22,0},          // 17
-            new[] {19 ,39,0},          // 18
-            new[] {18 ,20,0},          // 19
-            new[] {19 ,21,0},          // 20
+            new[] {16 ,14,-1},          // 15
+            new[] {17 ,15,-1},          // 16
+            new[] {16 ,22,-1},          // 17
+            new[] {19 ,39,-1},          // 18
+            new[] {18 ,20,-1},          // 19
+            new[] {19 ,21,-1},          // 20
             new[] {20 ,30, 11},         // 21
             new[] {17 ,23,0},          // 22
             new[] {22 ,24, 40},         // 23
@@ -40,8 +40,8 @@ namespace Catan.Scripts.Point
             new[] {26 ,28, 44},         // 27
             new[] {27 ,29, 10},         // 28
             new[] {28 ,30, 46},         // 29
-            new[] {21 ,29,0},          // 39
-            new[] {14 ,32,0},          // 31
+            new[] {21 ,29,-1},          // 39
+            new[] {14 ,32,-1},          // 31
             new[] {31 ,33, 47},         // 32
             new[] {6 ,32 ,34},          // 33
             new[] {33, 35 ,49},         // 34
@@ -49,21 +49,21 @@ namespace Catan.Scripts.Point
             new[] {35 ,37, 51},         // 36
             new[] {36 ,38 ,13},         // 37
             new[] {37 ,39, 53},         // 38
-            new[] {38, 18,0},          // 39
-            new[] {41 ,23,0},          // 40
-            new[] {40 ,42,0},          // 41
+            new[] {38, 18,-1},          // 39
+            new[] {41 ,23,-1},          // 40
+            new[] {40 ,42,-1},          // 41
             new[] {41 ,43 ,25},         // 42
-            new[] {42, 44,0},          // 43
+            new[] {42, 44,-1},          // 43
             new[] {43 ,45, 27},         // 44
-            new[] {44 ,46,0},          // 45
-            new[] {29 ,45,0},          // 46
-            new[] {32 ,48,0},          // 47
-            new[] {47 ,49,0},          // 48
+            new[] {44 ,46,-1},          // 45
+            new[] {29 ,45,-1},          // 46
+            new[] {32 ,48,-1},          // 47
+            new[] {47 ,49,-1},          // 48
             new[] {34 ,48, 50},         // 49
-            new[] {49 ,51,0},          // 50
+            new[] {49 ,51,-1},          // 50
             new[] {36 ,50, 52},         // 51
-            new[] {51 ,53,0},          // 52
-            new[] {38 ,52,0}           // 53
+            new[] {51 ,53,-1},          // 52
+            new[] {38 ,52,-1}           // 53
       };
 
         public void Allocation()
@@ -72,13 +72,15 @@ namespace Catan.Scripts.Point
             {
                 GameObject tmpGameObject = pointChildrenGeneration.childrenPointGameObjects[i];
                 var setGameObject = tmpGameObject.GetComponent<PointChildrenBehavior>();
-                setGameObject.AdjacentPoint_0 =
-                       pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][0]];
-                setGameObject.AdjacentPoint_1 =
-                        pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][1]];
-                setGameObject.AdjacentPoint_2 =
-                        pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][2]];
-
+                setGameObject.adjacentPoint.Add(
+                       pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][0]]);
+                setGameObject.adjacentPoint.Add(
+                        pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][1]]);
+                if (adjacentPoint[i][2] != -1)
+                {
+                    setGameObject.adjacentPoint.Add(
+                            pointChildrenGeneration.childrenPointGameObjects[adjacentPoint[i][2]]);
+                }
             }
         }
     }
