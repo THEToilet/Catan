@@ -22,7 +22,9 @@ namespace Catan.Scripts.Presenter
             foreach (GameObject g in p.GetComponent<Belongings>().scards)
             {
 
-                GameObject go = GameObject.Instantiate(g, new Vector3(0,0,0), Quaternion.identity);
+                GameObject go = Instantiate(g) as GameObject;
+                go.transform.SetParent(specialHnad.transform, false); // SetParentの第二引数で相対的な大きさにするかを決められる。
+                                                                     //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
                 var cardType = g.GetComponent<SpecialCardEntity>().specialCardType;
                 switch (cardType)
                 {
@@ -47,8 +49,6 @@ namespace Catan.Scripts.Presenter
                         break;
                 }
                 Debug.Log("oha");
-                go.transform.SetParent(specialHnad.transform, false); // SetParentの第二引数で相対的な大きさにするかを決められる。
-                                                                     //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
             }
         }
 
