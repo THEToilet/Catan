@@ -19796,6 +19796,7 @@ GameObject:
   - component: {fileID: 1669153311}
   - component: {fileID: 1669153313}
   - component: {fileID: 1669153314}
+  - component: {fileID: 1669153315}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -20292,6 +20293,24 @@ MonoBehaviour:
   resourceCardSelectionPresenter: {fileID: 2096806396}
   toCardObject: {fileID: 35605536}
   toCardWithCardTypeObject: {fileID: 35605540}
+  monopolizationManeger: {fileID: 1669153315}
+--- !u!114 &1669153315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae7e20e6085f35488d4a35c6f40486c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnManeger: {fileID: 1669153291}
+  cardEnumeration: {fileID: 35605539}
+  cardConsumptionManeger: {fileID: 1669153307}
+  toCardWithCardTypeObject: {fileID: 35605540}
+  toPleyerObject: {fileID: 35605534}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0

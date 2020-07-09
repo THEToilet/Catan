@@ -97,6 +97,7 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\InitialPlacement.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitialState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitializationManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\MonopolizationManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />

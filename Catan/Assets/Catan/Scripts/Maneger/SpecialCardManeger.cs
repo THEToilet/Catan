@@ -23,6 +23,7 @@ namespace Catan.Scripts.Manager
         public ResourceCardSelectionPresenter resourceCardSelectionPresenter;
         public ToCardObject toCardObject;
         public ToCardWithCardTypeObject toCardWithCardTypeObject;
+        public MonopolizationManeger monopolizationManeger;
 
         public void Knight()
         {
@@ -68,11 +69,16 @@ namespace Catan.Scripts.Manager
 
         }
 
-        public void Monopolization()
+        async public void Monopolization()
         {
             Debug.Log("Monopolization");
             // HarveestPresenterに関数を作り使うカードを選ばせる
             // 指定した資源一種類全部もらえる
+            resourceCardSelectionPresenter.ShowPanel();
+            await UniTask.WaitUntil(() => resourceCardSelectionPresenter.isPushed);
+            resourceCardSelectionPresenter.ErasePanel();
+            CardType r = resourceCardSelectionPresenter.GetResourceType();
+            monopolizationManeger.monopoly(r);
         }
 
         async UniTaskVoid CheckLocateRoad(int c, GameObject g)
