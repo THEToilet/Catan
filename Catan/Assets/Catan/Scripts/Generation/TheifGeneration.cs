@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Catan.Scripts.Terrain;
 using Catan.Scripts.Theif;
+using Catan.Scripts.Manager;
 
 namespace Catan.Scripts.Generation
 {
@@ -12,6 +13,9 @@ namespace Catan.Scripts.Generation
     {
         [SerializeField] GameObject theifObject;
         public PointParentGeneration pointParentGeneration;
+        private GameObject theifLocatePoint;
+        private GameObject theifInstitareObj;
+        public TheifManeger theifManeger;
         public void Generate()
         {
             var p = pointParentGeneration.parentPointObjects;
@@ -24,9 +28,20 @@ namespace Catan.Scripts.Generation
                     break;
                 }
             }
-            GameObject.Instantiate(theifObject, new Vector3(desertPosition.transform.position.x, desertPosition.transform.position.y, desertPosition.transform.position.z), Quaternion.Euler(0, 0, 0));
+            theifInstitareObj = GameObject.Instantiate(theifObject, new Vector3(desertPosition.transform.position.x, desertPosition.transform.position.y, desertPosition.transform.position.z), Quaternion.Euler(0, 0, 0));
             desertPosition.SetActive(true);
             theifObject.GetComponent<ThiefCore>().theifPosition = desertPosition;
+            theifLocatePoint = desertPosition;
+        }
+
+        public void Move(GameObject g)
+        {
+            theifLocatePoint.GetComponent<PointParentBehavior>().hasThief = false;
+            GameObject.Destroy(theifInstitareObj);
+            theifInstitareObj = GameObject.Instantiate(theifObject, g.transform.position, Quaternion.Euler(0, 0, 0));
+            g.GetComponent<PointParentBehavior>().hasThief = true;
+            theifLocatePoint = g;
+            theifManeger.isPlace = true;
         }
     }
 

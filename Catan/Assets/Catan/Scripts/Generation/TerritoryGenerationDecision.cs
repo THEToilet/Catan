@@ -3,6 +3,7 @@ using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Point;
+using UnityEngine.Rendering;
 
 namespace Catan.Scripts.Generation
 {
@@ -10,6 +11,7 @@ namespace Catan.Scripts.Generation
     {
         public TerritoryGeneration territoryGeneration;
         public PlayerTurnManeger playerTurn;
+        public TheifGeneration theifGeneration;
         private bool hasPointTerritory;
         private bool hasRoadBaseTerritory;
         public void GeneratingInstruction(GameObject _gameObject)
@@ -32,6 +34,14 @@ namespace Catan.Scripts.Generation
                 {
                     _gameObject.GetComponent<RoadBaseBehavior>().hasTerritory = true;
                     territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Road, playerTurn._currentPlayerId.Value, _gameObject);
+                }
+            }
+            // PointChildren の生成
+            if ((_gameObject.name).Contains("PointParent_"))
+            {
+                if (!_gameObject.GetComponent<PointParentBehavior>().hasThief)
+                {
+                    theifGeneration.Move(_gameObject);
                 }
             }
         }

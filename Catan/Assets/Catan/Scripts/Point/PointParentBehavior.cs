@@ -19,10 +19,7 @@ namespace Catan.Scripts.Point
      */
         public TerrainType terrainType;
 
-        public bool hasThief()
-        {
-            return false;
-        }
+        public bool hasThief;
     }
 
 }

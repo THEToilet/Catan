@@ -18215,6 +18215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   territoryGeneration: {fileID: 1669153300}
   playerTurn: {fileID: 1669153291}
+  theifGeneration: {fileID: 1669153309}
 --- !u!114 &1669153302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18333,6 +18334,7 @@ MonoBehaviour:
   theifObject: {fileID: 7909872320494514294, guid: 04382b0b8187d5942a4fcf1ea67feae9,
     type: 3}
   pointParentGeneration: {fileID: 1669153296}
+  theifManeger: {fileID: 1669153313}
 --- !u!114 &1669153310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18390,6 +18392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIRestrictionPresenter: {fileID: 2096806386}
+  pointParentPresenter: {fileID: 2096806395}
+  isPlace: 0
 --- !u!114 &1669153314
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,8 +1,10 @@
-﻿using Catan.Scripts.Presenter;
+﻿using Catan.Scripts.Generation;
+using Catan.Scripts.Presenter;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.AccessControl;
 using UnityEngine;
+using UnityEngine.Experimental.XR.Interaction;
 
 namespace Catan.Scripts.Manager
 {
@@ -10,6 +12,8 @@ namespace Catan.Scripts.Manager
     public class TheifManeger : MonoBehaviour
     {
         public UIRestrictionPresenter uIRestrictionPresenter;
+        public PointParentPresenter pointParentPresenter;
+        public bool isPlace = false;
         void ReduceCard()
         {
             // プレイヤーのカードが8枚以上だったら半分にする
@@ -19,11 +23,18 @@ namespace Catan.Scripts.Manager
         public void MoveTheif()
         {
             uIRestrictionPresenter.TurnOffAll();
-            // ここで処理
-            uIRestrictionPresenter.Release();
+            pointParentPresenter.ShowAll();
         }
-
-
+        private void Update()
+        {
+            if (isPlace)
+            {
+                pointParentPresenter.EraseAll();
+                uIRestrictionPresenter.Release();
+                isPlace = false;
+            }
+            
+        }
     }
 
 

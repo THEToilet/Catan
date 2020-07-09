@@ -35,7 +35,7 @@ namespace Catan.Scripts.Generation
             GameObject tmpGameObject;
             for (int i = 0; i < parentPoints.Length; i++)
             {
-                tmpGameObject = GameObject.Instantiate(parentPoint, parentPoints[i], Quaternion.identity);
+                tmpGameObject = GameObject.Instantiate(parentPoint, parentPoints[i], Quaternion.Euler(90, 0, 0));
                 tmpGameObject.name = "PointParent_" + i;
                 parentPointObjects.Add(tmpGameObject);
                 tmpGameObject.SetActive(false);
