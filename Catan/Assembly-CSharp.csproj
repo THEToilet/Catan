@@ -74,6 +74,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToSpecialCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\TradeCardEnumeration.cs" />
+    <Compile Include="Assets\Catan\Scripts\Common\DestoryButton.cs" />
     <Compile Include="Assets\Catan\Scripts\Common\Dice.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\PlayerGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\PointChildrenGeneration.cs" />

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6024726388809415099}
   - component: {fileID: 1168333370465622850}
   - component: {fileID: 1728791486967324695}
+  - component: {fileID: 3393130494153100373}
   m_Layer: 0
   m_Name: MonopolizationCard
   m_TagString: Untagged
@@ -96,7 +97,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3393130494153100373}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &5239148018359293259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -165,3 +177,15 @@ MonoBehaviour:
   m_FlexibleWidth: 0
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &3393130494153100373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084588388414511856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de8a43d2b89ed147a8d4626cbaa2e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
