@@ -72,6 +72,7 @@
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\SpecialCardType.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToCardObject.cs" />
+    <Compile Include="Assets\Catan\Scripts\Card\ToCardWithCardTypeObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\ToSpecialCardObject.cs" />
     <Compile Include="Assets\Catan\Scripts\Card\TradeCardEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Common\DestoryButton.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\PlayerNotificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PointChildrenPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PointParentPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\ResourceCardSelectionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\RoadBasePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\SpecialCardPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\TableTopCardPresenter.cs" />

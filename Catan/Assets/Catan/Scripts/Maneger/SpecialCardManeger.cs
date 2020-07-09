@@ -8,6 +8,7 @@ using UniRx;
 using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
+using Catan.Scripts.Card;
 
 namespace Catan.Scripts.Manager
 {
@@ -19,6 +20,9 @@ namespace Catan.Scripts.Manager
         public RoadBasePresenter roadBasePresenter;
         public ToPleyerObject toPleyerObject;
         public PlayerTurnManeger playerTurnManeger;
+        public ResourceCardSelectionPresenter resourceCardSelectionPresenter;
+        public ToCardObject toCardObject;
+        public ToCardWithCardTypeObject toCardWithCardTypeObject;
 
         public void Knight()
         {
@@ -42,11 +46,26 @@ namespace Catan.Scripts.Manager
             CheckLocateRoad(0, g).Forget();
         }
 
-        public void Harvest()
+        async public void Harvest()
         {
             Debug.Log("Harvest");
             // HarveestPresenterに関数を作り使うカードを選ばせる
+            resourceCardSelectionPresenter.ShowPanel();
+            await UniTask.WaitUntil(() => resourceCardSelectionPresenter.isPushed);
+            resourceCardSelectionPresenter.ErasePanel();
+            CardType r1 = resourceCardSelectionPresenter.GetResourceType();
+            resourceCardSelectionPresenter.ShowPanel();
+            await UniTask.WaitUntil(() => resourceCardSelectionPresenter.isPushed);
+            resourceCardSelectionPresenter.ErasePanel();
+            CardType r2 = resourceCardSelectionPresenter.GetResourceType();
+
             // 資源カードを二枚もらえる
+            var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
+            var c = gameObject.GetComponent<Belongings>().cards;
+            c.Add(toCardWithCardTypeObject.ToCard(r1));
+            c.Add(toCardWithCardTypeObject.ToCard(r2));
+
+
         }
 
         public void Monopolization()

@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 35605537}
   - component: {fileID: 35605539}
   - component: {fileID: 35605538}
+  - component: {fileID: 35605540}
   m_Layer: 0
   m_Name: Common
   m_TagString: Untagged
@@ -496,6 +497,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toPleyerObject: {fileID: 35605534}
+--- !u!114 &35605540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35605533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cd03769f27e6348a836c9d95fc265a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrickCard: {fileID: 6786201980398328745, guid: 340ade802ad9f754b813b4153bd8efc6,
+    type: 3}
+  IronOreCard: {fileID: 6096707088935298040, guid: d8b6884ee3ca2a44fa855051a9cb237b,
+    type: 3}
+  WheatCard: {fileID: 5611914648156111369, guid: c9905570922ff594bb6b699d34e864ad,
+    type: 3}
+  WoodCard: {fileID: 229454834926381371, guid: a675f1de7c66de845b79d94b33d2bb58, type: 3}
+  WoolCard: {fileID: 5084588388414511856, guid: 397427f90dec28049b40897723ce4573,
+    type: 3}
 --- !u!1001 &50385936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4074,7 +4096,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 299789024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986379621}
+        m_MethodName: DOPlayBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &299789024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9782,7 +9815,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 756855356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986379621}
+        m_MethodName: DOPlayBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &756855356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12818,7 +12862,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 992462351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986379621}
+        m_MethodName: DOPlayBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &992462351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13585,7 +13640,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063440811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986379621}
+        m_MethodName: DOPlayBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1063440811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20220,9 +20286,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theifManeger: {fileID: 1669153313}
-  roadBasePresenter: {fileID: 0}
-  toPleyerObject: {fileID: 0}
-  playerTurnManeger: {fileID: 0}
+  roadBasePresenter: {fileID: 2096806388}
+  toPleyerObject: {fileID: 35605534}
+  playerTurnManeger: {fileID: 1669153291}
+  resourceCardSelectionPresenter: {fileID: 2096806396}
+  toCardObject: {fileID: 35605536}
+  toCardWithCardTypeObject: {fileID: 35605540}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25406,7 +25475,7 @@ GameObject:
   - component: {fileID: 1986379622}
   - component: {fileID: 1986379621}
   m_Layer: 5
-  m_Name: HarvestPannel
+  m_Name: ResourceSelectionPannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25428,7 +25497,6 @@ RectTransform:
   - {fileID: 2087890044}
   - {fileID: 992462349}
   - {fileID: 1063440809}
-  - {fileID: 2073133114}
   m_Father: {fileID: 403003095}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25512,7 +25580,7 @@ MonoBehaviour:
   loopType: 0
   loops: 1
   id: 
-  isRelative: 0
+  isRelative: 1
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 0
@@ -25525,7 +25593,7 @@ MonoBehaviour:
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: -275, z: 0}
+  endValueV3: {x: 0, y: -300, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -26445,134 +26513,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad522fb3fa902f43bf64f77dbf9298e, type: 3}
---- !u!1 &2073133113
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2073133114}
-  - component: {fileID: 2073133117}
-  - component: {fileID: 2073133116}
-  - component: {fileID: 2073133115}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2073133114
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073133113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 1986379620}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355, y: 109}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2073133115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073133113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 2073133116}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1986379621}
-        m_MethodName: DOPlayBackwards
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2073133116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073133113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d702dd3eeb4c141f58a7b9b5fd5b8358, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2073133117
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073133113}
-  m_CullTransparentMesh: 0
 --- !u!1 &2079120526
 GameObject:
   m_ObjectHideFlags: 0
@@ -26819,7 +26759,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087890046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1986379621}
+        m_MethodName: DOPlayBackwards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087890046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27049,6 +27000,7 @@ GameObject:
   - component: {fileID: 2096806394}
   - component: {fileID: 2096806393}
   - component: {fileID: 2096806395}
+  - component: {fileID: 2096806396}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -27416,6 +27368,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointParentGeneration: {fileID: 1669153296}
+--- !u!114 &2096806396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedc7d87d3385784cb4d73df355b4a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodButton: {fileID: 299789023}
+  woolButton: {fileID: 756855355}
+  wheatButton: {fileID: 2087890045}
+  ironOreButton: {fileID: 992462350}
+  brickButton: {fileID: 1063440810}
+  resourcePanel: {fileID: 1986379619}
+  isPushed: 0
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0
