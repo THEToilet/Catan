@@ -90,6 +90,7 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\BattleManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\CardConsumptionManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\CardExchangeManeger.cs" />
+    <Compile Include="Assets\Catan\Scripts\Maneger\DeterminingTheWinnerManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeDevelopmentCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\CardViewPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\CurrentPlayerPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\DicePresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\GameResultPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\NortificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ObjectClickPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PlayerInfoPresenter.cs" />
