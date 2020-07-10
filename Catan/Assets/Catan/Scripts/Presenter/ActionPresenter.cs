@@ -70,7 +70,8 @@ namespace Catan.Scripts.Presenter
                 {
                     Debug.Log("Thief");
                     playerNotificationPresenter.DisplayNote("Theif time");
-                    theifManeger.MoveTheif(); 
+                    theifManeger.ReduceCard();
+                    theifManeger.MoveTheif();
                 }
                 else
                 {

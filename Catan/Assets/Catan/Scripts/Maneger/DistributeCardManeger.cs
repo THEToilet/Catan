@@ -43,7 +43,10 @@ namespace Catan.Scripts.Manager
                             if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[j].Equals(n.City[l].GetComponent<TerritoryEntity>().TerritoryPosition))
                             {
                                 Debug.Log("Hello unnko");
-                                n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
+                                if (!tmpGameObjects[i].GetComponent<PointParentBehavior>().hasThief)
+                                {
+                                    n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
+                                }
                             }
                     }
                 }

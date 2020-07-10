@@ -1,10 +1,9 @@
 ﻿using Catan.Scripts.Generation;
+using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.AccessControl;
 using UnityEngine;
-using UnityEngine.Experimental.XR.Interaction;
 
 namespace Catan.Scripts.Manager
 {
@@ -13,13 +12,28 @@ namespace Catan.Scripts.Manager
     {
         public UIRestrictionPresenter uIRestrictionPresenter;
         public PointParentPresenter pointParentPresenter;
+        public ToPleyerObject toPleyerObject;
         public bool isPlace = false;
-        void ReduceCard()
+        PlayerId[] playerIds = new PlayerId[] { PlayerId.Player1, PlayerId.Player1, PlayerId.Player3, PlayerId.Player4 };
+        public void ReduceCard()
         {
+            List<GameObject> deletePlayer = new List<GameObject>();
             // プレイヤーのカードが8枚以上だったら半分にする
+            for (int i = 0; i < playerIds.Length; i++)
+            {
+                var p = toPleyerObject.ToPlayer(playerIds[i]);
+                if (p.GetComponent<Belongings>().cards.Count >= 8)
+                {
+                    deletePlayer.Add(p);
+                }
+
+                // 削除するカードを選ばせる
+
+            }
+
 
         }
-        
+
         public void MoveTheif()
         {
             uIRestrictionPresenter.TurnOffAll();
@@ -33,7 +47,7 @@ namespace Catan.Scripts.Manager
                 uIRestrictionPresenter.Release();
                 isPlace = false;
             }
-            
+
         }
     }
 
