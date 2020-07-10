@@ -4,6 +4,8 @@ using Catan.Scripts.Territory;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Point;
 using UnityEngine.Rendering;
+using UnityEditor.UIElements;
+using Catan.Scripts.Presenter;
 
 namespace Catan.Scripts.Generation
 {
@@ -12,8 +14,10 @@ namespace Catan.Scripts.Generation
         public TerritoryGeneration territoryGeneration;
         public PlayerTurnManeger playerTurn;
         public TheifGeneration theifGeneration;
+        public CityGeneration cityGeneration;
         private bool hasPointTerritory;
         private bool hasRoadBaseTerritory;
+        public CityPresenter cityPresenter;
         public void GeneratingInstruction(GameObject _gameObject)
         {
 
@@ -43,6 +47,12 @@ namespace Catan.Scripts.Generation
                 {
                     theifGeneration.Move(_gameObject);
                 }
+            }
+
+            if ((_gameObject.name).Contains("CityColliderCube_"))
+            {
+                cityGeneration.Generation(int.Parse(_gameObject.name.Substring("CityColliderCube_".Length)));
+                cityPresenter.isLocate = true;
             }
         }
     }

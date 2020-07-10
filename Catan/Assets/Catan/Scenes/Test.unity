@@ -20930,6 +20930,7 @@ GameObject:
   - component: {fileID: 1669153314}
   - component: {fileID: 1669153315}
   - component: {fileID: 1669153316}
+  - component: {fileID: 1669153317}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -21229,6 +21230,8 @@ MonoBehaviour:
   territoryGeneration: {fileID: 1669153300}
   playerTurn: {fileID: 1669153291}
   theifGeneration: {fileID: 1669153309}
+  cityGeneration: {fileID: 1669153317}
+  cityPresenter: {fileID: 2096806398}
 --- !u!114 &1669153302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21406,6 +21409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIRestrictionPresenter: {fileID: 2096806386}
   pointParentPresenter: {fileID: 2096806395}
+  toPleyerObject: {fileID: 0}
   isPlace: 0
 --- !u!114 &1669153314
 MonoBehaviour:
@@ -21461,6 +21465,20 @@ MonoBehaviour:
   toPleyerObject: {fileID: 35605534}
   winner: {fileID: 0}
   gameResultPresenter: {fileID: 2096806397}
+--- !u!114 &1669153317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee70554eee10d5459ce76338e398fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnManeger: {fileID: 1669153291}
+  toPleyerObject: {fileID: 35605534}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28171,6 +28189,7 @@ GameObject:
   - component: {fileID: 2096806395}
   - component: {fileID: 2096806396}
   - component: {fileID: 2096806397}
+  - component: {fileID: 2096806398}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -28580,6 +28599,22 @@ MonoBehaviour:
   - {fileID: 1890667428}
   - {fileID: 1472449211}
   - {fileID: 1289258865}
+--- !u!114 &2096806398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233f36dfed8aad7478b6a4acef77a958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocate: 0
+  toPleyerObject: {fileID: 35605534}
+  cityColliderCube: {fileID: 906210925172911778, guid: e1f27b8a1d1b2c1498c16b7ee80b56a9,
+    type: 3}
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0
