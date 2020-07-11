@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Catan/Scenes/Test.unity
+- path: Assets/Catan/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

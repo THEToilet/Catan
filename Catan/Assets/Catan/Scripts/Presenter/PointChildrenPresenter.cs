@@ -37,6 +37,8 @@ namespace Catan.Scripts.Presenter
             }
         }
 
+        // Settlement作成できる点表示
+
         public void ShowPossiblePoint(PlayerId playerId)
         {
             var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
