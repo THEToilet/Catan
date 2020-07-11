@@ -27,7 +27,17 @@ namespace Catan.Scripts.Manager
                     deletePlayer.Add(p);
                 }
 
-                // 削除するカードを選ばせる
+
+            }
+
+            // 削除するカードを選ばせる
+            for (int i = 0; i < deletePlayer.Count; i++)
+            {
+                var t = deletePlayer[i].GetComponent<Belongings>().cards.Count;
+                while (deletePlayer[i].GetComponent<Belongings>().cards.Count <= t / 2)
+                {
+                    deletePlayer[i].GetComponent<Belongings>().cards.RemoveAt(deletePlayer[i].GetComponent<Belongings>().cards.Count - 1);
+                }
 
             }
 

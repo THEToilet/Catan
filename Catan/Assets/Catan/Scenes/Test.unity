@@ -21409,7 +21409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIRestrictionPresenter: {fileID: 2096806386}
   pointParentPresenter: {fileID: 2096806395}
-  toPleyerObject: {fileID: 0}
+  toPleyerObject: {fileID: 35605534}
   isPlace: 0
 --- !u!114 &1669153314
 MonoBehaviour:
@@ -21479,6 +21479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurnManeger: {fileID: 1669153291}
   toPleyerObject: {fileID: 35605534}
+  City: {fileID: 4300000, guid: aae5e41c0a6f56f41942cab5cb018ea8, type: 3}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
