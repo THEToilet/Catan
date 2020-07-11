@@ -114,7 +114,6 @@
     <Compile Include="Assets\Catan\Scripts\Point\PointParentBehavior.cs" />
     <Compile Include="Assets\Catan\Scripts\Point\PointParentRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ActionPresenter.cs" />
-    <Compile Include="Assets\Catan\Scripts\Presenter\ActiveButtonPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\BankUIPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\BuildUIPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\CardViewPresenter.cs" />
@@ -141,7 +140,6 @@
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseRoadRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadToChildrenRelevanceSetting.cs" />
-    <Compile Include="Assets\Catan\Scripts\Terrain\TerrainBehavior.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\TerrainType.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEntity.cs" />
     <Compile Include="Assets\Catan\Scripts\Territory\TerritoryEnumeration.cs" />

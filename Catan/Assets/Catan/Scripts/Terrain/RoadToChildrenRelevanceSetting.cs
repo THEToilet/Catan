@@ -92,7 +92,6 @@ namespace Catan.Scripts.Terrain
         {
             for (int i = 0; i < 72; i++)
             {
-                Debug.Log("unnko");
                 var r = roadGeneration.roads[i].GetComponent<RoadBaseBehavior>().adjacentPointChildren;
                 r.Add(pointChildrenGeneration.childrenPointGameObjects[roadToChildre[i][0]]);
                 r.Add(pointChildrenGeneration.childrenPointGameObjects[roadToChildre[i][1]]);

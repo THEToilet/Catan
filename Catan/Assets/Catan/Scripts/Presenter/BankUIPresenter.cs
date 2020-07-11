@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
 using Catan.Scripts.Manager;
@@ -76,7 +74,6 @@ namespace Catan.Scripts.Presenter
         {
             if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
             {
-                var t = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
                 var num = cardEnumeration.Enumeration(playerTurnManeger._currentPlayerId.Value);
                 if (num[0] >= 4 || num[1] >= 4 || num[2] >= 4 || num[3] >= 4 || num[4] >= 4)
                 {

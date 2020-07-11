@@ -40,7 +40,6 @@ namespace Catan.Scripts.Manager
             theifGeneration.Generate(); // 盗賊生成
             roadToChildrenRelevanceSetting.Allocation();
             roadBaseRoadRelevanceSetting.Allocation();
-            Debug.Log("hello");
         }
     }
 

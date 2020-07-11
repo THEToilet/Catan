@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Catan.Scripts.Player;
+﻿using UnityEngine;
 using Catan.Scripts.Manager;
 using UnityEngine.UI;
 
@@ -13,7 +10,7 @@ namespace Catan.Scripts.Presenter
         [SerializeField] Text currentPlayer;
         void Update()
         {
-                currentPlayer.text = playerTurnManeger._currentPlayerId.ToString();
+            currentPlayer.text = playerTurnManeger._currentPlayerId.ToString();
 
         }
     }

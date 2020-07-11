@@ -21061,7 +21061,6 @@ MonoBehaviour:
   uIRestrictionPresenter: {fileID: 2096806386}
   roadBasePresenter: {fileID: 2096806388}
   pointChildrenPresenter: {fileID: 2096806389}
-  tableTopCardPresenter: {fileID: 2096806390}
   specialCardPresenter: {fileID: 2096806392}
   pIds: 
 --- !u!114 &1669153293
@@ -28126,7 +28125,6 @@ GameObject:
   - component: {fileID: 2096806380}
   - component: {fileID: 2096806381}
   - component: {fileID: 2096806377}
-  - component: {fileID: 2096806382}
   - component: {fileID: 2096806383}
   - component: {fileID: 2096806384}
   - component: {fileID: 2096806385}
@@ -28246,26 +28244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 167422086}
   terrainGenerationDecision: {fileID: 1669153301}
---- !u!114 &2096806382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096806376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f460377598d9d76458029ac9a8816f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rollDiceButton: {fileID: 167564505}
-  chageButton: {fileID: 589532255}
-  settingiButton: {fileID: 1563832404}
-  drawCardButton: {fileID: 0}
-  UseCardButton: {fileID: 0}
-  NegotiationButton: {fileID: 0}
-  ConstructionButton: {fileID: 0}
-  tradeBuuton: {fileID: 0}
 --- !u!114 &2096806383
 MonoBehaviour:
   m_ObjectHideFlags: 0

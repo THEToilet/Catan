@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Catan.Scripts.Point;
+﻿using UnityEngine;
 using Catan.Scripts.Generation;
 
 
 namespace Catan.Scripts.Terrain
 {
+    /// <summary>
+    /// 路と隣接する路を割り当てるclass
+    /// </summary>
     public class RoadBaseRoadRelevanceSetting : MonoBehaviour
     {
         public PointChildrenGeneration pointChildrenGeneration;
@@ -92,21 +92,16 @@ namespace Catan.Scripts.Terrain
         {
             for (int i = 0; i < 72; i++)
             {
-                Debug.Log("unnko");
                 var p = roadGeneration.roads[i].GetComponent<RoadBaseBehavior>().adjacentRoadBase;
-                p.Add(
-                             roadGeneration.roads[roadBaseRoads[i][0]]);
-                p.Add(
-                        roadGeneration.roads[roadBaseRoads[i][1]]);
+                p.Add(roadGeneration.roads[roadBaseRoads[i][0]]);
+                p.Add(roadGeneration.roads[roadBaseRoads[i][1]]);
                 if (roadBaseRoads[i][2] != -1)
                 {
-                    p.Add(
-                            roadGeneration.roads[roadBaseRoads[i][2]]);
+                    p.Add(roadGeneration.roads[roadBaseRoads[i][2]]);
                 }
                 if (roadBaseRoads[i][3] != -1)
                 {
-                    p.Add(
-                           roadGeneration.roads[roadBaseRoads[i][3]]);
+                    p.Add(roadGeneration.roads[roadBaseRoads[i][3]]);
                 }
             }
         }

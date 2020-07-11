@@ -27,12 +27,9 @@ namespace Catan.Scripts.Manager
         public UIRestrictionPresenter uIRestrictionPresenter;
         public RoadBasePresenter roadBasePresenter;
         public PointChildrenPresenter pointChildrenPresenter;
-        public TableTopCardPresenter tableTopCardPresenter;
         public SpecialCardPresenter specialCardPresenter;
         public ReactiveProperty<int> _currentCursole = new ReactiveProperty<int>(0);
         public List<PlayerId> pIds = new List<PlayerId>();
-        int cur = 0;
-        private int state = 0;
         private bool isOK = false;
 
         private void Start()
@@ -45,16 +42,15 @@ namespace Catan.Scripts.Manager
 
         public void Excute()
         {
-            Debug.Log("^_^");
             playerIds = orderDetermining.GetOrder();
             Debug.Log(playerIds);
             _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < playerIds.Length; i++)
             {
                 pIds.Add(playerIds[i]);
             }
             Array.Reverse(playerIds);
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < playerIds.Length; i++)
             {
                 pIds.Add(playerIds[i]);
             }
@@ -104,7 +100,6 @@ namespace Catan.Scripts.Manager
                         _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
                     }
                 }
-
             }
         }
 

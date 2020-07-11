@@ -8,7 +8,9 @@ using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Presenter
 {
-
+    /// <summary>
+    /// CityButton押された際にクリックできるオブジェクトを生成するclass 
+    /// </summary>
     public class CityPresenter : MonoBehaviour
     {
         public bool isLocate = false;
@@ -38,10 +40,7 @@ namespace Catan.Scripts.Presenter
 
         async UniTaskVoid CheckLocateCity()
         {
-
             await UniTask.WaitUntil(() => isLocate);
-
         }
     }
-
 }

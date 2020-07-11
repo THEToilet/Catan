@@ -1,7 +1,4 @@
 ﻿using Catan.Scripts.Player;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 using UnityEngine;
 
 namespace Catan.Scripts.Territory
@@ -20,7 +17,6 @@ namespace Catan.Scripts.Territory
             {
                 switch (p.City[i].GetComponent<TerritoryEntity>().territoryType)
                 {
-
                     case (TerritoryType.City):
                         num[0]++;
                         break;
@@ -28,19 +24,13 @@ namespace Catan.Scripts.Territory
                         num[1]++;
                         break;
                     case (TerritoryType.Settlement):
+                        num[2]++;
                         break;
                     default:
                         break;
                 }
-
             }
-
             return num;
-
-
         }
-
     }
-
-
 }

@@ -8,7 +8,7 @@ using Catan.Scripts.Manager;
 namespace Catan.Scripts.Presenter
 
 
-    /// このクラスイランかも
+/// このクラスいるかも
 {
     public class VictoryPointPresenter : MonoBehaviour
     {

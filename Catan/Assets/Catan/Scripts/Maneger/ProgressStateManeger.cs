@@ -31,7 +31,7 @@ namespace Catan.Scripts.Manager
         private void Update()
         {
             Debug.Log(_currentProgressState.Value);
-            if(_currentProgressState.Value == ProgressState.Battle)
+            if (_currentProgressState.Value == ProgressState.Battle)
             {
                 if (isOK)
                 {
@@ -55,8 +55,6 @@ namespace Catan.Scripts.Manager
                 // 遷移先に合わせて処理をする
                 switch (next)
                 {
-                    case ProgressState.Maching:
-                        break;
                     case ProgressState.Initialization:
                         Debug.Log("ini");
                         initializationManeger.Excute();
@@ -67,15 +65,9 @@ namespace Catan.Scripts.Manager
                         Debug.Log("battle");
                         playerTurn.Excute();
                         break;
-                    case ProgressState.Finished:
-                        Debug.Log("Finished");
-                        break;
-                    case ProgressState.Result:
-                        Debug.Log("Result");
-                        break;
                 }
-            }
 
+            }
         }
     }
 }

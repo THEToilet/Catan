@@ -38,11 +38,6 @@ namespace Catan.Scripts.Presenter
         void Start()
         {
 
-            useCardButton.OnClickAsObservable()  // カードを使う　
-            .Subscribe(_ =>
-            {
-            });
-
             negotiationButton.OnClickAsObservable()  // 交渉する
             .Subscribe(_ =>
             {
@@ -51,7 +46,6 @@ namespace Catan.Scripts.Presenter
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                Debug.Log("ok");
                 playerTurn._currentCursole.Value++;
             });
 
@@ -60,7 +54,6 @@ namespace Catan.Scripts.Presenter
             {
                 uIRestrictionPresenter.TurnOffRollDice();
                 var d = Dice.RandomRollTwiceDice();
-                Debug.Log("Dice : " + d[0] + d[1]);
                 if (d[0] + d[1] == 7)
                 {
                     Debug.Log("Thief");
@@ -75,6 +68,7 @@ namespace Catan.Scripts.Presenter
                 dicePresenter.ShowDiceNum(d[0] + d[1]);
                 dicePresenter.ShowDice(d[0], d[1]);
             });
+
 
             submmitButton.OnClickAsObservable()
             .Subscribe(_ =>
@@ -97,12 +91,11 @@ namespace Catan.Scripts.Presenter
             });
 
             costButton.OnClickAsObservable()
-         .Subscribe(_ =>
-         {
-             costButton.gameObject.SetActive(false);
-             costCancelButton.gameObject.SetActive(true);
-
-         });
+            .Subscribe(_ =>
+            {
+                costButton.gameObject.SetActive(false);
+                costCancelButton.gameObject.SetActive(true);
+            });
 
             costCancelButton.OnClickAsObservable()
             .Subscribe(_ =>
