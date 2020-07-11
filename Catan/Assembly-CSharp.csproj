@@ -129,6 +129,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\CurrentPlayerPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\DicePresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\GameResultPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Presenter\NegotiationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\NortificationPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\ObjectClickPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\PlayerInfoPresenter.cs" />

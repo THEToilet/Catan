@@ -6,6 +6,8 @@ using UniRx;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
+using Catan.Scripts.Generation;
+using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Presenter
 {
@@ -27,6 +29,13 @@ namespace Catan.Scripts.Presenter
         public CardEnumeration cardEnumeration;
         public CardConsumptionManeger cardConsumptionManeger;
         public ToCardObject toCardObject;
+        public PointChildrenGeneration pointChildrenGeneration;
+        int[] wd2 = new int[] { 31, 32 };
+        int[] wl2 = new int[] { 22, 23 };
+        int[] wt2 = new int[] { 21, 30 };
+        int[] io2 = new int[] { 42, 43 };
+        int[] br2 = new int[] { 49, 50 };
+        int[] trade3 = new int[] { 15, 16, 45, 46, 18, 39, 52, 53 };
 
         public void TurnOffAll()
         {
@@ -118,55 +127,59 @@ namespace Catan.Scripts.Presenter
 
         }
 
+        public bool CheckLocate(int[] point, List<GameObject> list)
+        {
+            for (int i = 0; i < point.Length; i++)
+            {
+                var checkPoint = pointChildrenGeneration.childrenPointGameObjects[i];
+                for (int j = 0; j < list.Count; j++)
+                {
+                    if (checkPoint.Equals(list[j].GetComponent<TerritoryEntity>().TerritoryPosition))
+                    {
+                        return true;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         private void Update()
         {
             if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
             {
                 var t = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
                 var num = cardEnumeration.Enumeration(playerTurnManeger._currentPlayerId.Value);
-                if (num[0] >= 2)
+                var c = t.GetComponent<Belongings>().City;
+                if (num[0] >= 2 || num[1] >= 2 || num[2] >= 2 || num[3] >= 2 || num[4] >= 2)
                 {
-                    brick2Button.interactable = true;
+                    if (CheckLocate(br2, c))
+                    {
+                        brick2Button.interactable = true;
+                    }
+                    if (CheckLocate(io2, c))
+                    {
+                        ironOre2Button.interactable = true;
+                    }
+                    if (CheckLocate(wt2, c))
+                    {
+                        wheat2Button.interactable = true;
+                    }
+                    if (CheckLocate(wd2, c))
+                    {
+                        wood2Button.interactable = true;
+                    }
+                    if (CheckLocate(wl2, c))
+                    {
+                        wool2Button.interactable = true;
+                    }
                 }
-                if (num[1] >= 2)
+                if ((num[0] >= 3 || num[1] >= 3 || num[2] >= 3 || num[3] >= 3 || num[4] >= 3) && (CheckLocate(trade3, c)))
                 {
-                    ironOre2Button.interactable = true;
-                }
-                if (num[2] >= 2)
-                {
-                    wheat2Button.interactable = true;
-                }
-                if (num[3] >= 2)
-                {
-                    wood2Button.interactable = true;
-                }
-                if (num[4] >= 2)
-                {
-                    wool2Button.interactable = true;
-                }
-                if (num[0] >= 3)
-                {
-                    brick2Button.interactable = true;
                     brick3Button.interactable = true;
-                }
-                if (num[1] >= 3)
-                {
-                    ironOre2Button.interactable = true;
                     ironOre3Button.interactable = true;
-                }
-                if (num[2] >= 3)
-                {
-                    wheat2Button.interactable = true;
                     wheat3Button.interactable = true;
-                }
-                if (num[3] >= 3)
-                {
-                    wood2Button.interactable = true;
                     wood3Button.interactable = true;
-                }
-                if (num[4] >= 3)
-                {
-                    wool2Button.interactable = true;
                     wool3Button.interactable = true;
                 }
             }
