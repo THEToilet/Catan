@@ -22,7 +22,8 @@ namespace Catan.Scripts.Presenter
         public void TurnOffAll()
         {
             ActionsButton.interactable = false;
-            RollDice.interactable = false;
+            RollDice.gameObject.SetActive(false);
+            ChangeButton.interactable = false;
         }
 
         public void TurnOffRollDice()

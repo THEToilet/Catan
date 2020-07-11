@@ -7,9 +7,7 @@ using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
 using System;
 using Catan.Scripts.Territory;
-using Zenject;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 
 namespace Catan.Scripts.Manager
 {
@@ -39,7 +37,6 @@ namespace Catan.Scripts.Manager
 
         private void Start()
         {
-            PlayerIdChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
             uIRestrictionPresenter.TurnOffAll();
             CursoleAsync(this.GetCancellationTokenOnDestroy()).Forget();
@@ -70,63 +67,13 @@ namespace Catan.Scripts.Manager
         {
             roadBasePresenter.EraseAll();
             pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
-            Debug.Log(";;");
             playerNotificationPresenter.DisplayPlayerName(_currentPlayerId.Value);
-        }
-        /// <summary>
-        /// ステート遷移するたびに処理を走らせる 初期配置で使う
-        /// </summary>
-        private async UniTaskVoid PlayerIdChangedAsync(CancellationToken cancellationToken)
-        {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                // ステート遷移を待つ
-                var next = await _currentPlayerId;
-                // 遷移先に合わせて処理をする
-                if (_currentTurnState.Value == TurnState.NormalTurn)
-                {
-                    // uIRestrictionPresenter.ReleaseExpectAction();
-                    uIRestrictionPresenter.Release();
-                    tableTopCardPresenter.DeleateCard(_currentPlayerId.Value);
-                    tableTopCardPresenter.CreateCard(_currentPlayerId.Value);
-                    specialCardPresenter.DeleateCard(_currentPlayerId.Value);
-                    specialCardPresenter.CreateCard(_currentPlayerId.Value);
-                    roadBasePresenter.EraseAll();
-                    pointChildrenPresenter.EraseAll();
-                }
-                else
-                {
-                    roadBasePresenter.EraseAll();
-                    pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
-                }
-                switch (next)
-                {
-                    // TODO: 通知する＞開拓地と路を一つずつ置く＞次の人＞反対からもう一回
-                    case PlayerId.Player1:
-                        Debug.Log(1);
-                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player1); // playerにターン開始を通知
-                        break;
-                    case PlayerId.Player2:
-                        Debug.Log(2);
-                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player2);
-                        break;
-                    case PlayerId.Player3:
-                        Debug.Log(3);
-                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player3);
-                        break;
-                    case PlayerId.Player4:
-                        Debug.Log(4);
-                        playerNotificationPresenter.DisplayPlayerName(PlayerId.Player4);
-                        break;
-                }
-            }
         }
 
         private void Update()
         {
             if (progressStateManeger._currentProgressState.Value == ProgressState.Battle && isOK)
             {
-
                 var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
                 var s = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road;
                 if (t.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
@@ -155,7 +102,6 @@ namespace Catan.Scripts.Manager
                     if (_currentCursole.Value == 8)
                     {
                         _currentTurnState.SetValueAndForceNotify(TurnState.NormalTurn);
-                        //Note();
                     }
                 }
 
@@ -168,15 +114,12 @@ namespace Catan.Scripts.Manager
             {
                 // ステート遷移を待つ
                 var next = await _currentCursole;
-                // 遷移先に合わせて処理をする
                 if (_currentTurnState.Value != TurnState.NormalTurn && _currentCursole.Value <= 7)
                 {
-                    Debug.Log("Common");
                     _currentPlayerId.SetValueAndForceNotify(pIds[_currentCursole.Value]);
                 }
                 else
                 {
-                    Debug.Log("紙");
                     _currentPlayerId.SetValueAndForceNotify(playerIds[_currentCursole.Value % 4]);
                 }
             }
@@ -198,25 +141,20 @@ namespace Catan.Scripts.Manager
                         playerNotificationPresenter.DisplayNote("Decend");
                         pointChildrenPresenter.ShowAll();
                         uIRestrictionPresenter.TurnOffAll();
-                        Debug.Log("Decend");
                         break;
                     case TurnState.AscendingOrderArrangement:
                         playerNotificationPresenter.DisplayNote("Accend");
-                        Debug.Log("Accend");
                         break;
                     case TurnState.NormalTurn:
                         // カードを配る
                         roadBasePresenter.EraseAll();
                         pointChildrenPresenter.EraseAll();
                         uIRestrictionPresenter.Release();
-                        playerNotificationPresenter.DisplayNote("NormalState");
-                        Debug.Log("NormalState");
                         distributeCardManeger.InitDistribute();
+                        playerNotificationPresenter.DisplayNote("NormalState");
                         break;
                 }
             }
         }
-
-
     }
 }

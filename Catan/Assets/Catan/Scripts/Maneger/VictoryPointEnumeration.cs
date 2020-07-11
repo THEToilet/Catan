@@ -44,7 +44,7 @@ namespace Catan.Scripts.Manager
                             victoryPoint[i]++;
                         }
                     }
-                    toPleyerObject.ToPlayer(playerIds[i]).GetComponent<PlayerCore>().playerScore.Value = victoryPoint[i];
+                    toPleyerObject.ToPlayer(playerIds[i]).GetComponent<PlayerCore>().playerScore= victoryPoint[i];
                 }
 
             }

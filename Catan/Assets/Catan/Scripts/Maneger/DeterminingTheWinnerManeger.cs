@@ -45,12 +45,12 @@ namespace Catan.Scripts.Manager
                 {
                     var p = toPleyerObject.ToPlayer(playerIds[i]);
                     // ここでplayerTurnをそれぞれのプレイヤーのスコアが10以上になるまで回す
-                    if (p.GetComponent<PlayerCore>().playerScore.Value >= 10)
+                    if (p.GetComponent<PlayerCore>().playerScore >= 10)
                     {
                         winner = p;
                         for (int j = 0; j < playerIds.Length; j++)
                         {
-                            playerI s = new playerI() { point = p.GetComponent<PlayerCore>().playerScore.Value, p = playerIds[j] };
+                            playerI s = new playerI() { point = p.GetComponent<PlayerCore>().playerScore, p = playerIds[j] };
                             pI.Add(s);
                         }
                         IOrderedEnumerable<playerI> player = pI.OrderByDescending(rec => rec.point);

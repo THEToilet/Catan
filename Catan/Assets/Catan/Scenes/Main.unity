@@ -28142,6 +28142,7 @@ GameObject:
   - component: {fileID: 2096806396}
   - component: {fileID: 2096806397}
   - component: {fileID: 2096806398}
+  - component: {fileID: 2096806399}
   m_Layer: 0
   m_Name: UIPresenter
   m_TagString: Untagged
@@ -28567,6 +28568,25 @@ MonoBehaviour:
   toPleyerObject: {fileID: 35605534}
   cityColliderCube: {fileID: 906210925172911778, guid: e1f27b8a1d1b2c1498c16b7ee80b56a9,
     type: 3}
+--- !u!114 &2096806399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096806376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f575bb80c95ca7840830b282ede22465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointChildrenPresenter: {fileID: 2096806389}
+  playerTurnManeger: {fileID: 1669153291}
+  uIRestrictionPresenter: {fileID: 2096806386}
+  tableTopCardPresenter: {fileID: 2096806390}
+  specialCardPresenter: {fileID: 2096806392}
+  roadBasePresenter: {fileID: 2096806388}
+  playerNotificationPresenter: {fileID: 2096806380}
 --- !u!1 &2099229382
 GameObject:
   m_ObjectHideFlags: 0

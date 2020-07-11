@@ -46,7 +46,7 @@ namespace Catan.Scripts.Manager
 
         public void MoveTheif()
         {
-            uIRestrictionPresenter.TurnOffAll();
+            uIRestrictionPresenter.TurnOffRollDice();
             pointParentPresenter.ShowAll();
         }
         private void Update()
