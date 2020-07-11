@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6908522563355498801}
   - component: {fileID: 6151823770652402311}
   - component: {fileID: 3563437574606294445}
+  - component: {fileID: 8351782401384149998}
   m_Layer: 0
   m_Name: WoodCard
   m_TagString: Untagged
@@ -180,3 +181,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8351782401384149998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229454834926381371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadbf89cf87cd534397d05cb5816f960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 990518091380954287}
   - component: {fileID: 1366936733836376483}
   - component: {fileID: -4890443960719522926}
-  - component: {fileID: -3132043273333658980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -124,19 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards: []
   scards: []
-  territories: []
-  Settlement: []
   City: []
   Road: []
---- !u!114 &-3132043273333658980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8623643969187196314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f233b033d38246d45a659d8b5ccb2a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

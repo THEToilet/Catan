@@ -20911,11 +20911,8 @@ GameObject:
   - component: {fileID: 1669153288}
   - component: {fileID: 1669153302}
   - component: {fileID: 1669153290}
-  - component: {fileID: 1669153292}
   - component: {fileID: 1669153301}
   - component: {fileID: 1669153291}
-  - component: {fileID: 1669153286}
-  - component: {fileID: 1669153299}
   - component: {fileID: 1669153300}
   - component: {fileID: 1669153304}
   - component: {fileID: 1669153293}
@@ -20952,7 +20949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initializationManeger: {fileID: 1669153285}
   orderDetermining: {fileID: 1669153294}
-  battleManeger: {fileID: 1669153292}
   playerTurn: {fileID: 1669153291}
 --- !u!114 &1669153285
 MonoBehaviour:
@@ -20981,20 +20977,6 @@ MonoBehaviour:
   theifGeneration: {fileID: 1669153309}
   roadToChildrenRelevanceSetting: {fileID: 1669153311}
   roadBaseRoadRelevanceSetting: {fileID: 1669153312}
---- !u!114 &1669153286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669153283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c74464b339e9e842832a07723890011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTurnManeger: {fileID: 1669153291}
-  distributeDevelopmentCardManeger: {fileID: 1669153293}
 --- !u!4 &1669153287
 Transform:
   m_ObjectHideFlags: 0
@@ -21073,7 +21055,6 @@ MonoBehaviour:
   dicePresenter: {fileID: 2096806379}
   nortificationPresenter: {fileID: 2096806387}
   distributeCardManeger: {fileID: 1669153304}
-  playerMonitoring: {fileID: 1669153299}
   progressStateManeger: {fileID: 1669153284}
   orderDetermining: {fileID: 1669153294}
   playerIds: 
@@ -21083,22 +21064,6 @@ MonoBehaviour:
   tableTopCardPresenter: {fileID: 2096806390}
   specialCardPresenter: {fileID: 2096806392}
   pIds: 
---- !u!114 &1669153292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669153283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31af53c0293b8f40885c097adbd5fbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTurn: {fileID: 1669153291}
-  progressStateManeger: {fileID: 1669153284}
-  toPleyerObject: {fileID: 35605534}
-  winner: {fileID: 0}
 --- !u!114 &1669153293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21183,20 +21148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointChildrenGeneration: {fileID: 1669153295}
   pointParentGeneration: {fileID: 1669153296}
---- !u!114 &1669153299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669153283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63e01fcaec114e4caade28fcd90981c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectClickPresenter: {fileID: 2096806381}
-  actionPresenter: {fileID: 2096806377}
 --- !u!114 &1669153300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23878,7 +23829,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1814146515}
   m_OnClick:
     m_PersistentCalls:
@@ -28215,7 +28166,6 @@ MonoBehaviour:
   useCardButton: {fileID: 196575398}
   negotiationButton: {fileID: 1814146517}
   submmitButton: {fileID: 1934438161}
-  gameStateManeger: {fileID: 1669153286}
   playerTurn: {fileID: 1669153291}
   distributeCardManeger: {fileID: 1669153304}
   uIRestrictionPresenter: {fileID: 2096806386}
@@ -28545,6 +28495,7 @@ MonoBehaviour:
   cardEnumeration: {fileID: 35605539}
   cardConsumptionManeger: {fileID: 1669153307}
   toCardObject: {fileID: 35605536}
+  pointChildrenGeneration: {fileID: 0}
 --- !u!114 &2096806395
 MonoBehaviour:
   m_ObjectHideFlags: 0

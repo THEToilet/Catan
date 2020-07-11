@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6046608826185157243}
   - component: {fileID: 345569536039972605}
   - component: {fileID: 3809164043303892128}
+  - component: {fileID: -9221478616301544993}
   m_Layer: 0
   m_Name: WoolCard
   m_TagString: Untagged
@@ -180,3 +181,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-9221478616301544993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084588388414511856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadbf89cf87cd534397d05cb5816f960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -20,7 +20,6 @@ namespace Catan.Scripts.Presenter
         [SerializeField] private Button negotiationButton;
         [SerializeField] Button submmitButton;
 
-        public GameStateManeger gameStateManeger;
         public PlayerTurnManeger playerTurn;
         public DistributeCardManeger distributeCardManeger;
         public UIRestrictionPresenter uIRestrictionPresenter;
@@ -42,15 +41,11 @@ namespace Catan.Scripts.Presenter
             useCardButton.OnClickAsObservable()  // カードを使う　
             .Subscribe(_ =>
             {
-                gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.UseCard);
             });
 
             negotiationButton.OnClickAsObservable()  // 交渉する
             .Subscribe(_ =>
             {
-                gameStateManeger._currentGameState
-                    .SetValueAndForceNotify(GameState.Negotiation);
             });
 
             turnEndButton.OnClickAsObservable()

@@ -49,14 +49,14 @@ namespace Catan.Scripts.Presenter
             wheat4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wheat, CardType.Wheat, CardType.Wheat, CardType.Wheat});
+                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wheat, CardType.Wheat, CardType.Wheat, CardType.Wheat });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Hill));
                 this.TurnOffAll();
             });
             ironOre4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.IronOre, CardType.IronOre, CardType.IronOre, CardType.IronOre});
+                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.IronOre, CardType.IronOre, CardType.IronOre, CardType.IronOre });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Mine));
                 this.TurnOffAll();
 
@@ -64,7 +64,7 @@ namespace Catan.Scripts.Presenter
             brick4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Brick, CardType.Brick, CardType.Brick, CardType.Brick});
+                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Brick, CardType.Brick, CardType.Brick, CardType.Brick });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Field));
                 this.TurnOffAll();
 
@@ -78,24 +78,12 @@ namespace Catan.Scripts.Presenter
             {
                 var t = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
                 var num = cardEnumeration.Enumeration(playerTurnManeger._currentPlayerId.Value);
-                if (num[0] >= 4)
+                if (num[0] >= 4 || num[1] >= 4 || num[2] >= 4 || num[3] >= 4 || num[4] >= 4)
                 {
                     brick4Button.interactable = true;
-                }
-                if (num[1] >= 4)
-                {
                     ironOre4Button.interactable = true;
-                }
-                if (num[2] >= 4)
-                {
                     wheat4Button.interactable = true;
-                }
-                if (num[3] >= 4)
-                {
                     wood4Button.interactable = true;
-                }
-                if (num[4] >= 4)
-                {
                     wool4Button.interactable = true;
                 }
             }

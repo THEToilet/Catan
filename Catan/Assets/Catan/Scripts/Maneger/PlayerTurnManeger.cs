@@ -20,7 +20,6 @@ namespace Catan.Scripts.Manager
         public DicePresenter dicePresenter;
         public NortificationPresenter nortificationPresenter;
         public DistributeCardManeger distributeCardManeger;
-        public PlayerMonitoring playerMonitoring;
         public ProgressStateManeger progressStateManeger;
         // ステート管理するReactiveProperty
         public ReactiveProperty<PlayerId> _currentPlayerId = new ReactiveProperty<PlayerId>();

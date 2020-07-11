@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6728502282185740677}
   - component: {fileID: -6407303738632465109}
   - component: {fileID: -6164862130381962289}
+  - component: {fileID: -1451558723361748611}
   m_Layer: 0
   m_Name: IronOreCard
   m_TagString: Untagged
@@ -180,3 +181,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1451558723361748611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096707088935298040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadbf89cf87cd534397d05cb5816f960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
