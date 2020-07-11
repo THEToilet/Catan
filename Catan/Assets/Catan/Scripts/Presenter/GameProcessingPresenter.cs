@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Threading;
 using UniRx;
 using UniRx.Async;
@@ -38,9 +36,7 @@ namespace Catan.Scripts.Presenter
                 // 遷移先に合わせて処理をする
                 if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
                 {
-                    // uIRestrictionPresenter.ReleaseExpectAction();
-                    uIRestrictionPresenter.Release();
-                    uIRestrictionPresenter.Release();
+                    uIRestrictionPresenter.LetRollDice();
                     tableTopCardPresenter.DeleateCard(playerTurnManeger._currentPlayerId.Value);
                     tableTopCardPresenter.CreateCard(playerTurnManeger._currentPlayerId.Value);
                     specialCardPresenter.DeleateCard(playerTurnManeger._currentPlayerId.Value);

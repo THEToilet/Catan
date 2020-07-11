@@ -52,7 +52,7 @@ namespace Catan.Scripts.Presenter
             rollDiceButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
-                uIRestrictionPresenter.TurnOffRollDice();
+                uIRestrictionPresenter.LetAction();
                 var d = Dice.RandomRollTwiceDice();
                 if (d[0] + d[1] == 7)
                 {

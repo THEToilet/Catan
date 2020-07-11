@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using UniRx;
-using UnityEngine.PlayerLoop;
 
 namespace Catan.Scripts.Presenter
 {
@@ -28,6 +25,7 @@ namespace Catan.Scripts.Presenter
         public RoadBasePresenter roadBasePresenter;
         public PointChildrenPresenter pointChildrenPresenter;
         public UIRestrictionPresenter uIRestrictionPresenter;
+        public CityPresenter cityPresenter;
         private bool isCheck = false;
         public int r, c;
 
@@ -48,7 +46,6 @@ namespace Catan.Scripts.Presenter
             this.setCount(p);
             isCheck = true;
             uIRestrictionPresenter.TurnOffAll();
-            Debug.Log("あ！");
         });
             settlementButton.OnClickAsObservable()
         .Subscribe(_ =>
@@ -60,19 +57,17 @@ namespace Catan.Scripts.Presenter
             this.setCount(p);
             isCheck = true;
             uIRestrictionPresenter.TurnOffAll();
-            Debug.Log("い！");
         });
             cityButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             cardConsumptionManeger.BuyCity();
-            pointChildrenPresenter.ShowPossiblePlayerPoint(playerTurnManeger._currentPlayerId.Value);
+            cityPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
             this.TurnOffAll();
             this.setCount(p);
             isCheck = true;
             uIRestrictionPresenter.TurnOffAll();
-            Debug.Log("う！");
         });
             drawCardButton.OnClickAsObservable()
         .Subscribe(_ =>
@@ -80,7 +75,6 @@ namespace Catan.Scripts.Presenter
             drawCard.Draw();
             cardConsumptionManeger.BuyCard();
             this.TurnOffAll();
-            Debug.Log("お！");
         });
         }
 
@@ -130,13 +124,13 @@ namespace Catan.Scripts.Presenter
                 if (dr > r)
                 {
                     isCheck = false;
-                    uIRestrictionPresenter.Release();
+                    uIRestrictionPresenter.LetAction();
                     roadBasePresenter.EraseAll();
                 }
                 if (dc > c)
                 {
                     isCheck = false;
-                    uIRestrictionPresenter.Release();
+                    uIRestrictionPresenter.LetAction();
                     pointChildrenPresenter.EraseAll();
                 }
             }

@@ -144,7 +144,7 @@ namespace Catan.Scripts.Manager
                         // カードを配る
                         roadBasePresenter.EraseAll();
                         pointChildrenPresenter.EraseAll();
-                        uIRestrictionPresenter.Release();
+                        uIRestrictionPresenter.LetRollDice();
                         distributeCardManeger.InitDistribute();
                         playerNotificationPresenter.DisplayNote("NormalState");
                         break;

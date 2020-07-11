@@ -28407,6 +28407,7 @@ MonoBehaviour:
   roadBasePresenter: {fileID: 2096806388}
   pointChildrenPresenter: {fileID: 2096806389}
   uIRestrictionPresenter: {fileID: 2096806386}
+  cityPresenter: {fileID: 2096806398}
   r: 0
   c: 0
 --- !u!114 &2096806392
@@ -28474,7 +28475,7 @@ MonoBehaviour:
   cardEnumeration: {fileID: 35605539}
   cardConsumptionManeger: {fileID: 1669153307}
   toCardObject: {fileID: 35605536}
-  pointChildrenGeneration: {fileID: 0}
+  pointChildrenGeneration: {fileID: 1669153295}
 --- !u!114 &2096806395
 MonoBehaviour:
   m_ObjectHideFlags: 0

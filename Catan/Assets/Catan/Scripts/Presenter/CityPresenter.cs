@@ -20,7 +20,7 @@ namespace Catan.Scripts.Presenter
         {
             CheckLocateCity().Forget();
         }
-        async public void ShowPossbilePoint(PlayerId playerId)
+        async public void ShowPossiblePoint(PlayerId playerId)
         {
             var p = toPleyerObject.ToPlayer(playerId);
             var c = p.GetComponent<Belongings>().City;

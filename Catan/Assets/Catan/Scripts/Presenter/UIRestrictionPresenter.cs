@@ -17,12 +17,21 @@ namespace Catan.Scripts.Presenter
         public void LetRollDice()
         {
             ActionsButton.interactable = false;
+            RollDice.interactable = true;
+            RollDice.gameObject.SetActive(true);
+            ChangeButton.interactable = true;
+        }
+        public void LetAction()
+        {
+            ActionsButton.interactable = true;
+            ChangeButton.interactable = true;
+            RollDice.gameObject.SetActive(false);
         }
 
         public void TurnOffAll()
         {
             ActionsButton.interactable = false;
-            RollDice.gameObject.SetActive(false);
+            RollDice.interactable = false;
             ChangeButton.interactable = false;
         }
 
