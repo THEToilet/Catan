@@ -69,7 +69,7 @@ namespace Catan.Scripts.Manager
         public void Note()
         {
             roadBasePresenter.EraseAll();
-            pointChildrenPresenter.ShowAll();
+            pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
             Debug.Log(";;");
             playerNotificationPresenter.DisplayPlayerName(_currentPlayerId.Value);
         }
@@ -97,7 +97,7 @@ namespace Catan.Scripts.Manager
                 else
                 {
                     roadBasePresenter.EraseAll();
-                    pointChildrenPresenter.ShowAll();
+                    pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
                 }
                 switch (next)
                 {

@@ -6,6 +6,7 @@ using Catan.Scripts.Point;
 using Catan.Scripts.Player;
 using Catan.Scripts.Terrain;
 using System.Linq;
+using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Presenter
 {
@@ -40,9 +41,7 @@ namespace Catan.Scripts.Presenter
         {
             var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
             var p = pointChildrenGeneration.childrenPointGameObjects;
-            var b = roadGeneration.roads;
             List<GameObject> showPoint = new List<GameObject>();
-            List<GameObject> hasPoint = new List<GameObject>();
             for (int i = 0; i < p.Count; i++)
             {
                 var a = p[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
@@ -54,31 +53,65 @@ namespace Catan.Scripts.Presenter
                         count++;
                     }
                 }
-                if (count == 3)
+                if (count == a.Count)
                 {
                     showPoint.Add(p[i]);
                 }
             }
-            for (int i = 0; i < b.Count; i++)
+            for (int i = 0; i < showPoint.Count; i++)
             {
-                var c = b[i].GetComponent<RoadBaseBehavior>().adjacentPointChildren;
-                for (int j = 0; j < c.Count; j++)
+                showPoint[i].SetActive(true);
+            }
+
+        }
+        public void ShowPossiblePlayerPoint(PlayerId playerId)
+        {
+            var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
+            var p = pointChildrenGeneration.childrenPointGameObjects;
+            List<GameObject> hasPoint = new List<GameObject>();
+            for (int i = 0; i < player.Road.Count; i++)
+            {
+                var c = player.Road[i].GetComponent<TerritoryEntity>().TerritoryPosition.GetComponent<RoadBaseBehavior>().adjacentPointChildren;
+                if (IsIndependence(c))
                 {
-                    showPoint.Add(c[j]);
-                    if (!CheckDuplication(showPoint))
+                    hasPoint.Add(c[0]);
+                    hasPoint.Add(c[1]);
+                }
+            }
+            // Debug.Log("DEEEEEEEEEEEEEEEEEE" + hasPoint.Count);
+            for (int i = 0; i < hasPoint.Count; i++)
+            {
+                var a = hasPoint[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
+                int count = 0;
+                for (int j = 0; j < a.Count; j++)
+                {
+                    if (!a[j].GetComponent<PointChildrenBehavior>().hasTerritory)
                     {
+                        count++;
                     }
-                    else
-                    {
-                        hasPoint.Add(c[j]);
-                    }
+                }
+                if (count != a.Count)
+                {
+                    hasPoint.RemoveAt(i);
+                    i = 0;
                 }
             }
             for (int i = 0; i < hasPoint.Count; i++)
             {
                 hasPoint[i].SetActive(true);
             }
+        }
 
+        bool IsIndependence(List<GameObject> c)
+        {
+            for (int j = 0; j < c.Count; j++)
+            {
+                if (c[j].GetComponent<PointChildrenBehavior>().hasTerritory)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         bool CheckDuplication(List<GameObject> showPoint)

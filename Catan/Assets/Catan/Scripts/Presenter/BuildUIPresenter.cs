@@ -55,7 +55,7 @@ namespace Catan.Scripts.Presenter
         {
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             cardConsumptionManeger.BuySettlement();
-            pointChildrenPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
+            pointChildrenPresenter.ShowPossiblePlayerPoint(playerTurnManeger._currentPlayerId.Value);
             this.TurnOffAll();
             this.setCount(p);
             isCheck = true;
@@ -67,7 +67,7 @@ namespace Catan.Scripts.Presenter
         {
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             cardConsumptionManeger.BuyCity();
-            pointChildrenPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
+            pointChildrenPresenter.ShowPossiblePlayerPoint(playerTurnManeger._currentPlayerId.Value);
             this.TurnOffAll();
             this.setCount(p);
             isCheck = true;
