@@ -4,6 +4,8 @@ using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using UniRx;
+using Catan.Scripts.Terrain;
+using UnityEngine.Networking.NetworkSystem;
 
 namespace Catan.Scripts.Presenter
 {
@@ -26,6 +28,7 @@ namespace Catan.Scripts.Presenter
         public PointChildrenPresenter pointChildrenPresenter;
         public UIRestrictionPresenter uIRestrictionPresenter;
         public CityPresenter cityPresenter;
+        public CityKindsEnumeration cityKindsEnumeration;
         private bool isCheck = false;
         public int r, c;
 
@@ -58,17 +61,17 @@ namespace Catan.Scripts.Presenter
             isCheck = true;
             uIRestrictionPresenter.TurnOffAll();
         });
-           cityButton.OnClickAsObservable()
-        .Subscribe(_ =>
-        {
-            var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
-            cardConsumptionManeger.BuyCity();
-            cityPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
-            this.TurnOffAll();
-            this.setCount(p);
-            isCheck = true;
-            uIRestrictionPresenter.TurnOffAll();
-        });
+            cityButton.OnClickAsObservable()
+         .Subscribe(_ =>
+         {
+             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
+             cardConsumptionManeger.BuyCity();
+             cityPresenter.ShowPossiblePoint(playerTurnManeger._currentPlayerId.Value);
+             this.TurnOffAll();
+             this.setCount(p);
+             isCheck = true;
+             uIRestrictionPresenter.TurnOffAll();
+         });
             drawCardButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
@@ -99,15 +102,17 @@ namespace Catan.Scripts.Presenter
             {
                 var t = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
                 var num = cardEnumeration.Enumeration(playerTurnManeger._currentPlayerId.Value);
+                var canLocateNum = pointChildrenPresenter.GetShowPossiblePlayerPointNum(playerTurnManeger._currentPlayerId.Value);
+                var cityNum = cityKindsEnumeration.Enmeration(playerTurnManeger._currentPlayerId.Value);
                 if (num[3] >= 1 && num[0] >= 1)
                 {
                     roadButton.interactable = true;
                 }
-                if (num[3] >= 1 && num[0] >= 1 && num[2] >= 1 && num[4] >= 1)
+                if (num[3] >= 1 && num[0] >= 1 && num[2] >= 1 && num[4] >= 1 && canLocateNum > 0)
                 {
                     settlementButton.interactable = true;
                 }
-                if (num[2] >= 2 && num[1] >= 3)
+                if (num[2] >= 2 && num[1] >= 3 && cityNum[1] > 0)
                 {
                     cityButton.interactable = true;
                 }

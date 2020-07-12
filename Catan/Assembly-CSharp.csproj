@@ -136,6 +136,7 @@
     <Compile Include="Assets\Catan\Scripts\Presenter\TradeUIPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\UIRestrictionPresenter.cs" />
     <Compile Include="Assets\Catan\Scripts\Presenter\VictoryPointPresenter.cs" />
+    <Compile Include="Assets\Catan\Scripts\Terrain\CityKindsEnumeration.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseBehavior.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseRelevanceSetting.cs" />
     <Compile Include="Assets\Catan\Scripts\Terrain\RoadBaseRoadRelevanceSetting.cs" />

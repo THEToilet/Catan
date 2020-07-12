@@ -26,7 +26,7 @@ namespace Catan.Scripts.Presenter
             geneCityCube = new List<GameObject>();
             for (int i = 0; i < c.Count; i++)
             {
-                var g = GameObject.Instantiate(cityColliderCube, new Vector3( c[i].transform.position.x , c[i].transform.position.y + 10,c[i].transform.position.z ),Quaternion.Euler(90,0,0));
+                var g = GameObject.Instantiate(cityColliderCube, new Vector3(c[i].transform.position.x, c[i].transform.position.y + 10, c[i].transform.position.z), Quaternion.Euler(90, 0, 0));
                 g.name = "CityColliderCube_" + i.ToString();
                 geneCityCube.Add(g);
             }

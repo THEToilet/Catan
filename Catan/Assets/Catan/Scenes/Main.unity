@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 35605539}
   - component: {fileID: 35605538}
   - component: {fileID: 35605540}
+  - component: {fileID: 35605541}
   m_Layer: 0
   m_Name: Common
   m_TagString: Untagged
@@ -518,6 +519,19 @@ MonoBehaviour:
   WoodCard: {fileID: 229454834926381371, guid: a675f1de7c66de845b79d94b33d2bb58, type: 3}
   WoolCard: {fileID: 5084588388414511856, guid: 397427f90dec28049b40897723ce4573,
     type: 3}
+--- !u!114 &35605541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35605533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adec899ce61520645af764c0567b2583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toPleyerObject: {fileID: 35605534}
 --- !u!1001 &50385936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28408,6 +28422,7 @@ MonoBehaviour:
   pointChildrenPresenter: {fileID: 2096806389}
   uIRestrictionPresenter: {fileID: 2096806386}
   cityPresenter: {fileID: 2096806398}
+  cityKindsEnumeration: {fileID: 35605541}
   r: 0
   c: 0
 --- !u!114 &2096806392

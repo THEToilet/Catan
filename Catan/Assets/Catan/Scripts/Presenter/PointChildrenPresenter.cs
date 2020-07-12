@@ -116,22 +116,42 @@ namespace Catan.Scripts.Presenter
             return true;
         }
 
-        bool CheckDuplication(List<GameObject> showPoint)
+        public int GetShowPossiblePlayerPointNum(PlayerId playerId)
         {
-            HashSet<string> hashSet = new HashSet<string>();
-
-            foreach (var item in showPoint)
+            var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
+            var p = pointChildrenGeneration.childrenPointGameObjects;
+            List<GameObject> hasPoint = new List<GameObject>();
+            for (int i = 0; i < player.Road.Count; i++)
             {
-                hashSet.Add(item.name);
+                var c = player.Road[i].GetComponent<TerritoryEntity>().TerritoryPosition.GetComponent<RoadBaseBehavior>().adjacentPointChildren;
+                if (IsIndependence(c))
+                {
+                    hasPoint.Add(c[0]);
+                    hasPoint.Add(c[1]);
+                }
             }
-
-            //重複がある場合は要素数が減る
-            if (showPoint.Count > hashSet.Count)
+            // Debug.Log("DEEEEEEEEEEEEEEEEEE" + hasPoint.Count);
+            for (int i = 0; i < hasPoint.Count; i++)
             {
-                return false;
+                var a = hasPoint[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
+                int count = 0;
+                for (int j = 0; j < a.Count; j++)
+                {
+                    if (!a[j].GetComponent<PointChildrenBehavior>().hasTerritory)
+                    {
+                        count++;
+                    }
+                }
+                if (count != a.Count)
+                {
+                    hasPoint.RemoveAt(i);
+                    i = 0;
+                }
             }
-            return true;
+            return hasPoint.Count;
         }
+
+
     }
 
 }
