@@ -52,7 +52,8 @@ namespace Catan.Scripts.Generation
             if ((_gameObject.name).Contains("CityColliderCube_"))
             {
                 cityGeneration.Generation(int.Parse(_gameObject.name.Substring("CityColliderCube_".Length)));
-                cityPresenter.isLocate = true;
+                Debug.Log("DDDDDDDDDDDDDDDDDDDD" + _gameObject.name.Substring("CityColliderCube_".Length));
+                cityPresenter.DeleteLocateCity();
             }
         }
     }

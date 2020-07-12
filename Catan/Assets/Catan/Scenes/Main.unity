@@ -28547,6 +28547,7 @@ MonoBehaviour:
   toPleyerObject: {fileID: 35605534}
   cityColliderCube: {fileID: 906210925172911778, guid: e1f27b8a1d1b2c1498c16b7ee80b56a9,
     type: 3}
+  uIRestrictionPresenter: {fileID: 2096806386}
 --- !u!114 &2096806399
 MonoBehaviour:
   m_ObjectHideFlags: 0

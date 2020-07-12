@@ -58,7 +58,7 @@ namespace Catan.Scripts.Presenter
             isCheck = true;
             uIRestrictionPresenter.TurnOffAll();
         });
-            cityButton.OnClickAsObservable()
+           cityButton.OnClickAsObservable()
         .Subscribe(_ =>
         {
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);

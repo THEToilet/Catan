@@ -16,31 +16,31 @@ namespace Catan.Scripts.Presenter
         public bool isLocate = false;
         public ToPleyerObject toPleyerObject;
         [SerializeField] GameObject cityColliderCube;
-        private void Update()
+        List<GameObject> geneCityCube;
+        public UIRestrictionPresenter uIRestrictionPresenter;
+        public void ShowPossiblePoint(PlayerId playerId)
         {
-            CheckLocateCity().Forget();
-        }
-        async public void ShowPossiblePoint(PlayerId playerId)
-        {
+            Debug.Log("okokokoko");
             var p = toPleyerObject.ToPlayer(playerId);
             var c = p.GetComponent<Belongings>().City;
-            List<GameObject> geneCityCube = new List<GameObject>();
+            geneCityCube = new List<GameObject>();
             for (int i = 0; i < c.Count; i++)
             {
-                var g = GameObject.Instantiate(cityColliderCube, c[i].transform.position, c[i].transform.rotation);
+                var g = GameObject.Instantiate(cityColliderCube, new Vector3( c[i].transform.position.x , c[i].transform.position.y + 10,c[i].transform.position.z ),Quaternion.Euler(90,0,0));
                 g.name = "CityColliderCube_" + i.ToString();
                 geneCityCube.Add(g);
             }
-            await CheckLocateCity();
+        }
+
+        public void DeleteLocateCity()
+        {
+            Debug.Log("okokokoko2");
             for (int i = 0; i < geneCityCube.Count; i++)
             {
                 GameObject.Destroy(geneCityCube[i]);
             }
-        }
-
-        async UniTaskVoid CheckLocateCity()
-        {
-            await UniTask.WaitUntil(() => isLocate);
+            Debug.Log("okokokoko3");
+            uIRestrictionPresenter.LetAction();
         }
     }
 }
