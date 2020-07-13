@@ -26,8 +26,6 @@ namespace Catan.Scripts.Manager
                 {
                     deletePlayer.Add(p);
                 }
-
-
             }
 
             // 削除するカードを選ばせる
@@ -38,10 +36,7 @@ namespace Catan.Scripts.Manager
                 {
                     deletePlayer[i].GetComponent<Belongings>().cards.RemoveAt(deletePlayer[i].GetComponent<Belongings>().cards.Count - 1);
                 }
-
             }
-
-
         }
 
         public void MoveTheif()
@@ -54,7 +49,7 @@ namespace Catan.Scripts.Manager
             if (isPlace)
             {
                 pointParentPresenter.EraseAll();
-                uIRestrictionPresenter.Release();
+                uIRestrictionPresenter.LetAction();
                 isPlace = false;
             }
 

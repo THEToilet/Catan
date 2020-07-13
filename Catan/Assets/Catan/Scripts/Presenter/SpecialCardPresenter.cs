@@ -5,6 +5,7 @@ using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
+using DG.Tweening;
 
 namespace Catan.Scripts.Presenter
 {
@@ -15,6 +16,9 @@ namespace Catan.Scripts.Presenter
         public ToCardObject toCardObject;
         public SpecialCardManeger specialCardManeger;
         [SerializeField] GameObject specialHnad;
+        [SerializeField] GameObject actionsPanel;
+        [SerializeField] Button cancelButton;
+        [SerializeField] Button actionButton;
         public void CreateCard(PlayerId playerId)
         {
             // 生成
@@ -24,8 +28,11 @@ namespace Catan.Scripts.Presenter
 
                 GameObject go = Instantiate(g) as GameObject;
                 go.transform.SetParent(specialHnad.transform, false); // SetParentの第二引数で相対的な大きさにするかを決められる。
-                                                                     //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
+                                                                      //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
                 var cardType = g.GetComponent<SpecialCardEntity>().specialCardType;
+                go.GetComponent<Button>().onClick.AddListener(() => actionsPanel.GetComponent<DOTweenAnimation>().DOPlayBackwards());
+                go.GetComponent<Button>().onClick.AddListener(() => cancelButton.gameObject.SetActive(false));
+                go.GetComponent<Button>().onClick.AddListener(() => actionButton.gameObject.SetActive(true));
                 switch (cardType)
                 {
                     case SpecialCardType.Harvest:

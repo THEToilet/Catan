@@ -21,24 +21,16 @@ namespace Catan.Scripts.Manager
         public ToPleyerObject toPleyerObject;
         public GameObject winner;
         public GameResultPresenter gameResultPresenter;
+        bool isOver = false;
 
         private PlayerId[] playerIds = { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
 
         List<playerI> pI = new List<playerI>();
 
-        public void Start()
-        {
-            // TODO このクラスでやりたかったことをRxでやる
-            /*  winnerScore.ObserveEveryValueChanged(_ => _.Value)
-                    .Where(x => x >= 10)
-                    .Subscribe(_ =>
-                        gameResultPresenter.Show())
-                    );*/
-        }
 
         private void Update()  // 優勝者がいるまでまわす
         {
-            if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
+            if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn && !isOver)
             {
 
                 for (int i = 0; i < playerIds.Length; i++)
@@ -50,11 +42,13 @@ namespace Catan.Scripts.Manager
                         winner = p;
                         for (int j = 0; j < playerIds.Length; j++)
                         {
-                            playerI s = new playerI() { point = p.GetComponent<PlayerCore>().playerScore, p = playerIds[j] };
+                            var neop = toPleyerObject.ToPlayer(playerIds[j]);
+                            playerI s = new playerI() { point = neop.GetComponent<PlayerCore>().playerScore, p = playerIds[j] };
                             pI.Add(s);
                         }
                         IOrderedEnumerable<playerI> player = pI.OrderByDescending(rec => rec.point);
                         gameResultPresenter.ShowGameResult(player);
+                        isOver = true;
                     }
                 }
             }

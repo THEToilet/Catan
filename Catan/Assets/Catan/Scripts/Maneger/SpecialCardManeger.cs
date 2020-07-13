@@ -24,6 +24,7 @@ namespace Catan.Scripts.Manager
         public ToCardObject toCardObject;
         public ToCardWithCardTypeObject toCardWithCardTypeObject;
         public MonopolizationManeger monopolizationManeger;
+        public UIRestrictionPresenter uIRestrictionPresenter;
 
         public void Knight()
         {

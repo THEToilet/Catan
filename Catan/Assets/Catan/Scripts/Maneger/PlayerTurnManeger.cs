@@ -16,7 +16,6 @@ namespace Catan.Scripts.Manager
         public PlayerNotificationPresenter playerNotificationPresenter;
         public ToPleyerObject toPleyerObjects;
         public DicePresenter dicePresenter;
-        public NortificationPresenter nortificationPresenter;
         public DistributeCardManeger distributeCardManeger;
         public ProgressStateManeger progressStateManeger;
         // ステート管理するReactiveProperty
@@ -43,7 +42,6 @@ namespace Catan.Scripts.Manager
         public void Excute()
         {
             playerIds = orderDetermining.GetOrder();
-            Debug.Log(playerIds);
             _currentTurnState.SetValueAndForceNotify(TurnState.DescendingOrderArragement);
             for (int i = 0; i < playerIds.Length; i++)
             {
