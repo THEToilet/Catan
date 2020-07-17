@@ -24,6 +24,7 @@ namespace Catan.Scripts.Manager
         public TheifGeneration theifGeneration;
         public RoadToChildrenRelevanceSetting roadToChildrenRelevanceSetting;
         public RoadBaseRoadRelevanceSetting roadBaseRoadRelevanceSetting;
+        public PortGeneration portGeneration;
 
         public void Excute()
         {
@@ -40,6 +41,7 @@ namespace Catan.Scripts.Manager
             theifGeneration.Generate(); // 盗賊生成
             roadToChildrenRelevanceSetting.Allocation();
             roadBaseRoadRelevanceSetting.Allocation();
+            portGeneration.Generate();  // 港生成
         }
     }
 

@@ -21682,6 +21682,7 @@ GameObject:
   - component: {fileID: 1669153315}
   - component: {fileID: 1669153316}
   - component: {fileID: 1669153317}
+  - component: {fileID: 1669153286}
   m_Layer: 0
   m_Name: Administrator
   m_TagString: Untagged
@@ -21731,6 +21732,22 @@ MonoBehaviour:
   theifGeneration: {fileID: 1669153309}
   roadToChildrenRelevanceSetting: {fileID: 1669153311}
   roadBaseRoadRelevanceSetting: {fileID: 1669153312}
+  portGeneration: {fileID: 1669153286}
+--- !u!114 &1669153286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669153283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fccb9869a092bc43b7570dac8da4445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portGameObject: {fileID: 1318738888430404093, guid: 32b4ccba41bb0964aab2b3e908af3276,
+    type: 3}
+  portObjectCollections: []
 --- !u!4 &1669153287
 Transform:
   m_ObjectHideFlags: 0
@@ -22134,7 +22151,7 @@ MonoBehaviour:
   toCardObject: {fileID: 35605536}
   toCardWithCardTypeObject: {fileID: 35605540}
   monopolizationManeger: {fileID: 1669153315}
-  uIRestrictionPresenter: {fileID: 0}
+  uIRestrictionPresenter: {fileID: 2096806386}
 --- !u!114 &1669153315
 MonoBehaviour:
   m_ObjectHideFlags: 0

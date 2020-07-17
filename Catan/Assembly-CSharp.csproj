@@ -82,6 +82,7 @@
     <Compile Include="Assets\Catan\Scripts\Generation\PlayerGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\PointChildrenGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\PointParentGeneration.cs" />
+    <Compile Include="Assets\Catan\Scripts\Generation\PortGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\RandomNoGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\RoadGeneration.cs" />
     <Compile Include="Assets\Catan\Scripts\Generation\TerrainGeneration.cs" />
