@@ -15,57 +15,49 @@ namespace Catan.Scripts.Presenter
         [SerializeField] Button wheat4Button;
         [SerializeField] Button ironOre4Button;
         [SerializeField] Button brick4Button;
+        [SerializeField] GameObject deleteResourceSelectPanel;
         public PlayerTurnManeger playerTurnManeger;
         public ToPleyerObject toPleyerObject;
         public CardEnumeration cardEnumeration;
         public CardConsumptionManeger cardConsumptionManeger;
         public ToCardObject toCardObject;
-        public void TurnOffAll()
-        {
-            wood4Button.interactable = false;
-            wool4Button.interactable = false;
-            wheat4Button.interactable = false;
-            ironOre4Button.interactable = false;
-            brick4Button.interactable = false;
-        }
+        public DeleteResourcePresenter deleteResourcePresenter;
         void Start()
         {
             wood4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wood, CardType.Wood, CardType.Wood, CardType.Wood });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Forest));
-                this.TurnOffAll();
+                deleteResourcePresenter.numberOfCards = 4;
+                deleteResourceSelectPanel.SetActive(true);
             });
             wool4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wool, CardType.Wool, CardType.Wool, CardType.Wool });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Pasture));
-                this.TurnOffAll();
+                deleteResourcePresenter.numberOfCards = 4;
+                deleteResourceSelectPanel.SetActive(true);
             });
             wheat4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wheat, CardType.Wheat, CardType.Wheat, CardType.Wheat });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Hill));
-                this.TurnOffAll();
+                deleteResourcePresenter.numberOfCards = 4;
+                deleteResourceSelectPanel.SetActive(true);
             });
             ironOre4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.IronOre, CardType.IronOre, CardType.IronOre, CardType.IronOre });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Mine));
-                this.TurnOffAll();
-
+                deleteResourcePresenter.numberOfCards = 4;
+                deleteResourceSelectPanel.SetActive(true);
             });
             brick4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Brick, CardType.Brick, CardType.Brick, CardType.Brick });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Field));
-                this.TurnOffAll();
-
+                deleteResourcePresenter.numberOfCards = 4;
+                deleteResourceSelectPanel.SetActive(true);
             });
 
         }
@@ -82,6 +74,14 @@ namespace Catan.Scripts.Presenter
                     wheat4Button.interactable = true;
                     wood4Button.interactable = true;
                     wool4Button.interactable = true;
+                }
+                else
+                {
+                    wood4Button.interactable = false;
+                    wool4Button.interactable = false;
+                    wheat4Button.interactable = false;
+                    ironOre4Button.interactable = false;
+                    brick4Button.interactable = false;
                 }
             }
         }

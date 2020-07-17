@@ -30,12 +30,14 @@ namespace Catan.Scripts.Presenter
         public CardConsumptionManeger cardConsumptionManeger;
         public ToCardObject toCardObject;
         public PointChildrenGeneration pointChildrenGeneration;
+        public DeleteResourcePresenter deleteResourcePresenter;
         int[] wd2 = new int[] { 31, 32 };
         int[] wl2 = new int[] { 22, 23 };
         int[] wt2 = new int[] { 21, 30 };
         int[] io2 = new int[] { 42, 43 };
         int[] br2 = new int[] { 49, 50 };
         int[] trade3 = new int[] { 15, 16, 45, 46, 18, 39, 52, 53 };
+        [SerializeField] GameObject selectKindPanel;
 
         public void TurnOffAll()
         {
@@ -55,74 +57,84 @@ namespace Catan.Scripts.Presenter
             wood2Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wood, CardType.Wood });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Forest));
+                deleteResourcePresenter.numberOfCards = 2;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             wool2Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wool, CardType.Wool });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Pasture));
+                deleteResourcePresenter.numberOfCards = 2;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             wheat2Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wheat, CardType.Wheat });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Hill));
+                deleteResourcePresenter.numberOfCards = 2;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             ironOre2Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.IronOre, CardType.IronOre });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Mine));
+                deleteResourcePresenter.numberOfCards = 2;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             brick2Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Brick, CardType.Brick });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Field));
+                deleteResourcePresenter.numberOfCards = 2;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
 
 
             wood3Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wood, CardType.Wood, CardType.Wood });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Forest));
+                deleteResourcePresenter.numberOfCards = 3;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             wool3Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wool, CardType.Wool, CardType.Wool });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Pasture));
+                deleteResourcePresenter.numberOfCards = 3;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             wheat3Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Wheat, CardType.Wheat, CardType.Wheat });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Hill));
+                deleteResourcePresenter.numberOfCards = 3;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             ironOre3Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.IronOre, CardType.IronOre, CardType.IronOre });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Mine));
+                deleteResourcePresenter.numberOfCards = 3;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
             brick3Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
-                cardConsumptionManeger.DeleteCard(new CardType[] { CardType.Brick, CardType.Brick, CardType.Brick });
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Field));
+                deleteResourcePresenter.numberOfCards = 3;
                 this.TurnOffAll();
+                selectKindPanel.SetActive(true);
             });
 
         }

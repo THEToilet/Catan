@@ -11,7 +11,7 @@ namespace Catan.Scripts.Manager
     {
         public PlayerTurnManeger playerTurnManeger;
         public ToPleyerObject toPleyerObject;
-        private void DeleteElement(GameObject p, CardType[] cost)
+        public void DeleteElement(GameObject p, CardType[] cost)
         {
             var c = p.GetComponent<Belongings>().cards;
             int check = 0;
