@@ -80,28 +80,40 @@ namespace Catan.Scripts.Presenter
                 {
                     brickButton.interactable = true;
                 }
-                else if (num[1] >= numberOfCards)
+                else
+                {
+                    brickButton.interactable = false;
+                }
+                if (num[1] >= numberOfCards)
                 {
                     ironOreButton.interactable = true;
                 }
-                else if (num[1] >= numberOfCards)
+                else
+                {
+                    ironOreButton.interactable = false;
+                }
+                if (num[2] >= numberOfCards)
                 {
                     wheatButton.interactable = true;
                 }
-                else if (num[1] >= numberOfCards)
+                else
+                {
+                    wheatButton.interactable = false;
+                }
+                if (num[3] >= numberOfCards)
                 {
                     woodButton.interactable = true;
                 }
-                else if (num[1] >= numberOfCards)
+                else
+                {
+                    woodButton.interactable = false;
+                }
+                if (num[4] >= numberOfCards)
                 {
                     woolButton.interactable = true;
                 }
                 else
                 {
-                    brickButton.interactable = false;
-                    ironOreButton.interactable = false;
-                    wheatButton.interactable = false;
-                    woodButton.interactable = false;
                     woolButton.interactable = false;
                 }
             }

@@ -37,12 +37,6 @@ namespace Catan.Scripts.Presenter
         // Start is called before the first frame update
         void Start()
         {
-
-            negotiationButton.OnClickAsObservable()  // 交渉する
-            .Subscribe(_ =>
-            {
-            });
-
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {

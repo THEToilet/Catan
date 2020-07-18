@@ -15,7 +15,10 @@ namespace Catan.Scripts.Presenter
         [SerializeField] Button wheat4Button;
         [SerializeField] Button ironOre4Button;
         [SerializeField] Button brick4Button;
+        [SerializeField] Button bankButton;
+        [SerializeField] Button bankCancelButton;
         [SerializeField] GameObject deleteResourceSelectPanel;
+        [SerializeField] GameObject bankPanel;
         public PlayerTurnManeger playerTurnManeger;
         public ToPleyerObject toPleyerObject;
         public CardEnumeration cardEnumeration;
@@ -24,12 +27,21 @@ namespace Catan.Scripts.Presenter
         public DeleteResourcePresenter deleteResourcePresenter;
         void Start()
         {
+            bankButton.OnClickAsObservable().Subscribe(_ =>
+            {
+                bankPanel.SetActive(true);
+            });
+            bankCancelButton.OnClickAsObservable().Subscribe(_ =>
+            {
+                bankPanel.SetActive(false);
+            });
             wood4Button.OnClickAsObservable().Subscribe(_ =>
             {
                 var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value).GetComponent<Belongings>().cards;
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Forest));
                 deleteResourcePresenter.numberOfCards = 4;
                 deleteResourceSelectPanel.SetActive(true);
+                bankPanel.SetActive(false);
             });
             wool4Button.OnClickAsObservable().Subscribe(_ =>
             {
@@ -37,6 +49,7 @@ namespace Catan.Scripts.Presenter
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Pasture));
                 deleteResourcePresenter.numberOfCards = 4;
                 deleteResourceSelectPanel.SetActive(true);
+                bankPanel.SetActive(false);
             });
             wheat4Button.OnClickAsObservable().Subscribe(_ =>
             {
@@ -44,6 +57,7 @@ namespace Catan.Scripts.Presenter
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Hill));
                 deleteResourcePresenter.numberOfCards = 4;
                 deleteResourceSelectPanel.SetActive(true);
+                bankPanel.SetActive(false);
             });
             ironOre4Button.OnClickAsObservable().Subscribe(_ =>
             {
@@ -51,6 +65,7 @@ namespace Catan.Scripts.Presenter
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Mine));
                 deleteResourcePresenter.numberOfCards = 4;
                 deleteResourceSelectPanel.SetActive(true);
+                bankPanel.SetActive(false);
             });
             brick4Button.OnClickAsObservable().Subscribe(_ =>
             {
@@ -58,6 +73,7 @@ namespace Catan.Scripts.Presenter
                 p.Add(toCardObject.ToCard(Terrain.TerrainType.Field));
                 deleteResourcePresenter.numberOfCards = 4;
                 deleteResourceSelectPanel.SetActive(true);
+                bankPanel.SetActive(false);
             });
 
         }
