@@ -27777,6 +27777,10 @@ MonoBehaviour:
   wheat2Button: {fileID: 227277337}
   ironOre2Button: {fileID: 1294900940}
   brick2Button: {fileID: 1330571651}
+  tradeButton: {fileID: 196575398}
+  tradeCancelButton: {fileID: 746787198}
+  tradePanel: {fileID: 434897996}
+  deleteSelectPanel: {fileID: 1473707018}
   playerTurnManeger: {fileID: 1669153291}
   toPleyerObject: {fileID: 35605534}
   cardEnumeration: {fileID: 35605539}
