@@ -35,12 +35,6 @@ namespace Catan.Scripts.Presenter
         public ToCardObject toCardObject;
         public PointChildrenGeneration pointChildrenGeneration;
         public DeleteResourcePresenter deleteResourcePresenter;
-        int[] wd2 = new int[] { 31, 32 };
-        int[] wl2 = new int[] { 22, 23 };
-        int[] wt2 = new int[] { 21, 30 };
-        int[] io2 = new int[] { 42, 43 };
-        int[] br2 = new int[] { 49, 50 };
-        int[] trade3 = new int[] { 15, 16, 45, 46, 18, 39, 52, 53 };
         [SerializeField] GameObject selectKindPanel;
 
         void Start()
@@ -143,18 +137,24 @@ namespace Catan.Scripts.Presenter
         {
             for (int i = 0; i < point.Length; i++)
             {
-                var checkPoint = pointChildrenGeneration.childrenPointGameObjects[i];
+                var checkPoint = pointChildrenGeneration.childrenPointGameObjects[point[i]];
                 for (int j = 0; j < list.Count; j++)
                 {
                     if (checkPoint.Equals(list[j].GetComponent<TerritoryEntity>().TerritoryPosition))
                     {
+                        Debug.Log("poe?");
                         return true;
                     }
                 }
-
             }
-            return true;
+            return false;
         }
+        int[] wd2 = new int[] { 31, 32 };
+        int[] wl2 = new int[] { 22, 23 };
+        int[] wt2 = new int[] { 21, 30 };
+        int[] io2 = new int[] { 42, 43 };
+        int[] br2 = new int[] { 49, 50 };
+        int[] trade3 = new int[] { 15, 16, 45, 46, 18, 39, 52, 53 };
 
         private void Update()
         {
@@ -206,6 +206,14 @@ namespace Catan.Scripts.Presenter
                         wool2Button.interactable = false;
                     }
                 }
+                else
+                {
+                    wood2Button.interactable = false;
+                    wool2Button.interactable = false;
+                    wheat2Button.interactable = false;
+                    brick2Button.interactable = false;
+                    ironOre2Button.interactable = false;
+                }
                 if ((num[0] >= 3 || num[1] >= 3 || num[2] >= 3 || num[3] >= 3 || num[4] >= 3) && (CheckLocate(trade3, c)))
                 {
                     brick3Button.interactable = true;
@@ -214,7 +222,6 @@ namespace Catan.Scripts.Presenter
                     wood3Button.interactable = true;
                     wool3Button.interactable = true;
                 }
-
                 else
                 {
                     brick3Button.interactable = false;
