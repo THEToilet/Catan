@@ -15,7 +15,7 @@ namespace Catan.Scripts.Manager
         {
             var c = p.GetComponent<Belongings>().cards;
             int check = 0;
-            Debug.Log("DOODODO");
+            if (cost.Length == 0) return;
             for (int i = 0; i < c.Count; i++)
             {
                 if (c[i].GetComponent<CardEntity>().cardType == cost[check])

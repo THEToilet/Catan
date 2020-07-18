@@ -37,7 +37,7 @@ namespace Catan.Scripts.Presenter
                 if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
                 {
                     uIRestrictionPresenter.LetRollDice();
-                    tableTopCardPresenter.DeleateCard(playerTurnManeger._currentPlayerId.Value);
+                    tableTopCardPresenter.DeleateCard();
                     tableTopCardPresenter.CreateCard(playerTurnManeger._currentPlayerId.Value);
                     specialCardPresenter.DeleateCard(playerTurnManeger._currentPlayerId.Value);
                     specialCardPresenter.CreateCard(playerTurnManeger._currentPlayerId.Value);
