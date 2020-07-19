@@ -4,6 +4,7 @@ using UniRx;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using Catan.Scripts.Manager;
+using ModestTree.Util;
 
 namespace Catan.Scripts.Presenter
 {
@@ -34,6 +35,37 @@ namespace Catan.Scripts.Presenter
         PlayerId target = PlayerId.Player1;
         [SerializeField] Text playerText;
 
+        private void Update()
+        {
+            var p = playerTurnManeger._currentPlayerId.Value;
+            switch (p)
+            {
+                case (PlayerId.Player1):
+                    player1SelectButton.interactable = false;
+                    player2SelectButton.interactable = true;
+                    player3SelectButton.interactable = true;
+                    player4SelectButton.interactable = true;
+                    break;
+                case (PlayerId.Player2):
+                    player1SelectButton.interactable = true;
+                    player2SelectButton.interactable = false;
+                    player3SelectButton.interactable = true;
+                    player4SelectButton.interactable = true;
+                    break;
+                case (PlayerId.Player3):
+                    player1SelectButton.interactable = true;
+                    player2SelectButton.interactable = true;
+                    player3SelectButton.interactable = false;
+                    player4SelectButton.interactable = true;
+                    break;
+                case (PlayerId.Player4):
+                    player1SelectButton.interactable = true;
+                    player2SelectButton.interactable = true;
+                    player3SelectButton.interactable = true;
+                    player4SelectButton.interactable = false;
+                    break;
+            };
+        }
         private void Start()
         {
             negotiationButton.OnClickAsObservable().Subscribe(_ =>
@@ -50,7 +82,7 @@ namespace Catan.Scripts.Presenter
             {
                 negotiationPanel.SetActive(false);
                 playerSelectionPanel.SetActive(true);
-                beforeCards = tableTopCardPresenter.GetTableTopCard2();
+                beforeCards = tableTopCardPresenter.GetTableTopCard();
             });
 
 
