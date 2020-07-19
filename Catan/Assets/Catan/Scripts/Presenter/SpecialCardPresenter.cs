@@ -6,6 +6,10 @@ using Catan.Scripts.Card;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
 using DG.Tweening;
+using System.Threading;
+using UniRx;
+using UniRx.Async;
+using UniRx.Async.Triggers;
 
 namespace Catan.Scripts.Presenter
 {
@@ -34,16 +38,16 @@ namespace Catan.Scripts.Presenter
                 switch (cardType)
                 {
                     case SpecialCardType.Harvest:
-                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Harvest());
+                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Harvest().Forget());
                         break;
                     case SpecialCardType.Knight:
                         go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Knight());
                         break;
                     case SpecialCardType.Monopolization:
-                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Monopolization());
+                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Monopolization().Forget());
                         break;
                     case SpecialCardType.Road:
-                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.MainRoad());
+                        go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.MainRoad().Forget());
                         break;
                     case SpecialCardType.Wining:
                         break;

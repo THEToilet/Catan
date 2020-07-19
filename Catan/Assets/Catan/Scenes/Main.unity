@@ -4225,7 +4225,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 299789024}
   m_OnClick:
     m_PersistentCalls:
@@ -9870,7 +9870,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 756855356}
   m_OnClick:
     m_PersistentCalls:
@@ -13369,7 +13369,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 992462351}
   m_OnClick:
     m_PersistentCalls:
@@ -14263,7 +14263,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1063440811}
   m_OnClick:
     m_PersistentCalls:
@@ -21640,6 +21640,7 @@ MonoBehaviour:
   monopolizationManeger: {fileID: 1669153315}
   uIRestrictionPresenter: {fileID: 2096806386}
   playerNotificationPresenter: {fileID: 2096806380}
+  resourceSelectionPanel: {fileID: 1986379619}
 --- !u!114 &1669153315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27606,7 +27607,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2087890046}
   m_OnClick:
     m_PersistentCalls:
@@ -28269,6 +28270,7 @@ MonoBehaviour:
   ironOreButton: {fileID: 992462350}
   brickButton: {fileID: 1063440810}
   resourcePanel: {fileID: 1986379619}
+  playerTurnManeger: {fileID: 0}
   isPushed: 0
 --- !u!114 &2096806397
 MonoBehaviour:

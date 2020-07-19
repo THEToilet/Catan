@@ -86,12 +86,13 @@ namespace Catan.Scripts.Manager
                     {
                         for (int j = 0; j < c.Count; j++)
                         {
-                            if (c[i].GetComponent<CardEntity>().cardType == card)
+                            if (c[j].GetComponent<CardEntity>().cardType == card)
                             {
-                                c.RemoveAt(i);
+                                c.RemoveAt(j);
+                                playerHasCard = cardEnumeration.Enumeration(playerIds[i]);
+                                break;
                             }
                         }
-
                     }
                 }
             }
