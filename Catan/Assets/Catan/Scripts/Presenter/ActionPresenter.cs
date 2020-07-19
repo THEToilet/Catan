@@ -54,6 +54,7 @@ namespace Catan.Scripts.Presenter
                     playerNotificationPresenter.DisplayNote("Theif time");
                     theifManeger.ReduceCard();
                     theifManeger.MoveTheif();
+                    uIRestrictionPresenter.TurnOffAll();
                 }
                 else
                 {
@@ -64,11 +65,6 @@ namespace Catan.Scripts.Presenter
             });
 
 
-            submmitButton.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                tradeCardEnumeration.TableTopEnumeration();
-            });
 
             actionButton.OnClickAsObservable()
             .Subscribe(_ =>

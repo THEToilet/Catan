@@ -25,7 +25,7 @@ namespace Catan.Scripts.Presenter
             var p = toPleyerObject.ToPlayer(playerId);
             foreach (GameObject g in p.GetComponent<Belongings>().scards)
             {
-                GameObject go = Instantiate(g) as GameObject;
+                GameObject go = GameObject.Instantiate(g, this.transform.position, Quaternion.identity);
                 go.transform.SetParent(specialHnad.transform, false); // SetParentの第二引数で相対的な大きさにするかを決められる。
                                                                       //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
                 var cardType = g.GetComponent<SpecialCardEntity>().specialCardType;

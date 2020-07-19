@@ -14,20 +14,15 @@ namespace Catan.Scripts.Manager
         public void DeleteElement(GameObject p, CardType[] cost)
         {
             var c = p.GetComponent<Belongings>().cards;
-            int check = 0;
-            if (cost.Length == 0) return;
-            for (int i = 0; i < c.Count; i++)
+            for (int i = 0; i < cost.Length; i++)
             {
-                if (c[i].GetComponent<CardEntity>().cardType == cost[check])
+                for (int j = 0; j < c.Count; j++)
                 {
-                    check++;
-                    c.RemoveAt(i);
-                    i = 0;
-                    if (check == cost.Length)
+                    if (c[j].GetComponent<CardEntity>().cardType == cost[i])
                     {
+                        c.RemoveAt(j);
                         break;
                     }
-                    continue;
                 }
             }
         }
