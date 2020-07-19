@@ -25,10 +25,12 @@ namespace Catan.Scripts.Manager
         public ToCardWithCardTypeObject toCardWithCardTypeObject;
         public MonopolizationManeger monopolizationManeger;
         public UIRestrictionPresenter uIRestrictionPresenter;
+        public PlayerNotificationPresenter playerNotificationPresenter;
 
         public void Knight()
         {
             Debug.Log("Knight");
+            playerNotificationPresenter.DisplayNote("Knight");
             theifManeger.MoveTheif();
         }
 
@@ -36,6 +38,7 @@ namespace Catan.Scripts.Manager
         {
             // 路を二つ置く
             Debug.Log("MainRoad");
+            playerNotificationPresenter.DisplayNote("MainRoad");
             roadBasePresenter.ShowAll();
             var g = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             int c = g.GetComponent<Belongings>().Road.Count;
@@ -51,6 +54,7 @@ namespace Catan.Scripts.Manager
         async public void Harvest()
         {
             Debug.Log("Harvest");
+            playerNotificationPresenter.DisplayNote("Harvest");
             // HarveestPresenterに関数を作り使うカードを選ばせる
             resourceCardSelectionPresenter.ShowPanel();
             await UniTask.WaitUntil(() => resourceCardSelectionPresenter.isPushed);
@@ -73,6 +77,7 @@ namespace Catan.Scripts.Manager
         async public void Monopolization()
         {
             Debug.Log("Monopolization");
+            playerNotificationPresenter.DisplayNote("Monopolization");
             // HarveestPresenterに関数を作り使うカードを選ばせる
             // 指定した資源一種類全部もらえる
             resourceCardSelectionPresenter.ShowPanel();

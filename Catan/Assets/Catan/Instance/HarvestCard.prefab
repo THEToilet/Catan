@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3199464005277783011}
   - component: {fileID: 908865121008657568}
   - component: {fileID: -5251286178306461264}
+  - component: {fileID: -8955429992689147018}
   m_Layer: 0
   m_Name: HarvestCard
   m_TagString: Untagged
@@ -189,3 +190,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de8a43d2b89ed147a8d4626cbaa2e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8955429992689147018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084588388414511856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03361786f9d4e4bb60e168e23ca7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
+  placeholderParent: {fileID: 0}

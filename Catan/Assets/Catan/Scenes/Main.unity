@@ -1689,7 +1689,7 @@ RectTransform:
   m_GameObject: {fileID: 118938743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1301525, y: 2.1301525, z: 2.1301525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1273640916}
   m_Father: {fileID: 2079120527}
@@ -1697,8 +1697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -22.579662, y: 1174.4838}
-  m_SizeDelta: {x: 958.2, y: 478.9}
+  m_AnchoredPosition: {x: 0, y: 1174.4838}
+  m_SizeDelta: {x: 958.2, y: 478.90002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &118938745
 CanvasRenderer:
@@ -16259,8 +16259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: -790}
-  m_SizeDelta: {x: 0.19995117, y: 158.20001}
+  m_AnchoredPosition: {x: -6.999878, y: -1568}
+  m_SizeDelta: {x: 0.19995117, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273640917
 MonoBehaviour:
@@ -21639,6 +21639,7 @@ MonoBehaviour:
   toCardWithCardTypeObject: {fileID: 35605540}
   monopolizationManeger: {fileID: 1669153315}
   uIRestrictionPresenter: {fileID: 2096806386}
+  playerNotificationPresenter: {fileID: 2096806380}
 --- !u!114 &1669153315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27464,7 +27465,7 @@ RectTransform:
   m_GameObject: {fileID: 2079120526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46945, y: 0.46945, z: 0.46945}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 118938744}
   m_Father: {fileID: 1831122620}

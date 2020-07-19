@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1459652460638440421}
   - component: {fileID: 7862297231998931191}
   - component: {fileID: 458260997006789887}
+  - component: {fileID: 7930406361735366301}
   m_Layer: 0
   m_Name: WiningPointCard
   m_TagString: Untagged
@@ -121,3 +122,17 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7930406361735366301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084588388414511856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03361786f9d4e4bb60e168e23ca7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
+  placeholderParent: {fileID: 0}

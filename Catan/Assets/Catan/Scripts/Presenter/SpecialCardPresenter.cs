@@ -25,9 +25,8 @@ namespace Catan.Scripts.Presenter
             var p = toPleyerObject.ToPlayer(playerId);
             foreach (GameObject g in p.GetComponent<Belongings>().scards)
             {
-                GameObject go = GameObject.Instantiate(g, this.transform.position, Quaternion.identity);
-                go.transform.SetParent(specialHnad.transform, false); // SetParentの第二引数で相対的な大きさにするかを決められる。
-                                                                      //  ここでfalseを指定することで、プレハブ本来の大きさで子オブジェクトにすることができる。
+                GameObject go = GameObject.Instantiate(g, specialHnad.transform.position, Quaternion.identity);
+                go.transform.SetParent(specialHnad.transform); 
                 var cardType = g.GetComponent<SpecialCardEntity>().specialCardType;
                 go.GetComponent<Button>().onClick.AddListener(() => actionsPanel.GetComponent<DOTweenAnimation>().DOPlayBackwards());
                 go.GetComponent<Button>().onClick.AddListener(() => cancelButton.gameObject.SetActive(false));
@@ -36,22 +35,19 @@ namespace Catan.Scripts.Presenter
                 {
                     case SpecialCardType.Harvest:
                         go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Harvest());
-                        Debug.Log("ha");
                         break;
                     case SpecialCardType.Knight:
                         go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Knight());
-                        Debug.Log("kn");
                         break;
                     case SpecialCardType.Monopolization:
                         go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.Monopolization());
-                        Debug.Log("mon");
                         break;
                     case SpecialCardType.Road:
                         go.GetComponent<Button>().onClick.AddListener(() => specialCardManeger.MainRoad());
-                        Debug.Log("ma");
+                        break;
+                    case SpecialCardType.Wining:
                         break;
                     default:
-                        Debug.Log("ooooooooooo");
                         break;
                 }
             }

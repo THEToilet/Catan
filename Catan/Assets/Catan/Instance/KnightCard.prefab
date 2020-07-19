@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2093857510755847518}
   - component: {fileID: 7723551837439282087}
   - component: {fileID: 8626100469892346376}
+  - component: {fileID: -1863071994378844880}
   m_Layer: 0
   m_Name: KnightCard
   m_TagString: Untagged
@@ -189,3 +190,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de8a43d2b89ed147a8d4626cbaa2e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1863071994378844880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5084588388414511856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03361786f9d4e4bb60e168e23ca7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentToReturnTo: {fileID: 0}
+  placeholderParent: {fileID: 0}
