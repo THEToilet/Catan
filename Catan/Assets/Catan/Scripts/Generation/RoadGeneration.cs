@@ -94,19 +94,19 @@ namespace Catan.Scripts.Generation
                 roads.Add(tmpGameObject);
                 if (i >= 0 && i <= 23)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 90;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 0;
                 }
                 else if (i == 53)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240;
                 }
                 else if (i >= 24 && i <= 46)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 30;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240;
                 }
                 else
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 150;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -120;
                 }
                 tmpGameObject.SetActive(false);
             }

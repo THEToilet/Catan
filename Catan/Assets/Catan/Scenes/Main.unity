@@ -22583,7 +22583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTurnManeger: {fileID: 1669153291}
   toPleyerObject: {fileID: 35605534}
-  City: {fileID: 4300000, guid: aae5e41c0a6f56f41942cab5cb018ea8, type: 3}
+  City: {fileID: 4493585093827132993, guid: 1d3e756a4abfb794c9861df76425768b, type: 3}
 --- !u!1001 &1669487427
 PrefabInstance:
   m_ObjectHideFlags: 0
