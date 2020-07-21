@@ -13902,7 +13902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911216453581656, guid: a3c86169a7a9bc84ba11f03b3da24c10, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76
+      value: 57.9
       objectReference: {fileID: 0}
     - target: {fileID: 4911216453581656, guid: a3c86169a7a9bc84ba11f03b3da24c10, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16147,7 +16147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275041570135376, guid: 645f4b7e75b11cf4da13304a997b51ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.4
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4275041570135376, guid: 645f4b7e75b11cf4da13304a997b51ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19412,7 +19412,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462571287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35605542}
+        m_MethodName: ToTitle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1462571287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22113,6 +22124,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portGameObject: {fileID: 1318738888430404093, guid: 32b4ccba41bb0964aab2b3e908af3276,
     type: 3}
+  brick: {fileID: 21300000, guid: 7bc2336c28a5f7e41b16101258dbb8f4, type: 3}
+  wood: {fileID: 21300000, guid: 3a1fb701dd00ddf4fbee9ce78e697fdb, type: 3}
+  wool: {fileID: 21300000, guid: 25074c91806ce814ebff2476874665fc, type: 3}
+  iron: {fileID: 21300000, guid: f3b0f85c6ecbc0a49ad182239a82d4e7, type: 3}
   portObjectCollections: []
 --- !u!4 &1669153287
 Transform:
@@ -29127,6 +29142,9 @@ MonoBehaviour:
   actionCancelButton: {fileID: 947930611}
   costButton: {fileID: 1395368465}
   costCancelButton: {fileID: 416527087}
+  settingButton: {fileID: 1563832404}
+  settingCancelButton: {fileID: 1762758631}
+  settingPanel: {fileID: 788760027}
   dicePresenter: {fileID: 2096806379}
 --- !u!4 &2096806378
 Transform:
@@ -29518,7 +29536,7 @@ MonoBehaviour:
   ironOreButton: {fileID: 992462350}
   brickButton: {fileID: 1063440810}
   resourcePanel: {fileID: 1986379619}
-  playerTurnManeger: {fileID: 0}
+  playerTurnManeger: {fileID: 1669153291}
   isPushed: 0
 --- !u!114 &2096806397
 MonoBehaviour:

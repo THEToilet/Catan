@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Catan.Scripts.Generation
 {
     public class PortGeneration : MonoBehaviour
     {
         [SerializeField] GameObject portGameObject;
+        [SerializeField] Sprite brick;
+        [SerializeField] Sprite wood;
+        [SerializeField] Sprite wool;
+        [SerializeField] Sprite iron;
+        Sprite[] sprites = new Sprite[5];
         public List<GameObject> portObjectCollections = new List<GameObject>();
         // 3:1の点4つ
         // 2:1の点5つ　羊は二つ
@@ -23,6 +29,16 @@ namespace Catan.Scripts.Generation
         };
 
         int[] rotate = new int[] { 45, 125, -125, -125, 0, -185, -54, 0, 45 };
+        //parentGameObjectは親要素のgameObject
+        //GameObject obj = parentGameObject.transform.GetChild(0).gameObject;
+        private void Awake()
+        {
+            sprites[0] = brick;
+            sprites[1] = wood;
+            sprites[2] = wool;
+            sprites[3] = iron;
+            sprites[4] = wool;
+        }
         public void Generate()
         {
             GameObject tmpGameObject;
@@ -31,6 +47,15 @@ namespace Catan.Scripts.Generation
                 tmpGameObject = GameObject.Instantiate(portGameObject, portPoints[i], Quaternion.Euler(90, rotate[i], 0));
                 tmpGameObject.name = "PortGameObject_" + i;
                 portObjectCollections.Add(tmpGameObject);
+                if (i >= 0 && i <= 4)
+                {
+                    tmpGameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = sprites[i];
+                    tmpGameObject.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = "2 : 1";
+                }
+                else
+                {
+                    tmpGameObject.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = "3 : 1";
+                }
             }
         }
     }

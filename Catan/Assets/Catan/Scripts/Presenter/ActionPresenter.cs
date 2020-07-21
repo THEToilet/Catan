@@ -30,6 +30,9 @@ namespace Catan.Scripts.Presenter
         [SerializeField] Button actionCancelButton;
         [SerializeField] Button costButton;
         [SerializeField] Button costCancelButton;
+        [SerializeField] Button settingButton;
+        [SerializeField] Button settingCancelButton;
+        [SerializeField] GameObject settingPanel;
 
         public DicePresenter dicePresenter;
 
@@ -37,6 +40,14 @@ namespace Catan.Scripts.Presenter
         // Start is called before the first frame update
         void Start()
         {
+            settingButton.OnClickAsObservable().Subscribe(_ => { settingButton.gameObject.SetActive(false);
+                settingCancelButton.gameObject.SetActive(true);
+                settingPanel.SetActive(true);
+            });
+            settingCancelButton.OnClickAsObservable().Subscribe(_ => { settingButton.gameObject.SetActive(true);
+                settingCancelButton.gameObject.SetActive(false);
+                settingPanel.SetActive(false);
+            });
             turnEndButton.OnClickAsObservable()
             .Subscribe(_ =>
             {
