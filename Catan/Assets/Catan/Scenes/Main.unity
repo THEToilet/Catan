@@ -29183,6 +29183,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3fda0206ea1bd45f58dad0d57cfbbb5a, type: 3}
   DicePanel: {fileID: 1948238062}
   diceText: {fileID: 2025805034}
+  uIRestrictionPresenter: {fileID: 2096806386}
 --- !u!114 &2096806380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29200,6 +29201,8 @@ MonoBehaviour:
   playerTurn: {fileID: 1669153291}
   noteText: {fileID: 1948030844}
   nnoteText: {fileID: 1799842522}
+  uIRestrictionPresenter: {fileID: 2096806386}
+  playerTurnManeger: {fileID: 1669153291}
 --- !u!114 &2096806381
 MonoBehaviour:
   m_ObjectHideFlags: 0

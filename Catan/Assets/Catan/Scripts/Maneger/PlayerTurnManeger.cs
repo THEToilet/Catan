@@ -62,6 +62,7 @@ namespace Catan.Scripts.Manager
             roadBasePresenter.EraseAll();
             pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
             playerNotificationPresenter.DisplayPlayerName(_currentPlayerId.Value);
+            uIRestrictionPresenter.Release();
         }
 
         private void Update()
@@ -131,12 +132,10 @@ namespace Catan.Scripts.Manager
                 switch (next)
                 {
                     case TurnState.DescendingOrderArragement:
-                        playerNotificationPresenter.DisplayNote("Decend");
                         pointChildrenPresenter.ShowAll();
                         uIRestrictionPresenter.TurnOffAll();
                         break;
                     case TurnState.AscendingOrderArrangement:
-                        playerNotificationPresenter.DisplayNote("Accend");
                         break;
                     case TurnState.NormalTurn:
                         // カードを配る
@@ -144,7 +143,6 @@ namespace Catan.Scripts.Manager
                         pointChildrenPresenter.EraseAll();
                         uIRestrictionPresenter.LetRollDice();
                         distributeCardManeger.InitDistribute();
-                        playerNotificationPresenter.DisplayNote("NormalState");
                         break;
                 }
             }

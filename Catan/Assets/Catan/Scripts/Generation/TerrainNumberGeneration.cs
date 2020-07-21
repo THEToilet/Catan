@@ -22,7 +22,7 @@ namespace Catan.Scripts.Generation
                 {
                     p[i].GetComponent<PointParentBehavior>().tokenNumber = 7;
                     tmp = GameObject.Instantiate(numberTokenObject, new Vector3(p[i].transform.position.x, p[i].transform.position.y + 5f, p[i].transform.position.z), Quaternion.Euler(90, -90, 0));
-                    tmp.GetComponent<TextMesh>().text = "7";
+                    tmp.GetComponent<TextMesh>().text = " 7";
                 }
                 else
                 {

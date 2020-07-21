@@ -17,9 +17,12 @@ namespace Catan.Scripts.Presenter
         public PlayerTurnManeger playerTurn;
         public Text noteText;
         public Text nnoteText;
+        public UIRestrictionPresenter uIRestrictionPresenter;
+        public PlayerTurnManeger playerTurnManeger;
 
         async public void DisplayPlayerName(PlayerId _playerId)
         {
+            uIRestrictionPresenter.TurnOffAll();
             noteText.color = PlayerIdExtensions.ToColor(_playerId);
             notePanel.SetActive(true);
             switch (_playerId)
@@ -40,16 +43,25 @@ namespace Catan.Scripts.Presenter
                     noteText.text = "undfined";
                     break;
             }// FixedUpdateのタイミングで10フレーム待つ
-            await UniTask.DelayFrame(30, PlayerLoopTiming.FixedUpdate);
+            await UniTask.DelayFrame(50, PlayerLoopTiming.FixedUpdate);
             notePanel.SetActive(false);
+            if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
+            {
+                uIRestrictionPresenter.Release();
+            }
         }
 
         async public void DisplayNote(string mess)
         {
+            uIRestrictionPresenter.TurnOffAll();
             nnotePanel.SetActive(true);
             nnoteText.text = mess;
-            await UniTask.DelayFrame(20, PlayerLoopTiming.FixedUpdate);
+            await UniTask.DelayFrame(30, PlayerLoopTiming.FixedUpdate);
             nnotePanel.SetActive(false);
+            if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
+            {
+                uIRestrictionPresenter.Release();
+            }
         }
 
 
