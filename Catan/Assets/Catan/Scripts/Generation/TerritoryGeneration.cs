@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Catan.Scripts.Presenter;
+﻿using UnityEngine;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Player;
 using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 陣地を生成するクラス
+    /// </summary>
     public class TerritoryGeneration : MonoBehaviour
     {
-
         public ToPleyerObject toPleyerObject;
         [SerializeField] GameObject Road;
         [SerializeField] GameObject Settlement;
@@ -43,9 +42,7 @@ namespace Catan.Scripts.Generation
                     tmp.GetComponent<TerritoryEntity>().TerritoryPosition = _gameObject;
                     break;
             }
-
             tmp.GetComponent<Renderer>().material.color = PlayerIdExtensions.ToColor(playerId); //　生成したオブジェクトに色付ける
         }
-
     }
 }

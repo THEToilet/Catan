@@ -5,14 +5,11 @@ using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using UniRx;
 using Catan.Scripts.Terrain;
-using UnityEngine.Networking.NetworkSystem;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class BuildUIPresenter : MonoBehaviour
     {
-
         [SerializeField] Button cityButton;
         [SerializeField] Button settlementButton;
         [SerializeField] Button roadButton;
@@ -139,14 +136,11 @@ namespace Catan.Scripts.Presenter
                     pointChildrenPresenter.EraseAll();
                 }
             }
-
         }
         private void setCount(GameObject g)
         {
             r = g.GetComponent<Belongings>().Road.Count;
             c = g.GetComponent<Belongings>().City.Count;
         }
-
     }
-
 }

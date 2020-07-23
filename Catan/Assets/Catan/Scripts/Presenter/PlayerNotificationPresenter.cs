@@ -7,10 +7,8 @@ using Catan.Scripts.Manager;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class PlayerNotificationPresenter : MonoBehaviour
     {
-
         public GameObject notePanel;
         public GameObject nnotePanel;
         public ReactiveProperty<PlayerId> _currentPlayerId;
@@ -56,15 +54,12 @@ namespace Catan.Scripts.Presenter
             uIRestrictionPresenter.TurnOffAll();
             nnotePanel.SetActive(true);
             nnoteText.text = mess;
-            await UniTask.DelayFrame(30, PlayerLoopTiming.FixedUpdate);
+            await UniTask.DelayFrame(50, PlayerLoopTiming.FixedUpdate);
             nnotePanel.SetActive(false);
             if (playerTurnManeger._currentTurnState.Value == TurnState.NormalTurn)
             {
-                uIRestrictionPresenter.Release();
+                //uIRestrictionPresenter.Release();
             }
         }
-
-
     }
-
 }

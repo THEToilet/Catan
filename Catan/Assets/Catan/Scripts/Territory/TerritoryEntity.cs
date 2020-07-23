@@ -4,13 +4,9 @@ using UnityEngine;
 
 namespace Catan.Scripts.Territory
 {
-    /// <summary>
-    /// </summary>
-
-    public class TerritoryEntity: MonoBehaviour
+    public class TerritoryEntity : MonoBehaviour
     {
         public TerritoryType territoryType;
         public GameObject TerritoryPosition;
     }
-
 }

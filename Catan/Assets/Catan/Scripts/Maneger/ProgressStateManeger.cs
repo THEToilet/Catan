@@ -20,7 +20,7 @@ namespace Catan.Scripts.Manager
         // ステート管理するReactiveProperty
         public ReactiveProperty<ProgressState> _currentProgressState
             = new ReactiveProperty<ProgressState>();
-        bool isOK = true;
+        bool isFirst = true;
 
         void Start()
         {
@@ -33,10 +33,10 @@ namespace Catan.Scripts.Manager
             Debug.Log(_currentProgressState.Value);
             if (_currentProgressState.Value == ProgressState.Battle)
             {
-                if (isOK)
+                if (isFirst)
                 {
                     playerTurn.Excute();
-                    isOK = false;
+                    isFirst = false;
                 }
             }
         }
@@ -59,14 +59,12 @@ namespace Catan.Scripts.Manager
                         Debug.Log("ini");
                         initializationManeger.Excute();
                         _currentProgressState.SetValueAndForceNotify(ProgressState.Battle);
-                        Debug.Log("OK");
                         break;
                     case ProgressState.Battle:
                         Debug.Log("battle");
                         playerTurn.Excute();
                         break;
                 }
-
             }
         }
     }

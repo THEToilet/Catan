@@ -84,5 +84,4 @@ namespace Catan.Scripts.Point
             }
         }
     }
-
 }

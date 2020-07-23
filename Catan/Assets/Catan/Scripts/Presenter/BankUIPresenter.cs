@@ -7,7 +7,6 @@ using Catan.Scripts.Card;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class BankUIPresenter : MonoBehaviour
     {
         [SerializeField] Button wood4Button;
@@ -101,6 +100,5 @@ namespace Catan.Scripts.Presenter
                 }
             }
         }
-
     }
 }

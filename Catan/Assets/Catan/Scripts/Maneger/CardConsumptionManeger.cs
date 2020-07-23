@@ -1,11 +1,12 @@
 ﻿using Catan.Scripts.Card;
 using Catan.Scripts.Player;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// カードのコストを使用するクラス
+    /// </summary>
 
     public class CardConsumptionManeger : MonoBehaviour
     {
@@ -32,7 +33,6 @@ namespace Catan.Scripts.Manager
             CardType[] cost = new CardType[] { CardType.Brick, CardType.Wood };
             var p = this.ToPlayer();
             DeleteElement(p, cost);
-
         }
 
         public void BuySettlement()
@@ -47,7 +47,6 @@ namespace Catan.Scripts.Manager
             CardType[] cost = new CardType[] { CardType.Wheat, CardType.Wheat, CardType.IronOre, CardType.IronOre, CardType.IronOre };
             var p = this.ToPlayer();
             DeleteElement(p, cost);
-
         }
 
         public void BuyCard()
@@ -55,23 +54,19 @@ namespace Catan.Scripts.Manager
             CardType[] cost = new CardType[] { CardType.IronOre, CardType.Wheat, CardType.Wool };
             var p = this.ToPlayer();
             DeleteElement(p, cost);
-
         }
 
-        public void DeleteCard(CardType[] cost)
+        private void DeleteCard(CardType[] cost)
         {
             var p = this.ToPlayer();
             DeleteElement(p, cost);
         }
-        public GameObject ToPlayer()
+
+        private GameObject ToPlayer()
         {
             var p = playerTurnManeger._currentPlayerId.Value;
             var t = toPleyerObject.ToPlayer(p);
             return t;
         }
-
-
     }
-
-
 }

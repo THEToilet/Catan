@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using UniRx;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Common;
-using UnityEditor.VersionControl;
-using UniRx.Triggers;
 using Catan.Scripts.Card;
 
 namespace Catan.Scripts.Presenter
@@ -13,10 +11,7 @@ namespace Catan.Scripts.Presenter
     {
         [SerializeField] private Button turnEndButton;
         [SerializeField] private Button rollDiceButton;
-
-
         [SerializeField] private Button useCardButton;
-
         [SerializeField] private Button negotiationButton;
         [SerializeField] Button submmitButton;
 
@@ -36,15 +31,17 @@ namespace Catan.Scripts.Presenter
 
         public DicePresenter dicePresenter;
 
-
-        // Start is called before the first frame update
         void Start()
         {
-            settingButton.OnClickAsObservable().Subscribe(_ => { settingButton.gameObject.SetActive(false);
+            settingButton.OnClickAsObservable().Subscribe(_ =>
+            {
+                settingButton.gameObject.SetActive(false);
                 settingCancelButton.gameObject.SetActive(true);
                 settingPanel.SetActive(true);
             });
-            settingCancelButton.OnClickAsObservable().Subscribe(_ => { settingButton.gameObject.SetActive(true);
+            settingCancelButton.OnClickAsObservable().Subscribe(_ =>
+            {
+                settingButton.gameObject.SetActive(true);
                 settingCancelButton.gameObject.SetActive(false);
                 settingPanel.SetActive(false);
             });
@@ -70,12 +67,10 @@ namespace Catan.Scripts.Presenter
                 else
                 {
                     distributeCardManeger.Distribute(d[0] + d[1]);
+                    dicePresenter.ShowDiceNum(d[0] + d[1]);
+                    dicePresenter.ShowDice(d[0], d[1]);
                 }
-                dicePresenter.ShowDiceNum(d[0] + d[1]);
-                dicePresenter.ShowDice(d[0], d[1]);
             });
-
-
 
             actionButton.OnClickAsObservable()
             .Subscribe(_ =>
@@ -104,7 +99,6 @@ namespace Catan.Scripts.Presenter
                 costCancelButton.gameObject.SetActive(false);
                 costButton.gameObject.SetActive(true);
             });
-
 
         }
     }

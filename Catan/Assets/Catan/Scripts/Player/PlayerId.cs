@@ -1,10 +1,5 @@
-﻿using System;
-using UnityEngine;
-
-
-namespace Catan.Scripts.Player
+﻿namespace Catan.Scripts.Player
 {
-
     public enum PlayerId
     {
         Player1 = 1,
@@ -12,6 +7,4 @@ namespace Catan.Scripts.Player
         Player3 = 3,
         Player4 = 4,
     }
-
-
 }

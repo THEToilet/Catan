@@ -4,11 +4,9 @@ using UniRx;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using Catan.Scripts.Manager;
-using ModestTree.Util;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class NegotiationPresenter : MonoBehaviour
     {
         [SerializeField] Button submmitButton;

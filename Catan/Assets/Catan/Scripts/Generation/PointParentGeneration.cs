@@ -3,7 +3,9 @@ using UnityEngine;
 
 namespace Catan.Scripts.Generation
 {
-
+    /// <summary>
+    /// 親の点を生成するクラス
+    /// </summary>
     public class PointParentGeneration : MonoBehaviour
     {
         [SerializeField] GameObject parentPoint;
@@ -39,10 +41,7 @@ namespace Catan.Scripts.Generation
                 tmpGameObject.name = "PointParent_" + i;
                 parentPointObjects.Add(tmpGameObject);
                 tmpGameObject.SetActive(false);
-
-
             }
         }
     }
-
 }

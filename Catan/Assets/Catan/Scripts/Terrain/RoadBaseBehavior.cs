@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Terrain
@@ -11,5 +10,4 @@ namespace Catan.Scripts.Terrain
         public List<GameObject> adjacentRoadBase = new List<GameObject>();
         public List<GameObject> adjacentPointChildren = new List<GameObject>();
     }
-
 }

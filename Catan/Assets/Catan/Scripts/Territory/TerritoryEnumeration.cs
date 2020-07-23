@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Catan.Scripts.Territory
 {
-
     public class TerritoryEnumeration : MonoBehaviour
     {
         public ToPleyerObject toPleyerObject;

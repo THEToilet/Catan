@@ -1,16 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 子の点を生成するクラス
+    /// </summary>
 
     public class PointChildrenGeneration : MonoBehaviour
     {
         [SerializeField] GameObject childPoint;
         Vector3[] childPoints = new Vector3[]{
-            new Vector3(-5f,0,0),            // 0
+            new Vector3(-5f,0,0),           // 0
             new Vector3(-2.5f,0,-5f),       // 1
             new Vector3(2.5f,0,-5f),        // 2
             new Vector3(5f,0,0),            // 3

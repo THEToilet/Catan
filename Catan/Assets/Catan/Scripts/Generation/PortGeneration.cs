@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 港を生成するクラス
+    /// </summary>
     public class PortGeneration : MonoBehaviour
     {
         [SerializeField] GameObject portGameObject;
@@ -14,23 +15,21 @@ namespace Catan.Scripts.Generation
         [SerializeField] Sprite iron;
         Sprite[] sprites = new Sprite[5];
         public List<GameObject> portObjectCollections = new List<GameObject>();
-        // 3:1の点4つ
-        // 2:1の点5つ　羊は二つ
+        // 3:1の点4つ // 2:1の点5つ　羊は二つ
         Vector3[] portPoints = new Vector3[]{
             new Vector3(22f,0,-4.5f),                // 0 brick
             new Vector3(14.5f,0,-18.5f),             // 1 wood
-            new Vector3(-13.5f,0,-18.5f),             // 2 wool
-            new Vector3(-21.5f,0,-4f),              // 3 ironore
-            new Vector3(-7.5f,0,23.5f),               // 4 wool
-            new Vector3(0,0,-28f),            // 5 3:1
-            new Vector3(-21.5f,0,14.5f),           // 6 3:1
-            new Vector3(7.5f,0,23.5f),          // 7 3:1
-            new Vector3(21.5f,0,14.5f),           // 8 3:1
+            new Vector3(-13.5f,0,-18.5f),            // 2 wool
+            new Vector3(-21.5f,0,-4f),               // 3 ironore
+            new Vector3(-7.5f,0,23.5f),              // 4 wool
+            new Vector3(0,0,-28f),                   // 5 3:1
+            new Vector3(-21.5f,0,14.5f),             // 6 3:1
+            new Vector3(7.5f,0,23.5f),               // 7 3:1
+            new Vector3(21.5f,0,14.5f),              // 8 3:1
         };
 
-        int[] rotate = new int[] { 45, 125, -125, -125, 0, -185, -54, 0, 45 };
-        //parentGameObjectは親要素のgameObject
-        //GameObject obj = parentGameObject.transform.GetChild(0).gameObject;
+        private int[] rotate = new int[] { 45, 125, -125, -125, 0, -185, -54, 0, 45 };
+
         private void Awake()
         {
             sprites[0] = brick;
@@ -39,6 +38,7 @@ namespace Catan.Scripts.Generation
             sprites[3] = iron;
             sprites[4] = wool;
         }
+        
         public void Generate()
         {
             GameObject tmpGameObject;
@@ -59,5 +59,4 @@ namespace Catan.Scripts.Generation
             }
         }
     }
-
 }

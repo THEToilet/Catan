@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Generation
 {
-
+    /// <summary>
+    /// Playerオブジェクトを生成するクラス
+    /// </summary>
     public class PlayerGeneration : MonoBehaviour
     {
         [SerializeField] private GameObject Player;
@@ -56,5 +56,4 @@ namespace Catan.Scripts.Generation
             }
         }
     }
-
 }

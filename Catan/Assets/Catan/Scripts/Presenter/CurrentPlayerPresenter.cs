@@ -11,8 +11,6 @@ namespace Catan.Scripts.Presenter
         void Update()
         {
             currentPlayer.text = playerTurnManeger._currentPlayerId.ToString();
-
         }
     }
-
 }

@@ -1,20 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Catan .Scripts.Player;
+﻿using UnityEngine;
 
 namespace Catan.Scripts.Card
 {
-
     /// <summary>
     /// CardEntity
-    /// スペシャルノーマルカードの実態
+    /// 発展カードの基底クラス 
     /// </summary>
-
     public class SpecialCardEntity : MonoBehaviour
     {
         public SpecialCardType specialCardType;
 
     }
-
 }

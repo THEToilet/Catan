@@ -1,12 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Catan.Scripts.Terrain;
 using System;
 
 namespace Catan.Scripts.Card
 {
-    public class ToCardObject: MonoBehaviour
+    /// <summary>
+    /// 陣地の種類から当てはまる資源カードを返すクラス
+    /// </summary>
+    public class ToCardObject : MonoBehaviour
     {
         [SerializeField] GameObject BrickCard;
         [SerializeField] GameObject IronOreCard;
@@ -30,9 +31,6 @@ namespace Catan.Scripts.Card
                 default:
                     throw new ArgumentOutOfRangeException("tt", tt, null);
             }
-
-
         }
-
     }
 }

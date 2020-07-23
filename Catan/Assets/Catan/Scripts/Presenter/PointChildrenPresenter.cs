@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Catan.Scripts.Generation;
 using Catan.Scripts.Point;
 using Catan.Scripts.Player;
 using Catan.Scripts.Terrain;
-using System.Linq;
 using Catan.Scripts.Territory;
 
 namespace Catan.Scripts.Presenter
@@ -38,7 +36,6 @@ namespace Catan.Scripts.Presenter
         }
 
         // Settlement作成できる点表示
-
         public void ShowPossiblePoint(PlayerId playerId)
         {
             var player = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
@@ -80,7 +77,6 @@ namespace Catan.Scripts.Presenter
                     hasPoint.Add(c[1]);
                 }
             }
-            // Debug.Log("DEEEEEEEEEEEEEEEEEE" + hasPoint.Count);
             for (int i = 0; i < hasPoint.Count; i++)
             {
                 var a = hasPoint[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
@@ -130,7 +126,6 @@ namespace Catan.Scripts.Presenter
                     hasPoint.Add(c[1]);
                 }
             }
-            // Debug.Log("DEEEEEEEEEEEEEEEEEE" + hasPoint.Count);
             for (int i = 0; i < hasPoint.Count; i++)
             {
                 var a = hasPoint[i].GetComponent<PointChildrenBehavior>().adjacentPoint;
@@ -150,8 +145,5 @@ namespace Catan.Scripts.Presenter
             }
             return hasPoint.Count;
         }
-
-
     }
-
 }

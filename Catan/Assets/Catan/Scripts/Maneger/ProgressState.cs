@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Catan.Scripts.Manager
+﻿namespace Catan.Scripts.Manager
 {
-
+    /// <summary>
+    /// ゲーム進行の定義クラス
+    /// </summary>
     public enum ProgressState
     {
         Title,
         Maching,
         Initialization,
         Battle,
-        Finished,
-        Result
     }
-
 }

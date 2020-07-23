@@ -1,11 +1,11 @@
 ﻿using Catan.Scripts.Player;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Card
 {
-
+    /// <summary>
+    /// Playerが持っている資源カードの枚数を計算するclass
+    /// </summary>
     public class CardEnumeration : MonoBehaviour
     {
         public ToPleyerObject toPleyerObject;
@@ -13,7 +13,7 @@ namespace Catan.Scripts.Card
         {
             var p = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>();
             int[] num = new int[] { 0, 0, 0, 0, 0 };
-            for(int i = 0; i < p.cards.Count; i++)
+            for (int i = 0; i < p.cards.Count; i++)
             {
                 switch (p.cards[i].GetComponent<CardEntity>().cardType)
                 {
@@ -37,10 +37,6 @@ namespace Catan.Scripts.Card
                 }
             }
             return num;
-                        
-
         }
-        
     }
-
 }

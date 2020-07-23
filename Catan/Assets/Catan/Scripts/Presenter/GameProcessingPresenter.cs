@@ -5,7 +5,6 @@ using UniRx.Async;
 using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Manager;
-using Catan.Scripts.Presenter;
 
 namespace Catan.Scripts.Presenter
 {
@@ -67,5 +66,4 @@ namespace Catan.Scripts.Presenter
             }
         }
     }
-
 }

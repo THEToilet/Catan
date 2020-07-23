@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Catan.Scripts.Common
 {
+    /// <summary>
+    /// サイコロに関するクラス
+    /// </summary>
     public static class Dice
     {
         public static int RollOnceDice()

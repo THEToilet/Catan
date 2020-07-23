@@ -11,6 +11,9 @@ using System.Collections.Generic;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// Battle時のクラス
+    /// </summary>
     public class PlayerTurnManeger : MonoBehaviour
     {
         public PlayerNotificationPresenter playerNotificationPresenter;
@@ -29,16 +32,19 @@ namespace Catan.Scripts.Manager
         public SpecialCardPresenter specialCardPresenter;
         public ReactiveProperty<int> _currentCursole = new ReactiveProperty<int>(0);
         public List<PlayerId> pIds = new List<PlayerId>();
-        private bool isOK = false;
+        private bool isSetUpComplete = false;
 
         private void Start()
         {
             TurnStateChangedAsync(this.GetCancellationTokenOnDestroy()).Forget();
-            uIRestrictionPresenter.TurnOffAll();
             CursoleAsync(this.GetCancellationTokenOnDestroy()).Forget();
+            uIRestrictionPresenter.TurnOffAll();
             playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
         }
 
+        /// <summary>
+        /// 初期設定
+        /// </summary>
         public void Excute()
         {
             playerIds = orderDetermining.GetOrder();
@@ -54,7 +60,7 @@ namespace Catan.Scripts.Manager
             }
             Array.Reverse(playerIds);
             _currentPlayerId.SetValueAndForceNotify(pIds[0]);
-            isOK = true;
+            isSetUpComplete = true;
         }
 
         public void Note()
@@ -62,22 +68,24 @@ namespace Catan.Scripts.Manager
             roadBasePresenter.EraseAll();
             pointChildrenPresenter.ShowPossiblePoint(_currentPlayerId.Value);
             playerNotificationPresenter.DisplayPlayerName(_currentPlayerId.Value);
-            uIRestrictionPresenter.Release();
         }
 
+        /// <summary>
+        /// playerの持っている路と陣地から次のターンに進むか判定
+        /// </summary>
         private void Update()
         {
-            if (progressStateManeger._currentProgressState.Value == ProgressState.Battle && isOK)
+            if (progressStateManeger._currentProgressState.Value == ProgressState.Battle && isSetUpComplete)
             {
-                var t = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
-                var s = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road;
-                if (t.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
+                var settlement = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().City;
+                var road = toPleyerObjects.ToPlayer(_currentPlayerId.Value).GetComponent<Belongings>().Road;
+                if (settlement.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
                 {
-                    roadBasePresenter.ShowAdjacentPoint(t[0].GetComponent<TerritoryEntity>().TerritoryPosition);
+                    roadBasePresenter.ShowAdjacentPoint(settlement[0].GetComponent<TerritoryEntity>().TerritoryPosition);
                     pointChildrenPresenter.EraseAll();
                 }
 
-                if (s.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
+                if (road.Count == 1 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.AscendingOrderArrangement)
                 {
                     _currentCursole.Value++;
                     if (_currentCursole.Value == 4)
@@ -86,12 +94,12 @@ namespace Catan.Scripts.Manager
                         Note();
                     }
                 }
-                if (t.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
+                if (settlement.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
                 {
-                    roadBasePresenter.ShowAdjacentPoint(t[1].GetComponent<TerritoryEntity>().TerritoryPosition);
+                    roadBasePresenter.ShowAdjacentPoint(settlement[1].GetComponent<TerritoryEntity>().TerritoryPosition);
                     pointChildrenPresenter.EraseAll();
                 }
-                if (s.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
+                if (road.Count == 2 && _currentTurnState.Value != TurnState.NormalTurn && _currentTurnState.Value != TurnState.DescendingOrderArragement)
                 {
                     _currentCursole.Value++;
                     if (_currentCursole.Value == 8)
@@ -133,7 +141,6 @@ namespace Catan.Scripts.Manager
                 {
                     case TurnState.DescendingOrderArragement:
                         pointChildrenPresenter.ShowAll();
-                        uIRestrictionPresenter.TurnOffAll();
                         break;
                     case TurnState.AscendingOrderArrangement:
                         break;

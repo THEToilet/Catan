@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Catan.Scripts.Common
 {
+    /// <summary>
+    /// ボタンを押したら押せなくするクラス
+    /// </summary>
 
-public class UnInteractableButton : MonoBehaviour
-{
+    public class UnInteractableButton : MonoBehaviour
+    {
         Button btn;
-
         private void Start()
         {
             btn = GetComponent<Button>();
@@ -17,8 +17,7 @@ public class UnInteractableButton : MonoBehaviour
 
         public void OnClick()
         {
-            btn.interactable = false; 
+            btn.interactable = false;
         }
     }
-
 }

@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 namespace Catan.Scripts.Card
 {
-
+    /// <summary>
+    /// tabletopにあるカードを返すクラス
+    /// </summary>
     public class TradeCardEnumeration : MonoBehaviour
     {
-
         [SerializeField] GameObject tableTop;
         public List<GameObject> cards; 
         public void TableTopEnumeration()
@@ -20,5 +19,4 @@ namespace Catan.Scripts.Card
             }
         }
     }
-
 }

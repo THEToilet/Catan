@@ -33,5 +33,4 @@ namespace Catan.Scripts.Presenter
             diceText.text = n.ToString();
         }
     }
-
 }

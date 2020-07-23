@@ -1,6 +1,4 @@
 ﻿using Catan.Scripts.Point;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Catan.Scripts.Terrain;
 using Catan.Scripts.Theif;
@@ -8,12 +6,15 @@ using Catan.Scripts.Manager;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 盗賊生成するクラス
+    /// </summary>
 
     public class TheifGeneration : MonoBehaviour
     {
         [SerializeField] GameObject theifObject;
         public PointParentGeneration pointParentGeneration;
-        private GameObject theifLocatePoint;
+        private GameObject theifLocatePoint; // 盗賊が置いてある点
         private GameObject theifInstitareObj;
         public TheifManeger theifManeger;
         public void Generate()
@@ -44,5 +45,4 @@ namespace Catan.Scripts.Generation
             theifManeger.isPlace = true;
         }
     }
-
 }

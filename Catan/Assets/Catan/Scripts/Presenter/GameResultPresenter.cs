@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
 using System.Linq;
+
 namespace Catan.Scripts.Presenter
 {
-
     public class GameResultPresenter : MonoBehaviour
     {
         [SerializeField] GameObject resultBoard;
@@ -25,5 +24,4 @@ namespace Catan.Scripts.Presenter
             }
         }
     }
-
 }

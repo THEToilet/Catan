@@ -1,10 +1,12 @@
 ﻿using Catan.Scripts.Terrain;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 路を生成するクラス
+    /// </summary>
 
     public class RoadGeneration : MonoBehaviour
     {
@@ -94,23 +96,22 @@ namespace Catan.Scripts.Generation
                 roads.Add(tmpGameObject);
                 if (i >= 0 && i <= 23)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 0;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = 0; // |
                 }
                 else if (i == 53)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240; // ＼
                 }
                 else if (i >= 24 && i <= 46)
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -240; // ＼ 
                 }
                 else
                 {
-                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -120;
+                    tmpGameObject.GetComponent<RoadBaseBehavior>().angle = -120; // /
                 }
                 tmpGameObject.SetActive(false);
             }
         }
-
     }
 }

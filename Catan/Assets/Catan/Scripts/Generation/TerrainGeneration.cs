@@ -5,6 +5,9 @@ using Catan.Scripts.Terrain;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 地形生成クラス
+    /// </summary>
     public class TerrainGeneration : MonoBehaviour
     {
         private Vector3 tmpTerrainPosition;

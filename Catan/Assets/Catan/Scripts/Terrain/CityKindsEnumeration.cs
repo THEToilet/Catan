@@ -1,12 +1,9 @@
 ﻿using Catan.Scripts.Player;
 using Catan.Scripts.Territory;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Terrain
 {
-
     public class CityKindsEnumeration : MonoBehaviour
     {
         public ToPleyerObject toPleyerObject;
@@ -27,8 +24,6 @@ namespace Catan.Scripts.Terrain
                 }
             }
             return value;
-
         }
     }
-
 }

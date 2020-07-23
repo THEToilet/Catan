@@ -7,7 +7,6 @@ using Catan.Scripts.Card;
 
 namespace Catan.Scripts.Presenter
 {
-
     /// <summary>
     /// カードの使用する種類を指定するclass
     /// </summary>
@@ -117,7 +116,6 @@ namespace Catan.Scripts.Presenter
                     woolButton.interactable = false;
                 }
             }
-
         }
     }
 }

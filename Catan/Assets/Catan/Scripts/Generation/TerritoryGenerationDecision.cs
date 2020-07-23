@@ -3,12 +3,13 @@ using Catan.Scripts.Terrain;
 using Catan.Scripts.Territory;
 using Catan.Scripts.Manager;
 using Catan.Scripts.Point;
-using UnityEngine.Rendering;
-using UnityEditor.UIElements;
 using Catan.Scripts.Presenter;
 
 namespace Catan.Scripts.Generation
 {
+    /// <summary>
+    /// 陣地を置けるか判断するクラス
+    /// </summary>
     public class TerritoryGenerationDecision : MonoBehaviour
     {
         public TerritoryGeneration territoryGeneration;
@@ -40,7 +41,8 @@ namespace Catan.Scripts.Generation
                     territoryGeneration.Generate(_gameObject.transform.position, TerritoryType.Road, playerTurn._currentPlayerId.Value, _gameObject);
                 }
             }
-            // PointChildren の生成
+
+            // Theifの移動
             if ((_gameObject.name).Contains("PointParent_"))
             {
                 if (!_gameObject.GetComponent<PointParentBehavior>().hasThief)
@@ -52,7 +54,6 @@ namespace Catan.Scripts.Generation
             if ((_gameObject.name).Contains("CityColliderCube_"))
             {
                 cityGeneration.Generation(int.Parse(_gameObject.name.Substring("CityColliderCube_".Length)));
-                Debug.Log("DDDDDDDDDDDDDDDDDDDD" + _gameObject.name.Substring("CityColliderCube_".Length));
                 cityPresenter.DeleteLocateCity();
             }
         }

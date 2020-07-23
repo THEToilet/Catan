@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class PointParentPresenter : MonoBehaviour
     {
         public PointParentGeneration pointParentGeneration;
@@ -17,7 +16,6 @@ namespace Catan.Scripts.Presenter
             {
                 p[i].SetActive(true);
             }
-
         }
         public void EraseAll()
         {
@@ -28,6 +26,4 @@ namespace Catan.Scripts.Presenter
             }
         }
     }
-
-
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Catan.Scripts.Generation;
 using Catan.Scripts.Terrain;
 using Catan.Scripts.Point;
@@ -24,7 +22,6 @@ namespace Catan.Scripts.Presenter
                     r[i].SetActive(true);
                 }
             }
-
         }
 
         public void EraseAll()
@@ -34,7 +31,6 @@ namespace Catan.Scripts.Presenter
             {
                 r[i].SetActive(false);
             }
-
         }
 
         public void ShowAdjacentPoint(GameObject g)
@@ -48,7 +44,6 @@ namespace Catan.Scripts.Presenter
                     s.SetActive(true);
                 }
             }
-
         }
         public void EraseAdjacentPoint(GameObject g)
         {
@@ -59,7 +54,6 @@ namespace Catan.Scripts.Presenter
             a1.SetActive(false);
             a2.SetActive(false);
             a3.SetActive(false);
-
         }
         public void ShowPossiblePoint(PlayerId playerId)
         {
@@ -85,10 +79,8 @@ namespace Catan.Scripts.Presenter
                     {
                         ad[j].SetActive(true);
                     }
-
                 }
             }
         }
-
     }
 }

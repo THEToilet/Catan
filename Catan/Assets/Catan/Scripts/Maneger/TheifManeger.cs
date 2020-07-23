@@ -1,12 +1,13 @@
-﻿using Catan.Scripts.Generation;
-using Catan.Scripts.Player;
+﻿using Catan.Scripts.Player;
 using Catan.Scripts.Presenter;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 盗賊クラス
+    /// </summary>
 
     public class TheifManeger : MonoBehaviour
     {

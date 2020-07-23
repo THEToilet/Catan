@@ -6,10 +6,8 @@ using UnityEngine;
 
 namespace Catan.Scripts.Presenter
 {
-
     public class TableTopCardPresenter : MonoBehaviour
     {
-
         [SerializeField] GameObject TableTop;
         [SerializeField] GameObject TableTop2;
         [SerializeField] GameObject Hand;
@@ -22,7 +20,6 @@ namespace Catan.Scripts.Presenter
             var p = toPleyerObject.ToPlayer(playerId);
             foreach (GameObject g in p.GetComponent<Belongings>().cards)
             {
-
                 GameObject tmpObject = GameObject.Instantiate(g, this.transform.position, Quaternion.identity);
                 tmpObject.transform.SetParent(Hand.transform);
             }
@@ -33,7 +30,6 @@ namespace Catan.Scripts.Presenter
             var p = toPleyerObject.ToPlayer(playerId);
             foreach (GameObject g in p.GetComponent<Belongings>().cards)
             {
-
                 GameObject tmpObject = GameObject.Instantiate(g, this.transform.position, Quaternion.identity);
                 tmpObject.transform.SetParent(Hand2.transform);
             }
@@ -95,9 +91,7 @@ namespace Catan.Scripts.Presenter
                 cards[i] = n.GetComponent<CardEntity>().cardType;
                 i++;
             }
-
             return cards;
         }
     }
-
 }

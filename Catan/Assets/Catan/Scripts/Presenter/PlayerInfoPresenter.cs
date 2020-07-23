@@ -1,9 +1,7 @@
 ﻿using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.UI;
 using UnityEngine.UI;
 
 public class PlayerInfoPresenter : MonoBehaviour
@@ -15,10 +13,6 @@ public class PlayerInfoPresenter : MonoBehaviour
     [SerializeField] List<Text> point = new List<Text>(4);
     [SerializeField] List<Text> card = new List<Text>(4);
 
-    private void Start()
-    {
-    }
-
     void Update()
     {
         var p = playerTurnManeger.playerIds;
@@ -28,7 +22,5 @@ public class PlayerInfoPresenter : MonoBehaviour
             card[i].text = (toPleyerObject.ToPlayer(p[i]).GetComponent<Belongings>().cards.Count).ToString();
             player[i].text = toPleyerObject.ToPlayer(p[i]).name;
         }
-
-
     }
 }

@@ -5,7 +5,6 @@ namespace Catan.Scripts.Player
 {
     public static class PlayerIdExtensions
     {
-
         public static Color ToColor(PlayerId id)
         {
             switch (id)
@@ -23,5 +22,4 @@ namespace Catan.Scripts.Player
             }
         }
     }
-
 }

@@ -1,6 +1,5 @@
 ﻿namespace Catan.Scripts.Terrain
 {
-
     public enum TerrainType
     {
         Forest,
@@ -9,7 +8,5 @@
         Pasture,
         Field,
         Desert
-
     }
-
 }

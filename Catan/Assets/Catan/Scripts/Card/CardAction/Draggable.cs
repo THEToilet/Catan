@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 namespace Catan.Scripts.Card.CardAction
 {
-
     public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
 

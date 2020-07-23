@@ -3,10 +3,12 @@ using UnityEngine;
 using Catan.Scripts.Player;
 using Catan.Scripts.Point;
 using Catan.Scripts.Terrain;
-using Catan.Scripts.Theif;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 初期準備クラス
+    /// </summary>
     public class InitializationManeger : MonoBehaviour
     {
         public TerrainGeneration terrainGeneration;
@@ -39,10 +41,9 @@ namespace Catan.Scripts.Manager
             orderDetermining.OrderDecide();　// 順番生成
             terrainNumberGeneration.Distribution(); // 数字トークン生成
             theifGeneration.Generate(); // 盗賊生成
-            roadToChildrenRelevanceSetting.Allocation();
-            roadBaseRoadRelevanceSetting.Allocation();
+            roadToChildrenRelevanceSetting.Allocation(); // 路と点の連結設定
+            roadBaseRoadRelevanceSetting.Allocation(); // 路同士の連結設定
             portGeneration.Generate();  // 港生成
         }
     }
-
 }

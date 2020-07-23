@@ -95,10 +95,8 @@
     <Compile Include="Assets\Catan\Scripts\Maneger\DeterminingTheWinnerManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeCardManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\DistributeDevelopmentCardManeger.cs" />
-    <Compile Include="Assets\Catan\Scripts\Maneger\GameState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\InitializationManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\MonopolizationManeger.cs" />
-    <Compile Include="Assets\Catan\Scripts\Maneger\NegotiationManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\PlayerTurnManeger.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressState.cs" />
     <Compile Include="Assets\Catan\Scripts\Maneger\ProgressStateManeger.cs" />

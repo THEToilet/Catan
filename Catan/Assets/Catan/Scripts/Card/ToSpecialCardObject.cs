@@ -1,10 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Catan.Scripts.Card
 {
+    /// <summary>
+    /// 発展カードを返すクラス
+    /// </summary>
     public class ToSpecialCardObject : MonoBehaviour
     {
         [SerializeField] GameObject KnightCard;

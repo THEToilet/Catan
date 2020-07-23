@@ -1,14 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.UI;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
 
 namespace Catan.Scripts.Presenter
 
-
-/// このクラスいるかも
 {
     public class VictoryPointPresenter : MonoBehaviour
     {
@@ -27,5 +22,4 @@ namespace Catan.Scripts.Presenter
             }
         }
     }
-
 }

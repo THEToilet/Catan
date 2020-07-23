@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 namespace Catan.Scripts.Player
@@ -26,9 +24,6 @@ namespace Catan.Scripts.Player
                 default:
                     throw new ArgumentOutOfRangeException("id", id, null);
             }
-
-
         }
-
     }
 }

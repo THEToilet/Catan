@@ -1,16 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UniRx.Async;
-using UniRx.Async.Triggers;
-using UniRx;
-using UnityEngine;
-using Catan.Scripts.Territory;
+﻿using UnityEngine;
 using Catan.Scripts.Generation;
-using Catan.Scripts.Player;
-using Catan.Scripts.Manager;
-using Catan.Scripts.Point;
-using Catan.Scripts.Terrain;
 
 public class ObjectClickPresenter : MonoBehaviour
 {
@@ -18,12 +7,6 @@ public class ObjectClickPresenter : MonoBehaviour
     public TerritoryGenerationDecision terrainGenerationDecision;
     private RaycastHit hit; //レイキャストが当たったものを取得する入れ物
     GameObject getedGameObject;
-    // TODO : この機能をUniRxで実装する
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) //マウスがクリックされたら

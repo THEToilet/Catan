@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Catan.Scripts.Player;
-using UniRx;
 using Catan.Scripts.Presenter;
 using System.Linq;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 優勝者を決定するクラス
+    /// </summary>
     public struct playerI
     {
         public int point;
@@ -19,7 +20,6 @@ namespace Catan.Scripts.Manager
         public PlayerTurnManeger playerTurnManeger;
         public ProgressStateManeger progressStateManeger;
         public ToPleyerObject toPleyerObject;
-        public GameObject winner;
         public GameResultPresenter gameResultPresenter;
         bool isOver = false;
 
@@ -39,7 +39,6 @@ namespace Catan.Scripts.Manager
                     // ここでplayerTurnをそれぞれのプレイヤーのスコアが10以上になるまで回す
                     if (p.GetComponent<PlayerCore>().playerScore >= 10)
                     {
-                        winner = p;
                         for (int j = 0; j < playerIds.Length; j++)
                         {
                             var neop = toPleyerObject.ToPlayer(playerIds[j]);
@@ -54,5 +53,4 @@ namespace Catan.Scripts.Manager
             }
         }
     }
-
 }

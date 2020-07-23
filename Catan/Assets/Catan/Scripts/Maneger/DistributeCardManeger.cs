@@ -10,6 +10,9 @@ using Catan.Scripts.Point;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 資源カードを配るクラス
+    /// </summary>
     public class DistributeCardManeger : MonoBehaviour
     {
         public TerrainGeneration terrainGeneration;
@@ -18,10 +21,13 @@ namespace Catan.Scripts.Manager
         public ToCardObject toCardObject;
         PlayerId[] playerIds = new PlayerId[4] { PlayerId.Player1, PlayerId.Player2, PlayerId.Player3, PlayerId.Player4 };
 
+        /// <summary>
+        /// 通常の資源配布で使用
+        /// </summary>
+        /// <param name="diceNum"></param>
         public void Distribute(int diceNum)
         {
             List<GameObject> tmpGameObjects = new List<GameObject>();
-            Debug.Log("超うんこ");
             var t = pointParentGeneration.parentPointObjects;
 
             for (int i = 0; i < t.Count; i++)
@@ -42,7 +48,6 @@ namespace Catan.Scripts.Manager
                         for (int j = 0; j < 6; j++)
                             if (tmpGameObjects[i].GetComponent<PointParentBehavior>().childPointObjects[j].Equals(n.City[l].GetComponent<TerritoryEntity>().TerritoryPosition))
                             {
-                                Debug.Log("Hello unnko");
                                 if (!tmpGameObjects[i].GetComponent<PointParentBehavior>().hasThief)
                                 {
                                     n.cards.Add(toCardObject.ToCard(tmpGameObjects[i].GetComponent<PointParentBehavior>().terrainType));
@@ -53,9 +58,11 @@ namespace Catan.Scripts.Manager
             }
         }
 
+        /// <summary>
+        /// 最初の資源配布で使用
+        /// </summary>
         public void InitDistribute()
         {
-            Debug.Log("神うんこ");
             for (int i = 0; i < playerIds.Length; i++)
             {
                 var pb = toPleyerObject.ToPlayer(playerIds[i]).GetComponent<Belongings>();
@@ -69,7 +76,6 @@ namespace Catan.Scripts.Manager
                     {
                         if (tt.Equals(tmp.childPointObjects[k]))
                         {
-                            Debug.Log("真うんこ");
                             if (TerrainType.Desert != tmp.terrainType)
                             {
                                 pb.cards.Add(toCardObject.ToCard(tmp.terrainType));

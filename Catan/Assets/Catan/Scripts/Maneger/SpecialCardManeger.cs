@@ -1,18 +1,14 @@
-﻿using Catan.Scripts.Generation;
-using Catan.Scripts.Presenter;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Catan.Scripts.Presenter;
 using UnityEngine;
-using System.Threading;
-using UniRx;
 using UniRx.Async;
-using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
-using System.Security.Cryptography;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 発展カード使用時のクラス
+    /// </summary>
     enum SpecialCardState
     {
         Knight, MainRoad, Harvest, Monopolization, None
@@ -143,9 +139,6 @@ namespace Catan.Scripts.Manager
                     break;
                 }
             }
-
         }
-
     }
-
 }

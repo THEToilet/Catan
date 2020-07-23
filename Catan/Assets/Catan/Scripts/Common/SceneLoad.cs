@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UniRx;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Catan.Scripts.Common
 {
-
+    /// <summary>
+    /// シーン遷移クラス
+    /// </summary>
     public class SceneLoad : MonoBehaviour
     {
         public void ToMain()
@@ -19,6 +17,4 @@ namespace Catan.Scripts.Common
             SceneManager.LoadScene("Title");
         }
     }
-
-
 }

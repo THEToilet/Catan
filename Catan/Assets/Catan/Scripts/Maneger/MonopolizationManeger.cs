@@ -1,13 +1,12 @@
-﻿using Boo.Lang.Environments;
-using Catan.Scripts.Card;
+﻿using Catan.Scripts.Card;
 using Catan.Scripts.Player;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// モノポリカード使用時のクラス
+    /// </summary>
 
     public class MonopolizationManeger : MonoBehaviour
     {
@@ -42,12 +41,7 @@ namespace Catan.Scripts.Manager
             }
             GetCard(CalcSumCard(index), card);
             DeleteUserCard(card, index);
-
         }
-
-
-        // カードを指定枚数消してくれるメソッド
-
 
         public int CalcSumCard(int index)
         {
@@ -62,7 +56,6 @@ namespace Catan.Scripts.Manager
             }
             return sum;
         }
-
 
         public void GetCard(int sum, CardType card)
         {
@@ -96,8 +89,6 @@ namespace Catan.Scripts.Manager
                     }
                 }
             }
-
         }
     }
-
 }

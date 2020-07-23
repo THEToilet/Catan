@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Catan.Scripts.Manager
+﻿namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 初期設定時の定義クラス
+    /// </summary>
 
     public enum TurnState
     {
-        RollDice,
         AscendingOrderArrangement,
         DescendingOrderArragement,
         NormalTurn
     }
-
 }

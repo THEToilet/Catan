@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
-using UniRx.Async;
-using UniRx.Async.Triggers;
 using Catan.Scripts.Player;
 
 namespace Catan.Scripts.Presenter
@@ -20,7 +16,6 @@ namespace Catan.Scripts.Presenter
         public UIRestrictionPresenter uIRestrictionPresenter;
         public void ShowPossiblePoint(PlayerId playerId)
         {
-            Debug.Log("okokokoko");
             var p = toPleyerObject.ToPlayer(playerId);
             var c = p.GetComponent<Belongings>().City;
             geneCityCube = new List<GameObject>();
@@ -34,12 +29,10 @@ namespace Catan.Scripts.Presenter
 
         public void DeleteLocateCity()
         {
-            Debug.Log("okokokoko2");
             for (int i = 0; i < geneCityCube.Count; i++)
             {
                 GameObject.Destroy(geneCityCube[i]);
             }
-            Debug.Log("okokokoko3");
             uIRestrictionPresenter.LetAction();
         }
     }

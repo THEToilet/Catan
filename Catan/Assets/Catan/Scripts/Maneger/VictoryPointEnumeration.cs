@@ -1,16 +1,16 @@
 ﻿using Catan.Scripts.Card;
 using Catan.Scripts.Player;
 using Catan.Scripts.Territory;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 勝利ポイント計算クラス
+    /// </summary>
 
     public class VictoryPointEnumeration : MonoBehaviour
     {
-
         public PlayerTurnManeger playerTurnManeger;
         public ProgressStateManeger progressStateManeger;
         public ToPleyerObject toPleyerObject;
@@ -44,11 +44,9 @@ namespace Catan.Scripts.Manager
                             victoryPoint[i]++;
                         }
                     }
-                    toPleyerObject.ToPlayer(playerIds[i]).GetComponent<PlayerCore>().playerScore= victoryPoint[i];
+                    toPleyerObject.ToPlayer(playerIds[i]).GetComponent<PlayerCore>().playerScore = victoryPoint[i];
                 }
-
             }
         }
     }
-
 }

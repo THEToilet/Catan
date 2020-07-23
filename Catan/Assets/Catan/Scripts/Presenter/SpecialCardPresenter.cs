@@ -1,15 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Catan.Scripts.Player;
 using Catan.Scripts.Card;
 using UnityEngine.UI;
 using Catan.Scripts.Manager;
 using DG.Tweening;
-using System.Threading;
-using UniRx;
 using UniRx.Async;
-using UniRx.Async.Triggers;
 
 namespace Catan.Scripts.Presenter
 {
@@ -30,7 +25,7 @@ namespace Catan.Scripts.Presenter
             foreach (GameObject g in p.GetComponent<Belongings>().scards)
             {
                 GameObject go = GameObject.Instantiate(g, specialHnad.transform.position, Quaternion.identity);
-                go.transform.SetParent(specialHnad.transform); 
+                go.transform.SetParent(specialHnad.transform);
                 var cardType = g.GetComponent<SpecialCardEntity>().specialCardType;
                 go.GetComponent<Button>().onClick.AddListener(() => actionsPanel.GetComponent<DOTweenAnimation>().DOPlayBackwards());
                 go.GetComponent<Button>().onClick.AddListener(() => cancelButton.gameObject.SetActive(false));
@@ -66,5 +61,4 @@ namespace Catan.Scripts.Presenter
             }
         }
     }
-
 }

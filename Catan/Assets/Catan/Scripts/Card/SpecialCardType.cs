@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Catan.Scripts.Card
+﻿namespace Catan.Scripts.Card
 {
-
+    /// <summary>
+    /// 発展カードの種類
+    /// </summary>
     public enum SpecialCardType
     {
         Knight,

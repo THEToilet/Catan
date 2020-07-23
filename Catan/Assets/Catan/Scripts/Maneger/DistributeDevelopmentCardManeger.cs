@@ -1,12 +1,12 @@
 ﻿using Catan.Scripts.Player;
 using Catan.Scripts.Card;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Catan.Scripts.Manager
 {
+    /// <summary>
+    /// 発展カードを手に入れるクラス
+    /// </summary>
 
     public class DistributeDevelopmentCardManeger : MonoBehaviour
     {
@@ -17,7 +17,6 @@ namespace Catan.Scripts.Manager
         public void DrawCard(PlayerId playerId)
         {
             var tmp = toPleyerObject.ToPlayer(playerId).GetComponent<Belongings>().scards;
-            // ここでコスト計算　if()
             var card = toSpecialCardObject.ToCard(Random.Range(start, end));
             tmp.Add(card);
         }

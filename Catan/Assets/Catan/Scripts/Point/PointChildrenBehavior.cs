@@ -11,10 +11,6 @@ namespace Catan.Scripts.Point
         public GameObject AdjacentPoint_2;
         public List<GameObject> adjacentPoint = new List<GameObject>();
         public List<GameObject> adjacentRoadBase = new List<GameObject>(3);
-        GameObject parent;
-        GameObject terriory;
         public bool hasTerritory = false;
-
     }
-
 }

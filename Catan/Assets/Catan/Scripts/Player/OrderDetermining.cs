@@ -3,9 +3,11 @@ using UnityEngine;
 using System.Linq;
 using Catan.Scripts.Common;
 
-
 namespace Catan.Scripts.Player
 {
+    /// <summary>
+    /// 順番生成クラス
+    /// </summary>
     public class OrderDetermining : MonoBehaviour
     {
         public int[] orderNum = new int[4];
@@ -31,7 +33,6 @@ namespace Catan.Scripts.Player
             foreach (var v in sortOrder)
             {
                 playerIds[j] = v.Key;
-              //  Debug.Log(v.Key + ":" + v.Value);
                 j++;
             }
         }
@@ -40,8 +41,5 @@ namespace Catan.Scripts.Player
         {
             return playerIds;
         }
-
-
     }
-
 }

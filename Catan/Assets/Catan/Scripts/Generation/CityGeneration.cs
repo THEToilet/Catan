@@ -1,13 +1,13 @@
 ﻿using Catan.Scripts.Manager;
 using Catan.Scripts.Player;
 using Catan.Scripts.Territory;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Catan.Scripts.Generation
 {
-
+    /// <summary>
+    /// 都市生成クラス
+    /// </summary>
     public class CityGeneration : MonoBehaviour
     {
         public PlayerTurnManeger playerTurnManeger;
@@ -18,8 +18,7 @@ namespace Catan.Scripts.Generation
             var p = toPleyerObject.ToPlayer(playerTurnManeger._currentPlayerId.Value);
             var c = p.GetComponent<Belongings>().City;
             c[index].GetComponent<TerritoryEntity>().territoryType = TerritoryType.City;
-            c[index].GetComponent<MeshFilter>().mesh = City;
+            c[index].GetComponent<MeshFilter>().mesh = City; // settlementのメッシュをcityメッシュに変更
         }
     }
-
 }

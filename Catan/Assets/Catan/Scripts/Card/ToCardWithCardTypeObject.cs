@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Catan.Scripts.Terrain;
+﻿using UnityEngine;
 using System;
 
 namespace Catan.Scripts.Card
 {
+    /// <summary>
+    /// カードの種類からカードを返すクラス
+    /// </summary>
     public class ToCardWithCardTypeObject : MonoBehaviour
     {
         [SerializeField] GameObject BrickCard;
@@ -30,9 +30,6 @@ namespace Catan.Scripts.Card
                 default:
                     throw new ArgumentOutOfRangeException("tt", ct, null);
             }
-
-
         }
-
     }
 }
